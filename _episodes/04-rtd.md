@@ -4,8 +4,8 @@ title: "Deploying Sphinx documentation to Read the Docs"
 teaching: 0
 exercises: 15
 questions:
-  - "A question that this episode will answer?"
-  - "Another question?"
+  - "How do Python projects deploy their documentation?"
+  - "Can we use their solutions for projects which do not use Python?"
 objectives:
   - "This is one objective of this episode."
   - "This is another objective of this episode."
