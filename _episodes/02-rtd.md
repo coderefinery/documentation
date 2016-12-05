@@ -1,8 +1,8 @@
 ---
 layout: episode
-title: "Unsorted"
-teaching: 20
-exercises: 25
+title: "Deploying Sphinx documentation to Read the Docs"
+teaching: 0
+exercises: 15
 questions:
   - "A question that this episode will answer?"
   - "Another question?"
@@ -36,11 +36,3 @@ https://github.com/bast/software-development-toolbox).
 - Create a post commit hook in GitHub so that changes automatically refresh the Read the Docs pages.
 - Test the post commit hook by making and pushing changes to the documentation sources and verify
   that the documentation refreshes after your changes.
-
----
-
-## Part 2: Create an example project website and host it on GitHub Pages
-
-Create an example project website (from GitHub Pages templates or on your own)
-and host it on GitHub Pages (https://pages.github.com). If you use Doxygen, try
-to host Doxygen-generated documentation on GitHub Pages.

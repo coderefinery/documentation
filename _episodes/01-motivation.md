@@ -1,8 +1,8 @@
 ---
 layout: episode
-title: "Unsorted"
-teaching: 20
-exercises: 25
+title: "Motivation"
+teaching: 15
+exercises: 0
 questions:
   - "A question that this episode will answer?"
   - "Another question?"
