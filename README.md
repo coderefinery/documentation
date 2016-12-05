@@ -1,6 +1,8 @@
 
 
-# Example lesson
+# Code documentation lesson
+
+## Credit
 
 The lesson Jekyll file structure and browsing layout is inspired by and derived from
 work by [Software Carpentry](http://software-carpentry.org) licensed under the
