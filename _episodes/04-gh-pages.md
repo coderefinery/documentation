@@ -2,7 +2,7 @@
 layout: episode
 title: "Deploying a project website to GitHub pages"
 teaching: 0
-exercises: 15
+exercises: 10
 questions:
   - "A question that this episode will answer?"
   - "Another question?"
