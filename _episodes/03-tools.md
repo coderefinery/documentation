@@ -19,17 +19,19 @@ keypoints:
 
 ## README files in the source tree
 
-- advantage: versionnable (goes with the code development)
-- disadvantage: you need a terminal to read it
-- better than nothing
+- Advantage: versioned (goes with the code development)
+- Disadvantage: you need a terminal or GitGub/GitLab browser read them
+- Better than nothing
 
 ---
 
 ## Wikis
 
-- Dokuwiki https://www.dokuwiki.org
-- advantage: barrier to write and edit is low
-- disadvantage: difficult to have versions
+- [MediaWiki](https://www.mediawiki.org)
+- [Dokuwiki](https://www.dokuwiki.org)
+- Advantage: barrier to write and edit is low
+- Disadvantage: difficult to have versions
+- Typically needs to be hosted and maintained
 
 ---
 
@@ -51,7 +53,7 @@ keypoints:
 - Has support for Fortran and Python
 - Many keywords are understood by Doxygen: http://www.stack.nl/~dimitri/doxygen/manual/commands.html
 - Can be used to also generate higher-level ("human") documentation
-- Can be deployed to GiHub/Bitbucket pages
+- Can be deployed to GiHub/GitLab/Bitbucket pages
 
 ---
 
@@ -60,5 +62,6 @@ keypoints:
 - Both very lightweight
 - Looks good in the browser
 - Looks good in the terminal
-- Sphinx http://sphinx-doc.org can generate HTML from RST
+- [Sphinx](http://sphinx-doc.org) can generate HTML/PDF/LaTeX from RST
 - Basically all Python projects use Sphinx
+- Good code highlighting: [Pygments](http://pygments.org), [Rouge](http://rouge.jneen.net)
