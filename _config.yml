@@ -5,8 +5,8 @@ start_time: 780  # 13:00
 source: .
 destination: ./_site
 plugins_dir: ./_plugins
-layouts_dir: ./common/layouts
-includes_dir: ./common/includes
+layouts_dir: ./jekyll-common/layouts
+includes_dir: ./jekyll-common/includes
 data_dir: ./_data
 
 # handling reading
