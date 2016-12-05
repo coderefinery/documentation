@@ -17,6 +17,34 @@ keypoints:
   - "One more key point."
 ---
 
+## Read the Docs
+
+- https://readthedocs.org
+- Free Sphinx hosting
+- RST or Markdown
+- PDF can be generated on the fly
+- Equations and images no problem
+- Layout can be changed
+- It is no problem to serve from GitHub pages or Read the Docs using your own URL
+- Many projects use https://readthedocs.org as their main site
+
+---
+
+## Typical Read the Docs workflow
+
+- Host source code with documentation sources on GitHub
+- `post-receive` sends POST request to Read the Docs to rebuild the documentation
+
+```shell
+$ curl -X POST http://readthedocs.org/build/myproject
+```
+
+- Read the Docs then fetches changes (typically from GitHub but can be somewhere else provided the repo is public)
+  and rebuilds HTML and PDF
+- No problem to build several branches (versions) of your documentation
+
+---
+
 ## Part 1: Sphinx-based documentation on Read the Docs
 
 In this exercise we will implement a Sphinx-based documentation, host it on
