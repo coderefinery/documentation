@@ -30,6 +30,11 @@ objectives:
     - Chance is that next time the user/colleague
       will find the answer by him/herself
     - Trains people to read the doc
+
+---
+
+## Aspects we often forget in our busy lives
+
 - Some people who install and test the software know nothing about the theory behind the code
     - Busy user support at computing centers
     - Vendors who run benchmarks
