@@ -54,3 +54,16 @@ keypoints:
 ## Written by humans
 
 - Prose
+
+---
+
+## Minimum contents
+
+- Authors
+- Citation
+- License
+- Purpose
+- Usage
+- Example
+- Installation
+- Dependencies
