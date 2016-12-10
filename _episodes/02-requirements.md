@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: "Requirements"
+title: "Specs and requirements"
 teaching: 5
 exercises: 0
 questions:
