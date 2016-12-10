@@ -6,14 +6,7 @@ exercises: 15
 questions:
   - "How can we have a good-looking project website without hosting it ourselves?"
 objectives:
-  - "This is one objective of this episode."
-  - "This is another objective of this episode."
-  - "Yet another objective."
-  - "And not to forget this objective."
-keypoints:
-  - "This is an important key point."
-  - "Another important key point."
-  - "One more key point."
+  - "Create a working example which you can take home and adapt for your project."
 ---
 
 ## Technology
@@ -43,3 +36,10 @@ keypoints:
 Create an example project website (from GitHub Pages templates or on your own)
 and host it on GitHub Pages (https://pages.github.com). If you use Doxygen, try
 to host Doxygen-generated documentation on GitHub Pages.
+
+---
+
+## Where you might want to go from here
+
+- Write me
+It is no problem to serve using your own URL
