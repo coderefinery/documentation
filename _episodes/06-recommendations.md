@@ -7,8 +7,9 @@ questions:
   - "What recommendations can we take home?"
 objectives:
   - "Automatize and give the boring work to machines."
-  - "Make writing documentation easy and fun."
-  - "Sometimes take a step back and consider different perspectives to the documentation."
+  - "Make contribution documentation easy, simple, and direct."
+  - "Sometimes take a step back and consider different perspectives to your documentation."
+  - "Do not maintain own servers, use good available services."
 ---
 
 ## Technical aspects
@@ -23,19 +24,35 @@ objectives:
 ## Human aspects
 
 - Write documentation that you would like to read
-- Answer questions with an URL to (updated) documentation
+- Answer questions about your code with an URL to (updated) documentation
     - Email answers get lost/forgotten
     - Answer and improve doc at the same time
-    - Long-term lazy
+    - Lazy in the long-term
     - Chance is that next time the user/colleague
       will find the answer by him/herself
-    - Trains people to read the doc
+    - Trains people to read the documentation before writing emails
+
+---
+
+## Documentation checklist
+
+- Purpose
+- Authors
+- Recommended citation
+- License
+- Usage
+- Example
+- Installation instructions
+- Requirements and dependencies (libraries, compilers, environment)
 
 ---
 
 ## Aspects we often forget in our busy lives
 
-- Some people who install and test the software know nothing about the theory behind the code
+- Some people who install and test the software know nothing about the theory behind the code - do not force them to understand the theory in order to install and test the code
     - Busy user support at computing centers
     - Vendors who run benchmarks
-- Market success stories (pictures, scaling, molecules, be proud)
+- Be proud of your good work and market success stories
+    - Important for grant applications
+    - Show pictures
+    - Demonstrate the efficiency or functionality or good scaling (if relevant)
