@@ -115,7 +115,7 @@ time we push to the repository and sends a POST request to a web service.
 Let us set up the webhook:
 
 
-### Create a webhook on GitHub and verify that changes to the Git repo automatically refresh the Read the Docs pages
+### Create a webhook and verify that changes to the repository automatically refresh the website
 
 - In a new browser tab visit your doc-example repository, e.g.: https://github.com/user/doc-example
 - Click "Settings"
