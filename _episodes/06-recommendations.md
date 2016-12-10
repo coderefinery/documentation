@@ -38,12 +38,14 @@ objectives:
 
 - Purpose
 - Authors
-- Recommended citation
 - License
+- Recommended citation
 - Usage
 - Example
 - Installation instructions
 - Requirements and dependencies (libraries, compilers, environment)
+- Contact points (mailing list or forum or chat or issue tracker)
+- Contribution guide
 
 ---
 
