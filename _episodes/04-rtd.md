@@ -7,33 +7,25 @@ questions:
   - "How do Python projects deploy their documentation?"
   - "Can we use their solutions for projects which do not use Python?"
 objectives:
-  - "This is one objective of this episode."
-  - "This is another objective of this episode."
-  - "Yet another objective."
-  - "And not to forget this objective."
-keypoints:
-  - "This is an important key point."
-  - "Another important key point."
-  - "One more key point."
+  - "Create a working example which you can take home and adapt for your project."
 ---
 
-## Read the Docs
+## [Read the Docs](https://readthedocs.org)
 
-- https://readthedocs.org
 - Free Sphinx hosting
 - RST or Markdown
 - PDF can be generated on the fly
 - Equations and images no problem
-- Layout can be changed
-- It is no problem to serve from GitHub pages or Read the Docs using your own URL
-- Many projects use https://readthedocs.org as their main site
+- Layout can be styled
+- Many projects use [Read the Docs](https://readthedocs.org) as their main site
+- It is no problem to serve using your own URL `http://myproject.org` instead of `http://myproject.readthedocs.io`
 
 ---
 
 ## Typical Read the Docs workflow
 
 - Host source code with documentation sources on GitHub
-- `post-receive` sends POST request to Read the Docs to rebuild the documentation
+- Each time you `git push` to the repository, a `post-receive` hook sends POST request to Read the Docs to rebuild the documentation
 
 ```shell
 $ curl -X POST http://readthedocs.org/build/myproject
@@ -45,22 +37,99 @@ $ curl -X POST http://readthedocs.org/build/myproject
 
 ---
 
-## Part 1: Sphinx-based documentation on Read the Docs
+## Exercise: Deploy Sphinx documentation to Read the Docs
 
-In this exercise we will implement a Sphinx-based documentation, host it on
-GitHub and deploy it to https://readthedocs.org. This is exactly how this
-page that you read right now arrives to your browser (the sources are here:
-https://github.com/bast/software-development-toolbox).
+In this exercise we will create Sphinx-based documentation, host it on GitHub
+and deploy it to Read the Docs.
 
-- Set up a virtual environment according to http://docs.python-guide.org/en/latest/dev/virtualenvs/.
-- Install Sphinx to the virtual environment.
-- Run ``sphinx-quickstart`` (http://sphinx-doc.org/tutorial.html).
-- Build the html and check it locally on your computer and in your browser.
-- Make some changes to it and build them locally.
-- Create a new GitHub project for it.
-- Push the documentation sources to the new GitHub project.
-- Create an account at https://readthedocs.org.
-- Import the Github project you just created to Read the Docs.
-- Create a post commit hook in GitHub so that changes automatically refresh the Read the Docs pages.
-- Test the post commit hook by making and pushing changes to the documentation sources and verify
-  that the documentation refreshes after your changes.
+Before we start, make sure that Sphinx is part of your Python installation or
+environment. If you use Anaconda, you are set. If you use Miniconda or virtual
+environments, make sure Sphinx is installed into the Miniconda or virtual
+environment.
+
+We will use GitHub for this exercise but it will also work with any Git
+repository with public read access.
+
+
+### Make a copy (fork) of the [example repostitory](https://github.com/coderefinery/doc-example)
+
+Now fork [this repository](https://github.com/coderefinery/doc-example) and
+then clone the fork to your laptop:
+
+```shell
+$ git clone git@github.com:user/doc-example.git  # adapt user, also ok to clone via https if you prefer
+$ cd doc-example
+```
+
+### Build HTML pages locally
+
+Inside the cloned repository, run `sphinx-build` and you should see this:
+
+```shell
+$ sphinx-build doc _build
+
+Running Sphinx v1.5
+making output directory...
+loading pickled environment... not yet created
+building [mo]: targets for 0 po files that are out of date
+building [html]: targets for 3 source files that are out of date
+updating environment: 3 added, 0 changed, 0 removed
+reading sources... [100%] index
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+writing output... [100%] index
+generating indices... genindex
+writing additional pages... search
+copying static files... done
+copying extra files... done
+dumping search index in English (code: en) ... done
+dumping object inventory... done
+build succeeded.
+```
+
+Then point your browser to e.g.
+`file:///home/user/doc-example/_build/index.html`. Adapt the path to the actual
+path where you have cloned to (the `/home/user` part is almost certainly wrong in your case).
+
+Hopefully you can now see a website. If so, then you are able to build Sphinx pages locally.
+This is useful to check how things look before pushing changes to GitHub.
+
+
+### Enable the project on [Read the Docs](https://readthedocs.org)
+
+- Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
+- Click "Import a Project"
+- We could now "Connect to GitHub" and that would be easier but we will follow "Import Manually" which is more general
+- Specify "Name:", e.g.: "user-doc-example" (replace "user")
+- Set "Repository URL:", e.g.: https://github.com/user/doc-example.git (replace "user")
+- Click "Next"
+
+Now we should see the warning: "This repository doesn't have a valid webhook
+set up. That means it won't be rebuilt on commits to the repository."
+
+Right - we need to set that up. A webhook is a script that is executed every
+time we push to the repository and sends a POST request to a web service.
+
+Let us set up the webhook:
+
+
+### Create a webhook on GitHub and verify that changes to the Git repo automatically refresh the Read the Docs pages
+
+- In a new browser tab visit your doc-example repository, e.g.: https://github.com/user/doc-example
+- Click "Settings"
+- Click "Webhooks"
+- Click "Add webhook"
+- Under "Payload URL" add "http://readthedocs.org/build/user-doc-example"
+  (replace "user-doc-example", this is your project name on Read the Docs)
+- Click the green "Add webhook"
+- Then go back to the Read the Docs browser tab and reload the dashboard, warning should now be gone
+
+Now we are ready to go, visit
+[http://user-doc-example.readthedocs.io](http://user-doc-example.readthedocs.io)
+(replace project name).
+
+Finally, make some changes to the documentation under `doc/`, commit and push
+them, and verify that the documentation website refreshes after your changes
+(can take few seconds or a minute).
