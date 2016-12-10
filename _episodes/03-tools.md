@@ -70,7 +70,7 @@ keypoints:
 - Has support for Fortran and Python
 - Many keywords are understood by Doxygen: http://www.stack.nl/~dimitri/doxygen/manual/commands.html
 - Can be used to also generate higher-level ("human") documentation
-- Can be deployed to GiHub/GitLab/Bitbucket pages
+- Can be deployed to GiHub/GitLab/Bitbucket Pages
 
 ---
 
@@ -91,6 +91,8 @@ keypoints:
 ## HTML
 
 - Avoid inventing your own solution
-- Avoid maintaining own servers
-- Use [Jekyll](https://jekyllrb.com) or other static site generators since they can be hosted on GitHub pages or GitLab pages for free
-- Good code highlighting: [Pygments](http://pygments.org), [Rouge](http://rouge.jneen.net)
+- Do not maintain own web servers for project websites
+    - [GitHub Pages](https://pages.github.com)
+    - [Bitbucket Pages](http://pages.bitbucket.org)
+    - [GitLab Pages](https://pages.gitlab.io)
+    - Good code highlighting: [Pygments](http://pygments.org), [Rouge](http://rouge.jneen.net)
