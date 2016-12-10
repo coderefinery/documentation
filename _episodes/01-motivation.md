@@ -14,7 +14,7 @@ objectives:
 
 - Website is often the contact with the project
 - Documentation often the second
-- If both are repelling, I might get repelled
+- If both are repelling, we might get repelled
 - Sometimes both are nonexistent
 - How do you feel when you see that the documentation has not been updated since 2001?
 
@@ -22,16 +22,20 @@ objectives:
 
 ## Motivation to have a project website
 
-- Project website is important
 - Companies without a website cannot exist
 - Soon scientific projects without website will not be able to exist (or in other words get grants)
 - A website is something that you can show when you apply for jobs
+- Project website is important for grant applications and project reports
 
 ---
 
-## Why do some projects not have a website?
+## Discuss with the learners
 
-- Discuss why
+- Why do some projects not have a website?
+- Why is project documentation important?
+- What are the features of a useful documentation?
+- Why are some projects lacking useful documentation
+- How can we motivate developers to contribute documentation?
 
 ---
 
@@ -42,29 +46,9 @@ objectives:
 - Lance Armstrong: "It's not the bike it's the rider."
 - Concerning documentation, sometimes it is not the rider, it is the bike
 - Some projects simply use better tools
-
----
-
-## Motivation to have a project documentation
-
-- Documentation is important - discuss why
-- Writing and reading documentation can be fun
-- Documentation does not have to be outdated/incomplete
+- It is not always the lazy programmer, sometimes it is the framework
 - If the documentation is notoriously outdated/incomplete, it can mean
   that your documentation framework/workflow is not ideal
-- It is not always the lazy programmer, sometimes it is the framework
-
----
-
-## What are the features of a useful documentation?
-
-- Discuss with the learners
-- Also discuss why some projects lack useful documentation
-
----
-
-## Typical problems
-
 - Parts of the documentation are outdated/incomplete
 - Documentation workflows undocumented
 - We typically program first and document later (or never)
