@@ -29,6 +29,9 @@ keypoints:
 - Important for reproducibility: I should be able to install a code version
   from 3 years ago and for this I will probably also need the possibility to
   see the documentation from 3 years ago.
+- If you release your code you probably need at least two documentation
+  versions: one for the released code, one for the bleeding edge code - make
+  sure your documentation supports that.
 
 ---
 
