@@ -28,7 +28,7 @@ keypoints:
 - Advantage
   - Versioned (goes with the code development)
 - Disadvantage
-  - You need a terminal or GitGub/GitLab browser to read them
+  - You need a terminal or GitHub/GitLab browser to read them
 - If you use README files, use either
   [RST](http://docutils.sourceforge.net/rst.html) or
   [Markdown](http://daringfireball.net/projects/markdown/) markup
@@ -43,7 +43,8 @@ keypoints:
 - Advantage
   - Barrier to write and edit is low
 - Disadvantages
-  - Difficult to have versions
+  - Difficult to serve multiple versions
+  - Difficult to check out a specific old version
   - Typically needs to be hosted and maintained
 
 ---
@@ -68,7 +69,7 @@ keypoints:
 - Documented directly in the source code
 - Popular in the C++ community (Doxygen is to C++ what Sphinx is to Python)
 - Has support for Fortran and Python
-- Many keywords are understood by Doxygen: http://www.stack.nl/~dimitri/doxygen/manual/commands.html
+- Many keywords are understood by Doxygen: [Doxygen special commands](http://www.stack.nl/~dimitri/doxygen/manual/commands.html)
 - Can be used to also generate higher-level ("human") documentation
 - Can be deployed to GiHub/GitLab/Bitbucket Pages
 
@@ -84,7 +85,7 @@ keypoints:
 - Good code highlighting: [Pygments](http://pygments.org), [Rouge](http://rouge.jneen.net)
 - [Jekyll](https://jekyllrb.com) and other static site generators could be used, too
 - Advantage of Sphinx
-  - [Read the docs](http://readthedocs.org)
+  - [Read the docs](http://readthedocs.org): Service to host public [Sphinx](http://sphinx-doc.org) documentation for free!
 
 ---
 

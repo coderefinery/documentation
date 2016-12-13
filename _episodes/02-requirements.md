@@ -16,16 +16,16 @@ keypoints:
 
 ## Documentation should be placed and tracked close to the source code
 
-- Minimizes barrier to contribute
-- I should not need to log in to another machine or service to contribute
-- Ideally we prefer to write documentation there where we also write code
+- Documenting close to the source code minimizes barrier to contribute.
+- I should not need to log in to another machine or service and jump through hoops to contribute.
+- Ideally we prefer to write documentation there where we also write code.
 
 ---
 
 ## Versions
 
-- Your code project should be versioned (version control)
-- If the project has versions, the documentation should too
+- Your code project should be versioned (version control).
+- If the project has versions, the documentation should too.
 - Important for reproducibility: I should be able to install a code version
   from 3 years ago and for this I will probably also need the possibility to
   see the documentation from 3 years ago.
@@ -37,26 +37,26 @@ keypoints:
 
 ## Use a lightweight markup
 
-- LaTeX is not lightweight enough
-- Use a standard markup language
-- Use RST or Markdown
-- GitHub and GitLab automatically render README.md or README.rst files
+- LaTeX is not lightweight enough.
+- Use a standard markup language.
+- Use RST or Markdown.
+- GitHub and GitLab automatically render README.md or README.rst files.
 
 ---
 
 ## Make the documentation readable on any device
 
-- Many people browse the web on their phone or tablet
+- Many people browse the web on their phone or tablet.
 - If you use standard solutions and services (to be demonstrated later in this
-  lesson), you do not have to worry about this
+  lesson), you do not have to worry about this.
 
 ---
 
 ## Division into tutorials and keyword reference
 
 - Show not only what the software can do, but also how the software should be used: tutorials!
-- Tutorials should contain good defaults
-- Ready examples that one can copy-paste to get quickly started
+- Tutorials should contain good defaults.
+- Ready examples that one can copy-paste to get quickly started.
 
 ---
 
@@ -65,7 +65,7 @@ keypoints:
 - Prose
 - Automatically generated documentation (e.g. API documentation) is useful as
   complementary documentation but it does not replace tutorials written by
-  humans
+  humans.
 
 ---
 
