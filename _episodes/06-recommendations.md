@@ -34,21 +34,6 @@ objectives:
 
 ---
 
-## Documentation checklist
-
-- Purpose
-- Authors
-- License
-- Recommended citation
-- Usage
-- Example
-- Installation instructions
-- Requirements and dependencies (libraries, compilers, environment)
-- Contact points (mailing list or forum or chat or issue tracker)
-- Contribution guide
-
----
-
 ## Aspects we often forget in our busy lives
 
 - Some people who install and test the software know nothing about the theory behind the code - do not force them to understand the theory in order to install and test the code
