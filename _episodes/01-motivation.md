@@ -22,8 +22,6 @@ objectives:
 
 ## Motivation to have a project website
 
-- Companies without a website cannot exist.
-- Soon scientific projects without website will not be able to exist (or in other words get grants).
 - Project website is important for grant applications and project reports.
 - A website is something that you can show when you apply for jobs.
 
@@ -44,12 +42,6 @@ objectives:
 - Many scientific websites look like websites created by scientists in the 90s.
 - Websites which are not suitable for phones.
 - Parts of the documentation are outdated/incomplete.
-  - Lance Armstrong: "It's not the bike it's the rider.".
-  - Concerning documentation, sometimes it is not the rider, it is the bike.
-  - Some projects simply use better tools.
-  - It is not always the lazy programmer, sometimes it is the framework.
-  - If the documentation is notoriously outdated/incomplete, it can mean.
-    that your documentation framework/workflow is not ideal.
 - Documentation workflows undocumented.
 - We typically program first and document later (or never).
 - No manual for developers (first steps, call tree, where to start, what to do and what not to do).
