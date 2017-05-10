@@ -4,10 +4,10 @@ title: "Deploying Sphinx documentation to Read the Docs"
 teaching: 0
 exercises: 15
 questions:
-  - "How do Python projects deploy their documentation?"
-  - "Can we use their solutions for projects which do not use Python?"
+  - How do Python projects deploy their documentation?
+  - Can we use their solutions for projects which do not use Python?
 objectives:
-  - "Create a working example which you can take home and adapt for your project."
+  - Create a working example which you can take home and adapt for your project.
 ---
 
 ## [Read the Docs](https://readthedocs.org)
@@ -24,16 +24,17 @@ objectives:
 
 ## Typical Read the Docs workflow
 
-- Host source code with documentation sources on GitHub
-- Each time you `git push` to the repository, a `post-receive` hook sends POST request to Read the Docs to rebuild the documentation
+- Host source code with documentation sources on GitHub.
+- Each time you `git push` to the repository, a `post-receive` hook sends POST
+  request to Read the Docs to rebuild the documentation.
 
 ```shell
 $ curl -X POST http://readthedocs.org/build/myproject
 ```
 
-- Read the Docs then fetches changes (typically from GitHub but can be somewhere else provided the repo is public)
-  and rebuilds HTML and PDF
-- No problem to build several branches (versions) of your documentation
+- Read the Docs then fetches changes (typically from GitHub but can be
+  somewhere else provided the repo is public) and rebuilds HTML and PDF.
+- No problem to build several branches (versions) of your documentation.
 
 ---
 

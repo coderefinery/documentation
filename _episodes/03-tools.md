@@ -4,13 +4,13 @@ title: "Popular tools and solutions"
 teaching: 10
 exercises: 0
 questions:
-  - "What tools are out there?"
-  - "What are their pros and cons?"
+  - What tools are out there?
+  - What are their pros and cons?
 objectives:
-  - "Choose the right tool for the right reason."
+  - Choose the right tool for the right reason.
 keypoints:
-  - "Some popular solutions make reproducibility and maintenance of multiple code versions difficult."
-  - "Do not reinvent the wheel: learn from large and busy open source projects."
+  - Some popular solutions make reproducibility and maintenance of multiple code versions difficult.
+  - Do not reinvent the wheel: learn from large and busy open source projects.
 ---
 
 ## Comments in the source code

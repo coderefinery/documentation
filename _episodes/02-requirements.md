@@ -4,14 +4,23 @@ title: "Specs and requirements"
 teaching: 5
 exercises: 0
 questions:
-  - "What requirements and specifications can we impose on a good documentation?"
+  - What requirements and specifications can we impose on a good documentation?
 objectives:
-  - "Arrive at a set of specifications that we can use as checklist for designing and deploying code documentation."
+  - Arrive at a set of specifications that we can use as checklist for designing and deploying code documentation.
 keypoints:
-  - "Documentation is part of the code."
-  - "Documentation should be close to the source code to minimize the barrier to contribute."
-  - "Documentation needs to be versioned for reproducibility."
-  - "Use lightweight and standard markup languages such as RST or Markdown."
+  - Documentation is part of the code.
+  - Documentation should be close to the source code to minimize the barrier to contribute.
+  - Documentation needs to be versioned for reproducibility.
+  - Use lightweight and standard markup languages such as RST or Markdown.
+---
+
+## What do we expect from a good documentation?
+
+- Allow pull requests
+- Minimize server maintenance
+- No need to jump through hoops to refresh
+- Versioned
+
 ---
 
 ## Documentation should be placed and tracked close to the source code

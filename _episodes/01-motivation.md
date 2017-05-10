@@ -4,36 +4,21 @@ title: "Motivation"
 teaching: 10
 exercises: 0
 questions:
-  - "Why is code documentation important?"
-  - "Why does almost every project need a website?"
+  - Why is code documentation important?
+  - Why does almost every project need a website?
 objectives:
-  - "Discuss the need for documentation and a project website."
+  - Discuss the need for documentation and a project website.
 ---
 
-## When you look at a code project for the first time, what are the things you look for?
+## Questions
 
-- Website is often the contact with the project.
-- Documentation often the second.
-- If both are repelling, we might get repelled.
-- Sometimes both are nonexistent.
-- How do you feel when you see that the documentation has not been updated since 2001?
-
----
-
-## Motivation to have a project website
-
-- Project website is important for grant applications and project reports.
-- A website is something that you can show when you apply for jobs.
-
----
-
-## Discuss with the learners
-
-- Why do some projects not have a website?
 - Why is project documentation important?
-- What are the features of a useful documentation?
+- How would you describe a useful documentation?
 - Why are some projects lacking useful documentation?
 - How can we motivate developers to contribute to the documentation?
+- Why do some projects not have a website?
+- Does your project have a website? If not, do you think it would be good for
+  the project?
 
 ---
 
