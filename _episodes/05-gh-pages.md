@@ -4,11 +4,11 @@ title: "Deploying a project website to GitHub Pages"
 teaching: 0
 exercises: 15
 questions:
-  - "How can we have a good-looking project website without hosting it ourselves?"
+  - How can we have a good-looking project website without hosting it ourselves?
 objectives:
-  - "Create a working example which you can take home and adapt for your project."
+  - Create a working example which you can take home and adapt for your project.
 keypoints:
-  - "Do not maintain own web servers for project websites."
+  - Do not maintain own web servers for project websites.
 ---
 
 ## Create an example project website and host it on GitHub Pages
@@ -46,13 +46,13 @@ on `https://<user>.github.io`.
 
 - Plain HTML often leads to code repetition and does not allow modular development of website sources.
 - There are many web frameworks available.
-- Static site generators allow modular websites and play well with GitHub/GitLab/Bitbucket Pages which serve static sites:
+- **Static site generators** allow modular websites and play well with GitHub/GitLab/Bitbucket Pages which serve static sites:
   - [Jekyll](https://jekyllrb.com)
   - [Hugo](https://gohugo.io)
   - [Hexo](https://hexo.io)
   - Many others
 - See the [GitHub Pages documentation](https://pages.github.com) for step-by-step guides.
-- It is no problem to serve GitHub/GitLab/Bitbucket Pages using your own domain name.
-- Do not reinvent the wheel - use CSS frameworks:
+- It is no problem to serve GitHub/GitLab/Bitbucket Pages using your **own domain name**.
+- Do not reinvent the wheel - **use CSS frameworks**:
     - [Bootstrap](http://getbootstrap.com)
     - [Foundation](http://foundation.zurb.com)
