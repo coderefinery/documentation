@@ -118,12 +118,19 @@ Let us set up the webhook:
 
 ### Create a webhook and verify that changes to the repository automatically refresh the website
 
+You may first need to set up an incoming webhook integration on Read the Docs: 
+
+- Click on your project's "Integrations" admin dashboard page and select "Add integration"
+- As integration type, choose "GitHub incoming webhook"
+- After clicking "Add integration", copy to your clipboard the URL for the integration on the integration detail page
+ 
+Next, we set up the webhook on GitHub:
+
 - In a new browser tab visit your doc-example repository, e.g.: https://github.com/user/doc-example
 - Click "Settings"
 - Click "Webhooks"
 - Click "Add webhook"
-- Under "Payload URL" add "http://readthedocs.org/build/user-doc-example"
-  (replace "user-doc-example", this is your project name on Read the Docs)
+- Under "Payload URL" use the URL of the integration on Read the Docs (adding "https://" in front)
 - Click the green "Add webhook"
 - Then go back to the Read the Docs browser tab and reload the dashboard, warning should now be gone
 
