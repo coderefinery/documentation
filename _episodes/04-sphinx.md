@@ -69,38 +69,29 @@ the default options are used. Note that people using Windows should change the l
 
 A number of files are created in the source directory:
 
-================  ====================================
-Directory         Contents
-================  ====================================
-source/conf.py    Documentation configuration file.
-source/index.rst  Documentation master file.
-Makefile          Makefile to generate documentation.
-make.bat          Batch file for Windows.
-================  ====================================
-
-
-<table style="width:100%;">
+<table style="width:50%;">
   <tr>
-    <th style="text-align: center; border: 1px solid black; padding: 3px; width:50%"> Directory </th>
-    <th style="text-align: center; border: 1px solid black; padding: 3px; width:50%"> Contents </th>
+    <th style="text-align: center; border: 1px solid black; padding: 3px; width:15%"> Directory </th>
+    <th style="text-align: center; border: 1px solid black; padding: 3px; width:35%"> Contents </th>
   </tr>
   <tr>
-    <td style="text-align: center; border: 1px solid black; padding: 3px;"> source/conf.py </td>
-    <td style="text-align: center; border: 1px solid black; padding: 3px;"> Documentation configuration file. </td>
+    <td style="text-align: left; border: 1px solid black; padding: 3px;"> source/conf.py </td>
+    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Documentation configuration file. </td>
   </tr>
   <tr>
-    <td style="text-align: center; border: 1px solid black; padding: 3px;"> source/index.rst </td>
-    <td style="text-align: center; border: 1px solid black; padding: 3px;"> Documentation master file.. </td>
+    <td style="text-align: left; border: 1px solid black; padding: 3px;"> source/index.rst </td>
+    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Documentation master file.. </td>
   </tr>
   <tr>
-    <td style="text-align: center; border: 1px solid black; padding: 3px;"> Makefile </td>
-    <td style="text-align: center; border: 1px solid black; padding: 3px;"> Makefile to generate documentation. </td>
+    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Makefile </td>
+    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Makefile to generate documentation. </td>
   </tr>
   <tr>
-    <td style="text-align: center; border: 1px solid black; padding: 3px;"> make.bat </td>
-    <td style="text-align: center; border: 1px solid black; padding: 3px;"> Batch file to build docs on Windows. </td>
+    <td style="text-align: left; border: 1px solid black; padding: 3px;"> make.bat </td>
+    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Batch file to build docs on Windows. </td>
   </tr>
 </table>
 
-Let's have a look at the `index.rst` file, which is the master document.  
-We will not use the *Indices and tables* section now, so remove it.
+Let's have a look at the `index.rst` file, which is the master document.
+
+- We will not use the *Indices and tables* section now, so remove it.
