@@ -22,17 +22,21 @@ objectives:
 
 ---
 
-## Typical problems
+## Why is project documentation important?
+- You will be using your code in 6 months
+- You want people to use your code
+- You want people to help out
+- You want your code to be better
+- You want to be a better writer
 
-- Many scientific websites look like websites created by scientists in the 90s.
-- Websites which are not suitable for phones.
-- Parts of the documentation are outdated/incomplete.
-- Documentation workflows undocumented.
-- We typically program first and document later (or never).
-- No manual for developers (first steps, call tree, where to start, what to do and what not to do).
-- One documentation for different versions (either just confusing or documentation for
-  older versions is just dropped).
-- Have to read a lot of text in different places just to get started.
-- Keyword-driven (what is possible) instead of tutorial-driven (what is recommended).
-- With some projects it is impossible to get a result after 5 minutes of reading.
-- Some scientific projects take pride in being inaccessible, hard to understand, undocumented, opaque.
+---
+
+## Let's have a look at some websites...
+- https://www.vasp.at/
+- http://www.abinit.org/
+- http://www.psicode.org/
+- https://docs.julialang.org/en/stable/
+- https://seaborn.pydata.org 
+- http://www.boost.org
+- http://daltonprogram.org/www/documentation.html
+- http://octopus-code.org/wiki/Main_Page
