@@ -40,21 +40,17 @@ $ curl -X POST http://readthedocs.org/build/myproject
 
 ## Exercise: Deploy Sphinx documentation to Read the Docs
 
-In this exercise we will create Sphinx-based documentation, host it on GitHub
-and deploy it to Read the Docs.
-
-Before we start, make sure that Sphinx is part of your Python installation or
-environment. If you use Anaconda, you are set. If you use Miniconda or virtual
-environments, make sure Sphinx is installed into the Miniconda or virtual
-environment.
+In this exercise we will host our previously 
+created Sphinx documentation on GitHub and deploy it to Read the Docs.
+If you haven't created any Sphinx documentation yet, 
+an alternative approach is provided below based on forking an example repository 
 
 We will use GitHub for this exercise but it will also work with any Git
 repository with public read access.
 
+### Alternative approach: Make a copy (fork) of the [example repostitory](https://github.com/coderefinery/doc-example)
 
-### Make a copy (fork) of the [example repostitory](https://github.com/coderefinery/doc-example)
-
-Now fork [this repository](https://github.com/coderefinery/doc-example) and
+Fork [this repository](https://github.com/coderefinery/doc-example) and
 then clone the fork to your laptop:
 
 ```shell
