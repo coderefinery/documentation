@@ -32,11 +32,11 @@ objectives:
 ---
 
 ## Let's have a look at some websites...
-- `VASP < https://www.vasp.at/>`_
-- `ABINIT <http://www.abinit.org/>`_
-- `PSI4 <http://www.psicode.org/>`_
-- `Julia <https://docs.julialang.org/en/stable/>`_
-- `Seaborn <https://seaborn.pydata.org>`_
-- `Boost <http://www.boost.org>`_
-- `Dalton <http://daltonprogram.org/www/documentation.html>`_
-- `Octopus <http://octopus-code.org/wiki/Main_Page>`_
+- [VASP](https://www.vasp.at/)
+- [ABINIT](http://www.abinit.org/)
+- [PSI4](http://www.psicode.org/)
+- [Julia](https://docs.julialang.org/en/stable/)
+- [Seaborn](https://seaborn.pydata.org)
+- [Boost](http://www.boost.org)
+- [Dalton](http://daltonprogram.org/www/documentation.html)
+- [Octopus](http://octopus-code.org/wiki/Main_Page)
