@@ -12,7 +12,7 @@ keypoints:
 ---
 
 ## RST and Markdown 
-- two of the most popular lightweight markup languages
+- Two of the most popular lightweight markup languages
 - Markdown considered simpler to use, but RST more extensible
 - Markdown convenient for smaller documents, 
   but for larger and more complicated documents RST may be a better option
@@ -29,7 +29,7 @@ environment. If you use Anaconda, you are set. If you use Miniconda or virtual
 environments, make sure Sphinx is installed into the Miniconda or virtual
 environment.
 
-### Create a directory for your documentation, and generate the basic documentation template:
+### Create a directory for your documentation, and generate the basic documentation template
 
 ```shell
 $ mkdir doc-example
@@ -66,7 +66,7 @@ the default options are used. Note that people using Windows should change the l
 > Create Windows command file? (y/n) [y]: n
 ```
 
-A number of files are created:
+A number of files and directories are created:
 
 <table style="width:50%;">
   <tr>
@@ -122,7 +122,7 @@ help:
 
 The Makefile is quite simple, and we can just as easily build manually by `sphinx-build . _build`.  
 
-Let's have a look at the `index.rst` file, which is the master document.
+Let's have a look at the `index.rst` file, which is the master document:
 
 ```
 .. My Great Project documentation master file, created by
@@ -214,11 +214,7 @@ _sources       _static        genindex.html  index.html     objects.inv    searc
 
 Now open the file `_build/html/index.html` in a browser, by entering `file:///home/user/doc-example/_build/html/index.html` in your browser (adapting the path to your needs).  
 
-Let's say we don't like the style of this website at all! We open the file `conf.py`, and change the option `html_theme` from `alabaster` to `default`. We then rebuild the site, and refresh the browser tab.
-
-```
-$ make html
-```
+Let's say we don't like the style of this website at all! We open the file `conf.py`, and change the option `html_theme` from `alabaster` to `default`. We then rebuild the site with `make html`, and refresh the browser tab.
 
 ## Exercise: Add content to your example documentation
 
