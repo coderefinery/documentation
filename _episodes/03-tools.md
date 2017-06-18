@@ -10,7 +10,7 @@ objectives:
   - Choose the right tool for the right reason.
 keypoints:
   - Some popular solutions make reproducibility and maintenance of multiple code versions difficult.
-  - Do not reinvent the wheel: learn from large and busy open source projects.
+  - Do not reinvent the wheel - learn from large and busy open source projects.
 ---
 
 ## Comments in the source code

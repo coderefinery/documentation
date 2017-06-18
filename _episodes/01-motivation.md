@@ -22,16 +22,16 @@ objectives:
 
 ---
 
-## Why is project documentation important?
-- You will be using your code in 6 months
-- You want people to use your code
-- You want people to help out
+## [Why is project documentation important?](http://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)
+- You will be using your code in the future
+- You may want other people to use your code
+- You may want people to help out
 - You want your code to be better
 - You want to be a better writer
 
 ---
 
-## Let's have a look at some websites...
+## Let's have a look at some project websites
 - [VASP](https://www.vasp.at/)
 - [ABINIT](http://www.abinit.org/)
 - [PSI4](http://www.psicode.org/)

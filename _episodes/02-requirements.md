@@ -27,7 +27,7 @@ keypoints:
 
 - Documenting close to the source code minimizes barrier to contribute.
 - I should not need to log in to another machine or service and jump through hoops to contribute.
-- Ideally we prefer to write documentation there where we also write code.
+- Ideally we prefer to write documentation where we also write code.
 
 ---
 
