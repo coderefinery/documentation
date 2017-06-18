@@ -43,10 +43,31 @@ $ curl -X POST http://readthedocs.org/build/myproject
 In this exercise we will host our previously 
 created Sphinx documentation on GitHub and deploy it to Read the Docs.
 If you haven't created any Sphinx documentation yet, 
-an alternative approach is provided below based on forking an example repository 
+an alternative approach is provided below based on forking an example repository.
 
 We will use GitHub for this exercise but it will also work with any Git
 repository with public read access.
+
+### Main approach: Create a new GitHub repository with your documentation
+
+- Create a new Git repository on your GitHub page called `doc-example`. Do not initiate with README, license or gitignore files. 
+- Inside your documentation directory, initiate the repo, add the required files and make your first commit.
+- Then add a basic `README.md` and `.gitignore` files (where you ignore the Makefile and the `_build/` and `_templates/` directories)
+- Finally, add the URL of the remote repository, and push your local repository to GitHub.
+- Before looking at the step-by-step instructions below, see if you remember how to do all these steps from the [Git introduction lesson](https://github.com/coderefinery/git-intro).
+
+Step-by-step instructions (after creating new repository on GitHub):
+```shell
+$ cd doc-example
+$ git init
+$ git add conf.py index.rst feature-a.rst tutorials/tutorial-1.rst
+$ git commit -m "first commit"
+# create a simple README.md file and a .gitignore file where you list Makefile, _build/ and _static/
+$ git add README.md .gitignore
+$ git commit -m "add readme and gitignore"
+$ git remote add origin git@github.com:user/doc-example.git  # change user to your GitHub username
+# check that it works by `git remote -v`
+```
 
 ### Alternative approach: Make a copy (fork) of the [example repostitory](https://github.com/coderefinery/doc-example)
 
@@ -60,38 +81,14 @@ $ cd doc-example
 
 ### Build HTML pages locally
 
-Inside the cloned repository, run `sphinx-build` and you should see this:
+If you already created your first Sphinx documentation in the [preceding episode](https://coderefinery.github.io/documentation/04-sphinx/), you can skip this step and proceed to the next section. 
 
-```shell
-$ sphinx-build doc _build
-
-Running Sphinx v1.5
-making output directory...
-loading pickled environment... not yet created
-building [mo]: targets for 0 po files that are out of date
-building [html]: targets for 3 source files that are out of date
-updating environment: 3 added, 0 changed, 0 removed
-reading sources... [100%] index
-looking for now-outdated files... none found
-pickling environment... done
-checking consistency... done
-preparing documents... done
-writing output... [100%] index
-generating indices... genindex
-writing additional pages... search
-copying static files... done
-copying extra files... done
-dumping search index in English (code: en) ... done
-dumping object inventory... done
-build succeeded.
-```
-
+Inside your documentation directory (or the cloned repository), run `sphinx-build`.  
 Then point your browser to e.g.
 `file:///home/user/doc-example/_build/index.html`. Adapt the path to the actual
 path where you have cloned to (the `/home/user` part is almost certainly wrong in your case).
 
-Hopefully you can now see a website. If so, then you are able to build Sphinx pages locally.
-This is useful to check how things look before pushing changes to GitHub.
+
 
 
 ### Enable the project on [Read the Docs](https://readthedocs.org)
