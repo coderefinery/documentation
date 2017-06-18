@@ -6,10 +6,9 @@ exercises: 0
 questions:
   - How do we get started on writing Sphinx documentation in RST?
 objectives:
-  - Create sample Sphinx documentation and learn some RST along the way.
+  - Create example Sphinx documentation and learn some RST along the way.
 keypoints:
-  - WRITEME
-  - WRITEME
+  - Sphinx and RST are relatively lightweight options for writing documentation.
 ---
 
 ## RST and Markdown 
@@ -33,8 +32,8 @@ environment.
 ### Create a directory for your documentation, and generate the basic documentation template:
 
 ```shell
-$ mkdir example-doc
-$ cd example-doc
+$ mkdir doc-example
+$ cd doc-example
 $ sphinx-quickstart
 ```
 
@@ -96,7 +95,7 @@ A number of files are created:
   </tr>
 </table>
 
-There is a `Makefile` to let Sphinx build the site. Let's have a look inside to see how it works:
+There is a `Makefile` to automate the Sphinx build process. Let's have a look inside to see how it works:
 
 ```
 # Minimal makefile for Sphinx documentation
@@ -120,6 +119,8 @@ help:
 %: Makefile
         @$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 ```
+
+The Makefile is quite simple, and we can just as easily build manually by `sphinx-build . _build`.  
 
 Let's have a look at the `index.rst` file, which is the master document.
 
@@ -211,7 +212,7 @@ $ ls _build/html
 _sources       _static        genindex.html  index.html     objects.inv    search.html    searchindex.js
 ```
 
-Now open the file `_build/html/index.html` in a browser, by entering `file:///home/user/example-doc/_build/html/index.html` in your browser (adapting the path to your needs).  
+Now open the file `_build/html/index.html` in a browser, by entering `file:///home/user/doc-example/_build/html/index.html` in your browser (adapting the path to your needs).  
 
 Let's say we don't like the style of this website at all! We open the file `conf.py`, and change the option `html_theme` from `alabaster` to `default`. We then rebuild the site, and refresh the browser tab.
 
@@ -224,7 +225,7 @@ $ make html
 1. Add a new toctree entry labeled *Tutorials* to the master document
 2. Create a directory `tutorials`, and create a file `tutorial-1.rst` inside it
 3. Add `tutorials/tutorial-1.rst` to the master document under the *Tutorials* section
-4. Add some content to your first tutorial!
+4. Add some content to your tutorial, rebuild with `make` or `sphinx-build`, and refresh the browser to look at the results
 
 Experiment with the following RST syntax:
 
