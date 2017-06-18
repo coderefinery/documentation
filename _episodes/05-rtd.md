@@ -93,9 +93,39 @@ path where you have cloned to (the `/home/user` part is almost certainly wrong i
 
 ### Enable the project on [Read the Docs](https://readthedocs.org)
 
+In this exercise you will import a project to Read the Docs by connecting to GitHub. 
+This will automatically set up a webhook on GitHub and webhook integration on Read the Docs so that `git push` will 
+automatically rebuild the Read the Docs site.  
+A more general scenario is to manually import the project to Read the Docs and set up the webhook on GitHub yourself along with the webhook integration on Read the Docs. Instructions for how to do this are found below.
+
+### Enable the project on [Read the Docs](https://readthedocs.org)
+
+In this exercise you will import a project to Read the Docs by connecting to GitHub. 
+This will automatically set up a webhook on GitHub and webhook integration on Read the Docs so that `git push` will 
+automatically rebuild the Read the Docs site.  
+A more general scenario is to manually import the project to Read the Docs and set up the webhook on GitHub yourself along with the webhook integration on Read the Docs. Instructions for how to do this are found below.
+
 - Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
 - Click "Import a Project"
-- We could now "Connect to GitHub" and that would be easier but we will follow "Import Manually" which is more general
+- Select "Connect to GitHub", and choose the doc-example repository
+- Click "Next"
+
+That's it! Your site should now be live on
+[http://user-doc-example.readthedocs.io](http://user-doc-example.readthedocs.io)
+(replace project name).
+
+Finally, make some changes to your documentation, commit and push
+them, and verify that the documentation website refreshes after your changes
+(can take few seconds or a minute).
+
+
+### Extra: Manually import project on [Read the Docs](https://readthedocs.org)
+
+If you have time, try this manual (and more general) approach which involves setting up a webhook on GitHub. 
+
+- Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
+- Click "Import a Project"
+- Select "Import Manually"
 - Specify "Name:", e.g.: "user-doc-example" (replace "user")
 - Set "Repository URL:", e.g.: https://github.com/user/doc-example.git (replace "user")
 - Click "Next"
@@ -108,10 +138,9 @@ time we push to the repository and sends a POST request to a web service.
 
 Let us set up the webhook:
 
+### Create a webhook on GitHub and webhook integration on Read the Docs
 
-### Create a webhook and verify that changes to the repository automatically refresh the website
-
-You may first need to set up an incoming webhook integration on Read the Docs: 
+You will first need to set up an incoming webhook integration on Read the Docs: 
 
 - Click on your project's "Integrations" admin dashboard page and select "Add integration"
 - As integration type, choose "GitHub incoming webhook"
@@ -127,10 +156,5 @@ Next, we set up the webhook on GitHub:
 - Click the green "Add webhook"
 - Then go back to the Read the Docs browser tab and reload the dashboard, warning should now be gone
 
-Now we are ready to go, visit
-[http://user-doc-example.readthedocs.io](http://user-doc-example.readthedocs.io)
-(replace project name).
-
-Finally, make some changes to the documentation under `doc/`, commit and push
-them, and verify that the documentation website refreshes after your changes
-(can take few seconds or a minute).
+Try again to make some changes to your documentation, commit and push
+them, and verify that the documentation website refreshes after your changes.
