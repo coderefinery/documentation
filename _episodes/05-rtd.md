@@ -52,7 +52,7 @@ repository with public read access.
 
 - Create a new Git repository on your GitHub page called `doc-example`. Do not initiate with README, license or gitignore files. 
 - Inside your documentation directory, initiate the repo, add the required files and make your first commit.
-- Then add a basic `README.md` and `.gitignore` files (where you ignore the Makefile and the `_build/` and `_templates/` directories)
+- Then add a basic `README.md` and `.gitignore` files (where you ignore the `_build/` directory)
 - Finally, add the URL of the remote repository, and push your local repository to GitHub.
 - Before looking at the step-by-step instructions below, see if you remember how to do all these steps from the [Git introduction lesson](https://github.com/coderefinery/git-intro).
 
@@ -62,14 +62,14 @@ $ cd doc-example
 $ git init
 $ git add conf.py index.rst feature-a.rst tutorials/tutorial-1.rst
 $ git commit -m "first commit"
-# create a simple README.md file and a .gitignore file where you list Makefile, _build/ and _static/
+# create a simple README.md file and a .gitignore file where you add _build/
 $ git add README.md .gitignore
 $ git commit -m "add readme and gitignore"
 $ git remote add origin git@github.com:user/doc-example.git  # change user to your GitHub username
 # check that it works by `git remote -v`
 ```
 
-### Alternative approach: Make a copy (fork) of the [example repostitory](https://github.com/coderefinery/doc-example)
+### Alternative approach: Make a copy (fork) of the [example repository](https://github.com/coderefinery/doc-example)
 
 Fork [this repository](https://github.com/coderefinery/doc-example) and
 then clone the fork to your laptop:

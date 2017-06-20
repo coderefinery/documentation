@@ -1,11 +1,10 @@
 ---
 layout: episode
 title: "Motivation"
-teaching: 10
+teaching: 5
 exercises: 0
 questions:
   - Why is code documentation important?
-  - Why does almost every project need a website?
 objectives:
   - Discuss the need for documentation and a project website.
 ---
