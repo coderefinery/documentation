@@ -1,8 +1,8 @@
 ---
 layout: episode
 title: "Sphinx and ReStructuredText"
-teaching: 15
-exercises: 0
+teaching: 5
+exercises: 15
 questions:
   - How do we get started on writing Sphinx documentation in RST?
 objectives:
@@ -182,7 +182,7 @@ Let's make a list (empty surrounding lines required):
 
 We now build the site:
 
-```
+```shell
 $ ls
 
 Makefile  _build  _static  _templates  conf.py  index.rst
@@ -213,6 +213,8 @@ _sources       _static        genindex.html  index.html     objects.inv    searc
 ```
 
 Now open the file `_build/html/index.html` in a browser, by entering `file:///home/user/doc-example/_build/html/index.html` in your browser (adapting the path to your needs).  
+Hopefully you can now see a website. If so, then you are able to build Sphinx pages locally.
+This is useful to check how things look before pushing changes to GitHub or elsewhere.
 
 Let's say we don't like the style of this website at all! We open the file `conf.py`, and change the option `html_theme` from `alabaster` to `default`. We then rebuild the site with `make html`, and refresh the browser tab.
 

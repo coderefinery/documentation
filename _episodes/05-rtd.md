@@ -1,7 +1,7 @@
 ---
 layout: episode
 title: "Deploying Sphinx documentation to Read the Docs"
-teaching: 0
+teaching: 5
 exercises: 15
 questions:
   - How do Python projects deploy their documentation?
@@ -88,15 +88,6 @@ Then point your browser to e.g.
 `file:///home/user/doc-example/_build/index.html`. Adapt the path to the actual
 path where you have cloned to (the `/home/user` part is almost certainly wrong in your case).
 
-
-
-
-### Enable the project on [Read the Docs](https://readthedocs.org)
-
-In this exercise you will import a project to Read the Docs by connecting to GitHub. 
-This will automatically set up a webhook on GitHub and webhook integration on Read the Docs so that `git push` will 
-automatically rebuild the Read the Docs site.  
-A more general scenario is to manually import the project to Read the Docs and set up the webhook on GitHub yourself along with the webhook integration on Read the Docs. Instructions for how to do this are found below.
 
 ### Enable the project on [Read the Docs](https://readthedocs.org)
 
