@@ -48,13 +48,29 @@ an alternative approach is provided below based on forking an example repository
 We will use GitHub for this exercise but it will also work with any Git
 repository with public read access.
 
-### Main approach: Create a new GitHub repository with your documentation
+1. In the first step, create a GitHub repository and push your documentation to it.
+2. In the second step, enable the project on Read the Docs
+
+### Step 1: Create a new GitHub repository with your documentation
 
 - Create a new Git repository on your GitHub page called `doc-example`. Do not initiate with README, license or gitignore files. 
 - Inside your documentation directory, initiate the repo, add the required files and make your first commit.
 - Then add a basic `README.md` and `.gitignore` files (where you ignore the `_build/` directory)
 - Finally, add the URL of the remote repository, and push your local repository to GitHub.
 - Before looking at the step-by-step instructions below, see if you remember how to do all these steps from the [Git introduction lesson](https://github.com/coderefinery/git-intro).
+
+**Solution below:**
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 Step-by-step instructions (after creating new repository on GitHub):
 ```shell
@@ -67,9 +83,10 @@ $ git add README.md .gitignore
 $ git commit -m "add readme and gitignore"
 $ git remote add origin git@github.com:user/doc-example.git  # change user to your GitHub username
 # check that it works by `git remote -v`
+$ git push origin master
 ```
 
-### Alternative approach: Make a copy (fork) of the [example repository](https://github.com/coderefinery/doc-example)
+#### Alternative approach: Make a copy (fork) of the [example repository](https://github.com/coderefinery/doc-example)
 
 Fork [this repository](https://github.com/coderefinery/doc-example) and
 then clone the fork to your laptop:
@@ -79,22 +96,23 @@ $ git clone git@github.com:user/doc-example.git  # adapt user, also ok to clone 
 $ cd doc-example
 ```
 
-### Build HTML pages locally
+#### Build HTML pages locally
 
 If you already created your first Sphinx documentation in the [preceding episode](https://coderefinery.github.io/documentation/04-sphinx/), you can skip this step and proceed to the next section. 
 
-Inside your documentation directory (or the cloned repository), run `sphinx-build`.  
+Inside your documentation directory (or the cloned repository), run `sphinx-build . _build`.
 Then point your browser to e.g.
 `file:///home/user/doc-example/_build/index.html`. Adapt the path to the actual
 path where you have cloned to (the `/home/user` part is almost certainly wrong in your case).
 
 
-### Enable the project on [Read the Docs](https://readthedocs.org)
+### Step 2: Enable the project on [Read the Docs](https://readthedocs.org)
 
-In this exercise you will import a project to Read the Docs by connecting to GitHub. 
+Now you will import a project to Read the Docs by connecting to GitHub. 
 This will automatically set up a webhook on GitHub and webhook integration on Read the Docs so that `git push` will 
 automatically rebuild the Read the Docs site.  
-A more general scenario is to manually import the project to Read the Docs and set up the webhook on GitHub yourself along with the webhook integration on Read the Docs. Instructions for how to do this are found below.
+
+A more general scenario is to manually import the project to Read the Docs and set up the webhook on GitHub yourself along with the webhook integration on Read the Docs. Instructions for how to do this are found in the "Extra" section below.
 
 - Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
 - Click "Import a Project"
@@ -129,7 +147,7 @@ time we push to the repository and sends a POST request to a web service.
 
 Let us set up the webhook:
 
-### Create a webhook on GitHub and webhook integration on Read the Docs
+#### Create a webhook on GitHub and webhook integration on Read the Docs
 
 You will first need to set up an incoming webhook integration on Read the Docs: 
 
