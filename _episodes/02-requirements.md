@@ -1,7 +1,7 @@
 ---
 layout: episode
 title: "Specs and requirements"
-teaching: 10
+teaching: 15
 exercises: 0
 questions:
   - What requirements and specifications can we impose on a good documentation?
@@ -29,22 +29,29 @@ keypoints:
 
 ## What do we expect from a good documentation?
 
-- Allow pull requests
-- Minimize server maintenance
-- No need to jump through hoops to refresh
+- Separate tutorials, FAQ and keyword reference
 - Versioned
+- Close to the source code
+- Information for contributors (allow pull request)
+- Lightweight markup
+- Minimize server maintenance
+- Readable on any device
+- Installation instructions
+- Project's license
+- Reader-friendly
 
 ---
 
-## Documentation should be placed and tracked close to the source code
+### Division into tutorials, FAQ and keyword reference
 
-- Documenting close to the source code minimizes barrier to contribute.
-- I should not need to log in to another machine or service and jump through hoops to contribute.
-- Ideally we prefer to write documentation where we also write code.
+- Show not only what the software can do, but also how the software should be used: tutorials!
+- Tutorials should contain good defaults.
+- Ready examples that one can copy-paste to get quickly started.
+- Up-to-date FAQ section
 
 ---
 
-## Versions
+### Versions
 
 - Your code project should be versioned (version control).
 - If the project has versions, the documentation should too.
@@ -57,7 +64,16 @@ keypoints:
 
 ---
 
-## Use a lightweight markup
+### Documentation should be placed and tracked close to the source code
+
+- Documenting close to the source code minimizes barrier to contribute.
+- I should not need to log in to another machine or service and jump through hoops to contribute.
+- Ideally we prefer to write documentation where we also write code.
+- Include instructions on how to contribute.
+
+---
+
+### Use a lightweight markup
 
 - LaTeX is not lightweight enough.
 - Use a standard markup language.
@@ -66,7 +82,7 @@ keypoints:
 
 ---
 
-## Make the documentation readable on any device
+### Make the documentation readable on any device
 
 - Many people browse the web on their phone or tablet.
 - If you use standard solutions and services (to be demonstrated later in this
@@ -74,15 +90,7 @@ keypoints:
 
 ---
 
-## Division into tutorials and keyword reference
-
-- Show not only what the software can do, but also how the software should be used: tutorials!
-- Tutorials should contain good defaults.
-- Ready examples that one can copy-paste to get quickly started.
-
----
-
-## Written by humans
+### Written by humans
 
 - Prose
 - Automatically generated documentation (e.g. API documentation) is useful as
