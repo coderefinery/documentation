@@ -37,8 +37,8 @@ $ cd doc-example
 $ sphinx-quickstart
 ```
 
-The quickstart utility will ask you some questions. For this exercise, enter the following answers (in most cases
-the default options are used. Note that people using Windows should change the last answer to `y`). 
+The quickstart utility will ask you some questions. For this exercise, enter the following answers. In most cases
+the default options are used, but we will choose to not create Makefiles and instead build the documentation directly with `sphinx-build`.
 
 ```
 > Root path for the documentation [.]:
@@ -62,11 +62,11 @@ the default options are used. Note that people using Windows should change the l
 > ifconfig: conditional inclusion of content based on config values (y/n) [n]:
 > viewcode: include links to the source code of documented Python objects (y/n) [n]:
 > githubpages: create .nojekyll file to publish the document on GitHub pages (y/n) [n]:
-> Create Makefile? (y/n) [y]:
+> Create Makefile? (y/n) [y]: n
 > Create Windows command file? (y/n) [y]: n
 ```
 
-A number of files and directories are created:
+A few files and directories are created:
 
 <table style="width:50%;">
   <tr>
@@ -82,47 +82,20 @@ A number of files and directories are created:
     <td style="text-align: left; border: 1px solid black; padding: 3px;"> Documentation master file </td>
   </tr>
   <tr>
-    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Makefile </td>
-    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Makefile to generate documentation </td>
-  </tr>
-  <tr>
-    <td style="text-align: left; border: 1px solid black; padding: 3px;"> make.bat </td>
-    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Batch file to build docs on Windows </td>
-  </tr>
-  <tr>
     <td style="text-align: left; border: 1px solid black; padding: 3px;"> _build/ </td>
     <td style="text-align: left; border: 1px solid black; padding: 3px;"> Directory where docs are built </td>
   </tr>
+  <tr>
+    <td style="text-align: left; border: 1px solid black; padding: 3px;"> _templates/ </td>
+    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Your own HTML templates </td>
+  </tr>
+  <tr>
+    <td style="text-align: left; border: 1px solid black; padding: 3px;"> _static/ </td>
+    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Static files (images, styles, etc.) copied to output directory on build </td>
+  </tr>
 </table>
 
-There is a `Makefile` to automate the Sphinx build process. Let's have a look inside to see how it works:
-
-```
-# Minimal makefile for Sphinx documentation
-#
-
-# You can set these variables from the command line.
-SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = Yetanothergreatproject
-SOURCEDIR     = .
-BUILDDIR      = _build
-
-# Put it first so that "make" without argument is like "make help".
-help:
-        @$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-
-.PHONY: help Makefile
-
-# Catch-all target: route all unknown targets to Sphinx using the new
-# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
-%: Makefile
-        @$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-```
-
-The Makefile is quite simple, and we can just as easily build manually by `sphinx-build . _build`.  
-
-Let's have a look at the `index.rst` file, which is the master document:
+Let's have a look at the `index.rst` file, which is the main file of your documentation:
 
 ```
 .. My Great Project documentation master file, created by
@@ -154,7 +127,7 @@ Indices and tables
 ```
 .. toctree::
    :maxdepth: 2
-   :caption: List of features:
+   :caption: Contents:
 
    feature-a
 ```
@@ -185,16 +158,19 @@ We now build the site:
 ```shell
 $ ls
 
-Makefile  _build  _static  _templates  conf.py  index.rst
+_build  _static  _templates  conf.py  index.rst
 
-$ make html
+$ sphinx-build . _build
 
 Running Sphinx v1.5.1
 loading pickled environment... done
 building [mo]: targets for 0 po files that are out of date
-building [html]: targets for 2 source files that are out of date
-updating environment: 0 added, 0 changed, 0 removed
+building [html]: targets for 1 source files that are out of date
+updating environment: 1 added, 1 changed, 0 removed
+reading sources... [100%] index
 looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
 preparing documents... done
 writing output... [100%] index
 generating indices... genindex
@@ -205,25 +181,30 @@ dumping search index in English (code: en) ... done
 dumping object inventory... done
 build succeeded.
 
-Build finished. The HTML pages are in _build/html.
+$ ls _build
 
-$ ls _build/html
-
-_sources       _static        genindex.html  index.html     objects.inv    search.html    searchindex.js
+_sources  _static  feature-a.html  genindex.html  index.html  objects.inv search.html  searchindex.js
 ```
 
-Now open the file `_build/html/index.html` in a browser, by entering `file:///home/user/doc-example/_build/html/index.html` in your browser (adapting the path to your needs).  
+Now open the file `_build/html/index.html` in a browser, by entering `file:///home/user/doc-example/_build/html/index.html` in your browser (adapting the path to your case). 
+
 Hopefully you can now see a website. If so, then you are able to build Sphinx pages locally.
 This is useful to check how things look before pushing changes to GitHub or elsewhere.
 
-Let's say we don't like the style of this website at all! We open the file `conf.py`, and change the option `html_theme` from `alabaster` to `default`. We then rebuild the site with `make html`, and refresh the browser tab.
+- Let's say we don't like the style of this website at all! We open the file `conf.py`, and change the option `html_theme` from `alabaster` to `default`. We then rebuild the site with `sphinx-build . _build`, and refresh the browser tab.
 
 ## Exercise: Add content to your example documentation
 
-1. Add a new toctree entry labeled *Tutorials* to the master document
-2. Create a directory `tutorials`, and create a file `tutorial-1.rst` inside it
-3. Add `tutorials/tutorial-1.rst` to the master document under the *Tutorials* section
-4. Add some content to your tutorial, rebuild with `make` or `sphinx-build`, and refresh the browser to look at the results
+1. Add a new toctree entry labeled *Tutorials* to the `index.rst` file
+2. Create a directory `tutorials`, and create a file `tutorial-1.rst` inside it:  
+   ```
+   $ ls
+   _build  _templates  index.rst  tutorials  _static  conf.py  feature-a.rst 
+   $ ls tutorials/
+   tutorial-1.rst
+   ```
+3. Add `tutorials/tutorial-1.rst` to `index.rst` under the *Tutorials* section
+4. Add some content to your tutorial, rebuild with `sphinx-build`, and refresh the browser to look at the results
 
 Experiment with the following RST syntax:
 
