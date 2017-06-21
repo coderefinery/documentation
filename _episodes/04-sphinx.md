@@ -277,4 +277,5 @@ The following is a code block::
 ```
 
 - For more RST functionality, see the [Sphinx documentation](http://www.sphinx-doc.org/en/stable/rest.html)
+  and the [quick-reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
 - For Sphinx additions to standard RST, see this [document on Sphinx Markup Constructs](http://www.sphinx-doc.org/en/stable/markup/index.html)

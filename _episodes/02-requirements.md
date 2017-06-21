@@ -16,6 +16,7 @@ keypoints:
 
 ## Let's have a look at some project websites
 - [ABINIT](http://www.abinit.org/)
+- [VASP](https://www.vasp.at/)
 - [Dalton](http://daltonprogram.org/)
 - [PSI4](http://www.psicode.org/)
 - [Jupyter Notebooks](http://jupyter-notebook.readthedocs.io/en/latest/)
