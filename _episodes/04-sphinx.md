@@ -12,12 +12,13 @@ keypoints:
 ---
 
 ## RST and Markdown 
-- Two of the most popular lightweight markup languages
-- Markdown considered simpler to use, but RST more extensible
+- Two of the most popular lightweight markup languages.
+- Markdown considered simpler to use, but RST more extensible.
 - Markdown convenient for smaller documents, 
-  but for larger and more complicated documents RST may be a better option
+  but for larger and more complicated documents RST may be a better option.
 - Sphinx was built around RST, but recently 
-[support for Markdown was added:](http://blog.readthedocs.com/adding-markdown-support/)
+[support for Markdown was added](http://blog.readthedocs.com/adding-markdown-support/).
+- There are (unfortunately) [many flavors of Markdown](https://github.com/jgm/CommonMark/wiki/Markdown-Flavors).
 
 ## Type-along exercise: Build Sphinx documentation in RST
 
@@ -199,8 +200,11 @@ This is useful to check how things look before pushing changes to GitHub or else
 2. Create a directory `tutorials`, and create a file `tutorial-1.rst` inside it:  
    ```
    $ ls
+
    _build  _templates  index.rst  tutorials  _static  conf.py  feature-a.rst 
+
    $ ls tutorials/
+
    tutorial-1.rst
    ```
 3. Add `tutorials/tutorial-1.rst` to `index.rst` under the *Tutorials* section
@@ -233,7 +237,7 @@ Level 4
 1. item 1
 2. item 2
 #. item 3
-#. item4
+#. item 4
 ```
 
 - Simple tables

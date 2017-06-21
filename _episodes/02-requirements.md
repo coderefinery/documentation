@@ -15,14 +15,13 @@ keypoints:
 ---
 
 ## Let's have a look at some project websites
-- [VASP](https://www.vasp.at/)
 - [ABINIT](http://www.abinit.org/)
+- [Dalton](http://daltonprogram.org/)
 - [PSI4](http://www.psicode.org/)
 - [Jupyter Notebooks](http://jupyter-notebook.readthedocs.io/en/latest/)
 - [Julia](https://docs.julialang.org/en/stable/)
 - [Seaborn](https://seaborn.pydata.org)
 - [Boost](http://www.boost.org)
-- [Dalton](http://daltonprogram.org/www/documentation.html)
 - [Octopus](http://octopus-code.org/wiki/Main_Page)
 
 ---
