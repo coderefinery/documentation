@@ -187,7 +187,7 @@ $ ls _build
 _sources  _static  feature-a.html  genindex.html  index.html  objects.inv search.html  searchindex.js
 ```
 
-Now open the file `_build/html/index.html` in a browser, by entering `file:///home/user/doc-example/_build/html/index.html` in your browser (adapting the path to your case). 
+Now open the file `_build/index.html` in a browser, by entering `file:///home/user/doc-example/_build/html/index.html` in your browser (adapting the path to your case). 
 
 Hopefully you can now see a website. If so, then you are able to build Sphinx pages locally.
 This is useful to check how things look before pushing changes to GitHub or elsewhere.
