@@ -29,29 +29,28 @@ keypoints:
 
 ## What do we expect from a good documentation?
 
-- Separate tutorials, FAQ and keyword reference
-- Versioned
-- Close to the source code
-- Information for contributors (allow pull request)
-- Lightweight markup
-- Minimize server maintenance
-- Readable on any device
-- Installation instructions
-- Project's license
-- Reader-friendly
+- [Separate tutorials, FAQ and keyword reference](#tutorials)
+- [Versioned](#versions)
+- [Close to the source code](#close-to-source)
+- [Lightweight markup](#markup)
+- [Readable on any device](#devices)
+- [Reader-friendly](#reader-friendly)
+- [Information for contributors (allow pull request)](#contributors)
+- [Installation instructions](#installation)
+- [Project's license](#license)
 
 ---
 
-### Division into tutorials, FAQ and keyword reference
+### Division into tutorials, FAQ and keyword reference {#tutorials}
 
 - Show not only what the software can do, but also how the software should be used: tutorials!
 - Tutorials should contain good defaults.
 - Ready examples that one can copy-paste to get quickly started.
-- Up-to-date FAQ section
+- Up-to-date FAQ section.
 
 ---
 
-### Versions
+### Versions {#versions}
 
 - Your code project should be versioned (version control).
 - If the project has versions, the documentation should too.
@@ -64,16 +63,15 @@ keypoints:
 
 ---
 
-### Documentation should be placed and tracked close to the source code
+### Documentation should be placed and tracked close to the source code {#close-to-source}
 
 - Documenting close to the source code minimizes barrier to contribute.
 - I should not need to log in to another machine or service and jump through hoops to contribute.
 - Ideally we prefer to write documentation where we also write code.
-- Include instructions on how to contribute.
 
 ---
 
-### Use a lightweight markup
+### Use a lightweight markup {#markup}
 
 - LaTeX is not lightweight enough.
 - Use a standard markup language.
@@ -82,7 +80,7 @@ keypoints:
 
 ---
 
-### Make the documentation readable on any device
+### Make the documentation readable on any device {#devices}
 
 - Many people browse the web on their phone or tablet.
 - If you use standard solutions and services (to be demonstrated later in this
@@ -90,12 +88,35 @@ keypoints:
 
 ---
 
-### Written by humans
+### Written by humans {#reader-friendly}
 
 - Prose
 - Automatically generated documentation (e.g. API documentation) is useful as
   complementary documentation but it does not replace tutorials written by
   humans.
+
+---
+
+### Information for contributors {#contributors}
+
+- You probably want people to help out, but it needs to be easy. Document how to contribute by pull requests.
+- Users of your code may be shy to contribute code. Your documentation provides a platform for your first contributions.
+- If you get contributions to your code or documentation that need further work, provide positive feedback.
+
+---
+
+### Installation instructions {#installation}
+
+- If you haven't documented how to install your code, people might not want to use it.
+- Give step by step instructions for the basic case. Additional information and caveats can be linked from there.
+- Include instructions for how to test for correctness after installation.
+
+---
+
+### Make the license explicit {#license}
+
+- Include a LICENSE file with your source code.
+- Without a license, your work is under exclusive copyright by default (others are not allowed to re-use or modify anything).
 
 ---
 
