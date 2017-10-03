@@ -96,6 +96,7 @@ keypoints:
 
 - If you haven't documented how to install your code, people might not want to use it.
 - Give step by step instructions for the basic case. Additional information and caveats can be linked from there.
+- List requirements and dependencies (libraries, compilers, environment)
 - Include instructions for how to test for correctness after installation.
 
 ---
@@ -109,13 +110,15 @@ keypoints:
 
 ## Documentation checklist
 
+Which items to include depends on the number of users apart from yourself.
+
 - Purpose
 - Authors
 - License
 - Recommended citation
 - Usage
 - Example
+- FAQ
 - Installation instructions
-- Requirements and dependencies (libraries, compilers, environment)
 - Contact points (mailing list or forum or chat or issue tracker)
 - Contribution guide
