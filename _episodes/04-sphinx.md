@@ -196,19 +196,9 @@ This is useful to check how things look before pushing changes to GitHub or else
 
 ## Exercise: Add content to your example documentation
 
-1. Add a new toctree entry labeled *Tutorials* to the `index.rst` file
-2. Create a directory `tutorials`, and create a file `tutorial-1.rst` inside it:  
-   ```
-   $ ls
-
-   _build  _templates  index.rst  tutorials  _static  conf.py  feature-a.rst 
-
-   $ ls tutorials/
-
-   tutorial-1.rst
-   ```
-3. Add `tutorials/tutorial-1.rst` to `index.rst` under the *Tutorials* section
-4. Add some content to your tutorial, rebuild with `sphinx-build`, and refresh the browser to look at the results
+1. Add a entry below feature-a labeled *tutorials* to the `index.rst` file.
+2. Create a file `tutorials.rst` in the same directory as your `feature-a.rst` file.
+3. Add some content to your tutorials, rebuild with `sphinx-build`, and refresh the browser to look at the results.
 
 Experiment with the following RST syntax:
 
