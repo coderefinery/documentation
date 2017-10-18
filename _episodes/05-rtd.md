@@ -111,8 +111,7 @@ path where you have cloned to (the `/home/user` part is almost certainly wrong i
 Now you will import a project to Read the Docs by connecting to GitHub. 
 This will automatically set up a webhook on GitHub and webhook integration on Read the Docs so that `git push` will 
 automatically rebuild the Read the Docs site.  
-
-A more general scenario is to manually import the project to Read the Docs and set up the webhook on GitHub yourself along with the webhook integration on Read the Docs. Instructions for how to do this are found in the "Extra" section below.
+One can also manually import the project to Read the Docs and set up the webhook on GitHub, along with webhook integration on Read the Docs, but this will not be needed here.
 
 - Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
 - Click "Import a Project"
@@ -127,43 +126,3 @@ Finally, make some changes to your documentation, commit and push
 them, and verify that the documentation website refreshes after your changes
 (can take few seconds or a minute).
 
-
-### Extra: Manually import project on [Read the Docs](https://readthedocs.org)
-
-If you have time, try this manual (and more general) approach which involves setting up a webhook on GitHub. 
-
-- Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
-- Click "Import a Project"
-- Select "Import Manually"
-- Specify "Name:", e.g.: "user-doc-example" (replace "user")
-- Set "Repository URL:", e.g.: https://github.com/user/doc-example.git (replace "user")
-- Click "Next"
-
-Now we should see the warning: "This repository doesn't have a valid webhook
-set up. That means it won't be rebuilt on commits to the repository."
-
-Right - we need to set that up. A webhook is a script that is executed every
-time we push to the repository and sends a POST request to a web service.
-
-Let us set up the webhook:
-
-#### Create a webhook on GitHub and webhook integration on Read the Docs
-
-You will first need to set up an incoming webhook integration on Read the Docs: 
-
-- Click on your project's "Integrations" admin dashboard page and select "Add integration"
-- As integration type, choose "GitHub incoming webhook"
-- After clicking "Add integration", copy to your clipboard the URL for the integration on the integration detail page
- 
-Next, we set up the webhook on GitHub:
-
-- In a new browser tab visit your doc-example repository, e.g.: https://github.com/user/doc-example
-- Click "Settings"
-- Click "Webhooks"
-- Click "Add webhook"
-- Under "Payload URL" use the URL of the integration on Read the Docs (adding "https://" in front)
-- Click the green "Add webhook"
-- Then go back to the Read the Docs browser tab and reload the dashboard, warning should now be gone
-
-Try again to make some changes to your documentation, commit and push
-them, and verify that the documentation website refreshes after your changes.
