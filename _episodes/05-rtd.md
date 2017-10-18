@@ -76,7 +76,7 @@ Step-by-step instructions (after creating new repository on GitHub):
 ```shell
 $ cd doc-example
 $ git init
-$ git add conf.py index.rst feature-a.rst tutorials/tutorial-1.rst
+$ git add conf.py index.rst feature-a.rst feature-b.rst
 $ git commit -m "first commit"
 # create a simple README.md file and a .gitignore file where you add _build/
 $ git add README.md .gitignore
