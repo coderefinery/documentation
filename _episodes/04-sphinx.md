@@ -220,7 +220,7 @@ Level 4
 ```
 
 - An image: `.. image:: image.png`
-- \`A link <http://www.google.com>\`_
+- \`A link \<http://www.google.com\>\`_
 - Numbered lists (can be automatic using `#`)
 
 ```
