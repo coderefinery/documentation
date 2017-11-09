@@ -159,7 +159,7 @@ We now build the site:
 ```shell
 $ ls
 
-_build  _static  _templates  conf.py  index.rst
+_build  _static  _templates  conf.py  feature-a.rst  index.rst
 
 $ sphinx-build . _build
 
