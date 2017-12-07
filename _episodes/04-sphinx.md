@@ -132,6 +132,7 @@ Indices and tables
 
    feature-a
 ```
+A common gotcha with directives is that **the first line of the content must be indented to the same level as the options (i.e., :maxdepth)**.
 
 `feature-a` refers to a file `feature-a.rst`. Let's create it:
 
@@ -187,10 +188,24 @@ $ ls _build
 _sources  _static  feature-a.html  genindex.html  index.html  objects.inv search.html  searchindex.js
 ```
 
-Now open the file `_build/index.html` in a browser, by entering `file:///home/user/doc-example/_build/index.html` in your browser (adapting the path to your case). 
+Now open the file `_build/index.html` in your browser by:
+
+Linux users type:
+```bash
+xdg-open _build/index.html
+``` 
+OS X users type:
+```bash
+open _build/index.html
+``` 
+
+Others:
+
+enter `file:///home/user/doc-example/_build/index.html` in your browser (adapting the path to your case). 
 
 Hopefully you can now see a website. If so, then you are able to build Sphinx pages locally.
 This is useful to check how things look before pushing changes to GitHub or elsewhere.
+
 
 - Let's say we don't like the style of this website at all! We open the file `conf.py`, and change the option `html_theme` from `alabaster` to `default`. We then rebuild the site with `sphinx-build . _build`, and refresh the browser tab.
 
@@ -265,7 +280,11 @@ The following is a code block::
       return 0;
     }
 ```
-
+- You could include the contents of an external file using literalinclude directive, as follows:
+```bash
+   .. literalinclude:: filename
+```
+   
 - For more RST functionality, see the [Sphinx documentation](http://www.sphinx-doc.org/en/stable/rest.html)
   and the [quick-reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
 - For Sphinx additions to standard RST, see this [document on Sphinx Markup Constructs](http://www.sphinx-doc.org/en/stable/markup/index.html)
