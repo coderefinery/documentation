@@ -281,8 +281,9 @@ The following is a code block::
     }
 ```
 - You could include the contents of an external file using literalinclude directive, as follows:
-```bash
-   .. literalinclude:: filename
+
+```
+.. literalinclude:: filename
 ```
    
 - For more RST functionality, see the [Sphinx documentation](http://www.sphinx-doc.org/en/stable/rest.html)
