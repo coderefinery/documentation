@@ -11,12 +11,12 @@ keypoints:
   - Sphinx and RST are relatively lightweight options for writing documentation.
 ---
 
-## RST and Markdown 
+## RST and Markdown
 - Two of the most popular lightweight markup languages.
 - Markdown considered simpler to use, but RST more extensible.
-- Markdown convenient for smaller documents, 
+- Markdown convenient for smaller documents,
   but for larger and more complicated documents RST may be a better option.
-- Sphinx was built around RST, but recently 
+- Sphinx was built around RST, but recently
 [support for Markdown was added](http://blog.readthedocs.com/adding-markdown-support/).
 - There are (unfortunately) [many flavors of Markdown](https://github.com/jgm/CommonMark/wiki/Markdown-Flavors).
 
@@ -43,7 +43,7 @@ the default options are used, but we will choose to not create Makefiles and ins
 
 ```
 > Root path for the documentation [.]:
-> Separate source and build directories (y/n) [n]: 
+> Separate source and build directories (y/n) [n]:
 > Name prefix for templates and static dir [_]:
 > Project name: My Great Project
 > Author name(s): <your-name>
@@ -119,7 +119,7 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-```  
+```
 
 - We will not use the `Indices and tables` section now, so remove it.
 - The top lines, starting with `..`, are a comment.
@@ -193,15 +193,19 @@ Now open the file `_build/index.html` in your browser by:
 Linux users type:
 ```bash
 xdg-open _build/index.html
-``` 
+```
 OS X users type:
 ```bash
 open _build/index.html
-``` 
+```
+Windows users type:
+```bash
+start _build/index.html
+```
 
 Others:
 
-enter `file:///home/user/doc-example/_build/index.html` in your browser (adapting the path to your case). 
+enter `file:///home/user/doc-example/_build/index.html` in your browser (adapting the path to your case).
 
 Hopefully you can now see a website. If so, then you are able to build Sphinx pages locally.
 This is useful to check how things look before pushing changes to GitHub or elsewhere.
@@ -221,7 +225,7 @@ Experiment with the following RST syntax:
 - Headings
 
 ```
-Level 1 
+Level 1
 =======
 
 Level 2
@@ -248,21 +252,21 @@ Level 4
 - Simple tables
 
 ```
-====== ====== 
+====== ======
 No.    Prime
-====== ====== 
+====== ======
 1      No
 2      Yes
 3      Yes
 4      No
-====== ====== 
+====== ======
 ```
 
 - Code block using special marker `::`
 
 ```
 The following is a code block::
-  
+
   def hello():
       print("Hello world")
 
@@ -285,7 +289,7 @@ The following is a code block::
 ```
 .. literalinclude:: filename
 ```
-   
+
 - For more RST functionality, see the [Sphinx documentation](http://www.sphinx-doc.org/en/stable/rest.html)
   and the [quick-reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
 - For Sphinx additions to standard RST, see this [document on Sphinx Markup Constructs](http://www.sphinx-doc.org/en/stable/markup/index.html)
