@@ -286,12 +286,13 @@ The following is a code block::
       return 0;
     }
 ```
-- You could include the contents of an external file using literalinclude directive, as follows:
+- You could include the contents of an external file using `literalinclude` directive, as follows:
 
 ```
 .. literalinclude:: filename
 ```
 
+- It is possible to combine `literalinclude` with code highlighting, line numbering, and even line highlighting.
 - For more RST functionality, see the [Sphinx documentation](http://www.sphinx-doc.org/en/stable/rest.html)
   and the [quick-reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
 - For Sphinx additions to standard RST, see this [document on Sphinx Markup Constructs](http://www.sphinx-doc.org/en/stable/markup/index.html)
