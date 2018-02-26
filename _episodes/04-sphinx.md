@@ -38,8 +38,10 @@ $ cd doc-example
 $ sphinx-quickstart
 ```
 
-The quickstart utility will ask you some questions. For this exercise, enter the following answers. In most cases
-the default options are used, but we will choose to not create Makefiles and instead build the documentation directly with `sphinx-build`.
+The quickstart utility will ask you some questions. For this exercise, enter
+the following answers. In most cases the default options are used, but we will
+choose to not create Makefiles and instead build the documentation directly
+with `sphinx-build`:
 
 ```
 > Root path for the documentation [.]:
@@ -67,7 +69,7 @@ the default options are used, but we will choose to not create Makefiles and ins
 > Create Windows command file? (y/n) [y]: n
 ```
 
-A few files and directories are created:
+A couple of files and directories are created:
 
 <table style="width:50%;">
   <tr>
@@ -284,12 +286,13 @@ The following is a code block::
       return 0;
     }
 ```
-- You could include the contents of an external file using literalinclude directive, as follows:
+- You could include the contents of an external file using `literalinclude` directive, as follows:
 
 ```
 .. literalinclude:: filename
 ```
 
+- It is possible to combine `literalinclude` with code highlighting, line numbering, and even line highlighting.
 - For more RST functionality, see the [Sphinx documentation](http://www.sphinx-doc.org/en/stable/rest.html)
   and the [quick-reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
-- For Sphinx additions to standard RST, see this [document on Sphinx Markup Constructs](http://www.sphinx-doc.org/en/stable/markup/index.html)
+- For Sphinx additions to standard RST, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/stable/markup/index.html).
