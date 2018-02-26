@@ -38,8 +38,10 @@ $ cd doc-example
 $ sphinx-quickstart
 ```
 
-The quickstart utility will ask you some questions. For this exercise, enter the following answers. In most cases
-the default options are used, but we will choose to not create Makefiles and instead build the documentation directly with `sphinx-build`.
+The quickstart utility will ask you some questions. For this exercise, enter
+the following answers. In most cases the default options are used, but we will
+choose to not create Makefiles and instead build the documentation directly
+with `sphinx-build`:
 
 ```
 > Root path for the documentation [.]:
@@ -67,7 +69,7 @@ the default options are used, but we will choose to not create Makefiles and ins
 > Create Windows command file? (y/n) [y]: n
 ```
 
-A few files and directories are created:
+A couple of files and directories are created:
 
 <table style="width:50%;">
   <tr>
