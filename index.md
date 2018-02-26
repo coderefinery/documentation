@@ -13,7 +13,10 @@ open documentation for free.
 
 This demonstration will be independent of programming languages and relevant
 also for your Fortran, C, C++, R, or Matlab projects.  We will also learn how
-to deploy a project website to [GitHub pages](https://pages.github.com).
+to deploy a project website to [GitHub Pages](https://pages.github.com).
+The approach that we will learn will be transferable to
+[GitLab Pages](https://about.gitlab.com/features/pages/) and
+[Bitbucket Pages](https://pages.bitbucket.io).
 
 
 ## Prerequisites
