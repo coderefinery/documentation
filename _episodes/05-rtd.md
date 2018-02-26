@@ -108,10 +108,12 @@ path where you have cloned to (the `/home/user` part is almost certainly wrong i
 
 ### Step 2: Enable the project on [Read the Docs](https://readthedocs.org)
 
-Now you will import a project to Read the Docs by connecting to GitHub. 
-This will automatically set up a webhook on GitHub and webhook integration on Read the Docs so that `git push` will 
-automatically rebuild the Read the Docs site.  
-One can also manually import the project to Read the Docs and set up the webhook on GitHub, along with webhook integration on Read the Docs, but this will not be needed here.
+Now you will import a project to Read the Docs by connecting to GitHub.  This
+will automatically set up a webhook on GitHub and webhook integration on Read
+the Docs so that `git push` will automatically rebuild the Read the Docs site.
+One can also manually import the project to Read the Docs and set up the
+webhook on GitHub, along with webhook integration on Read the Docs, but this
+will not be needed here.
 
 - Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
 - Click "Import a Project"
