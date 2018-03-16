@@ -13,8 +13,8 @@ keypoints:
 
 ## Create an example project website and host it on GitHub Pages
 
-In this demo we will create a very simple project website and host it on GitHub
-Pages. This exercise is transferable to GitLab or Bitbucket pages which offer a
+In this demo we will create a very simple project website and host it on [GitHub
+Pages](https://pages.github.com/). [GitLab](https://about.gitlab.com/features/pages/) and [Bitbucket](https://confluence.atlassian.com/bitbucket/publishing-a-website-on-bitbucket-cloud-221449776.html) also offer a
 very similar solution. The key is that you can give the hosting to
 professionals so that you can focus on your project.
 
@@ -25,11 +25,30 @@ contains a branch `gh-pages` is served on
 Let us try it out!
 
 - First fork and clone the [example repository](https://github.com/coderefinery/gh-pages-example).
+
+```shell
+$ git clone git@github.com:user/gh-pages-example.git  # adapt user, also ok to clone via https if you prefer
+$ cd gh-pages-example
+```
+
 - Check that you are indeed on the `gh-pages` branch.
-- Make some changes to `index.html`, commit, and push.
+- Make some changes to `index.md` or `about.md`or `team.md`, commit and push.
+```shell
+$ git add index.md team.md  # add changes to commit
+$ git commit -m "modified website contents"
+$ git push origin gh-pages
+```
 - Verify that your changes land on `https://<user>.github.io/gh-pages-example/`.
 
 Yay! Now you have successfully deployed a website!
+
+- What's going on?
+  - the example uses [github pages supported themes](https://pages.github.com/themes/)
+  - we define the theme we want to use in _config.yml 
+  - add the page layout that we want to use in the beginning of the markdown files. This is called [front matter](https://jekyllrb.com/docs/frontmatter/). 
+ 
+Thats it! Github takes care of rendering the pages - see the [documentation](https://help.github.com/articles/adding-a-jekyll-theme-to-your-github-pages-site/)
+
 
 It is a good idea to keep source code, web sources, and possibly also Sphinx
 source all in the same repository, tracking a common history.
@@ -37,7 +56,7 @@ source all in the same repository, tracking a common history.
 GitHub pages can be configured to also serve directly from the master branch
 under `docs/` - see the [documentation](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/).
 
-Many people put their personal home page on `<user>.github.io`, which is served
+Many people put their personal home page on repository `<user>.github.io`, which is served
 on `https://<user>.github.io`.
 
 ---

@@ -15,7 +15,7 @@ keypoints:
 
 ## Comments in the source code
 
-- Good for developers
+- Good for programmers
 - Requires terminal or repository browser
 - Can be used to generate API documentation (examples later)
 - Typically not sufficient for users
@@ -68,7 +68,7 @@ keypoints:
 - Typically used to auto-generate API documentation
 - Documented directly in the source code
 - Popular in the C++ community (Doxygen is to C++ what Sphinx is to Python)
-- Has support for Fortran and Python
+- Has support for C, Fortran, Python, Java, etc. See [Doxygen supported programming languages](http://www.stack.nl/~dimitri/doxygen/)
 - Many keywords are understood by Doxygen: [Doxygen special commands](http://www.stack.nl/~dimitri/doxygen/manual/commands.html)
 - Can be used to also generate higher-level ("human") documentation
 - Can be deployed to GiHub/GitLab/Bitbucket Pages

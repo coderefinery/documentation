@@ -293,6 +293,17 @@ The following is a code block::
 ```
 
 - It is possible to combine `literalinclude` with code highlighting, line numbering, and even line highlighting.
+- We can also use jupyter notebooks (*.ipynb) with sphinx. It requires `nbsphinx` extension to be installed. See [nbsphinx documentation](http://nbsphinx.readthedocs.io/en/0.3.1/) for more information
+```
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   feature-a
+   <python_notebook_name>.ipynb
+```
 - For more RST functionality, see the [Sphinx documentation](http://www.sphinx-doc.org/en/stable/rest.html)
   and the [quick-reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
 - For Sphinx additions to standard RST, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/stable/markup/index.html).
+
+ 

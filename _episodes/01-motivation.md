@@ -13,7 +13,8 @@ objectives:
 
 - Why is project documentation important?
 - How would you describe a useful documentation?
-- How can we motivate developers to contribute to the documentation?
+- How can we motivate researchers to contribute to the documentation?
+- How other researchers will know about your project?
 - Does your project have a website? If not, do you think it would be good for
   the project?
 
