@@ -105,6 +105,7 @@ keypoints:
 
 - Include a LICENSE file with your source code.
 - Without a license, your work is under exclusive copyright by default (others are not allowed to re-use or modify anything).
+- GitHub and GitLab allows to choose a license from common license templates. 
 
 ---
 
