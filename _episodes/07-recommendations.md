@@ -12,11 +12,10 @@ objectives:
   - Do not maintain own servers, use good available services.
 ---
 
-## Technical aspects
+## Setup
 
 - Whatever solution you choose, make it automatically rebuild pages upon `git push`.
-- If you need to ask somebody to run some scripts on the server after you have modified sources,
-  that will not work in practice (does not scale).
+- Documentation needs to be close to the source code and evolve with the source code.
 - When using code review make sure that new functionality always comes with documentation.
 
 ---
@@ -24,24 +23,9 @@ objectives:
 ## Human aspects
 
 - Write documentation that you would like to read.
-- Answer questions about your code with an URL to (updated) documentation.
-    - Email answers get lost/forgotten.
-    - Answer and improve doc at the same time.
-    - Lazy in the long-term.
-    - Chance is that next time the user/colleague
-      will find the answer by him/herself.
-    - Trains people to read the documentation before writing emails.
-
----
-
-## Aspects we often forget in our busy lives
-
-- Some people who install and test the software know nothing about the theory
-  behind the code - do not force them to understand the theory in order to
-  install and test the code:
-    - Busy user support at computing centers
+- Answer questions about your code with an updated documentation.
+- Do not force persons who install and test your software to read
+  tens of pages of documentation and understand the domain theory behind the code
+  in order to install and test the code:
+    - User support at computing centers
     - Vendors who run benchmarks
-- Be proud of your good work and market success stories:
-    - Important for grant applications
-    - Show pictures
-    - Demonstrate the efficiency or functionality or good scaling (if relevant)
