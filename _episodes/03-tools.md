@@ -77,7 +77,6 @@ keypoints:
 
 - Lightweight and readable
 - [Sphinx](http://sphinx-doc.org) can generate HTML/PDF/LaTeX from RST and Markdown
-- [Learn Markdown in 60 seconds](http://commonmark.org/help/)
 - Basically all Python projects use Sphinx
 - Good code highlighting: [Pygments](http://pygments.org), [Rouge](http://rouge.jneen.net)
 - [Jekyll](https://jekyllrb.com) and other static site generators could be used, too
@@ -108,6 +107,11 @@ A list:                           A list:
 There is more: images,            There is more: images,
 tables, links, ...                tables, links, ...
 ```
+
+Experiment with Markdown:
+- [Learn Markdown in 60 seconds](http://commonmark.org/help/)
+- [https://dillinger.io](http://dillinger.io)
+- [https://stackedit.io](https://stackedit.io)
 
 ---
 
