@@ -16,58 +16,41 @@ keypoints:
 
 ## What do we expect from a good documentation?
 
-- [Separate tutorials, FAQ and keyword reference](#tutorials)
-- [Versioned](#versions)
-- [Close to the source code](#close-to-source)
-- [Lightweight markup](#markup)
-- [Readable on any device](#devices)
-- [Reader-friendly](#reader-friendly)
-- [Information for contributors (allow pull request)](#contributors)
-- [Installation instructions](#installation)
-- [Project's license](#license)
+### Division into tutorials, FAQs, and keyword reference
 
----
-
-### Division into tutorials, FAQ and keyword reference {#tutorials}
-
-- Show not only what the software can do, but also how the software should be used: tutorials!
-- Tutorials should contain good defaults.
-- Ready examples that one can copy-paste to get quickly started.
+- Show not only what is possible, but also how the software should be used: **tutorials**!
+- Tutorials should contain **good defaults**.
+- Ready examples that one can **copy-paste** to get quickly started.
 - Up-to-date FAQ section.
 
 ---
 
-### Versions {#versions}
+### Versions
 
 - Your code project should be versioned (version control).
-- If the project has versions, the documentation should too.
-- Important for reproducibility: I should be able to install a code version
-  from 3 years ago and for this I will probably also need the possibility to
-  see the documentation from 3 years ago.
-- If you release your code you probably need at least two documentation
-  versions: one for the released code, one for the bleeding edge code - make
-  sure your documentation supports that.
+- Enable reproducibility and avoid confusion: **documentation should be versioned** as well.
+- Have you ever seen: *"We will soon release a new version and are updating the documentation.
+  Some features may not be available in the version you have downloaded."*?
 
 ---
 
-### Documentation should be placed and tracked close to the source code {#close-to-source}
+### Documentation should be placed and tracked close to the source code
 
-- Documenting close to the source code minimizes barrier to contribute.
+- Documenting **close to the source code** (e.g. subdirectory ``doc/``) minimizes barrier to contribute.
 - I should not need to log in to another machine or service and jump through hoops to contribute.
-- Ideally we prefer to write documentation where we also write code.
 
 ---
 
-### Use a lightweight markup {#markup}
+### Use a standard markup language
 
-- LaTeX is not lightweight enough.
-- Use a standard markup language.
-- Use RST or Markdown.
+- Use either
+  [RST](http://docutils.sourceforge.net/rst.html) or
+  [Markdown](http://daringfireball.net/projects/markdown/) markup.
 - GitHub and GitLab automatically render README.md or README.rst files.
 
 ---
 
-### Make the documentation readable on any device {#devices}
+### Readable on any device
 
 - Many people browse the web on their phone or tablet.
 - If you use standard solutions and services (to be demonstrated later in this
@@ -75,36 +58,45 @@ keypoints:
 
 ---
 
-### Written by humans {#reader-friendly}
+### Copy-paste-able
 
-- Prose
+- PDF alone is not enough since **copy-pasting out of a PDF document can be difficult**.
+- It is OK to provide a generated PDF in addition to a copy-paste-able format.
+
+---
+
+### Written by humans
+
 - Automatically generated documentation (e.g. API documentation) is useful as
   complementary documentation but it does not replace tutorials written by
   humans.
 
 ---
 
-### Information for contributors {#contributors}
+### Information for contributors
 
-- You probably want people to help out, but it needs to be easy. Document how to contribute by pull requests.
-- Users of your code may be shy to contribute code. Your documentation provides a platform for your first contributions.
+- Make it easy for others to contribute: **document how you prefer others to contribute**.
+- Users of your code may be shy to contribute code.
+  Your **documentation provides a platform for your first contributions**.
 - If you get contributions to your code or documentation that need further work, provide positive feedback.
 
 ---
 
-### Installation instructions {#installation}
+### Installation instructions
 
 - If you haven't documented how to install your code, people might not want to use it.
-- Give step by step instructions for the basic case. Additional information and caveats can be linked from there.
-- List requirements and dependencies (libraries, compilers, environment)
+- Give **step by step instructions for the basic case**.
+  Additional information and caveats can be linked from there.
+- List requirements and dependencies (libraries, compilers, environment).
 - Include instructions for how to test for correctness after installation.
 
 ---
 
-### Make the license explicit {#license}
+### Make the license explicit
 
-- Include a LICENSE file with your source code.
-- Without a license, your work is under exclusive copyright by default (others are not allowed to re-use or modify anything).
+- **Include a LICENSE file** with your source code.
+- Without a license, your work is under exclusive copyright by default:
+  others are not allowed to re-use or modify anything.
 - GitHub and GitLab allows to choose a license from common license templates. 
 
 ---
