@@ -18,7 +18,9 @@ wake participants up.
 
 ### Timing
 
-Give hints on timing.
+As an instructors you should prepare all bullet points in the requirements and
+tools section but do not go through each bullet point in detail. Only highlight
+the main points and rather give time for a discussion.
 
 
 ### Core aspects
