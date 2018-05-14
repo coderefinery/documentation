@@ -16,10 +16,8 @@ keypoints:
 ## Comments in the source code
 
 - Good for programmers
-- Requires terminal or repository browser
-- Can be used to generate API documentation (examples later)
 - Typically not sufficient for users
-- Typically not enough on its own
+- Can be used to auto-generate documentation for functions/classes
 
 ---
 
@@ -46,6 +44,7 @@ keypoints:
   - Difficult to serve multiple versions
   - Difficult to check out a specific old version
   - Typically needs to be hosted and maintained
+  - Typically disconnected from source code repository
 
 ---
 
@@ -54,9 +53,6 @@ keypoints:
 - Advantage
   - Popular and familiar in the physics and mathematics community
 - Disadvantages
-  - Not a lightweight markup
-  - Barrier to write documentation is relatively high
-  - Often requires sophisticated setup or a human running some compilation scripts
   - PDF format is not ideal for copy-paste ability of examples
   - PDF manual is not ideal on small screens (phone)
   - Typically not trivial to serve and update the generated PDF
@@ -65,11 +61,13 @@ keypoints:
 
 ## Doxygen
 
-- Typically used to auto-generate API documentation
+- Auto-generates API documentation
 - Documented directly in the source code
-- Popular in the C++ community (Doxygen is to C++ what Sphinx is to Python)
-- Has support for C, Fortran, Python, Java, etc. See [Doxygen supported programming languages](http://www.stack.nl/~dimitri/doxygen/)
-- Many keywords are understood by Doxygen: [Doxygen special commands](http://www.stack.nl/~dimitri/doxygen/manual/commands.html)
+- Popular in the C++ community
+- Has support for C, Fortran, Python, Java, etc.,
+  see [Doxygen supported programming languages](http://www.stack.nl/~dimitri/doxygen/)
+- Many keywords are understood by Doxygen:
+  [Doxygen special commands](http://www.stack.nl/~dimitri/doxygen/manual/commands.html)
 - Can be used to also generate higher-level ("human") documentation
 - Can be deployed to GiHub/GitLab/Bitbucket Pages
 
@@ -77,23 +75,46 @@ keypoints:
 
 ## RST and Markdown
 
-- Both very lightweight
-- Looks good in the browser
-- Looks good in the terminal
-- [Sphinx](http://sphinx-doc.org) can generate HTML/PDF/LaTeX from RST
+- Lightweight and readable
+- [Sphinx](http://sphinx-doc.org) can generate HTML/PDF/LaTeX from RST and Markdown
+- [Learn Markdown in 60 seconds](http://commonmark.org/help/)
 - Basically all Python projects use Sphinx
 - Good code highlighting: [Pygments](http://pygments.org), [Rouge](http://rouge.jneen.net)
 - [Jekyll](https://jekyllrb.com) and other static site generators could be used, too
-- Advantage of Sphinx
-  - [Read the docs](http://readthedocs.org): Service to host public [Sphinx](http://sphinx-doc.org) documentation for free!
+- Advantage of Sphinx: [Read the docs](http://readthedocs.org)
+  hosts public [Sphinx](http://sphinx-doc.org) documentation for free!
+
+```
+# This is a section in Markdown   This is a section in RST
+                                  ========================
+
+## This is a subsection           This is a subsection
+                                  --------------------
+
+No markup is needed for           No markup is needed for
+a normal paragraph.               a normal paragraph.
+
+                                  ::
+
+    This is a code block            This is a code block
+
+
+**Bold** and *emphasized*.        **Bold** and *emphasized*.
+
+A list:                           A list:
+- this is an item                 - this is an item
+- another item                    - another item
+
+There is more: images,            There is more: images,
+tables, links, ...                tables, links, ...
+```
 
 ---
 
 ## HTML
 
-- Avoid inventing your own solution
+- Projects typically autogenerate HTML from RST or Markdown
 - Do not maintain own web servers for project websites
     - [GitHub Pages](https://pages.github.com)
     - [Bitbucket Pages](http://pages.bitbucket.org)
     - [GitLab Pages](https://pages.gitlab.io)
-    - Good code highlighting: [Pygments](http://pygments.org), [Rouge](http://rouge.jneen.net)
