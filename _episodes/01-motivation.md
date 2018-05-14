@@ -11,19 +11,17 @@ objectives:
 
 ## Questions
 
-- Why is project documentation important?
+- Is project documentation important? Why?
 - How would you describe a useful documentation?
-- How can we motivate researchers to contribute to the documentation?
-- How other researchers will know about your project?
-- Does your project have a website? If not, do you think it would be good for
+- How can you motivate your colleagues to contribute to the documentation?
+- Does your project have a website? If not, do you think it could be good for
   the project?
 
 ---
 
 ## [Why is project documentation important?](http://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)
 
-- You will be using your code in the future
-- You may want other people to use your code
-- You may want people to help out
-- You want your code to be better
-- You want to be a better writer
+- You will probably use your code in the future and may forget details.
+- You may want others to use your code (almost impossible without documentation).
+- You may want others to contribute to the code.
+- Shield your limited time and let the documentation answer FAQs.
