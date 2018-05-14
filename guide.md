@@ -34,4 +34,11 @@ List optional sessions here.
 
 ### Typical pitfalls
 
-- Anaconda shell and Git
+#### Anaconda shell, Git, and Nano on Windows
+
+Windows users (probably) need to use the Anaconda prompt to run sphinx commands
+(sphinx-build, sphinx-quickstart). Git seems to be present in the standard
+anaconda installation, but not nano.
+
+A good working solution seems to be that Windows users have two terminals
+side-by-side, one with Anaconda prompt and another with git-bash.
