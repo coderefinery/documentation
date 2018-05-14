@@ -7,13 +7,13 @@ permalink: /guide/
 
 ### How to start
 
-Here can be a starting anecdote or a starting question.
+With questions about documentation habits and experience with documentation
+of own code and code written by others.
 
 
 ### Questions to involve participants
 
-Here list a couple of questions that can be asked to
-wake participants up.
+- How do you document unpublished features?
 
 
 ### Timing
@@ -25,13 +25,15 @@ the main points and rather give time for a discussion.
 
 ### Core aspects
 
-- Versionned and close to the code
+- Documentation has to be versionnable and branchable
+- Documentation should be tracked together with the source code
 - Sphinx is not only for Python
+- Read the Docs is not only for Github
 
 
 ### Sessions which can be skipped if time is tight
 
-List optional sessions here.
+- Do not insist on practicing Markdown or RST syntax
 
 
 ### Typical pitfalls
