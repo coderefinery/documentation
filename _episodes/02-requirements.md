@@ -16,7 +16,20 @@ keypoints:
 
 ## What do we expect from a good documentation?
 
-### Division into tutorials, FAQs, and keyword reference
+- [Division into tutorials, FAQs, and keyword reference](#tutorials)
+- [Versions](#versions)
+- [Tracked close to the source code](#close)
+- [Use a standard markup language](#standard-markup)
+- [Readable on any device](#any-device)
+- [Copy-paste-able](#copy-paste)
+- [Written by humans](#prose)
+- [Information for contributors](#contributors)
+- [Installation instructions](#installation)
+- [Explicit license](#license)
+
+---
+
+### Division into tutorials, FAQs, and keyword reference {#tutorials}
 
 - Show not only what is possible, but also how the software should be used: **tutorials**!
 - Tutorials should contain **good defaults**.
@@ -25,7 +38,7 @@ keypoints:
 
 ---
 
-### Versions
+### Versions {#versions}
 
 - Your code project should be versioned (version control).
 - Enable reproducibility and avoid confusion: **documentation should be versioned** as well.
@@ -34,14 +47,14 @@ keypoints:
 
 ---
 
-### Documentation should be placed and tracked close to the source code
+### Documentation should be placed and tracked close to the source code {#close}
 
 - Documenting **close to the source code** (e.g. subdirectory ``doc/``) minimizes barrier to contribute.
 - I should not need to log in to another machine or service and jump through hoops to contribute.
 
 ---
 
-### Use a standard markup language
+### Use a standard markup language {#standard-markup}
 
 - Use either
   [RST](http://docutils.sourceforge.net/rst.html) or
@@ -50,7 +63,7 @@ keypoints:
 
 ---
 
-### Readable on any device
+### Readable on any device {#any-device}
 
 - Many people browse the web on their phone or tablet.
 - If you use standard solutions and services (to be demonstrated later in this
@@ -58,14 +71,14 @@ keypoints:
 
 ---
 
-### Copy-paste-able
+### Copy-paste-able {#copy-paste}
 
 - PDF alone is not enough since **copy-pasting out of a PDF document can be difficult**.
 - It is OK to provide a generated PDF in addition to a copy-paste-able format.
 
 ---
 
-### Written by humans
+### Written by humans {#prose}
 
 - Automatically generated documentation (e.g. API documentation) is useful as
   complementary documentation but it does not replace tutorials written by
@@ -73,7 +86,7 @@ keypoints:
 
 ---
 
-### Information for contributors
+### Information for contributors {#contributors}
 
 - Make it easy for others to contribute: **document how you prefer others to contribute**.
 - Users of your code may be shy to contribute code.
@@ -82,7 +95,7 @@ keypoints:
 
 ---
 
-### Installation instructions
+### Installation instructions {#installation}
 
 - If you haven't documented how to install your code, people might not want to use it.
 - Give **step by step instructions for the basic case**.
@@ -92,12 +105,12 @@ keypoints:
 
 ---
 
-### Make the license explicit
+### Make the license explicit {#license}
 
 - **Include a LICENSE file** with your source code.
 - Without a license, your work is under exclusive copyright by default:
   others are not allowed to re-use or modify anything.
-- GitHub and GitLab allows to choose a license from common license templates. 
+- GitHub and GitLab allows to choose a license from common license templates.
 
 ---
 
