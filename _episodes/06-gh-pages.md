@@ -25,12 +25,10 @@ contains a branch `gh-pages` is served on
 Let us try it out!
 
 - First fork and clone the [example repository](https://github.com/coderefinery/gh-pages-example).
-
 ```shell
 $ git clone git@github.com:user/gh-pages-example.git  # adapt user, also ok to clone via https if you prefer
 $ cd gh-pages-example
 ```
-
 - Check that you are indeed on the `gh-pages` branch.
 - Make some changes to `index.md` or `about.md`or `team.md`, commit and push.
 ```shell
@@ -42,13 +40,13 @@ $ git push origin gh-pages
 
 Yay! Now you have successfully deployed a website!
 
-- What's going on?
-  - the example uses [github pages supported themes](https://pages.github.com/themes/)
-  - we define the theme we want to use in _config.yml 
-  - add the page layout that we want to use in the beginning of the markdown files. This is called [front matter](https://jekyllrb.com/docs/frontmatter/). 
- 
-Thats it! Github takes care of rendering the pages - see the [documentation](https://help.github.com/articles/adding-a-jekyll-theme-to-your-github-pages-site/)
+What just happened?
+- the example uses [GitHub Pages supported themes](https://pages.github.com/themes/).
+- we define the theme we want to use in `_config.yml`
+- add the page layout that we want to use in the beginning of the Markdown files. This is called [front matter](https://jekyllrb.com/docs/frontmatter/).
 
+Thats it! Github takes care of rendering the pages - see the
+[documentation](https://help.github.com/articles/adding-a-jekyll-theme-to-your-github-pages-site/).
 
 It is a good idea to keep source code, web sources, and possibly also Sphinx
 source all in the same repository, tracking a common history.
@@ -63,7 +61,6 @@ on `https://<user>.github.io`.
 
 ## Where you might want to go from here
 
-- Plain HTML often leads to code repetition and does not allow modular development of website sources.
 - There are many web frameworks available.
 - **Static site generators** allow modular websites and play well with GitHub/GitLab/Bitbucket Pages which serve static sites:
   - [Jekyll](https://jekyllrb.com)
