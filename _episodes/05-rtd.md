@@ -45,17 +45,17 @@ In this exercise we will fork an example repository on GitHub and deploy it to R
 We will use GitHub for this exercise but it will also work with any Git
 repository with public read access.
 
-1. In the first step, fork [this repository](https://github.com/Vathasav/example-rtdocs.git) and
+1. In the first step, fork [this repository](https://github.com/coderefinery/rtdocs-example.git) and
 then clone the fork to your laptop
     - The project contains a script for counting the frequency distribution of words in a given file and some documentation generated using sphinx. For bigger projects, we will have much more source files.
 2. In the second step, enable the project on Read the Docs
 
-### Step 1: Fork this [example repository](https://github.com/Vathasav/example-rtdocs.git) and clone the repository
+### Step 1: Fork this [example repository](https://github.com/coderefinery/rtdocs-example.git) and clone the repository
 
 
 ```shell
-$ git clone git@github.com:user/example-rtdocs.git  # adapt user, also ok to clone via https if you prefer
-$ cd example-rtdocs
+$ git clone git@github.com:user/rtdocs-example.git  # adapt user, also ok to clone via https if you prefer
+$ cd rtdocs-example
 ```
 - The repository contains two folders
     - **source** folder contains the source code
@@ -72,7 +72,7 @@ The docs folder contains the sphinx configuration file (conf.py) and the core fi
 
 Inside the cloned repository, run `sphinx-build . _build`.
 Then point your browser to e.g.
-`file:///home/user/example-rtdocs/docs/_build/index.html`. Adapt the path to the actual
+`file:///home/user/rtdocs-example/docs/_build/index.html`. Adapt the path to the actual
 path where you have cloned to (the `/home/user` part is almost certainly wrong in your case).
 
 
@@ -91,7 +91,7 @@ will not be needed here.
 - Click "Next"
 
 That's it! Your site should now be live on
-[http://user-example-rtdocs.readthedocs.io](http://user-example-rtdocs.readthedocs.io)
+[http://user-rtdocs-example.readthedocs.io](http://user-rtdocs-example.readthedocs.io)
 (replace project name).
 
 Finally, make some changes to your documentation
