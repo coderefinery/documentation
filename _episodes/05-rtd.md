@@ -54,7 +54,7 @@ then clone the fork to your laptop
 
 
 ```shell
-$ git clone git@github.com:user/rtdocs-example.git  # adapt user, also ok to clone via https if you prefer
+$ git clone https://github.com/user/rtdocs-example.git  # adapt user
 $ cd rtdocs-example
 ```
 - The repository contains two folders

@@ -41,7 +41,7 @@ Let us try it out!
 
 - First fork and clone the [example repository](https://github.com/coderefinery/gh-pages-example).
 ```shell
-$ git clone git@github.com:user/gh-pages-example.git  # adapt user, also ok to clone via https if you prefer
+$ git clone https://github.com/user/gh-pages-example.git  # adapt user
 $ cd gh-pages-example
 ```
 - Check that you are indeed on the `gh-pages` branch.
