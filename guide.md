@@ -5,6 +5,16 @@ permalink: /guide/
 
 # Instructor guide
 
+
+### Place this lesson on last day of the workshop
+
+Reason is that with collaborative Git we could create more interesting
+documentation exercises. Currently there are some elements of forking and
+pushing and this is only really introduced on day two.
+
+We have tried this lesson on day one and it felt too early and disconnected/abrupt.
+
+
 ### How to start
 
 With questions about documentation habits and experience with documentation
