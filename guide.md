@@ -46,3 +46,9 @@ anaconda installation, but not nano.
 
 A good working solution seems to be that Windows users have two terminals
 side-by-side, one with Anaconda prompt and another with git-bash.
+
+
+#### Character encoding issues
+
+Can arise when using non-utf8 characters in conf.py. Diagonse this with ``file -i conf.py``
+and ``locale``.
