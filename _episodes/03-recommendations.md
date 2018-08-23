@@ -22,7 +22,7 @@ objectives:
 
 ## Example
 
-- Great example: https://snakemake.readthedocs.io
+- Great example: [https://snakemake.readthedocs.io](https://snakemake.readthedocs.io)
 - Written in reStructuredText (RST)
 - Rendered to HTML/PDF/LaTeX by [Sphinx](http://sphinx-doc.org)
 - Served by [Read the Docs](https://readthedocs.org)
@@ -73,7 +73,7 @@ Learn Markdown:
 - [https://stackedit.io](https://stackedit.io)
 
 Learn RST:
-- http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
+- [http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html](reStructuredText Primer)
 
 ---
 

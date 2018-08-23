@@ -15,7 +15,7 @@ objectives:
 - Equations and images no problem
 - Layout can be styled
 - Many projects use [Read the Docs](https://readthedocs.org) as their main site
-- It is no problem to serve using your own URL `http://myproject.org` instead of `http://myproject.readthedocs.io`
+- It is no problem to serve using your own URL `https://myproject.org` instead of `https://myproject.readthedocs.io`
 
 ---
 
@@ -43,7 +43,7 @@ will not be needed here.
 - Log into [Read the Docs](https://readthedocs.org)
   and visit your [dashboard](https://readthedocs.org/dashboard/)
 - Click "Import a Project"
-- Select "Connect to GitHub", and choose the doc-example repository
+- Select "Connect to GitHub", and choose the repository you would like to build
 - Click "Next"
 
 That's it! Your site should now be live on

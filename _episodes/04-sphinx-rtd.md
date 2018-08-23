@@ -17,7 +17,7 @@ objectives:
 ### Sphinx is not only for Python
 
 Sphinx comes from the Python community but you can use
-it to document any project in any language.
+it to document any project in **any language**.
 
 
 ### How documentation is updated
@@ -42,14 +42,14 @@ We will return to the word-count example from the
 [https://coderefinery.github.io/reproducible-research/](reproducible research lesson)
 which we have partially documented using Sphinx/RTD.
 
-- Repository: https://github.com/coderefinery/word-count
-- Documentation: https://word-count.readthedocs.io
+- [https://github.com/coderefinery/word-count](Repository)
+- [https://word-count.readthedocs.io](Documentation on RTD)
 
 Your goal:
 
 - Fork the repository
 - Clone the fork
-- Contribute some documentation: https://word-count.readthedocs.io/en/latest/exercises.html
+- [https://word-count.readthedocs.io/en/latest/exercises.html](Contribute some documentation) using pull requests which we review and integrate together
 
 
 ### Which files to edit
