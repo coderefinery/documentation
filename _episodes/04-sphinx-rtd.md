@@ -123,7 +123,7 @@ Windows users type:
 $ start _build/index.html
 ```
 
-Others: enter `file:///home/user/doc-example/_build/index.html`
+Others: enter `file:///home/user/word-count/_build/index.html`
 in your browser (adapting the path to your case).
 
 Hopefully you can now see the documentation pages. If so, then you are able to
