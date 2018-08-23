@@ -19,9 +19,16 @@ objectives:
 
 ---
 
-## [Why is project documentation important?](http://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)
+## Why is project documentation important?
 
 - You will probably use your code in the future and may forget details.
 - You may want others to use your code (almost impossible without documentation).
 - You may want others to contribute to the code.
 - Shield your limited time and let the documentation answer FAQs.
+
+---
+
+## Good resources
+
+- http://www.writethedocs.org/guide/writing/beginners-guide-to-docs/
+- https://www.divio.com/blog/documentation/
