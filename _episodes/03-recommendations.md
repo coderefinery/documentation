@@ -4,7 +4,7 @@ title: "Recommendations"
 teaching: 5
 exercises: 0
 questions:
-  - What recommendations can we take home?
+  - What tools can we recommend?
 objectives:
   - Automatize and give the boring work to machines.
   - Make contributing documentation easy, simple, and direct.
