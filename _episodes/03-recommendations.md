@@ -31,9 +31,7 @@ objectives:
 
 ## Markdown and RST
 
-- Lightweight and readable
-- Widely used by static site generators such as [Sphinx](http://sphinx-doc.org),
-  [Jekyll](https://jekyllrb.com), and others.
+- Two of the most popular lightweight markup languages.
 
 ```
 # This is a section in Markdown   This is a section in RST
@@ -59,6 +57,15 @@ A list:                           A list:
 There is more: images,            There is more: images,
 tables, links, ...                tables, links, ...
 ```
+
+- Widely used by static site generators such as [Sphinx](http://sphinx-doc.org),
+  [Jekyll](https://jekyllrb.com), and others.
+- Markdown considered simpler to use, but RST more extensible.
+- Markdown convenient for smaller documents,
+  but for larger and more complicated documents RST may be a better option.
+- Sphinx was built around RST, but recently
+  [support for Markdown was added](http://blog.readthedocs.com/adding-markdown-support/).
+- There are (unfortunately) [many flavors of Markdown](https://github.com/jgm/CommonMark/wiki/Markdown-Flavors).
 
 Learn Markdown:
 - [Learn Markdown in 60 seconds](http://commonmark.org/help/)
