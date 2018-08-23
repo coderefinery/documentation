@@ -42,8 +42,8 @@ We will return to the word-count example from the
 [https://coderefinery.github.io/reproducible-research/](reproducible research lesson)
 which we have partially documented using Sphinx/RTD.
 
-- [https://github.com/coderefinery/word-count](Repository)
-- [https://word-count.readthedocs.io](Documentation on RTD)
+- [Repository](https://github.com/coderefinery/word-count)
+- [Documentation on RTD](https://word-count.readthedocs.io)
 
 Your goal:
 
