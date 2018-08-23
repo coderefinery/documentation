@@ -2,7 +2,7 @@
 layout: episode
 title: "Sphinx and Read the Docs exercise"
 teaching: 5
-exercises: 15
+exercises: 30
 objectives:
   - Contribute documentation to a project powered by Sphinx and Read the Docs.
 ---

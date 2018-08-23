@@ -1,7 +1,7 @@
 ---
 layout: episode
 title: "Recommendations"
-teaching: 5
+teaching: 10
 exercises: 0
 questions:
   - What tools can we recommend?

@@ -2,7 +2,7 @@
 layout: episode
 title: "Deploying a project website or homepage to GitHub Pages"
 teaching: 0
-exercises: 15
+exercises: 20
 questions:
   - How can we have a good-looking project website without hosting it ourselves?
 objectives:

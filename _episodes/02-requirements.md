@@ -1,7 +1,7 @@
 ---
 layout: episode
 title: "Specs and requirements"
-teaching: 15
+teaching: 10
 exercises: 0
 questions:
   - What requirements and specifications can we impose on a good documentation?

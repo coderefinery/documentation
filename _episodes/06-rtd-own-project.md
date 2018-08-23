@@ -2,7 +2,7 @@
 layout: episode
 title: "How to hook up your own project with Read the Docs"
 teaching: 5
-exercises: 15
+exercises: 20
 objectives:
   - Hook up your own project with Read the Docs.
 ---

@@ -2,7 +2,7 @@
 layout: episode
 title: "Adding Sphinx to your own project"
 teaching: 5
-exercises: 15
+exercises: 20
 objectives:
   - Hook up your own project with Sphinx.
 ---
