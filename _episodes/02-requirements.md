@@ -91,13 +91,11 @@ keypoints:
 - Make it easy for others to contribute: **document how you prefer others to contribute**.
 - Users of your code may be shy to contribute code.
   Your **documentation provides a platform for your first contributions**.
-- If you get contributions to your code or documentation that need further work, provide positive feedback.
 
 ---
 
 ### Installation instructions {#installation}
 
-- If you haven't documented how to install your code, people might not want to use it.
 - Give **step by step instructions for the basic case**.
   Additional information and caveats can be linked from there.
 - List requirements and dependencies (libraries, compilers, environment).
