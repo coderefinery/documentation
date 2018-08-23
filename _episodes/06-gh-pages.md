@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: "Deploying a project website to GitHub Pages"
+title: "Deploying a project website or homepage to GitHub Pages"
 teaching: 0
 exercises: 15
 questions:
@@ -8,7 +8,7 @@ questions:
 objectives:
   - Create a working example which you can take home and adapt for your project.
 keypoints:
-  - Do not maintain own web servers for project websites.
+  - Do not maintain own web servers for project websites or homepages.
 ---
 
 ## Create an example project website and host it on GitHub Pages
@@ -21,6 +21,8 @@ professionals so that you can focus on your project.
 Every project `<projectname>` on GitHub under the user/namespace `<user>` which
 contains a branch `gh-pages` is served on
 `https://<user>.github.io/<projectname>/`.
+
+This is how all https://coderefinery.org material is hosted.
 
 ---
 
@@ -75,6 +77,8 @@ under `docs/` - see the [documentation](https://help.github.com/articles/configu
 
 Many people put their personal home page on repository `<user>.github.io`, which is served
 on `https://<user>.github.io`.
+
+It is no problem to use a custom domain instead of `*.github.io`.
 
 ---
 
