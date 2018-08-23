@@ -47,7 +47,7 @@ $ git clone https://github.com/user/gh-pages-example.git  # adapt user
 $ cd gh-pages-example
 ```
 - Check that you are indeed on the `gh-pages` branch.
-- Make some changes to `index.md` or `about.md`or `team.md`, commit and push.
+- Make some changes to `index.md` or `about.md` or `team.md`, commit and push.
 ```shell
 $ git add index.md team.md  # add changes to commit
 $ git commit -m "modified website contents"
