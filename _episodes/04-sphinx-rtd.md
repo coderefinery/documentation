@@ -39,7 +39,7 @@ it to document any project in **any language**.
 ## Exercise
 
 We will return to the word-count example from the
-[https://coderefinery.github.io/reproducible-research/](reproducible research lesson)
+[reproducible research lesson](https://coderefinery.github.io/reproducible-research/)
 which we have partially documented using Sphinx/RTD.
 
 - [Repository](https://github.com/coderefinery/word-count)
@@ -49,7 +49,7 @@ Your goal:
 
 - Fork the repository
 - Clone the fork
-- [https://word-count.readthedocs.io/en/latest/exercises.html](Contribute some documentation) using pull requests which we review and integrate together
+- [Contribute some documentation](https://word-count.readthedocs.io/en/latest/exercises.html) using pull requests which we review and integrate together
 
 
 ### Which files to edit
