@@ -14,6 +14,12 @@ objectives:
 - Result deployed to and served by [Read the Docs](https://readthedocs.org)
 
 
+### Sphinx is not only for Python
+
+Sphinx comes from the Python community but you can use
+it to document any project in any language.
+
+
 ### How documentation is updated
 
 - By a `git push`
