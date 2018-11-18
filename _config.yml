@@ -26,7 +26,7 @@ unpublished: false
 
 # plugins
 whitelist: []
-plugins: []
+gems: []
 
 # conversion
 markdown: kramdown
