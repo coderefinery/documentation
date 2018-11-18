@@ -118,8 +118,9 @@ Experiment with Markdown:
 
 ## HTML
 
-- Projects typically autogenerate HTML from RST or Markdown
-- Do not maintain own web servers for project websites
+- Projects can easily autogenerate HTML from RST or Markdown
+- Make it possible to avoid maintaining own web servers to host 
+  documentation and use resources like: 
     - [GitHub Pages](https://pages.github.com)
     - [Bitbucket Pages](http://pages.bitbucket.org)
     - [GitLab Pages](https://pages.gitlab.io)
