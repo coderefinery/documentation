@@ -21,12 +21,10 @@ The approach that we will learn will be transferable to
 
 ## Prerequisites
 
-- Basic understanding of Git.
-- You need a [GitHub](https://github.com) account.
+1. Basic understanding of Git.
 
+2. You need a [GitHub](https://github.com) account.
 
-## Optional requirements (to set up own Sphinx/ Read the Docs project)
+3. You need a [Read the Docs](https://readthedocs.org) account.
 
-- You need a [Read the Docs](https://readthedocs.org) account.
-- You need to have [Sphinx](http://www.sphinx-doc.org) installed
-  (as part of your Python environment installation).
+4. You need to have [Sphinx](http://www.sphinx-doc.org) installed (as part of your Python environment installation).

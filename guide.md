@@ -5,16 +5,6 @@ permalink: /guide/
 
 # Instructor guide
 
-
-### Place this lesson on last day of the workshop
-
-Reason is that with collaborative Git we could create more interesting
-documentation exercises. Currently there are some elements of forking and
-pushing and this is only really introduced on day two.
-
-We have tried this lesson on day one and it felt too early and disconnected/abrupt.
-
-
 ### How to start
 
 With questions about documentation habits and experience with documentation
@@ -56,9 +46,3 @@ anaconda installation, but not nano.
 
 A good working solution seems to be that Windows users have two terminals
 side-by-side, one with Anaconda prompt and another with git-bash.
-
-
-#### Character encoding issues
-
-Can arise when using non-utf8 characters in conf.py. Diagonse this with ``file -i conf.py``
-and ``locale``.
