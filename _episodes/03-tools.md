@@ -18,6 +18,7 @@ keypoints:
 - Good for programmers
 - Typically not sufficient for users
 - Can be used to auto-generate documentation for functions/classes
+- Version controlled alongside code
 
 ---
 
