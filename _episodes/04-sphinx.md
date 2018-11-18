@@ -29,6 +29,19 @@ Before we start, make sure that Sphinx is part of your Python installation or
 environment. If you use Anaconda, you are set. If you use Miniconda or virtual
 environments, make sure Sphinx is installed into the Miniconda or virtual
 environment.
+To test your Sphinx installation
+
+```shell
+$ python --version
+Python 3.7.0
+
+$ python -c "import sphinx; print(sphinx.__version__)"
+1.8.2
+
+```
+The above command should returns python version and your Sphinx version, 
+if you receive an error e.g. command not found or ModuleNotFoundError 
+please follow installation instructions ([Sphinx](http://www.sphinx-doc.org)). 
 
 ### Create a directory for your documentation, and generate the basic documentation template
 
