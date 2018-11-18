@@ -39,8 +39,9 @@ $ python -c "import sphinx; print(sphinx.__version__)"
 1.8.2
 
 ```
-The above command should returns python version and your Sphinx version, 
-if you receive an error e.g. command not found or ModuleNotFoundError 
+The above command should return your python version and your Sphinx version, 
+if you receive an error  instead of the versions (any version would do) 
+e.g. command not found or ModuleNotFoundError 
 please follow installation instructions ([Sphinx](http://www.sphinx-doc.org)). 
 
 ### Create a directory for your documentation, and generate the basic documentation template
