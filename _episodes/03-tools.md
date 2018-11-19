@@ -18,6 +18,7 @@ keypoints:
 - Good for programmers
 - Typically not sufficient for users
 - Can be used to auto-generate documentation for functions/classes
+- Version controlled alongside code
 
 ---
 
@@ -113,12 +114,16 @@ Experiment with Markdown:
 - [https://dillinger.io](http://dillinger.io)
 - [https://stackedit.io](https://stackedit.io)
 
+Experiment with reStructuredText:
+- [http://rst.ninjs.org/](http://rst.ninjs.org/)
+
 ---
 
 ## HTML
 
-- Projects typically autogenerate HTML from RST or Markdown
-- Do not maintain own web servers for project websites
+- Projects can easily autogenerate HTML from RST or Markdown
+- Make it possible to avoid maintaining own web servers to host 
+  documentation and use resources like: 
     - [GitHub Pages](https://pages.github.com)
     - [Bitbucket Pages](http://pages.bitbucket.org)
     - [GitLab Pages](https://pages.gitlab.io)

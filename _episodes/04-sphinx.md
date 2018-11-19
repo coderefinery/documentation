@@ -29,6 +29,20 @@ Before we start, make sure that Sphinx is part of your Python installation or
 environment. If you use Anaconda, you are set. If you use Miniconda or virtual
 environments, make sure Sphinx is installed into the Miniconda or virtual
 environment.
+To test your Sphinx installation
+
+```shell
+$ python --version
+Python 3.7.0
+
+$ python -c "import sphinx; print(sphinx.__version__)"
+1.8.2
+
+```
+The above command should return your python version and your Sphinx version, 
+if you receive an error  instead of the versions (any version would do) 
+e.g. command not found or ModuleNotFoundError 
+please follow installation instructions ([Sphinx](http://www.sphinx-doc.org)). 
 
 ### Create a directory for your documentation, and generate the basic documentation template
 
@@ -220,6 +234,7 @@ This is useful to check how things look before pushing changes to GitHub or else
 1. Add a entry below feature-a labeled *feature-b* to the `index.rst` file.
 2. Create a file `feature-b.rst` in the same directory as your `feature-a.rst` file.
 3. Add some content to feature-b, rebuild with `sphinx-build`, and refresh the browser to look at the results.
+- [Help](http://docutils.sourceforge.net/docs/ref/rst/directives.html)
 
 Experiment with the following RST syntax:
 
