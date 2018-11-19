@@ -234,6 +234,7 @@ This is useful to check how things look before pushing changes to GitHub or else
 1. Add a entry below feature-a labeled *feature-b* to the `index.rst` file.
 2. Create a file `feature-b.rst` in the same directory as your `feature-a.rst` file.
 3. Add some content to feature-b, rebuild with `sphinx-build`, and refresh the browser to look at the results.
+- [Help](http://docutils.sourceforge.net/docs/ref/rst/directives.html)
 
 Experiment with the following RST syntax:
 
