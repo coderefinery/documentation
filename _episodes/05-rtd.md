@@ -62,11 +62,11 @@ $ cd rtdocs-example
     - **docs** folder contains the sphinx documentation
 
 The docs folder contains the sphinx configuration file (conf.py) and the core file (index.rst) and some contents (usage.rst and contributions.rst).
-  
+
 - The sphinx files are generated using sphinx-quickstart that we have practiced earlier. The only changes are:
     - *autodoc: automatically insert docstrings from modules (y/n) [n]: y*
     - informing conf.py where to find the source code  - *sys.path.insert(0, os.path.abspath('../source'))*
-  
+
 
 #### Build HTML pages locally
 
@@ -75,6 +75,12 @@ Then point your browser to e.g.
 `file:///home/user/rtdocs-example/docs/_build/index.html`. Adapt the path to the actual
 path where you have cloned to (the `/home/user` part is almost certainly wrong in your case).
 
+In order to customize the HTML pages build use the command `sphinx-build -bhtml . _build/html` where the `.` represents the source directory
+and `_build/html` represents the output directory.
+
+#### Test HTML pages links
+
+Inside the cloned repository, run `sphinx-build -W -blinkcheck -d _build/doctrees . _build/html` in order to check the integrity of all external links.
 
 ### Step 2: Enable the project on [Read the Docs](https://readthedocs.org)
 
@@ -100,4 +106,3 @@ Finally, make some changes to your documentation
   - rules for contribution
   - commit and push them, and verify that the documentation website refreshes after your changes
 (can take few seconds or a minute).
-
