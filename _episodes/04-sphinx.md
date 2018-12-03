@@ -52,10 +52,8 @@ $ cd doc-example
 $ sphinx-quickstart
 ```
 
-The quickstart utility will ask you some questions. For this exercise, enter
-the following answers. In most cases the default options are used, but we will
-choose to not create Makefiles and instead build the documentation directly
-with `sphinx-build`:
+The quickstart utility will ask you some questions. For this exercise, you can go 
+with the default answers except to specify a project name, your name and project version:. 
 
 ```
 > Root path for the documentation [.]:
@@ -79,8 +77,8 @@ with `sphinx-build`:
 > ifconfig: conditional inclusion of content based on config values (y/n) [n]:
 > viewcode: include links to the source code of documented Python objects (y/n) [n]:
 > githubpages: create .nojekyll file to publish the document on GitHub pages (y/n) [n]:
-> Create Makefile? (y/n) [y]: n
-> Create Windows command file? (y/n) [y]: n
+> Create Makefile? (y/n) [y]: 
+> Create Windows command file? (y/n) [y]: 
 ```
 
 A couple of files and directories are created:
@@ -110,7 +108,14 @@ A couple of files and directories are created:
     <td style="text-align: left; border: 1px solid black; padding: 3px;"> _static/ </td>
     <td style="text-align: left; border: 1px solid black; padding: 3px;"> Static files (images, styles, etc.) copied to output directory on build </td>
   </tr>
+  <tr>
+    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Makefile & make.bat </td>
+    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Makefiles to build documentation using make </td>
+  </tr>
 </table>
+
+`Makefile` and `make.bat` (for Windows) are build scripts that wrap the sphinx commands, but 
+we will be doing it explicitly.
 
 Let's have a look at the `index.rst` file, which is the main file of your documentation:
 
