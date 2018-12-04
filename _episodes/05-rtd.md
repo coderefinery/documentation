@@ -45,23 +45,24 @@ In this exercise we will fork an example repository on GitHub and deploy it to R
 We will use GitHub for this exercise but it will also work with any Git
 repository with public read access.
 
-1. In the first step, fork [this repository](https://github.com/coderefinery/rtdocs-example.git) and
-then clone the fork to your laptop
+1. In the first step, fork 
+ [this word-count example project](https://github.com/coderefinery/word-count.git) and
+ then clone the fork to your laptop
     - The project contains a script for counting the frequency distribution of words in a given file and some documentation generated using sphinx. For bigger projects, we will have much more source files.
 2. In the second step, enable the project on Read the Docs
 
-### Step 1: Fork this [example repository](https://github.com/coderefinery/rtdocs-example.git) and clone the repository
+### Step 1: Fork the [word-count project](https://github.com/coderefinery/word-count.git) and clone the repository
 
 
 ```shell
-$ git clone git@github.com:user/rtdocs-example.git  # adapt user, also ok to clone via https if you prefer
-$ cd rtdocs-example
+$ git clone git@github.com:user/word-count.git  # adapt user, also ok to clone via https if you prefer
+$ cd word-count
 ```
 - The repository contains two folders
     - **source** folder contains the source code
-    - **docs** folder contains the sphinx documentation
+    - **doc** folder contains the sphinx documentation
 
-The docs folder contains the sphinx configuration file (conf.py) and the core file (index.rst) and some contents (usage.rst and contributions.rst).
+The doc folder contains the sphinx configuration file (conf.py) and the core file (index.rst) and some contents (usage.rst and contributions.rst).
 
 - The sphinx files are generated using sphinx-quickstart that we have practiced earlier. The only changes are:
     - *autodoc: automatically insert docstrings from modules (y/n) [n]: y*
@@ -72,7 +73,7 @@ The docs folder contains the sphinx configuration file (conf.py) and the core fi
 
 Inside the cloned repository, run `sphinx-build . _build`.
 Then point your browser to e.g.
-`file:///home/user/rtdocs-example/docs/_build/index.html`. Adapt the path to the actual
+`file:///home/user/word-count/doc/_build/index.html`. Adapt the path to the actual
 path where you have cloned to (the `/home/user` part is almost certainly wrong in your case).
 
 In order to customize the HTML pages build use the command `sphinx-build -bhtml . _build/html` where the `.` represents the source directory
@@ -93,16 +94,22 @@ will not be needed here.
 
 - Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
 - Click "Import a Project"
-- Select "Connect to GitHub", and choose the doc-example repository
+- Select "Connect to GitHub", and choose the word-count repository
+- Rename the project to user-word-count (replacing "user" with your GitHub username)
 - Click "Next"
 
 That's it! Your site should now be live on
-[http://user-rtdocs-example.readthedocs.io](http://user-rtdocs-example.readthedocs.io)
-(replace project name).
+http://user-word-count.readthedocs.io (replace project name).
 
 Finally, make some changes to your documentation
-  - add documentation related to other functions
-  - prerequisites and how to use the program
-  - rules for contribution
-  - commit and push them, and verify that the documentation website refreshes after your changes
-(can take few seconds or a minute).
+  - Add documentation related to other functions
+  - Prerequisites and how to use the program
+  - Rules for contribution
+  - Some example results (figures, tables, ...)
+  - Commit and push them, and verify that the documentation website refreshes after your changes
+    (can take few seconds or a minute)
+
+### (Optional) Step 3: Create a pull request to the central repository
+
+It might be fun to collect the documentation contributions from everyone into the same 
+central repository.
