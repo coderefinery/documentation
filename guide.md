@@ -8,11 +8,25 @@ permalink: /guide/
 
 ### Place this lesson on last day of the workshop
 
-Reason is that with collaborative Git we could create more interesting
+Reason is that with collaborative Git we can create more interesting
 documentation exercises. Currently there are some elements of forking and
 pushing and this is only really introduced on day two.
 
 We have tried this lesson on day one and it felt too early and disconnected/abrupt.
+
+It works best after the reproducibility lesson since we then reuse the example
+and it feels familiar.
+
+
+### What worked well in past workshops
+
+It is good if participants see how they can `sphinx-quickstart` a project from
+zero.
+
+Then they learn how to deploy an existing project to RTD.
+
+Finally we all collaborate on a central example via PRs and this can be fun to
+receive documentation changes from participants.
 
 
 ### How to start
@@ -30,7 +44,10 @@ of own code and code written by others.
 
 As an instructors you should prepare all bullet points in the requirements and
 tools section but do not go through each bullet point in detail. Only highlight
-the main points and rather give time for a discussion.
+the main points and rather give time for a discussion. Leave details for a later
+lecture for those who want to find out more. If you go through each bullet point
+in detail, the motivation can easily take up 30 minutes and you will run out
+of time.
 
 
 ### Core aspects
