@@ -66,9 +66,9 @@ keypoints:
 - Documented directly in the source code
 - Popular in the C++ community
 - Has support for C, Fortran, Python, Java, etc.,
-  see [Doxygen supported programming languages](http://www.stack.nl/~dimitri/doxygen/)
+  see [Doxygen Github Repo](https://github.com/doxygen/doxygen)
 - Many keywords are understood by Doxygen:
-  [Doxygen special commands](http://www.stack.nl/~dimitri/doxygen/manual/commands.html)
+  [Doxygen special commands](http://www.doxygen.nl/manual/commands.html)
 - Can be used to also generate higher-level ("human") documentation
 - Can be deployed to GiHub/GitLab/Bitbucket Pages
 
@@ -122,8 +122,8 @@ Experiment with reStructuredText:
 ## HTML
 
 - Projects can easily autogenerate HTML from RST or Markdown
-- Make it possible to avoid maintaining own web servers to host 
-  documentation and use resources like: 
+- Make it possible to avoid maintaining own web servers to host
+  documentation and use resources like:
     - [GitHub Pages](https://pages.github.com)
-    - [Bitbucket Pages](http://pages.bitbucket.org)
+    - [Bitbucket Pages](https://pages.bitbucket.io/)
     - [GitLab Pages](https://pages.gitlab.io)
