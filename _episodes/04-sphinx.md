@@ -39,10 +39,10 @@ $ python -c "import sphinx; print(sphinx.__version__)"
 1.8.2
 
 ```
-The above command should return your python version and your Sphinx version, 
-if you receive an error  instead of the versions (any version would do) 
-e.g. command not found or ModuleNotFoundError 
-please follow installation instructions ([Sphinx](http://www.sphinx-doc.org)). 
+The above command should return your python version and your Sphinx version,
+if you receive an error  instead of the versions (any version would do)
+e.g. command not found or ModuleNotFoundError
+please follow installation instructions ([Sphinx](http://www.sphinx-doc.org)).
 
 ### Create a directory for your documentation, and generate the basic documentation template
 
@@ -52,8 +52,8 @@ $ cd doc-example
 $ sphinx-quickstart
 ```
 
-The quickstart utility will ask you some questions. For this exercise, you can go 
-with the default answers except to specify a project name, your name and project version:. 
+The quickstart utility will ask you some questions. For this exercise, you can go
+with the default answers except to specify a project name, your name and project version:.
 
 ```
 > Root path for the documentation [.]:
@@ -77,8 +77,8 @@ with the default answers except to specify a project name, your name and project
 > ifconfig: conditional inclusion of content based on config values (y/n) [n]:
 > viewcode: include links to the source code of documented Python objects (y/n) [n]:
 > githubpages: create .nojekyll file to publish the document on GitHub pages (y/n) [n]:
-> Create Makefile? (y/n) [y]: 
-> Create Windows command file? (y/n) [y]: 
+> Create Makefile? (y/n) [y]:
+> Create Windows command file? (y/n) [y]:
 ```
 
 A couple of files and directories are created:
@@ -114,7 +114,7 @@ A couple of files and directories are created:
   </tr>
 </table>
 
-`Makefile` and `make.bat` (for Windows) are build scripts that wrap the sphinx commands, but 
+`Makefile` and `make.bat` (for Windows) are build scripts that wrap the sphinx commands, but
 we will be doing it explicitly.
 
 Let's have a look at the `index.rst` file, which is the main file of your documentation:
@@ -313,7 +313,7 @@ The following is a code block::
 ```
 
 - It is possible to combine `literalinclude` with code highlighting, line numbering, and even line highlighting.
-- We can also use jupyter notebooks (*.ipynb) with sphinx. It requires `nbsphinx` extension to be installed. See [nbsphinx documentation](http://nbsphinx.readthedocs.io/en/0.3.1/) for more information
+- We can also use jupyter notebooks (*.ipynb) with sphinx. It requires `nbsphinx` extension to be installed. See [nbsphinx documentation](http://nbsphinx.readthedocs.io/en/latest/) for more information
 ```
 .. toctree::
    :maxdepth: 2
@@ -324,6 +324,4 @@ The following is a code block::
 ```
 - For more RST functionality, see the [Sphinx documentation](http://www.sphinx-doc.org/en/stable/rest.html)
   and the [quick-reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
-- For Sphinx additions to standard RST, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/stable/markup/index.html).
-
- 
+- For Sphinx additions to standard RST, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/1.7/markup/index.html).
