@@ -30,5 +30,5 @@ objectives:
 
 ## Good resources
 
-- [http://www.writethedocs.org/guide/writing/beginners-guide-to-docs/](A beginner’s guide to writing documentation)
-- [https://www.divio.com/blog/documentation/](What nobody tells you about documentation)
+- [A beginner’s guide to writing documentation](http://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)
+- [What nobody tells you about documentation](https://www.divio.com/blog/documentation/)
