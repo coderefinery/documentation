@@ -234,94 +234,96 @@ This is useful to check how things look before pushing changes to GitHub or else
 
 - Let's say we don't like the style of this website at all! We open the file `conf.py`, and change the option `html_theme` from `alabaster` to `default`. We then rebuild the site with `sphinx-build . _build`, and refresh the browser tab.
 
-## Exercise: Add content to your example documentation
+> ## Exercise: Add content to your example documentation
+> 
+> 1. Add a entry below feature-a labeled *feature-b* to the `index.rst` file.
+> 2. Create a file `feature-b.rst` in the same directory as your `feature-a.rst` file.
+> 3. Add some content to feature-b, rebuild with `sphinx-build`, and refresh the browser to look at the results.
+> - [Help](http://docutils.sourceforge.net/docs/ref/rst/directives.html)
+> 
+> Experiment with the following RST syntax:
+> 
+> - \*Emphasized text\* and \*\*bold text\*\*
+> - Headings
+> 
+> ```
+> Level 1
+> =======
+> 
+> Level 2
+> -------
+> 
+> Level 3
+> ^^^^^^^
+> 
+> Level 4
+> """""""
+> ```
+> 
+> - An image: `.. image:: image.png`
+> - \`A link \<http://www.google.com\>\`_
+> - Numbered lists (can be automatic using `#`)
+> 
+> ```
+> 1. item 1
+> 2. item 2
+> #. item 3
+> #. item 4
+> ```
+> 
+> - Simple tables
+> 
+> ```
+> ====== ======
+> No.    Prime
+> ====== ======
+> 1      No
+> 2      Yes
+> 3      Yes
+> 4      No
+> ====== ======
+> ```
+> 
+> - Code block using special marker `::`
+> 
+> ```
+> The following is a code block::
+> 
+>   def hello():
+>       print("Hello world")
+> 
+> ```
+> 
+> - Code block specifying syntax highlighting for other language than Python
+> 
+> ```
+> .. code-block:: c
+> 
+>    #include <stdio.h>
+>    int main()
+>    {
+>       printf("Hello, World!");
+>       return 0;
+>     }
+> ```
+> - You could include the contents of an external file using `literalinclude` directive, as follows:
+> 
+> ```
+> .. literalinclude:: filename
+> ```
+> 
+> - It is possible to combine `literalinclude` with code highlighting, line numbering, and even line highlighting.
+> - We can also use jupyter notebooks (*.ipynb) with sphinx. It requires `nbsphinx` extension to be installed. See [nbsphinx documentation](http://nbsphinx.readthedocs.io/en/latest/) for more information
+> ```
+> .. toctree::
+>    :maxdepth: 2
+>    :caption: Contents:
+> 
+>    feature-a
+>    <python_notebook_name>.ipynb
+> ```
+{: .task}
 
-1. Add a entry below feature-a labeled *feature-b* to the `index.rst` file.
-2. Create a file `feature-b.rst` in the same directory as your `feature-a.rst` file.
-3. Add some content to feature-b, rebuild with `sphinx-build`, and refresh the browser to look at the results.
-- [Help](http://docutils.sourceforge.net/docs/ref/rst/directives.html)
-
-Experiment with the following RST syntax:
-
-- \*Emphasized text\* and \*\*bold text\*\*
-- Headings
-
-```
-Level 1
-=======
-
-Level 2
--------
-
-Level 3
-^^^^^^^
-
-Level 4
-"""""""
-```
-
-- An image: `.. image:: image.png`
-- \`A link \<http://www.google.com\>\`_
-- Numbered lists (can be automatic using `#`)
-
-```
-1. item 1
-2. item 2
-#. item 3
-#. item 4
-```
-
-- Simple tables
-
-```
-====== ======
-No.    Prime
-====== ======
-1      No
-2      Yes
-3      Yes
-4      No
-====== ======
-```
-
-- Code block using special marker `::`
-
-```
-The following is a code block::
-
-  def hello():
-      print("Hello world")
-
-```
-
-- Code block specifying syntax highlighting for other language than Python
-
-```
-.. code-block:: c
-
-   #include <stdio.h>
-   int main()
-   {
-      printf("Hello, World!");
-      return 0;
-    }
-```
-- You could include the contents of an external file using `literalinclude` directive, as follows:
-
-```
-.. literalinclude:: filename
-```
-
-- It is possible to combine `literalinclude` with code highlighting, line numbering, and even line highlighting.
-- We can also use jupyter notebooks (*.ipynb) with sphinx. It requires `nbsphinx` extension to be installed. See [nbsphinx documentation](http://nbsphinx.readthedocs.io/en/latest/) for more information
-```
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   feature-a
-   <python_notebook_name>.ipynb
-```
 - For more RST functionality, see the [Sphinx documentation](http://www.sphinx-doc.org/en/stable/rest.html)
   and the [quick-reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
 - For Sphinx additions to standard RST, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/1.7/markup/index.html).
