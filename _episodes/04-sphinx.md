@@ -302,9 +302,9 @@ This is useful to check how things look before pushing changes to GitHub or else
 >    #include <stdio.h>
 >    int main()
 >    {
->       printf("Hello, World!");
->       return 0;
->     }
+>        printf("Hello, World!");
+>        return 0;
+>    }
 > ```
 > - You could include the contents of an external file using `literalinclude` directive, as follows:
 > 
