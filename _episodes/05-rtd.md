@@ -53,11 +53,6 @@ $ curl -X POST http://readthedocs.org/build/myproject
 > 
 > ### Step 1: Fork the [word-count project](https://github.com/coderefinery/word-count.git) and clone the repository
 > 
-> 
-> ```shell
-> $ git clone git@github.com:user/word-count.git  # adapt user, also ok to clone via https if you prefer
-> $ cd word-count
-> ```
 > - The repository contains two folders
 >     - **source** folder contains the source code
 >     - **doc** folder contains the sphinx documentation
