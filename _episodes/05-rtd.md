@@ -57,12 +57,9 @@ $ curl -X POST http://readthedocs.org/build/myproject
 >     - **source** folder contains the source code
 >     - **doc** folder contains the sphinx documentation
 > 
-> The doc folder contains the sphinx configuration file (conf.py) and the core file (index.rst) and some contents (usage.rst and contributions.rst).
-> 
-> - The sphinx files are generated using sphinx-quickstart that we have practiced earlier. The only changes are:
->     - *autodoc: automatically insert docstrings from modules (y/n) [n]: y*
->     - informing conf.py where to find the source code  - *sys.path.insert(0, os.path.abspath('../source'))*
-> 
+> The doc folder contains the sphinx configuration file (`conf.py`) and the
+> core file (`index.rst`) and some contents (`usage.rst` and `contributions.rst`).
+> The `conf.py` file has been adjusted to be able to autogenerate documentation from sources.
 > 
 > #### Build HTML pages locally
 > 
