@@ -63,13 +63,7 @@ $ curl -X POST http://readthedocs.org/build/myproject
 > 
 > #### Build HTML pages locally
 > 
-> Inside the cloned repository, run `sphinx-build . _build`.
-> Then point your browser to e.g.
-> `file:///home/user/word-count/doc/_build/index.html`. Adapt the path to the actual
-> path where you have cloned to (the `/home/user` part is almost certainly wrong in your case).
-> 
-> In order to customize the HTML pages build use the command `sphinx-build -bhtml . _build/html` where the `.` represents the source directory
-> and `_build/html` represents the output directory.
+> Inside the cloned repository, run `sphinx-build . _build` and verify the result in your browser.
 > 
 > #### Test HTML pages links
 > 
