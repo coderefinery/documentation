@@ -24,16 +24,11 @@ objectives:
 
 ## Typical Read the Docs workflow
 
-- Host source code with documentation sources on GitHub.
-- Each time you `git push` to the repository, a `post-receive` hook sends POST
-  request to Read the Docs to rebuild the documentation.
-
-```shell
-$ curl -X POST http://readthedocs.org/build/myproject
-```
-
-- Read the Docs then fetches changes (typically from GitHub but can be
-  somewhere else provided the repo is public) and rebuilds HTML and PDF.
+- Host source code with documentation sources on a public Git repository.
+- Each time you `git push` to the repository, a `post-receive` hook triggers
+  Read the Docs to rebuild the documentation.
+- Read the Docs then clones the repository
+  and rebuilds HTML and PDF.
 - No problem to build several branches (versions) of your documentation.
 
 ---
