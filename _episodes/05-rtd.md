@@ -48,7 +48,7 @@ objectives:
 > 
 > ### Step 1: Fork the [word-count project](https://github.com/coderefinery/word-count.git) and clone the repository
 > 
-> - The repository contains two folders
+> - The repository contains following two folders, among few other files and folder. 
 >     - **source** folder contains the source code
 >     - **doc** folder contains the sphinx documentation
 > 
@@ -58,7 +58,11 @@ objectives:
 > 
 > #### Build HTML pages locally
 > 
-> Inside the cloned repository, run `sphinx-build . _build` and verify the result in your browser.
+> Inside the cloned repository, run 
+>```shell
+> sphinx-build doc _build 
+>```
+> and verify the result in your browser.
 > 
 > #### Test HTML pages links
 > 
