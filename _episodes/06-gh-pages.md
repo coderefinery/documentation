@@ -18,11 +18,13 @@ Pages](https://pages.github.com/). [GitLab](https://about.gitlab.com/features/pa
 very similar solution. The key is that you can give the hosting to
 professionals so that you can focus on your project.
 
-Every project `<projectname>` on GitHub under the user/namespace `<user>` which
-contains a branch `gh-pages` is served on
-`https://<user>.github.io/<projectname>/`.
+<img src="{{ site.baseurl }}/img/gh-pages.jpg" width="50%">
 
-This is how all https://coderefinery.org material is hosted.
+It is no problem to use a custom domain instead of `*.github.io`.
+
+This is how all
+[https://coderefinery.org](https://coderefinery.org)
+material is hosted.
 
 ---
 
@@ -74,11 +76,6 @@ source all in the same repository, tracking a common history.
 
 GitHub pages can be configured to also serve directly from the master branch
 under `docs/` - see the [documentation](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/).
-
-Many people put their personal home page on repository `<user>.github.io`, which is served
-on `https://<user>.github.io`.
-
-It is no problem to use a custom domain instead of `*.github.io`.
 
 ---
 
