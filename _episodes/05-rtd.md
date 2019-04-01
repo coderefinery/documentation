@@ -60,8 +60,7 @@ objectives:
 > 
 > Inside the cloned repository, run 
 >```shell
-> cd doc
-> sphinx-build . _build 
+> sphinx-build doc _build 
 >```
 > and verify the result in your browser.
 > 
