@@ -48,31 +48,17 @@ objectives:
 > 
 > ### Step 1: Fork the [word-count project](https://github.com/coderefinery/word-count.git) and clone the repository
 > 
-> 
-> ```shell
-> $ git clone git@github.com:user/word-count.git  # adapt user, also ok to clone via https if you prefer
-> $ cd word-count
-> ```
 > - The repository contains two folders
 >     - **source** folder contains the source code
 >     - **doc** folder contains the sphinx documentation
 > 
-> The doc folder contains the sphinx configuration file (conf.py) and the core file (index.rst) and some contents (usage.rst and contributions.rst).
-> 
-> - The sphinx files are generated using sphinx-quickstart that we have practiced earlier. The only changes are:
->     - *autodoc: automatically insert docstrings from modules (y/n) [n]: y*
->     - informing conf.py where to find the source code  - *sys.path.insert(0, os.path.abspath('../source'))*
-> 
+> The doc folder contains the sphinx configuration file (`conf.py`) and the
+> core file (`index.rst`) and some contents (`usage.rst` and `contributions.rst`).
+> The `conf.py` file has been adjusted to be able to autogenerate documentation from sources.
 > 
 > #### Build HTML pages locally
 > 
-> Inside the cloned repository, run `sphinx-build . _build`.
-> Then point your browser to e.g.
-> `file:///home/user/word-count/doc/_build/index.html`. Adapt the path to the actual
-> path where you have cloned to (the `/home/user` part is almost certainly wrong in your case).
-> 
-> In order to customize the HTML pages build use the command `sphinx-build -bhtml . _build/html` where the `.` represents the source directory
-> and `_build/html` represents the output directory.
+> Inside the cloned repository, run `sphinx-build . _build` and verify the result in your browser.
 > 
 > #### Test HTML pages links
 > 
