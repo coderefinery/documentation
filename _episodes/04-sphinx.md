@@ -324,6 +324,56 @@ This is useful to check how things look before pushing changes to GitHub or else
 > ```
 {: .task}
 
+> ## Exercise: Update existing documentation that is not yours (Optional)
+> 
+> Very often we are using existing software/packages that have their own documentation in [ReadTheDocs](https://readthedocs.org/).
+> It is good practice to participate in improving the documentation, especially when spotting problems or areas 
+> that needs to be clarified.
+> The goal of this exercise is to update/improve an [existing documentation](https://word-count.readthedocs.io/en/latest/) 
+> available on [ReadTheDocs](https://readthedocs.org/).
+> ### Take a few minutes to read it and before you start
+>
+> - Discuss the exercise idea with the classroom.
+> - Distribute exercises among groups of 2-3 persons.
+> - Open a GitHub issue and inform the community about the problem and how you
+>  plan to solve it. Discuss why we do this.
+> - Fork this project.
+> - Commit to your fork. In your commit message auto-close the issue you have addressed.
+> - Submit a pull request.
+> - We then review the pull requests.
+> - After the pull requests are merged we verify that documentation updates itself.
+>
+>
+> ### Basic
+>
+> - Document the purpose of this example code.
+> - Document how to clone the code.
+> - Describe the project tree structure.
+> - Write a sentence or two about Zipf's law and link to Wikipedia
+>   (coordinate with the group working on the previous exercise).
+> - Document how to check the code style with ``pycodestyle``.
+> - Give other developers hints on how they can contribute to the documentation.
+> - Document how to build the documentation locally
+>   (coordinate with the group working on the previous exercise).
+> - Add an example output.
+> - Add an example plot
+>   (coordinate with the group working on the previous exercise).
+> - Document where/how to ask for help.
+> - Add a math equation somewhere.
+> 
+> 
+> ### Advanced
+> 
+> - Add a test and document how to run it.
+> - Add the possibility to auto-document Python code.
+> 
+> 
+> ### Meta
+> 
+> - Add new exercises ideas for future workshops (edit this file).
+>
+{: .task}
+
 - For more RST functionality, see the [Sphinx documentation](http://www.sphinx-doc.org/en/stable/rest.html)
   and the [quick-reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
 - For Sphinx additions to standard RST, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/1.7/markup/index.html).
