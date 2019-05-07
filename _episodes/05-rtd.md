@@ -66,7 +66,7 @@ objectives:
 > 
 > #### Test HTML pages links
 > 
-> Inside the cloned repository, run `sphinx-build -W -blinkcheck -d _build/doctrees . _build/html` in order to check the integrity of all external links.
+> Inside the cloned repository, run `sphinx-build -W -blinkcheck -d _build/doctrees _build/html` in order to check the integrity of all external links.
 > 
 > ### Step 2: Enable the project on [Read the Docs](https://readthedocs.org)
 > 
