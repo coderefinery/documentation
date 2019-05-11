@@ -39,25 +39,25 @@ material is hosted.
 
 ---
 
-### Example
-
-Let us try it out!
-
-- First fork and clone the [example repository](https://github.com/coderefinery/gh-pages-example).
-```shell
-$ git clone https://github.com/user/gh-pages-example.git  # adapt user
-$ cd gh-pages-example
-```
-- Check that you are indeed on the `gh-pages` branch.
-- Make some changes to `index.md` or `about.md` or `team.md`, commit and push.
-```shell
-$ git add index.md team.md  # add changes to commit
-$ git commit -m "modified website contents"
-$ git push origin gh-pages
-```
-- Verify that your changes land on `https://<user>.github.io/gh-pages-example/` (it may take a couple of seconds).
-
-Yay! Now you have successfully deployed a website!
+> ## Exercice: let us try it out!
+>
+> - First fork and clone the [example repository](https://github.com/coderefinery/gh-pages-example).
+> ```shell
+> $ git clone https://github.com/user/gh-pages-example.git  # adapt user
+> $ cd gh-pages-example
+> ```
+> - Check that you are indeed on the `gh-pages` branch.
+> - Make some changes to `index.md` or `about.md` or `team.md`, commit and push.
+> ```shell
+> $ git add index.md team.md  # add changes to commit
+> $ git commit -m "modified website contents"
+> $ git push origin gh-pages
+> ```
+> - Verify that your changes land on `https://<user>.github.io/gh-pages-example/` (it may take a couple of seconds).
+> 
+> Yay! Now you have successfully deployed a website!
+>
+{: .task}
 
 ---
 
