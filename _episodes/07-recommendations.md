@@ -14,6 +14,7 @@ objectives:
 
 ## Setup
 
+- Rather use Read the Docs if your documentation is associated to a source code and vary from one version to another. If you develop general documentation that is version independent then deploying a project website or homepage to GitHub Pages can be prefered.
 - Whatever solution you choose, make it automatically rebuild pages upon `git push`.
 - Documentation needs to be close to the source code and evolve with the source code.
 - When using code review make sure that new functionality always comes with documentation.
