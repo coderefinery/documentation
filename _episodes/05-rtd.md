@@ -95,6 +95,14 @@ objectives:
 >     (can take few seconds or a minute)
 {: .task}
  
+> ## Do not add `_build` directory to your repository
+>
+> The `_build` directory is generated locally with the command `sphinx-build doc _build`
+> and allows you to check the content locally but when hosted by Read the Docs, it is
+> not necessary to add it. The documentation will be automatically generated.
+>
+{: .callout}
+
 > ## (Optional) Create a pull request to the central repository
 > 
 > It might be fun to collect the documentation contributions from everyone into the same 
