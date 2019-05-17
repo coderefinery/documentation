@@ -31,14 +31,25 @@ environments, make sure Sphinx is installed into the Miniconda or virtual
 environment.
 To test your Sphinx installation
 
+- Test Sphinx within Python
+
 ```shell
 $ python --version
 Python 3.7.0
 
 $ python -c "import sphinx; print(sphinx.__version__)"
-1.8.2
+2.0.1
 
 ```
+
+- Test Sphinx tool installation
+
+```shell
+$ sphinx-quickstart --version
+sphinx-quickstart 2.0.1
+
+```
+
 The above command should return your python version and your Sphinx version,
 if you receive an error  instead of the versions (any version would do)
 e.g. command not found or ModuleNotFoundError
