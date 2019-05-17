@@ -100,3 +100,16 @@ objectives:
 > It might be fun to collect the documentation contributions from everyone into the same 
 > central repository.
 {: .task}
+
+> ## Running your own sphinx server
+>
+> We recommend to use Read the Docs to host your documentation but this may
+> not be suitable for you. For instance, many industries prefer to host their 
+> own sphinx server.
+> If you want to know more about it, look at:
+> - [https://docs.readthedocs.io/en/latest/install.html](https://docs.readthedocs.io/en/latest/install.html)
+> - [https://pypi.org/project/sphinx-autobuild/](https://pypi.org/project/sphinx-autobuild/)
+> - [https://pypi.org/project/sphinx-server/](https://pypi.org/project/sphinx-server/)
+>
+{: .callout}
+
