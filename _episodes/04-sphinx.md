@@ -385,6 +385,64 @@ This is useful to check how things look before pushing changes to GitHub or else
 >
 {: .task}
 
+
+> ## Rendering (LaTeX) math equations
+>
+> There are two different ways to display mathematical equations within Sphinx: `pngmath`and `MathJax`. 
+> While `pngmath` displays an equation as an image, `MathJax` is using scalable vector graphics (quality remains the same after zooming). For this reason, we strongly encourage you to use `MathJax` for your mathematical equations.
+>
+> To enable `MathJax` in Sphinx, you need first to add `sphinx.ext.mathjax` to the list of extensions in `conf.py`:
+>
+> ```shell 
+> extensions = ['sphinx.ext.mathjax']
+> ```
+>
+> ### Inline mathematics 
+>
+> The following shows how to inline mathematics within a text:
+>
+> ```shell
+> 
+> This simple equation is embedded :math:`a^2 + b^2 = c^2` in text. 
+>
+> ```
+>
+> To display an equation on a new line:
+>
+> ```shell
+>
+> .. math:: a^2+ b^2= c^2
+>    :label: equation_label1
+> ```
+>
+>   or:
+>
+> ```shell
+>    .. math::
+>       :label: equation_label2
+> 
+>          a^2+ b^2= c^2
+> ```
+> 
+> In the two examples above, we also added labels (`equation_label1` and 
+> `equation_label2`) so we can reference our equations using `:eq: equation_label`.
+>
+> ### Equation arrays 
+>
+> ```shell
+> .. math::
+>    :label: equation_label3
+> 
+>        \begin{eqnarray}
+>           x^2 & : x < 0\\
+>           x^3 & : x \ge 0\\
+>        \end{eqnarray}
+> ```
+>
+> These equations can then be referenced using `:eq: equation_label3`.
+>
+{: .callout}
+
 - For more RST functionality, see the [Sphinx documentation](http://www.sphinx-doc.org/en/stable/rest.html)
   and the [quick-reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
 - For Sphinx additions to standard RST, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/1.7/markup/index.html).
