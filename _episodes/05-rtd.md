@@ -80,7 +80,7 @@ objectives:
 > - Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
 > - Click "Import a Project"
 > - Select "Connect to GitHub", and choose the word-count repository
-> - Rename the project to user-word-count (replacing "user" with your GitHub username)
+> - Rename the project to user-word-count (replacing "user" with your GitHub username: we need a unique project name)
 > - Click "Next"
 > 
 > That's it! Your site should now be live on
