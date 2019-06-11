@@ -41,7 +41,7 @@ material is hosted.
 
 > ## Exercice: let us try it out!
 >
-> - First import [https://github.com/coderefinery/gh-pages-example](https://github.com/coderefinery/gh-pages-example) and clone the example repository.
+> - First import [our template](https://github.com/coderefinery/gh-pages-example/generate) and clone the example repository from your namespace:
 > ```shell
 > $ git clone https://github.com/user/gh-pages-example.git  # adapt user
 > $ cd gh-pages-example
