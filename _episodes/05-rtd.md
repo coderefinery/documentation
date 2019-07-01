@@ -60,14 +60,17 @@ objectives:
 > 
 > Inside the cloned repository, run 
 >```shell
-> sphinx-build doc _build 
+>$ sphinx-build doc _build
 >```
 > and verify the result in your browser.
 > 
 > #### Test HTML pages links
-> 
-> Inside the cloned repository, run `sphinx-build doc -W -blinkcheck -d _build/doctrees _build/html` in order to check the integrity of all external links.
-> 
+>
+> Inside the cloned repository, check the integrity of all external links:
+>```
+>$ sphinx-build doc -W -blinkcheck -d _build/doctrees _build/html
+>```
+>
 > ### Step 2: Enable the project on [Read the Docs](https://readthedocs.org)
 > 
 > Now you will import a project to Read the Docs by connecting to GitHub.  This
@@ -80,7 +83,7 @@ objectives:
 > - Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
 > - Click "Import a Project"
 > - Select "Connect to GitHub", and choose the word-count repository
-> - Rename the project to user-word-count (replacing "user" with your GitHub username)
+> - Rename the project to user-word-count (replacing "user" with your GitHub username: we need a unique project name)
 > - Click "Next"
 > 
 > That's it! Your site should now be live on
