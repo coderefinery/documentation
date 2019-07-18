@@ -46,7 +46,7 @@ objectives:
 >     - The project contains a script for counting the frequency distribution of words in a given file and some documentation generated using sphinx. For bigger projects, we will have much more source files.
 > 2. In the second step, enable the project on Read the Docs.
 > 
-> ### Step 1: Copy the [word-count project template](https://github.com/coderefinery/word-count/generate) to your namespace and clone the repository
+> ### Step 1: Go to the [word-count project template](https://github.com/coderefinery/word-count/generate), copy it to your namespace, and clone the repository
 > 
 > - The repository contains following two folders, among few other files and folder. 
 >     - **source** folder contains the source code
