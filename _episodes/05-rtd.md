@@ -35,18 +35,18 @@ objectives:
 
 > ## Exercise: Deploy Sphinx documentation to Read the Docs
 > 
-> In this exercise we will fork an example repository on GitHub and deploy it to Read the Docs.
+> In this exercise we will make a copy of an example repository on GitHub and deploy it to Read the Docs.
 > 
 > We will use GitHub for this exercise but it will also work with any Git
 > repository with public read access.
 > 
-> 1. In the first step, fork 
->  [this word-count example project](https://github.com/coderefinery/word-count.git) and
->  then clone the fork to your laptop
+> 1. In the first step, generate a new repository based on
+>  [this word-count example project template](https://github.com/coderefinery/word-count/generate) and
+>  then clone the newly created repository to your laptop.
 >     - The project contains a script for counting the frequency distribution of words in a given file and some documentation generated using sphinx. For bigger projects, we will have much more source files.
-> 2. In the second step, enable the project on Read the Docs
+> 2. In the second step, enable the project on Read the Docs.
 > 
-> ### Step 1: Fork the [word-count project](https://github.com/coderefinery/word-count.git) and clone the repository
+> ### Step 1: Go to the [word-count project template](https://github.com/coderefinery/word-count/generate), copy it to your namespace, and clone the repository
 > 
 > - The repository contains following two folders, among few other files and folder. 
 >     - **source** folder contains the source code
@@ -105,12 +105,6 @@ objectives:
 > not necessary to add it. The documentation will be automatically generated.
 >
 {: .callout}
-
-> ## (Optional) Create a pull request to the central repository
-> 
-> It might be fun to collect the documentation contributions from everyone into the same 
-> central repository.
-{: .task}
 
 > ## Running your own sphinx server
 >
