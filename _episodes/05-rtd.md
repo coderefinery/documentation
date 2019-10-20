@@ -101,8 +101,9 @@ objectives:
 > ## Do not add `_build` directory to your repository
 >
 > The `_build` directory is generated locally with the command `sphinx-build doc _build`
-> and allows you to check the content locally but when hosted by Read the Docs, it is
-> not necessary to add it. The documentation will be automatically generated.
+> and allows you to check the content locally but it should not be part of the Git repository.
+> We recommend to add `_build` to `.gitignore` to prevent you from accidentally
+> adding files below `_build` to the Git repository.
 >
 {: .callout}
 
