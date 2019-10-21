@@ -12,6 +12,7 @@ keypoints:
 ---
 
 ## RST and Markdown
+
 - Two of the most popular lightweight markup languages.
 - Markdown considered simpler to use, but RST more extensible.
 - Markdown convenient for smaller documents,
@@ -19,6 +20,7 @@ keypoints:
 - Sphinx was built around RST, but recently
 [support for Markdown was added](http://blog.readthedocs.com/adding-markdown-support/).
 - There are (unfortunately) [many flavors of Markdown](https://github.com/jgm/CommonMark/wiki/Markdown-Flavors).
+
 
 ## Type-along exercise: Build Sphinx documentation in RST
 
@@ -362,6 +364,10 @@ Note that you can change the styling by editing `conf.py` and changing the value
 >
 {: .callout}
 
+
+## Where to find more
+
 - For more RST functionality, see the [Sphinx documentation](http://www.sphinx-doc.org/en/stable/rest.html)
   and the [quick-reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
 - For Sphinx additions to standard RST, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/1.7/markup/index.html).
+- [https://docs.python-guide.org/writing/documentation/](https://docs.python-guide.org/writing/documentation/)
