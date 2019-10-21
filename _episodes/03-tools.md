@@ -78,7 +78,7 @@ keypoints:
 
 - Lightweight and readable
 - [Sphinx](http://sphinx-doc.org) can generate HTML/PDF/LaTeX from RST and Markdown
-- Basically all Python projects use Sphinx
+- Basically all Python projects use Sphinx but Sphinx is not limited to Python
 - Good code highlighting: [Pygments](http://pygments.org), [Rouge](http://rouge.jneen.net)
 - [Jekyll](https://jekyllrb.com) and other static site generators could be used, too
 - Advantage of Sphinx: [Read the docs](http://readthedocs.org)
@@ -109,13 +109,14 @@ There is more: images,            There is more: images,
 tables, links, ...                tables, links, ...
 ```
 
+- Sphinx can work with both RST and Markdown
+- RST has more features than Markdown but the choice is a matter of taste
+- We will use RST in a Sphinx example and Markdown in a GiHub pages example
+
 Experiment with Markdown:
 - [Learn Markdown in 60 seconds](http://commonmark.org/help/)
 - [https://dillinger.io](http://dillinger.io)
 - [https://stackedit.io](https://stackedit.io)
-
-Experiment with reStructuredText:
-- [http://rst.ninjs.org/](http://rst.ninjs.org/)
 
 ---
 
