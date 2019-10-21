@@ -25,6 +25,4 @@ The approach that we will learn will be transferable to
 
 2. You need a [GitHub](https://github.com) account.
 
-3. You need a [Read the Docs](https://readthedocs.org) account.
-
-4. You need to have [Sphinx](http://www.sphinx-doc.org) installed (as part of your Python environment installation).
+3. You need to have [Sphinx](http://www.sphinx-doc.org) installed (as part of your Python environment installation).
