@@ -64,18 +64,24 @@ material is hosted.
 ### Discussion
 
 What just happened?
-- the example uses [GitHub Pages supported themes](https://pages.github.com/themes/).
-- we define the theme we want to use in `_config.yml`
-- add the page layout that we want to use in the beginning of the Markdown files. This is called [front matter](https://jekyllrb.com/docs/frontmatter/).
+- We have used [GitHub Pages supported themes](https://pages.github.com/themes/).
+- We have defined the theme we want to use in the file `_config.yml`.
+- Each Markdown file started with [front matter](https://jekyllrb.com/docs/frontmatter/).
 
-Thats it! Github takes care of rendering the pages - see the
+GitHub generated HTML from the Markdown files - see the
 [documentation](https://help.github.com/articles/adding-a-jekyll-theme-to-your-github-pages-site/).
 
-It is a good idea to keep source code, web sources, and possibly also Sphinx
-source all in the same repository, tracking a common history.
-
-GitHub pages can be configured to also serve directly from the master branch
+GitHub pages typically use the branch `gh-pages` but can be configured to also serve directly from the `master` branch
 under `docs/` - see the [documentation](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/).
+
+---
+
+### Sphinx or GitHub pages or both?
+
+- GitHub pages typically serves one version (one branch). It is often used as the project/group/personal page.
+- Sphinx can serve several versions (several branches/tags) at the same time.
+- Some projects use both.
+- It is a good idea to keep source code, web sources, and possibly also Sphinx source all in the same repository, tracking a common history.
 
 ---
 
