@@ -16,12 +16,16 @@ keypoints:
 
 ## What do we expect from a good documentation?
 
-### Division into tutorials, FAQs, and keyword reference
+### Documentation comes in different forms - what *is* documentation?
 
-- Show not only what is possible, but also how the software should be used: **tutorials**!
-- Tutorials should contain **good defaults**.
-- Ready examples that one can **copy-paste** to get quickly started.
-- Up-to-date FAQ section.
+(This is adapted from: [What nobody tells you about documentation](https://www.divio.com/blog/documentation/))
+
+- **Tutorials**: learning-oriented, allows the newcomer to get started
+- **How-to guides**: goal-oriented, shows how to solve a specific problem
+- **Explanation**: understanding-oriented, explains a concept
+- **Reference**: information-oriented, describes the machinery
+
+These are distinct. For an excellent discussion, please see [What nobody tells you about documentation](https://www.divio.com/blog/documentation/).
 
 ---
 
