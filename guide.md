@@ -6,6 +6,14 @@ permalink: /guide/
 # Instructor guide
 
 
+### Core aspects
+
+- Documentation has to be versionnable and branchable
+- Documentation should be tracked together with the source code
+- Sphinx is not only for Python
+- Read the Docs is not only for Github
+
+
 ### Place this lesson on last day of the workshop
 
 Reason is that with collaborative Git we can create more interesting
@@ -45,14 +53,6 @@ the main points and rather give time for a discussion. Leave details for a later
 lecture for those who want to find out more. If you go through each bullet point
 in detail, the motivation can easily take up 30 minutes and you will run out
 of time.
-
-
-### Core aspects
-
-- Documentation has to be versionnable and branchable
-- Documentation should be tracked together with the source code
-- Sphinx is not only for Python
-- Read the Docs is not only for Github
 
 
 ### Sessions which can be skipped if time is tight
