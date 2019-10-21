@@ -114,9 +114,6 @@ Experiment with Markdown:
 - [https://dillinger.io](http://dillinger.io)
 - [https://stackedit.io](https://stackedit.io)
 
-Experiment with reStructuredText:
-- [http://rst.ninjs.org/](http://rst.ninjs.org/)
-
 ---
 
 ## HTML
