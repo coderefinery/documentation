@@ -29,9 +29,8 @@ Before we start, make sure that Sphinx is part of your Python installation or
 environment. If you use Anaconda, you are set. If you use Miniconda or virtual
 environments, make sure Sphinx is installed into the Miniconda or virtual
 environment.
-To test your Sphinx installation
 
-- Test Sphinx within Python
+Test Sphinx installation within Python:
 
 ```shell
 $ python --version
@@ -40,20 +39,21 @@ Python 3.7.0
 $ python -c "import sphinx; print(sphinx.__version__)"
 2.0.1
 
+$ python -c "import sphinx_rtd_theme"
 ```
 
-- Test Sphinx tool installation
+Test Sphinx tool installation:
 
 ```shell
 $ sphinx-quickstart --version
 sphinx-quickstart 2.0.1
-
 ```
 
-The above command should return your python version and your Sphinx version,
-if you receive an error  instead of the versions (any version would do)
+The the above commands produce an error
+instead of printing versions (any version would do)
 e.g. command not found or ModuleNotFoundError
 please follow installation instructions ([Sphinx](http://www.sphinx-doc.org)).
+
 
 ### Create a directory for your documentation, and generate the basic documentation template
 
@@ -206,15 +206,15 @@ Now open the file `_build/index.html` in your browser by:
 
 Linux users type:
 ```bash
-xdg-open _build/index.html
+$ xdg-open _build/index.html
 ```
 OS X users type:
 ```bash
-open _build/index.html
+$ open _build/index.html
 ```
 Windows users type:
 ```bash
-start _build/index.html
+$ start _build/index.html
 ```
 
 Others:
@@ -231,8 +231,8 @@ This is useful to check how things look before pushing changes to GitHub or else
 >
 > 1. Add a entry below feature-a labeled *feature-b* to the `index.rst` file.
 > 2. Create a file `feature-b.rst` in the same directory as your `feature-a.rst` file.
-> 3. Add some content to feature-b, rebuild with `sphinx-build`, and refresh the browser to look at the results.
-> - [Help](http://docutils.sourceforge.net/docs/ref/rst/directives.html)
+> 3. Add some content to feature-b, rebuild with `sphinx-build`, and refresh the browser to look at the results
+>    ([Help](http://docutils.sourceforge.net/docs/ref/rst/directives.html)).
 >
 > Experiment with the following RST syntax:
 >
@@ -333,15 +333,12 @@ This is useful to check how things look before pushing changes to GitHub or else
 > The following shows how to inline mathematics within a text:
 >
 > ```shell
->
 > This simple equation is embedded :math:`a^2 + b^2 = c^2` in text.
->
 > ```
 >
 > To display an equation on a new line:
 >
 > ```shell
->
 > .. math:: a^2+ b^2= c^2
 >    :label: equation_label1
 > ```
@@ -349,10 +346,10 @@ This is useful to check how things look before pushing changes to GitHub or else
 >   or:
 >
 > ```shell
->    .. math::
->       :label: equation_label2
+> .. math::
+>    :label: equation_label2
 >
->          a^2+ b^2= c^2
+>       a^2+ b^2= c^2
 > ```
 >
 > In the two examples above, we also added labels (`equation_label1` and
