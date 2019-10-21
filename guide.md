@@ -25,9 +25,6 @@ zero.
 
 Then they learn how to deploy an existing project to RTD.
 
-Finally we all collaborate on a central example via PRs and this can be fun to
-receive documentation changes from participants.
-
 
 ### How to start
 
