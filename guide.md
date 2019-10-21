@@ -8,8 +8,17 @@ permalink: /guide/
 
 ### Core aspects
 
+These two are the most important points:
 - Documentation has to be versionnable and branchable
 - Documentation should be tracked together with the source code
+
+**Please do not skim over the two above points**. Please take few minutes to
+explain why documentation (sources) should be tracked together with the source
+code.  Please discuss this aspect with workshop participants and connect it to
+**reproducibility**. This is for me (Radovan) the most important take-home
+message.
+
+Bring across that the tools we show are general:
 - Sphinx is not only for Python
 - Read the Docs is not only for Github
 
