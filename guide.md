@@ -39,7 +39,7 @@ of own code and code written by others.
 
 ### Timing
 
-As an instructors you should prepare all bullet points in the requirements and
+As an instructor you should prepare all bullet points in the requirements and
 tools section but do not go through each bullet point in detail. Only highlight
 the main points and rather give time for a discussion. Leave details for a later
 lecture for those who want to find out more. If you go through each bullet point
@@ -70,6 +70,8 @@ anaconda installation, but not nano.
 
 A good working solution seems to be that Windows users have two terminals
 side-by-side, one with Anaconda prompt and another with git-bash.
+
+Another solution is to `conda install git` into an Anaconda prompt.
 
 
 #### Character encoding issues
