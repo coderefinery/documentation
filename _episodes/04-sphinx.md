@@ -25,6 +25,9 @@ keypoints:
 We will take the first steps in creating documentation using Sphinx, and learn some
 RST syntax along the way.
 
+
+### Check whether we have the software we need
+
 Before we start, make sure that Sphinx is part of your Python installation or
 environment. If you use Anaconda, you are set. If you use Miniconda or virtual
 environments, make sure Sphinx is installed into the Miniconda or virtual
@@ -52,10 +55,13 @@ sphinx-quickstart 2.0.1
 The the above commands produce an error
 instead of printing versions (any version would do)
 e.g. command not found or ModuleNotFoundError
-please follow installation instructions ([Sphinx](http://www.sphinx-doc.org)).
+please follow our [installation instructions](https://coderefinery.github.io/installation/python/#installing-required-packages).
 
 
-### Create a directory for your documentation, and generate the basic documentation template
+### Generate the basic documentation template
+
+Create a directory for the example documentation, step into it, and inside
+generate the basic documentation template:
 
 ```shell
 $ mkdir doc-example
@@ -64,7 +70,7 @@ $ sphinx-quickstart
 ```
 
 The quickstart utility will ask you some questions. For this exercise, you can go
-with the default answers except to specify a project name, your name and project version:
+with the default answers except to specify a project name, author name, and project release:
 
 ```
 > Separate source and build directories (y/n) [n]: <hit enter>
@@ -113,13 +119,13 @@ we will be doing it explicitly.
 Let's have a look at the `index.rst` file, which is the main file of your documentation:
 
 ```
-.. My Great Project documentation master file, created by
-   sphinx-quickstart on Wed Jun 14 17:46:47 2017.
+.. myproject documentation master file, created by
+   sphinx-quickstart on Mon Oct 21 21:46:06 2019.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to My Great Project's documentation!
-============================================
+Welcome to myproject's documentation!
+=====================================
 
 .. toctree::
    :maxdepth: 2
@@ -135,8 +141,8 @@ Indices and tables
 * :ref:`search`
 ```
 
-- We will not use the `Indices and tables` section now, so remove it.
-- The top lines, starting with `..`, are a comment.
+- We will not use the `Indices and tables` section now, so remove it and everything below.
+- The top four lines, starting with `..`, are a comment.
 - The next lines are the table of contents. We can add content below:
 
 ```
@@ -208,7 +214,7 @@ Linux users type:
 ```bash
 $ xdg-open _build/index.html
 ```
-OS X users type:
+macOS users type:
 ```bash
 $ open _build/index.html
 ```
@@ -224,8 +230,7 @@ enter `file:///home/user/doc-example/_build/index.html` in your browser (adaptin
 Hopefully you can now see a website. If so, then you are able to build Sphinx pages locally.
 This is useful to check how things look before pushing changes to GitHub or elsewhere.
 
-
-- Let's say we don't like the style of this website at all! We open the file `conf.py`, and change the option `html_theme` from `alabaster` to `default`. We then rebuild the site with `sphinx-build . _build`, and refresh the browser tab.
+Note that you can change the styling by editing `conf.py` and changing the value `html_theme`.
 
 > ## Exercise: Add content to your example documentation
 >
@@ -284,7 +289,6 @@ This is useful to check how things look before pushing changes to GitHub or else
 >
 >   def hello():
 >       print("Hello world")
->
 > ```
 >
 > - Code block specifying syntax highlighting for other language than Python
@@ -319,55 +323,42 @@ This is useful to check how things look before pushing changes to GitHub or else
 
 > ## Rendering (LaTeX) math equations
 >
-> There are two different ways to display mathematical equations within Sphinx: `pngmath`and `MathJax`.
-> While `pngmath` displays an equation as an image, `MathJax` is using scalable vector graphics (quality remains the same after zooming). For this reason, we strongly encourage you to use `MathJax` for your mathematical equations.
+> There are two different ways to display mathematical equations within Sphinx:
+> `pngmath` and `MathJax`.  While `pngmath` displays an equation as an image,
+> `MathJax` is using scalable vector graphics (quality remains the same after
+> zooming). For this reason, we strongly encourage you to use `MathJax` for
+> your mathematical equations.
 >
-> To enable `MathJax` in Sphinx, you need first to add `sphinx.ext.mathjax` to the list of extensions in `conf.py`:
+> To enable `MathJax` in Sphinx, you need first to add `sphinx.ext.mathjax` to
+> the list of extensions in `conf.py`:
 >
 > ```shell
 > extensions = ['sphinx.ext.mathjax']
 > ```
 >
-> ### Inline mathematics
->
 > The following shows how to inline mathematics within a text:
 >
-> ```shell
-> This simple equation is embedded :math:`a^2 + b^2 = c^2` in text.
+> ```
+> This is an inline equation embedded :math:`a^2 + b^2 = c^2` in text.
 > ```
 >
-> To display an equation on a new line:
->
-> ```shell
-> .. math:: a^2+ b^2= c^2
->    :label: equation_label1
+> An equation and equation array:
 > ```
->
->   or:
->
-> ```shell
 > .. math::
->    :label: equation_label2
+>    :label: myequation
 >
->       a^2+ b^2= c^2
-> ```
+>    a^2 + b^2 = c^2
 >
-> In the two examples above, we also added labels (`equation_label1` and
-> `equation_label2`) so we can reference our equations using `:eq: equation_label`.
->
-> ### Equation arrays
->
-> ```shell
 > .. math::
->    :label: equation_label3
+>    :label: myarray
 >
->        \begin{eqnarray}
->           x^2 & : x < 0\\
->           x^3 & : x \ge 0\\
->        \end{eqnarray}
+>    \begin{eqnarray}
+>      x^2 & : x < 0 \\
+>      x^3 & : x \ge 0 \\
+>    \end{eqnarray}
 > ```
 >
-> These equations can then be referenced using `:eq: equation_label3`.
+> These equations can then be referenced using `:eq: myequation` and `:eq: myarray`.
 >
 {: .callout}
 
