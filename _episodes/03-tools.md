@@ -78,7 +78,7 @@ keypoints:
 
 - Lightweight and readable
 - [Sphinx](http://sphinx-doc.org) can generate HTML/PDF/LaTeX from RST and Markdown
-- Basically all Python projects use Sphinx
+- Basically all Python projects use Sphinx but Sphinx is not limited to Python
 - Good code highlighting: [Pygments](http://pygments.org), [Rouge](http://rouge.jneen.net)
 - [Jekyll](https://jekyllrb.com) and other static site generators could be used, too
 - Advantage of Sphinx: [Read the docs](http://readthedocs.org)
