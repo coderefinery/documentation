@@ -54,7 +54,7 @@ material is hosted.
 > $ git push origin gh-pages
 > ```
 > - Verify that your changes land on `https://<user>.github.io/gh-pages-example/` (it may take a couple of seconds).
-> 
+>
 > Yay! Now you have successfully deployed a website!
 >
 {: .task}
