@@ -82,13 +82,10 @@ under `docs/` - see the [documentation](https://help.github.com/articles/configu
 ### Where you might want to go from here
 
 - There are many web frameworks available.
-- **Static site generators** allow modular websites and play well with GitHub/GitLab/Bitbucket Pages which serve static sites:
-  - [Jekyll](https://jekyllrb.com)
-  - [Hugo](https://gohugo.io)
-  - [Hexo](https://hexo.io)
-  - Many others
+- **Static site generators**
+  (such as [Jekyll](https://jekyllrb.com), [Hugo](https://gohugo.io), [Hexo](https://hexo.io), ...)
+  allow modular websites and play well with GitHub/GitLab/Bitbucket Pages which serve static sites.
 - See the [GitHub Pages documentation](https://pages.github.com) for step-by-step guides.
 - It is no problem to serve GitHub/GitLab/Bitbucket Pages using your **own domain name**.
-- Do not reinvent the wheel - **use CSS frameworks**:
-    - [Bootstrap](http://getbootstrap.com)
-    - [Foundation](http://foundation.zurb.com)
+- For styling of your website you can use one of the many CSS frameworks (such as [Bootstrap](http://getbootstrap.com),
+  [Bulma](https://bulma.io), [Foundation](http://foundation.zurb.com), ...)
