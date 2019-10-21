@@ -6,27 +6,6 @@ permalink: /guide/
 # Instructor guide
 
 
-### What you need to do before the workshop
-
-We use this repository for a collaborative exercise:
-https://github.com/coderefinery/word-count
-
-Before the workshop you should squash all submitted changes
-by the participants of the last workshop and place the squashed
-commit on a branch, e.g.: https://github.com/coderefinery/word-count/commit/1f772a4f01cfcb9bd8bd1da505e6a7c47bcf091c
-
-For the branch name use the same URL suffix as for the workshop, e.g.
-for workshop
-https://coderefinery.org/workshops/2018-12-03-uppsala/
-create the branch name
-`doc-exercise/2018-12-03-uppsala`
-
-Then rewind the master branch to the last commit before participants
-sent in changes.
-
-Close all PRs which are open from the last workshop.
-
-
 ### Place this lesson on last day of the workshop
 
 Reason is that with collaborative Git we can create more interesting
