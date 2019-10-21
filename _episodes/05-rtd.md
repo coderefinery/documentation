@@ -121,3 +121,16 @@ objectives:
 >
 {: .callout}
 
+> ## Migrating your own documentation to Sphinx/ Read the Docs
+>
+> - First convert your documentation to RST using [Pandoc](https://pandoc.org)
+> - Create a file `index.rst` which lists all other RST files and provides the
+>   table of contents.
+> - Add a `conf.py` file. You can generate a starting point for `conf.py` and
+>   `index.rst` with `sphinx-quickstart`, or you can take the examples in this
+>   lesson as inspiration.
+> - Test building the documentation locally with `sphinx-build`.
+> - Once this works, enable the project on Read the Docs and try to push a
+>   change to your documentation.
+>
+{: .callout}
