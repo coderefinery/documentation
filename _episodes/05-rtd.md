@@ -12,9 +12,7 @@ objectives:
 
 ## [Read the Docs](https://readthedocs.org)
 
-- Free Sphinx hosting
-- RST or Markdown
-- PDF can be generated on the fly
+- Runs Sphinx and converts RST or Markdown to HTML and PDF and hosts them for you
 - Equations and images no problem
 - Layout can be styled
 - Many projects use [Read the Docs](https://readthedocs.org) as their main site
@@ -35,25 +33,31 @@ objectives:
 
 > ## Exercise: Deploy Sphinx documentation to Read the Docs
 >
-> In this exercise we will make a copy of an example repository on GitHub and deploy it to Read the Docs.
+> In this exercise we will make a copy of an [example repository](https://github.com/coderefinery/word-count/) on GitHub and
+> deploy it to Read the Docs. The example project contains a script for
+> counting the frequency distribution of words in a given file and some
+> documentation generated using Sphinx. For bigger projects, we will have much
+> more source files.
 >
 > We will use GitHub for this exercise but it will also work with any Git
 > repository with public read access.
 >
-> 1. In the first step, generate a new repository based on
->  [this word-count example project template](https://github.com/coderefinery/word-count/generate) and
->  then clone the newly created repository to your laptop.
->     - The project contains a script for counting the frequency distribution of words in a given file and some documentation generated using sphinx. For bigger projects, we will have much more source files.
-> 2. In the second step, enable the project on Read the Docs.
+> 1. In the first step, we will make a copy of the example repository and then
+>    clone the newly created repository to our laptop.
+> 2. In the second step, we will enable the project on Read the Docs, then
+>    commit and push some changes and check that the documentation is
+>    automatically rebuilt.
 >
-> ### Step 1: Go to the [word-count project template](https://github.com/coderefinery/word-count/generate), copy it to your namespace, and clone the repository
+> ### Step 1: Go to the [word-count project template](https://github.com/coderefinery/word-count/generate) and copy it to your namespace
 >
-> - The repository contains following two folders, among few other files and folder.
->     - **source** folder contains the source code
->     - **doc** folder contains the sphinx documentation
+> #### Clone the repository
 >
-> The doc folder contains the sphinx configuration file (`conf.py`) and the
-> core file (`index.rst`) and some contents (`usage.rst` and `contributions.rst`).
+> The repository contains following two folders, among few other files and folders:
+> - **source** folder contains the source code
+> - **doc** folder contains the Sphinx documentation
+>
+> The doc folder contains the Sphinx configuration file (`conf.py`) and the
+> index file (`index.rst`) and some contents (other RST files).
 > The `conf.py` file has been adjusted to be able to autogenerate documentation from sources.
 >
 > #### Build HTML pages locally
@@ -73,12 +77,7 @@ objectives:
 >
 > ### Step 2: Enable the project on [Read the Docs](https://readthedocs.org)
 >
-> Now you will import a project to Read the Docs by connecting to GitHub.  This
-> will automatically set up a webhook on GitHub and webhook integration on Read
-> the Docs so that `git push` will automatically rebuild the Read the Docs site.
-> One can also manually import the project to Read the Docs and set up the
-> webhook on GitHub, along with webhook integration on Read the Docs, but this
-> will not be needed here.
+> #### Import a project to Read the Docs by connecting to GitHub
 >
 > - Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
 > - Click "Import a Project"
@@ -86,8 +85,12 @@ objectives:
 > - Rename the project to user-word-count (replacing "user" with your GitHub username: we need a unique project name)
 > - Click "Next"
 >
+> #### Verify the result
+>
 > That's it! Your site should now be live on
 > http://user-word-count.readthedocs.io (replace project name).
+>
+> #### Verify refreshing the documentation
 >
 > Finally, make some changes to your documentation
 >   - Add documentation related to other functions
@@ -109,9 +112,8 @@ objectives:
 
 > ## Running your own sphinx server
 >
-> We recommend to use Read the Docs to host your documentation but this may
-> not be suitable for you. For instance, many industries prefer to host their
-> own sphinx server.
+> We recommend to use Read the Docs to host your documentation but if you
+> prefer, you can host your own Sphinx server.
 > If you want to know more about it, look at:
 > - [https://docs.readthedocs.io/en/latest/install.html](https://docs.readthedocs.io/en/latest/install.html)
 > - [https://pypi.org/project/sphinx-autobuild/](https://pypi.org/project/sphinx-autobuild/)
@@ -119,3 +121,16 @@ objectives:
 >
 {: .callout}
 
+> ## Migrating your own documentation to Sphinx/ Read the Docs
+>
+> - First convert your documentation to RST using [Pandoc](https://pandoc.org)
+> - Create a file `index.rst` which lists all other RST files and provides the
+>   table of contents.
+> - Add a `conf.py` file. You can generate a starting point for `conf.py` and
+>   `index.rst` with `sphinx-quickstart`, or you can take the examples in this
+>   lesson as inspiration.
+> - Test building the documentation locally with `sphinx-build`.
+> - Once this works, enable the project on Read the Docs and try to push a
+>   change to your documentation.
+>
+{: .callout}
