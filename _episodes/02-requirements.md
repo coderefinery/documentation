@@ -14,6 +14,29 @@ keypoints:
   - Use lightweight and standard markup languages such as RST or Markdown.
 ---
 
+## Own examples
+
+We would like to show you some examples which are not ideal but we do not want
+to point at others.
+
+Instead we list some of the projects we have contributed to (possibly long time
+ago), with varying quality of documentation:
+
+- [gtfspy](https://github.com/CxAalto/gtfspy)
+- [Niimpy](https://github.com/CxAalto/niimpy)
+- [pcd](https://github.com/rkdarst/pcd)
+- [Dalton](https://daltonprogram.org/documentation/)
+- [Autocmake](https://github.com/dev-cafe/autocmake)
+- [Cubicle](https://github.com/bast/cubicle)
+
+Discuss in groups what you like / or don't like about each before discussing it
+as a class.
+
+If you have examples of your own which you would like to share (on this website
+or verbally), please do!
+
+---
+
 ## What do we expect from a good documentation?
 
 ### Documentation comes in different forms - what *is* documentation?
