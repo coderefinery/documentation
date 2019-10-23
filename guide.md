@@ -63,10 +63,16 @@ lecture for those who want to find out more. If you go through each bullet point
 in detail, the motivation can easily take up 30 minutes and you will run out
 of time.
 
+The lesson does not fit into 1.5 hours if you go through everything. Optimize for
+discussions and prepare well to be able to jump over bullet points which
+can be left for a later lecture.
+
 
 ### Sessions which can be skipped if time is tight
 
-- Do not insist on practicing Markdown or RST syntax
+- Do not insist on practicing Markdown or RST syntax.
+- The GitHub pages episode can be done as demonstration instead of exercise.
+- If time is tight, the GitHub pages episode can be skipped and only mentioned that it exists.
 
 
 ### Typical pitfalls
