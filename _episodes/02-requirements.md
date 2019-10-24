@@ -26,6 +26,7 @@ ago), with varying quality of documentation:
 - [Dalton](https://daltonprogram.org/documentation/)
 - [Autocmake](https://github.com/dev-cafe/autocmake)
 - [Cubicle](https://github.com/bast/cubicle)
+- [XCFun code](https://github.com/dftlibs/xcfun/) with [documentation 1](https://xcfun.readthedocs.io) and [documentation 2](http://dftlibs.org/xcfun/)
 
 Discuss in groups what you like / or don't like about each before discussing it
 as a class.
