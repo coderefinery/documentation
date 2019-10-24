@@ -22,8 +22,6 @@ to point at others.
 Instead we list some of the projects we have contributed to (possibly long time
 ago), with varying quality of documentation:
 
-- [gtfspy](https://github.com/CxAalto/gtfspy)
-- [Niimpy](https://github.com/CxAalto/niimpy)
 - [pcd](https://github.com/rkdarst/pcd)
 - [Dalton](https://daltonprogram.org/documentation/)
 - [Autocmake](https://github.com/dev-cafe/autocmake)
