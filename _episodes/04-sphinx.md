@@ -360,7 +360,7 @@ Note that you can change the styling by editing `conf.py` and changing the value
 >    \end{eqnarray}
 > ```
 >
-> These equations can then be referenced using `:eq: myequation` and `:eq: myarray`.
+> These equations can then be referenced using ``:eq:`myequation` `` and ``:eq:`myarray` ``.
 >
 {: .callout}
 
