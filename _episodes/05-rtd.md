@@ -72,7 +72,7 @@ objectives:
 >
 > Inside the cloned repository, check the integrity of all external links:
 >```
->$ sphinx-build doc -W -blinkcheck -d _build/doctrees _build/html
+>$ sphinx-build doc -W -b linkcheck -d _build/doctrees _build/html
 >```
 >
 > ### Step 2: Enable the project on [Read the Docs](https://readthedocs.org)
