@@ -23,7 +23,8 @@ Instead we list some of the projects we have contributed to (possibly long time
 ago), with varying quality of documentation:
 
 - [pcd](https://github.com/rkdarst/pcd)
-- [Dalton](https://daltonprogram.org/documentation/)
+- [Dalton](https://daltonprogram.org/documentation/) (check the PDF
+  manuals, e.g. [Dalton 2018](https://daltonprogram.org/manuals/dalton2018manual.pdf))
 - [Autocmake](https://github.com/dev-cafe/autocmake)
 - [Cubicle](https://github.com/bast/cubicle)
 - [XCFun code](https://github.com/dftlibs/xcfun/) with [documentation 1](https://xcfun.readthedocs.io) and [documentation 2](http://dftlibs.org/xcfun/)
