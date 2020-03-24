@@ -64,7 +64,7 @@ Nano cannot be installed through Anaconda but is available by default in git-bas
 
 #### Character encoding issues
 
-Can arise when using non-utf8 characters in conf.py. Diagonse this with ``file -i conf.py``
+Can arise when using non-utf8 characters in conf.py. Diagnose this with ``file -i conf.py``
 and ``locale``.
 
 ### How to start
