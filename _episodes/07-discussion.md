@@ -12,7 +12,10 @@ questions:
 > ## Discussion
 >
 > - Please write your questions in the collaborative notes document.
-> - Some of the recommendations below can be used as food for thought.
+> - Any other ideas?
+>     - e.g. Any incremental improvements that can benefit your projects?
+>     - e.g. What's nice but overkill for your work?
+>     - Some of the recommendations below can be used as food for thought.
 {: .discussion}
 
 ---
