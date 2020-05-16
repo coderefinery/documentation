@@ -321,7 +321,7 @@ Note that you can change the styling by editing `conf.py` and changing the value
 >    feature-a
 >    <python_notebook_name>.ipynb
 > ```
-{: .task}
+{: .challenge}
 
 > ## Rendering (LaTeX) math equations
 >
