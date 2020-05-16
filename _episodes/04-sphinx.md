@@ -27,6 +27,12 @@ keypoints:
 We will take the first steps in creating documentation using Sphinx, and learn some
 RST syntax along the way.
 
+- Our goal in this episode is to build HTML pages locally on our computers.
+- In the next episode we will learn how to deploy the documentation to a cloud service
+  upon every `git push`.
+- Please write your questions in the collaborative HackMD document so that we can answer
+  them and discuss them together after the group sessions.
+
 
 > ## Prerequisites: Check whether we have the software we need
 >
@@ -216,15 +222,15 @@ RST syntax along the way.
 > Now open the file `_build/index.html` in your browser by:
 >
 > Linux users type:
-> ```bash
+> ```
 > $ xdg-open _build/index.html
 > ```
 > macOS users type:
-> ```bash
+> ```
 > $ open _build/index.html
 > ```
 > Windows users type:
-> ```bash
+> ```
 > $ start _build/index.html
 > ```
 >
@@ -235,7 +241,8 @@ RST syntax along the way.
 > Hopefully you can now see a website. If so, then you are able to build Sphinx pages locally.
 > This is useful to check how things look before pushing changes to GitHub or elsewhere.
 >
-> Note that you can change the styling by editing `conf.py` and changing the value `html_theme`.
+> Note that you can change the styling by editing `conf.py` and changing the value `html_theme`
+> (for instance you can set it to `sphinx_rtd_theme` to have the Read the Docs look).
 {: .challenge}
 
 > ## Exercise 2: Add content to your example documentation
@@ -368,8 +375,9 @@ RST syntax along the way.
 >
 {: .callout}
 
+---
 
-## Where to find more
+### Where to find more
 
 - For more RST functionality, see the [Sphinx documentation](http://www.sphinx-doc.org/en/stable/rest.html)
   and the [quick-reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
