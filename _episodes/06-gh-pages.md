@@ -33,12 +33,18 @@ material is hosted.
 
 > ## Exercise
 >
-> - Deploy own website reusing a template
-> - Make a change to the website after it has been deployed for the first time
+> - Deploy own website reusing a template:
+>   - Follow <https://pages.github.com/>
+>   - Select "Project site"
+>   - Select "Choose a theme" (for instance "Minimal")
+>   - Click "Select theme"
+>   - Adjust the README.md and commit
+>   - Browse your page on `http://username.github.io/repository` (adjust "username" and "repository")
+> - Make a change to the repository after the webpage has been deployed for the first time
 > - Verify that the change shows up on the website a minute or two later
 >
 > The documentation for GitHub Pages is very good so no need for us to duplicate
-> screenshots: [https://pages.github.com/](https://pages.github.com/)
+> screenshots: <https://pages.github.com/>
 {: .challenge}
 
 > ## Discussion
