@@ -26,7 +26,8 @@ Specific motivations:
 - It helps people to collaborate.
 - It improves the design of your code.
 
-## Intended learning outcomes:
+
+## Intended learning outcomes
 
 By the end of this lesson, learners should:
 - Understand the importance of writing code documentation together with the source code
@@ -35,26 +36,28 @@ By the end of this lesson, learners should:
 
 ## How to teach this lesson
 
+
 ### Requirements
 
 These are the software/packages used in the lesson material and exercises:
-- python 
+- python
 - Sphinx
 
 Attendees would need a Github account too.
+
 
 ### Typical pitfalls
 
 #### Anaconda shell, Git, and Nano on Windows
 
 Windows users (probably) need to use the Anaconda prompt to run sphinx commands
-(sphinx-build, sphinx-quickstart). 
+(sphinx-build, sphinx-quickstart).
 
 Git can be also be installed in the standard anaconda installation:
 
 ```bash
 conda install git
-``` 
+```
 
 The command above needs to be done into an Anaconda prompt or using Anaconda Navigator.
 
@@ -62,10 +65,12 @@ For editing files, learners should be encouraged to use their favorite editor.
 
 Nano cannot be installed through Anaconda but is available by default in git-bash. So a good working solution seems to be that Windows users have two terminals side-by-side, one with Anaconda prompt and another with git-bash.
 
+
 #### Character encoding issues
 
 Can arise when using non-utf8 characters in conf.py. Diagnose this with ``file -i conf.py``
 and ``locale``.
+
 
 ### How to start
 
@@ -77,27 +82,36 @@ of own code and code written by others.
 
 - How do you document unpublished features?
 
+
 ### Share your experience
 
-The three first episodes do not contain any live coding or exercises. 
+The three first episodes do not contain any live coding or exercises.
 
-In these first episodes, instructors share their own experience in writing documentation. Feel free to add your own experience and ask learners to share their thoughts too.
-Stress the importance of understanding the audience you are writing the documentation for (developers, users, etc.) and that starting with a simple tutorial (with a set of tests) is usually a good approach.
+In these first episodes, instructors share their own experience in writing
+documentation. Feel free to add your own experience and ask learners to share
+their thoughts too.  Stress the importance of understanding the audience you
+are writing the documentation for (developers, users, etc.) and that starting
+with a simple tutorial (with a set of tests) is usually a good approach.
 
-
-In the second episode, we review different tools: the goal here is to highlight what is important when choosing a tool for writing documentation. We have chosen to teach how to use Sphinx with Read the Docs but make sure you bring across that the tools we show are general:
+In the second episode, we review different tools: the goal here is to highlight
+what is important when choosing a tool for writing documentation. We have
+chosen to teach how to use Sphinx with Read the Docs but make sure you bring
+across that the tools we show are general:
 - Sphinx is not only for Python
 - Read the Docs is not only for Github
 
-In the fourth exercise, we first test the availability of Sphinx. This test needs to be done in a terminal where python is available. It can take a bit of time to get everybody on board with Sphinx.  
-It can be nice to make a short break if you need more time to fix problems.
+In the fourth exercise, we first test the availability of Sphinx. This test
+needs to be done in a terminal where python is available. It can take a bit of
+time to get everybody on board with Sphinx.  It can be nice to make a short
+break if you need more time to fix problems.
+
 
 ### Things to prepare
 
 We start from scratch for all the exercises in this lesson.
 
-### Optional sections
 
+### Optional sections
 
 The lesson does not fit into 1.5 hours if you go through everything. Optimize for
 discussions and prepare well to be able to jump over bullet points which
@@ -105,15 +119,22 @@ can be left for a later lecture. Some sections can be skipped if needed (see bel
 discussion with your learners to make them aware of what the training material contains.
 
 - Do not insist on practicing Markdown or RST syntax
-- The section *Rendering (LaTeX) math equations* may be optional if your attendees do not have to deal with equations.
-- In episode 6 *Deploying a project website or homepage to GitHub Pages*, the goal is not anymore to write code documentation but to show how to build project website with Github.
-If time is tight, the GitHub pages episode can be skipped or can be done as demonstration instead of exercise. 
-However, make sure you mention that it exists and explain that it is not generally used to write code documentation but to complement it with information on overall project.
+- The section *Rendering (LaTeX) math equations* may be optional if your
+  attendees do not have to deal with equations.
+- In episode 6 *Deploying a project website or homepage to GitHub Pages*, the
+  goal is not anymore to write code documentation but to show how to build
+  project website with Github.  If time is tight, the GitHub pages episode can be
+  skipped or can be done as demonstration instead of exercise.  However, make
+  sure you mention that it exists and explain that it is not generally used to
+  write code documentation but to complement it with information on overall
+  project.
+
 
 ### Live better than reading the website material
 
 It is better to  demonstrate the commands live and type-along. Ideally connecting
-to examples discussed earlier. 
+to examples discussed earlier.
+
 
 ### Place this lesson on last day of the workshop
 
@@ -134,6 +155,7 @@ zero.
 
 Then they learn how to deploy an existing project to RTD.
 
+
 ### Timing
 
 As an instructor you should prepare all bullet points in the requirements and
@@ -142,4 +164,3 @@ the main points and rather give time for a discussion. Leave details for a later
 lecture for those who want to find out more. If you go through each bullet point
 in detail, the motivation can easily take up 30 minutes and you will run out
 of time.
-
