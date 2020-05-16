@@ -5,36 +5,48 @@ teaching: 5
 exercises: 0
 questions:
   - What recommendations can we take home?
-objectives:
-  - Automatize and give the boring work to machines.
-  - Make contributing documentation easy, simple, and direct.
-  - Sometimes take a step back and consider different perspectives to your documentation.
-  - Do not maintain own servers, use good available services.
 ---
 
-## Setup
+## Back in the main room: Questions and answers, discussion
 
-- Rather use Read the Docs if your documentation is associated to a source code and vary from one version to another. If you develop general documentation that is version independent then deploying a project website or homepage to GitHub Pages can be preferred.
-- Whatever solution you choose, make it automatically rebuild pages upon `git push`.
-- Documentation needs to be close to the source code and evolve with the source code.
-- When using code review make sure that new functionality always comes with documentation.
+> ## Discussion
+>
+> - Please write your questions in the collaborative notes document.
+> - Some of the recommendations below can be used as food for thought.
+{: .discussion}
+
+---
+
+### There is not the one right way: it is always a balance
 
 
-### Sphinx or GitHub pages or both?
+**Jupyter notebooks can be good documentation for scripts**
+
+- For simple scripts and post-processing, Jupyter notebooks can form a nice
+  self-documenting pipeline.
+
+
+**README.md or README.rst?**
+
+- Functionality-wise both Markdown and RST are very similar.
+- With RST it is a one-liner to generate a table of contents automatically.
+- If you need math equations, RST/Sphinx might be a good fit.
+- Resizing images in README.rst on GitHub is currently not easy.
+
+
+**READMEs or Read the Docs?**
+
+- For smaller projects READMEs can be absolutely enough.
+- If the code is closed-source, you probably prefer Read the Docs (or similar).
+
+
+**How to make sure that code changes come together with documentation changes?**
+
+- Make documentation part of your code review.
+
+
+**Sphinx/RTD or GitHub pages or both?**
 
 - GitHub pages typically serves one version (one branch). It is often used as the project/group/personal page.
 - Sphinx can serve several versions (several branches/tags) at the same time.
 - Some projects use both.
-- It is a good idea to keep source code, web sources, and possibly also Sphinx source all in the same repository, tracking a common history.
-
----
-
-## Human aspects
-
-- Write documentation that you would like to read.
-- Answer questions about your code with an updated documentation.
-- Do not force persons who install and test your software to read
-  tens of pages of documentation and understand the domain theory behind the code
-  in order to install and test the code:
-    - User support at computing centers
-    - Vendors who run benchmarks
