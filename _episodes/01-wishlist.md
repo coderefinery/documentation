@@ -1,9 +1,10 @@
 ---
 layout: episode
-title: "Specs and requirements"
-teaching: 10
+title: "Motivation and wishlist"
+teaching: 15
 exercises: 0
 questions:
+  - Why is code documentation important?
   - What requirements and specifications can we impose on a good documentation?
 objectives:
   - Arrive at a set of specifications that we can use as checklist for designing and deploying code documentation.
@@ -12,6 +13,32 @@ keypoints:
   - Documentation should be close to the source code to minimize the barrier to contribute.
   - Documentation needs to be versioned for reproducibility.
   - Use lightweight and standard markup languages such as RST or Markdown.
+---
+
+## Questions
+
+- Is project documentation important? Why?
+- How would you describe a useful documentation?
+- How can you motivate your colleagues to contribute to the documentation?
+- Does your project have a website? If not, do you think it could be good for
+  the project?
+
+---
+
+## Why is project documentation important?
+
+- You will probably use your code in the future and may forget details.
+- You may want others to use your code (almost impossible without documentation).
+- You may want others to contribute to the code.
+- Shield your limited time and let the documentation answer FAQs.
+
+---
+
+## Good resources
+
+- [A beginner’s guide to writing documentation](http://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)
+- [What nobody tells you about documentation](https://www.divio.com/blog/documentation/)
+
 ---
 
 ## Own examples
