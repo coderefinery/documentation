@@ -1,8 +1,8 @@
 ---
 layout: episode
 title: Hosting websites/homepages on GitHub Pages
-teaching: 20
-exercises: 0
+teaching: 0
+exercises: 20
 questions:
   - How to serve a website/homepage using GitHub
 ---
