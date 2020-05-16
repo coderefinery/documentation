@@ -14,22 +14,23 @@ keypoints:
   - Use lightweight and standard markup languages such as reStructuredText or Markdown.
 ---
 
-## Questions
+## Why documenting code?
 
-- Is project documentation important? Why?
-- How would you describe a useful documentation?
-- How can you motivate your colleagues to contribute to the documentation?
-- Does your project have a website? If not, do you think it could be good for
-  the project?
+> ## Exercise in the main room
+>
+> - **Use the collaborative document**.
+> - Is project documentation important? Why?
+> - How would you describe a useful documentation?
+> - How can you motivate your colleagues to contribute to the documentation?
+{: .challenge}
 
----
-
-## Why is project documentation important?
-
-- You will probably use your code in the future and may forget details.
-- You may want others to use your code (almost impossible without documentation).
-- You may want others to contribute to the code.
-- Shield your limited time and let the documentation answer FAQs.
+> ## Our motivation (but let us brainstorm first)
+>
+> - You will probably use your code in the future and may forget details.
+> - You may want others to use your code (almost impossible without documentation).
+> - You may want others to contribute to the code.
+> - Shield your limited time and let the documentation answer FAQs.
+{: .solution}
 
 ---
 
@@ -77,8 +78,8 @@ or verbally), please do!
 
 > ## Exercise in the main room: Create a wishlist
 >
-> - Let us create a wishlist for how we would like documentation to be.
 > - **Use the collaborative document**.
+> - Let us create a wishlist for how we would like documentation to be.
 > - Below are some of our ideas but please do not look at them yet.
 > - We are sure you will come up with ideas we did not think about.
 {: .challenge}
