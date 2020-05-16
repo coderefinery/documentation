@@ -143,26 +143,25 @@ These are distinct. For an excellent discussion, please see [What nobody tells y
   others are not allowed to re-use or modify anything.
 - GitHub and GitLab allows to choose a license from common license templates.
 
+> ## Documentation checklist
+>
+> Which items to include depends on the number of users apart from yourself.
+>
+> - Purpose
+> - Authors
+> - License
+> - Recommended citation
+> - Copy-paste-able example to get started
+> - Dependencies and their versions or version ranges
+> - Installation instructions
+> - How do you want to be asked questions (mailing list or forum or chat or issue tracker)
+> - Possibly a FAQ section
+> - Contribution guide
+{: .discussion}
+
 ---
 
-## Documentation checklist
-
-Which items to include depends on the number of users apart from yourself.
-
-- Purpose
-- Authors
-- License
-- Recommended citation
-- Usage
-- Example
-- FAQ
-- Installation instructions
-- Contact points (mailing list or forum or chat or issue tracker)
-- Contribution guide
-
----
-
-## Good resources
+### Good resources
 
 - [A beginner’s guide to writing documentation](http://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)
 - [What nobody tells you about documentation](https://www.divio.com/blog/documentation/)
