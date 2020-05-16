@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: "Sphinx and ReStructuredText"
+title: "Sphinx and reStructuredText"
 teaching: 5
 exercises: 15
 questions:
