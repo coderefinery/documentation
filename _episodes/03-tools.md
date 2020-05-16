@@ -77,12 +77,11 @@ keypoints:
 ## RST and Markdown
 
 - Lightweight and readable
-- [Sphinx](http://sphinx-doc.org) can generate HTML/PDF/LaTeX from RST and Markdown
-- Basically all Python projects use Sphinx but Sphinx is not limited to Python
-- Good code highlighting: [Pygments](http://pygments.org), [Rouge](http://rouge.jneen.net)
-- [Jekyll](https://jekyllrb.com) and other static site generators could be used, too
-- Advantage of Sphinx: [Read the docs](http://readthedocs.org)
-  hosts public [Sphinx](http://sphinx-doc.org) documentation for free!
+- Two of the most popular lightweight markup languages.
+- RST has more features than Markdown but the choice is a matter of taste.
+- Markdown convenient for smaller documents,
+  but for larger and more complicated documents RST may be a better option.
+- There are (unfortunately) [many flavors of Markdown](https://github.com/jgm/CommonMark/wiki/Markdown-Flavors).
 
 ```
 # This is a section in Markdown   This is a section in RST
@@ -109,8 +108,6 @@ There is more: images,            There is more: images,
 tables, links, ...                tables, links, ...
 ```
 
-- Sphinx can work with both RST and Markdown
-- RST has more features than Markdown but the choice is a matter of taste
 - We will use RST in a Sphinx example and Markdown in a GiHub pages example
 
 Experiment with Markdown:
@@ -123,6 +120,14 @@ Experiment with Markdown:
 ## HTML
 
 - Projects can easily autogenerate HTML from RST or Markdown
+- [Sphinx](http://sphinx-doc.org) can generate HTML/PDF/LaTeX from RST and Markdown
+- Sphinx was built around RST, but recently
+[support for Markdown was added](http://blog.readthedocs.com/adding-markdown-support/).
+- Basically all Python projects use Sphinx but Sphinx is not limited to Python
+- Good code highlighting: [Pygments](http://pygments.org), [Rouge](http://rouge.jneen.net)
+- [Jekyll](https://jekyllrb.com) and other static site generators could be used, too
+- Advantage of Sphinx: [Read the docs](http://readthedocs.org)
+  hosts public [Sphinx](http://sphinx-doc.org) documentation for free!
 - Make it possible to avoid maintaining own web servers to host
   documentation and use resources like:
     - [GitHub Pages](https://pages.github.com)
