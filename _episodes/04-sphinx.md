@@ -11,17 +11,6 @@ keypoints:
   - Sphinx and RST are relatively lightweight options for writing documentation.
 ---
 
-## RST and Markdown
-
-- Two of the most popular lightweight markup languages.
-- Markdown considered simpler to use, but RST more extensible.
-- Markdown convenient for smaller documents,
-  but for larger and more complicated documents RST may be a better option.
-- Sphinx was built around RST, but recently
-[support for Markdown was added](http://blog.readthedocs.com/adding-markdown-support/).
-- There are (unfortunately) [many flavors of Markdown](https://github.com/jgm/CommonMark/wiki/Markdown-Flavors).
-
-
 ## Group exercise: Build Sphinx documentation using RST
 
 We will take the first steps in creating documentation using Sphinx, and learn some
