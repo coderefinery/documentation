@@ -71,7 +71,7 @@ or verbally), please do!
 {: .discussion}
 
 **There is no one size fits all**: often for small projects a `README.md` or
-`README.rst` (more about these formats later) can be enough.
+`README.rst` can be enough (more about these formats later).
 
 ---
 
@@ -97,14 +97,15 @@ or verbally), please do!
 >
 > - Documenting **close to the source code** (e.g. subdirectory ``doc/``) minimizes barrier to contribute.
 > - I should not need to log in to another machine or service and jump through hoops to contribute.
+> - It is often good enough to have a `README.md` or `README.rst` along with your code/script.
 >
 >
 > ### Use a standard markup language
 >
 > - Use either
->   [RST](http://docutils.sourceforge.net/rst.html) or
+>   [reStructuredText (RST)](http://docutils.sourceforge.net/rst.html) or
 >   [Markdown](http://daringfireball.net/projects/markdown/) markup.
-> - GitHub and GitLab automatically render README.md or README.rst files.
+> - GitHub and GitLab automatically render `README.md` or `README.rst` files.
 >
 >
 > ### Copy-paste-able
@@ -118,13 +119,6 @@ or verbally), please do!
 > - Automatically generated documentation (e.g. API documentation) is useful as
 >   complementary documentation but it does not replace tutorials written by
 >   humans.
->
->
-> ### Information for contributors
->
-> - Make it easy for others to contribute: **document how you prefer others to contribute**.
-> - Users of your code may be shy to contribute code.
->   Your **documentation provides a platform for your first contributions**.
 >
 >
 > ### Installation instructions
@@ -141,7 +135,16 @@ or verbally), please do!
 > - Without a license, your work is under exclusive copyright by default:
 >   others are not allowed to re-use or modify anything.
 > - GitHub and GitLab allows to choose a license from common license templates.
+>
+>
+> ### Information for contributors
+>
+> - Make it easy for others to contribute: **document how you prefer others to contribute**.
+> - Users of your code may be shy to contribute code.
+>   Your **documentation provides a platform for your first contributions**.
 {: .solution}
+
+---
 
 > ## Documentation checklist
 >
