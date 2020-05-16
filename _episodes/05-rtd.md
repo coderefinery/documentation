@@ -1,8 +1,8 @@
 ---
 layout: episode
 title: "Deploying Sphinx documentation to Read the Docs"
-teaching: 5
-exercises: 15
+teaching: 0
+exercises: 20
 questions:
   - How do Python projects deploy their documentation?
   - Can we use their solutions for projects which do not use Python?
@@ -18,14 +18,12 @@ objectives:
 - Many projects use [Read the Docs](https://readthedocs.org) as their main site
 - It is no problem to serve using your own URL `http://myproject.org` instead of `http://myproject.readthedocs.io`
 
----
-
-## Typical Read the Docs workflow
+### Typical Read the Docs workflow
 
 - Host source code with documentation sources on a public Git repository.
 - Each time you `git push` to the repository, a `post-receive` hook triggers
   Read the Docs to rebuild the documentation.
-- Read the Docs then clones the repository
+- Read the Docs then clones the repository, runs Sphinx,
   and rebuilds HTML and PDF.
 - No problem to build several branches (versions) of your documentation.
 
@@ -50,7 +48,7 @@ objectives:
 >
 > ### Step 1: Go to the [word-count project template](https://github.com/coderefinery/word-count/generate) and copy it to your namespace
 >
-> #### Clone the repository
+> **Clone the repository**
 >
 > The repository contains following two folders, among few other files and folders:
 > - **source** folder contains the source code
@@ -60,15 +58,16 @@ objectives:
 > index file (`index.rst`) and some contents (other RST files).
 > The `conf.py` file has been adjusted to be able to autogenerate documentation from sources.
 >
-> #### Build HTML pages locally
 >
-> Inside the cloned repository, run
+> **Build HTML pages locally**
+>
+> Inside the cloned repository, build the documentation and verify the result in your browser:
 >```shell
 >$ sphinx-build doc _build
 >```
-> and verify the result in your browser.
 >
-> #### Test HTML pages links
+>
+> **Test HTML pages links**
 >
 > Inside the cloned repository, check the integrity of all external links:
 >```
@@ -77,7 +76,7 @@ objectives:
 >
 > ### Step 2: Enable the project on [Read the Docs](https://readthedocs.org)
 >
-> #### Import a project to Read the Docs by connecting to GitHub
+> **Import a project to Read the Docs by connecting to GitHub**
 >
 > - Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
 > - Click "Import a Project"
@@ -85,12 +84,12 @@ objectives:
 > - Rename the project to user-word-count (replacing "user" with your GitHub username: we need a unique project name)
 > - Click "Next"
 >
-> #### Verify the result
+> **Verify the result**
 >
 > That's it! Your site should now be live on
 > http://user-word-count.readthedocs.io (replace project name).
 >
-> #### Verify refreshing the documentation
+> **Verify refreshing the documentation**
 >
 > Finally, make some changes to your documentation
 >   - Add documentation related to other functions
@@ -99,9 +98,9 @@ objectives:
 >   - Some example results (figures, tables, ...)
 >   - Commit and push them, and verify that the documentation website refreshes after your changes
 >     (can take few seconds or a minute)
-{: .task}
+{: .challenge}
 
-> ## Do not add `_build` directory to your repository
+> ## Do not add the generated build directory to your repository
 >
 > The `_build` directory is generated locally with the command `sphinx-build doc _build`
 > and allows you to check the content locally but it should not be part of the Git repository.
