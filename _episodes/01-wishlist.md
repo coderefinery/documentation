@@ -4,15 +4,14 @@ title: "Motivation and wishlist"
 teaching: 15
 exercises: 0
 questions:
-  - Why is code documentation important?
-  - What requirements and specifications can we impose on a good documentation?
+  - Why documenting code?
+  - What is our wishlist on a suitably good documentation?
 objectives:
-  - Arrive at a set of specifications that we can use as checklist for designing and deploying code documentation.
+  - Arrive at a checklist for designing and deploying code documentation.
 keypoints:
-  - Documentation is part of the code.
-  - Documentation should be close to the source code to minimize the barrier to contribute.
-  - Documentation needs to be versioned for reproducibility.
-  - Use lightweight and standard markup languages such as RST or Markdown.
+  - Documentation is part of the code and should be versionable.
+  - Documentation (sources) should be tracked with the corresponding code in the same repository.
+  - Use lightweight and standard markup languages such as reStructuredText or Markdown.
 ---
 
 ## Questions
