@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: "Recommendations"
+title: "Discussion after the exercises"
 teaching: 5
 exercises: 0
 questions:
