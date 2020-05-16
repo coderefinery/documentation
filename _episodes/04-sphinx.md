@@ -28,36 +28,39 @@ We will take the first steps in creating documentation using Sphinx, and learn s
 RST syntax along the way.
 
 
-### Check whether we have the software we need
-
-Before we start, make sure that Sphinx is part of your Python installation or
-environment. If you use Anaconda, you are set. If you use Miniconda or virtual
-environments, make sure Sphinx is installed into the Miniconda or virtual
-environment.
-
-Test Sphinx installation within Python:
-
-```shell
-$ python --version
-Python 3.7.0
-
-$ python -c "import sphinx; print(sphinx.__version__)"
-2.0.1
-
-$ python -c "import sphinx_rtd_theme"
-```
-
-Test Sphinx tool installation:
-
-```shell
-$ sphinx-quickstart --version
-sphinx-quickstart 2.0.1
-```
-
-The the above commands produce an error
-instead of printing versions (any version would do)
-e.g. command not found or ModuleNotFoundError
-please follow our [installation instructions](https://coderefinery.github.io/installation/python/#installing-required-packages).
+> ## Prerequisites: Check whether we have the software we need
+>
+> Before we start, make sure that Sphinx is part of your Python installation or
+> environment. If you use Anaconda, you are set. If you use Miniconda or virtual
+> environments, make sure Sphinx is installed into the Miniconda or virtual
+> environment.
+>
+> Test Sphinx installation within Python:
+>
+> ```shell
+> $ python --version
+> Python 3.7.0
+>
+> $ python -c "import sphinx; print(sphinx.__version__)"
+> 2.0.1
+>
+> $ python -c "import sphinx_rtd_theme"
+> # this should produce no output
+> ```
+>
+> Test Sphinx tool installation:
+>
+> ```shell
+> $ sphinx-quickstart --version
+> sphinx-quickstart 2.0.1
+> ```
+>
+> The the above commands produce an error
+> instead of printing versions (any version would do)
+> e.g. command not found or ModuleNotFoundError
+> please follow our
+> [installation instructions](https://coderefinery.github.io/installation/python/#installing-required-packages).
+{: .prereq}
 
 
 ### Generate the basic documentation template
