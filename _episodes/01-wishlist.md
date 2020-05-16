@@ -33,13 +33,6 @@ keypoints:
 
 ---
 
-## Good resources
-
-- [A beginner’s guide to writing documentation](http://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)
-- [What nobody tells you about documentation](https://www.divio.com/blog/documentation/)
-
----
-
 ## Own examples
 
 We would like to show you some examples which are not ideal but we do not want
@@ -166,3 +159,10 @@ Which items to include depends on the number of users apart from yourself.
 - Installation instructions
 - Contact points (mailing list or forum or chat or issue tracker)
 - Contribution guide
+
+---
+
+## Good resources
+
+- [A beginner’s guide to writing documentation](http://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)
+- [What nobody tells you about documentation](https://www.divio.com/blog/documentation/)
