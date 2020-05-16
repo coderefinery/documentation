@@ -19,6 +19,14 @@ objectives:
 - Documentation needs to be close to the source code and evolve with the source code.
 - When using code review make sure that new functionality always comes with documentation.
 
+
+### Sphinx or GitHub pages or both?
+
+- GitHub pages typically serves one version (one branch). It is often used as the project/group/personal page.
+- Sphinx can serve several versions (several branches/tags) at the same time.
+- Some projects use both.
+- It is a good idea to keep source code, web sources, and possibly also Sphinx source all in the same repository, tracking a common history.
+
 ---
 
 ## Human aspects

@@ -80,15 +80,6 @@ under `docs/` - see the [documentation](https://help.github.com/articles/configu
 
 ---
 
-### Sphinx or GitHub pages or both?
-
-- GitHub pages typically serves one version (one branch). It is often used as the project/group/personal page.
-- Sphinx can serve several versions (several branches/tags) at the same time.
-- Some projects use both.
-- It is a good idea to keep source code, web sources, and possibly also Sphinx source all in the same repository, tracking a common history.
-
----
-
 ### Where you might want to go from here
 
 - There are many web frameworks available.
