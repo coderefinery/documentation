@@ -108,13 +108,6 @@ or verbally), please do!
 > - GitHub and GitLab automatically render README.md or README.rst files.
 >
 >
-> ### Readable on any device
->
-> - Many people browse the web on their phone or tablet.
-> - If you use standard solutions and services (to be demonstrated later in this
->   lesson), you do not have to worry about this.
->
->
 > ### Copy-paste-able
 >
 > - PDF alone is not enough since **copy-pasting out of a PDF document can be difficult**.
