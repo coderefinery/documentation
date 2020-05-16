@@ -45,7 +45,7 @@ keypoints:
   - Sometimes users have no access to the source tree
 - If you use README files, use either
   [RST](http://docutils.sourceforge.net/rst.html) or
-  [Markdown](http://daringfireball.net/projects/markdown/) markup
+  [Markdown](https://commonmark.org/help/) markup
 
 ---
 
