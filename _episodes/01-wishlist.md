@@ -56,18 +56,23 @@ or verbally), please do!
 
 ---
 
-## What do we expect from a good documentation?
+## What do we expect from a suitably good documentation?
 
-### Documentation comes in different forms - what *is* documentation?
+> ## Documentation comes in different forms - what *is* documentation?
+>
+> (This is adapted from: [What nobody tells you about documentation](https://www.divio.com/blog/documentation/))
+>
+> - **Tutorials**: learning-oriented, allows the newcomer to get started
+> - **How-to guides**: goal-oriented, shows how to solve a specific problem
+> - **Explanation**: understanding-oriented, explains a concept
+> - **Reference**: information-oriented, describes the machinery
+>
+> These are distinct. For an excellent discussion,
+> please see [What nobody tells you about documentation](https://www.divio.com/blog/documentation/).
+{: .discussion}
 
-(This is adapted from: [What nobody tells you about documentation](https://www.divio.com/blog/documentation/))
-
-- **Tutorials**: learning-oriented, allows the newcomer to get started
-- **How-to guides**: goal-oriented, shows how to solve a specific problem
-- **Explanation**: understanding-oriented, explains a concept
-- **Reference**: information-oriented, describes the machinery
-
-These are distinct. For an excellent discussion, please see [What nobody tells you about documentation](https://www.divio.com/blog/documentation/).
+**There is no one size fits all**: often for small projects a `README.md` or
+`README.rst` (more about these formats later) can be enough.
 
 ---
 
