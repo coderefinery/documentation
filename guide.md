@@ -60,6 +60,22 @@ We have tried this lesson on day one and it felt too early and disconnected/abru
 It works best after the reproducibility lesson since we then reuse the example
 and it feels familiar.
 
+
+### Optional sections
+
+The lesson does not fit into 1.5 hours if you go through everything. Optimize for
+discussions and prepare well to be able to jump over bullet points which
+can be left for a later lecture. Some sections can be skipped if needed (see below). However, we recommend to have a
+discussion with your learners to make them aware of what the training material contains.
+
+- Do not insist on practicing Markdown or RST syntax
+- The section *Rendering (LaTeX) math equations* may be optional if your
+  attendees do not have to deal with equations.
+- In the GitHub pages episode, the
+  goal is not anymore to write code documentation but to show how to build
+  project website with Github.  If time is tight, the GitHub pages episode can be
+  skipped or can be done as demonstration instead of exercise.
+
 ---
 
 ## How to teach this lesson
@@ -137,25 +153,6 @@ break if you need more time to fix problems.
 ### Things to prepare
 
 We start from scratch for all the exercises in this lesson.
-
-
-### Optional sections
-
-The lesson does not fit into 1.5 hours if you go through everything. Optimize for
-discussions and prepare well to be able to jump over bullet points which
-can be left for a later lecture. Some sections can be skipped if needed (see below). However, we recommend to have a
-discussion with your learners to make them aware of what the training material contains.
-
-- Do not insist on practicing Markdown or RST syntax
-- The section *Rendering (LaTeX) math equations* may be optional if your
-  attendees do not have to deal with equations.
-- In episode 6 *Deploying a project website or homepage to GitHub Pages*, the
-  goal is not anymore to write code documentation but to show how to build
-  project website with Github.  If time is tight, the GitHub pages episode can be
-  skipped or can be done as demonstration instead of exercise.  However, make
-  sure you mention that it exists and explain that it is not generally used to
-  write code documentation but to complement it with information on overall
-  project.
 
 
 ### Live better than reading the website material
