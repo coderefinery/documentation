@@ -5,6 +5,26 @@ permalink: /guide/
 
 # Instructor guide
 
+* [Why we teach this lesson](#why-we-teach-this-lesson)
+   * [Intended learning outcomes](#intended-learning-outcomes)
+* [Timing and lesson placement](#timing-and-lesson-placement)
+   * [Timing](#timing)
+   * [Place this lesson towards the end of the workshop](#place-this-lesson-towards-the-end-of-the-workshop)
+   * [Optional sections](#optional-sections)
+* [Requirements and troubleshooting](#requirements-and-troubleshooting)
+   * [Typical pitfalls](#typical-pitfalls)
+      * [Anaconda shell, Git, and Nano on Windows](#anaconda-shell-git-and-nano-on-windows)
+      * [Character encoding issues](#character-encoding-issues)
+* [How to teach this lesson](#how-to-teach-this-lesson)
+   * [Things to prepare as instructor](#things-to-prepare-as-instructor)
+   * [How to start](#how-to-start)
+   * [Questions to involve participants](#questions-to-involve-participants)
+   * [Share your experience](#share-your-experience)
+   * [Own examples](#own-examples)
+   * [Live better than reading the website material](#live-better-than-reading-the-website-material)
+   * [What worked well in past workshops](#what-worked-well-in-past-workshops)
+
+
 ## Why we teach this lesson
 
 Everyone should document their code, even if they’re working alone.
@@ -27,23 +47,62 @@ Specific motivations:
 - It improves the design of your code.
 
 
-## Intended learning outcomes
+### Intended learning outcomes
 
 By the end of this lesson, learners should:
 - Understand the importance of writing code documentation together with the source code
 - Know what makes a good documentation
 - Learn what tools can be used for writing documentation
+- Be able to motivate a balanced decision: sometimes READMEs are absolutely enough
 
-## How to teach this lesson
+---
+
+## Timing and lesson placement
+
+### Timing
+
+As an instructor you should prepare all bullet points
+but do not go through each bullet point in detail. Only highlight
+the main points and rather give time for a discussion. Leave details for a later
+lecture for those who want to find out more. If you go through each bullet point
+in detail, the motivation can easily take up 30 minutes and you will run out
+of time.
 
 
-### Requirements
+### Place this lesson towards the end of the workshop
 
-These are the software/packages used in the lesson material and exercises:
-- python
+Reason is that with collaborative Git we can create more interesting
+documentation exercises. Currently there are some elements of forking and
+pushing and this is only really introduced on day two.
+
+We have tried this lesson on day one and it felt too early and disconnected/abrupt.
+
+It works best after the reproducibility lesson since we then reuse the example
+and it feels familiar.
+
+
+### Optional sections
+
+The lesson does not fit into 1.5 hours if you go through everything. Optimize for
+discussions and prepare well to be able to jump over bullet points which
+can be left for a later lecture. Some sections can be skipped if needed (see below). However, we recommend to have a
+discussion with your learners to make them aware of what the training material contains.
+
+- Do not insist on practicing Markdown or RST syntax
+- The section *Rendering (LaTeX) math equations* may be optional if your
+  attendees do not have to deal with equations.
+- In the GitHub pages episode, the
+  goal is not anymore to write code documentation but to show how to build
+  project website with Github.  If time is tight, the GitHub pages episode can be
+  skipped or can be done as demonstration instead of exercise.
+
+---
+
+## Requirements and troubleshooting
+
+- Python
 - Sphinx
-
-Attendees would need a Github account too.
+- GitHub accounts
 
 
 ### Typical pitfalls
@@ -55,8 +114,8 @@ Windows users (probably) need to use the Anaconda prompt to run sphinx commands
 
 Git can be also be installed in the standard anaconda installation:
 
-```bash
-conda install git
+```
+$ conda install git
 ```
 
 The command above needs to be done into an Anaconda prompt or using Anaconda Navigator.
@@ -70,6 +129,15 @@ Nano cannot be installed through Anaconda but is available by default in git-bas
 
 Can arise when using non-utf8 characters in conf.py. Diagnose this with ``file -i conf.py``
 and ``locale``.
+
+---
+
+## How to teach this lesson
+
+
+### Things to prepare as instructor
+
+We start from scratch for all the exercises in this lesson.
 
 
 ### How to start
@@ -85,7 +153,7 @@ of own code and code written by others.
 
 ### Share your experience
 
-The three first episodes do not contain any live coding or exercises.
+The first episodes do not contain any live coding or exercises.
 
 In these first episodes, instructors share their own experience in writing
 documentation. Feel free to add your own experience and ask learners to share
@@ -100,52 +168,40 @@ across that the tools we show are general:
 - Sphinx is not only for Python
 - Read the Docs is not only for Github
 
-In the fourth exercise, we first test the availability of Sphinx. This test
-needs to be done in a terminal where python is available. It can take a bit of
+In the Sphinx exercise, we first test the availability of Sphinx. This test
+needs to be done in a terminal where Python is available. It can take a bit of
 time to get everybody on board with Sphinx.  It can be nice to make a short
 break if you need more time to fix problems.
 
 
-### Things to prepare
+### Own examples
 
-We start from scratch for all the exercises in this lesson.
+Here we mention few of our own examples: <https://coderefinery.github.io/documentation/01-wishlist/#own-examples>
 
+These are some of the problems (which hopefully crystallize in a discussion):
 
-### Optional sections
-
-The lesson does not fit into 1.5 hours if you go through everything. Optimize for
-discussions and prepare well to be able to jump over bullet points which
-can be left for a later lecture. Some sections can be skipped if needed (see below). However, we recommend to have a
-discussion with your learners to make them aware of what the training material contains.
-
-- Do not insist on practicing Markdown or RST syntax
-- The section *Rendering (LaTeX) math equations* may be optional if your
-  attendees do not have to deal with equations.
-- In episode 6 *Deploying a project website or homepage to GitHub Pages*, the
-  goal is not anymore to write code documentation but to show how to build
-  project website with Github.  If time is tight, the GitHub pages episode can be
-  skipped or can be done as demonstration instead of exercise.  However, make
-  sure you mention that it exists and explain that it is not generally used to
-  write code documentation but to complement it with information on overall
-  project.
+- pcd:
+  - no README
+  - no usage examples
+  - one has to go into the source code to find out how to use it
+- Dalton:
+  - try to copy paste input snippets from the PDF
+  - manual is generated manually by running LaTeX, so in practice it is often behind
+- Cubicle:
+  - no usage examples
+  - one has to go into the source code to find out how to use it
+- Numgrid:
+  - contains copy-paste-able examples
+  - contains recommended citation
 
 
 ### Live better than reading the website material
 
-It is better to  demonstrate the commands live and type-along. Ideally connecting
+It is better to demonstrate the commands live and type-along. Ideally connecting
 to examples discussed earlier.
 
-
-### Place this lesson on last day of the workshop
-
-Reason is that with collaborative Git we can create more interesting
-documentation exercises. Currently there are some elements of forking and
-pushing and this is only really introduced on day two.
-
-We have tried this lesson on day one and it felt too early and disconnected/abrupt.
-
-It works best after the reproducibility lesson since we then reuse the example
-and it feels familiar.
+In online workshops most of the type-along becomes group exercise work where groups
+can share screen and discuss.
 
 
 ### What worked well in past workshops
@@ -154,13 +210,3 @@ It is good if participants see how they can `sphinx-quickstart` a project from
 zero.
 
 Then they learn how to deploy an existing project to RTD.
-
-
-### Timing
-
-As an instructor you should prepare all bullet points in the requirements and
-tools section but do not go through each bullet point in detail. Only highlight
-the main points and rather give time for a discussion. Leave details for a later
-lecture for those who want to find out more. If you go through each bullet point
-in detail, the motivation can easily take up 30 minutes and you will run out
-of time.
