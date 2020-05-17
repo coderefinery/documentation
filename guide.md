@@ -37,6 +37,31 @@ By the end of this lesson, learners should:
 
 ---
 
+## Timing and lesson placement
+
+### Timing
+
+As an instructor you should prepare all bullet points
+but do not go through each bullet point in detail. Only highlight
+the main points and rather give time for a discussion. Leave details for a later
+lecture for those who want to find out more. If you go through each bullet point
+in detail, the motivation can easily take up 30 minutes and you will run out
+of time.
+
+
+### Place this lesson towards the end of the workshop
+
+Reason is that with collaborative Git we can create more interesting
+documentation exercises. Currently there are some elements of forking and
+pushing and this is only really introduced on day two.
+
+We have tried this lesson on day one and it felt too early and disconnected/abrupt.
+
+It works best after the reproducibility lesson since we then reuse the example
+and it feels familiar.
+
+---
+
 ## How to teach this lesson
 
 
@@ -139,31 +164,9 @@ It is better to  demonstrate the commands live and type-along. Ideally connectin
 to examples discussed earlier.
 
 
-### Place this lesson on last day of the workshop
-
-Reason is that with collaborative Git we can create more interesting
-documentation exercises. Currently there are some elements of forking and
-pushing and this is only really introduced on day two.
-
-We have tried this lesson on day one and it felt too early and disconnected/abrupt.
-
-It works best after the reproducibility lesson since we then reuse the example
-and it feels familiar.
-
-
 ### What worked well in past workshops
 
 It is good if participants see how they can `sphinx-quickstart` a project from
 zero.
 
 Then they learn how to deploy an existing project to RTD.
-
-
-### Timing
-
-As an instructor you should prepare all bullet points in the requirements and
-tools section but do not go through each bullet point in detail. Only highlight
-the main points and rather give time for a discussion. Leave details for a later
-lecture for those who want to find out more. If you go through each bullet point
-in detail, the motivation can easily take up 30 minutes and you will run out
-of time.
