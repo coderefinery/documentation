@@ -47,6 +47,16 @@ material is hosted.
 > screenshots: <https://pages.github.com/>
 {: .challenge}
 
+> ## Real-life examples
+>
+> - Research Software Hour
+>   - Source: <https://raw.githubusercontent.com/ResearchSoftwareHour/researchsoftwarehour.github.io/master/about.md>
+>   - Result: <https://researchsoftwarehour.github.io/about/>
+> - This lesson
+>   - Source: <https://raw.githubusercontent.com/coderefinery/documentation/gh-pages/_episodes/06-gh-pages.md>
+>   - Result: this page
+{: .prereq}
+
 > ## Discussion
 >
 > - You can use HTML directly or another static site generator if you prefer
