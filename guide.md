@@ -78,16 +78,11 @@ discussion with your learners to make them aware of what the training material c
 
 ---
 
-## How to teach this lesson
+## Requirements and troubleshooting
 
-
-### Requirements
-
-These are the software/packages used in the lesson material and exercises:
-- python
+- Python
 - Sphinx
-
-Attendees would need a Github account too.
+- GitHub accounts
 
 
 ### Typical pitfalls
@@ -99,8 +94,8 @@ Windows users (probably) need to use the Anaconda prompt to run sphinx commands
 
 Git can be also be installed in the standard anaconda installation:
 
-```bash
-conda install git
+```
+$ conda install git
 ```
 
 The command above needs to be done into an Anaconda prompt or using Anaconda Navigator.
@@ -114,6 +109,15 @@ Nano cannot be installed through Anaconda but is available by default in git-bas
 
 Can arise when using non-utf8 characters in conf.py. Diagnose this with ``file -i conf.py``
 and ``locale``.
+
+---
+
+## How to teach this lesson
+
+
+### Things to prepare as instructor
+
+We start from scratch for all the exercises in this lesson.
 
 
 ### How to start
@@ -129,7 +133,7 @@ of own code and code written by others.
 
 ### Share your experience
 
-The three first episodes do not contain any live coding or exercises.
+The first episodes do not contain any live coding or exercises.
 
 In these first episodes, instructors share their own experience in writing
 documentation. Feel free to add your own experience and ask learners to share
@@ -144,21 +148,19 @@ across that the tools we show are general:
 - Sphinx is not only for Python
 - Read the Docs is not only for Github
 
-In the fourth exercise, we first test the availability of Sphinx. This test
-needs to be done in a terminal where python is available. It can take a bit of
+In the Sphinx exercise, we first test the availability of Sphinx. This test
+needs to be done in a terminal where Python is available. It can take a bit of
 time to get everybody on board with Sphinx.  It can be nice to make a short
 break if you need more time to fix problems.
 
 
-### Things to prepare
-
-We start from scratch for all the exercises in this lesson.
-
-
 ### Live better than reading the website material
 
-It is better to  demonstrate the commands live and type-along. Ideally connecting
+It is better to demonstrate the commands live and type-along. Ideally connecting
 to examples discussed earlier.
+
+In online workshops most of the type-along becomes group exercise work where groups
+can share screen and discuss.
 
 
 ### What worked well in past workshops
