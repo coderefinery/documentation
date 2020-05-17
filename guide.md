@@ -27,12 +27,15 @@ Specific motivations:
 - It improves the design of your code.
 
 
-## Intended learning outcomes
+### Intended learning outcomes
 
 By the end of this lesson, learners should:
 - Understand the importance of writing code documentation together with the source code
 - Know what makes a good documentation
 - Learn what tools can be used for writing documentation
+- Be able to motivate a balanced decision: sometimes READMEs are absolutely enough
+
+---
 
 ## How to teach this lesson
 
