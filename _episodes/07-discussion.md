@@ -51,5 +51,5 @@ questions:
 **Sphinx/RTD or GitHub pages or both?**
 
 - GitHub pages typically serves one version (one branch). It is often used as the project/group/personal page.
-- Sphinx can serve several versions (several branches/tags) at the same time.
+- RTD can serve several versions (several branches/tags) at the same time.
 - Some projects use both.
