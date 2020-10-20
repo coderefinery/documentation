@@ -42,11 +42,11 @@ to point at others.
 Instead we list some of the projects we have contributed to (possibly long time
 ago), with varying quality of documentation:
 
-- [pcd](https://github.com/rkdarst/pcd)
 - [Dalton](https://daltonprogram.org/documentation/) (check the PDF
   manuals, e.g. [Dalton 2018](https://daltonprogram.org/manuals/dalton2018manual.pdf))
 - [Cubicle](https://github.com/bast/cubicle)
 - [Numgrid](https://github.com/dftlibs/numgrid)
+- [MNE-Python](https://mne.tools)
 
 Discuss in groups what you like / or don't like about each before discussing it
 as a class.
