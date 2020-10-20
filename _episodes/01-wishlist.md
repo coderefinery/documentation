@@ -158,6 +158,8 @@ or verbally), please do!
 > - Copy-paste-able example to get started
 > - Dependencies and their versions or version ranges
 > - Installation instructions
+> - Tutorials covering key functionality
+> - Reference documentation (e.g. API) covering all functionality
 > - How do you want to be asked questions (mailing list or forum or chat or issue tracker)
 > - Possibly a FAQ section
 > - Contribution guide
