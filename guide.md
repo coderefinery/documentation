@@ -178,12 +178,8 @@ break if you need more time to fix problems.
 
 Here we mention few of our own examples: <https://coderefinery.github.io/documentation/01-wishlist/#own-examples>
 
-These are some of the problems (which hopefully crystallize in a discussion):
+These are some of the successes and problems (which hopefully crystallize in a discussion):
 
-- pcd:
-  - no README
-  - no usage examples
-  - one has to go into the source code to find out how to use it
 - Dalton:
   - try to copy paste input snippets from the PDF
   - manual is generated manually by running LaTeX, so in practice it is often behind
@@ -193,6 +189,11 @@ These are some of the problems (which hopefully crystallize in a discussion):
 - Numgrid:
   - contains copy-paste-able examples
   - contains recommended citation
+  - no tutorials with clear narration
+- MNE-Python:
+  - easy to select version of docs
+  - has four "levels": tutorials, how-to guides (examples), explanation pages and API reference
+  - this level of documentation is overkill for small projects, but serves as a great source of ideas
 
 
 ### Live better than reading the website material
