@@ -2,7 +2,7 @@
 layout: episode
 title: "Motivation and wishlist"
 teaching: 15
-exercises: 0
+exercises: 25
 questions:
   - Why documenting code?
   - What is our wishlist on a suitably good documentation?
