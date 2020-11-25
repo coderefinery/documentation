@@ -41,7 +41,7 @@ material is hosted.
 >   - Adjust the README.md and commit
 >   - Browse your page on `http://username.github.io/repository` (adjust "username" and "repository")
 > - Make a change to the repository after the webpage has been deployed for the first time
-> - Please wait few minutes and then Verify that the change shows up on the website
+> - Please wait few minutes and then verify that the change shows up on the website
 
 {: .challenge}
 
