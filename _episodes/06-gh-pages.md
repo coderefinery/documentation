@@ -27,24 +27,22 @@ material is hosted.
 
 ---
 
-<img src="{{ site.baseurl }}/img/gh-pages.jpg" width="50%">
+<img src="{{ site.baseurl }}/img/gh-pagesV2.jpg" width="50%">
 
 ---
 
 > ## Exercise
 >
 > - Deploy own website reusing a template:
->   - Follow <https://pages.github.com/>
+>   - Follow the steps from GitHub Pages <https://pages.github.com/>. The documentation there is very good so there is no need for us to duplicate the screenshots
 >   - Select "Project site"
 >   - Select "Choose a theme" (for instance "Minimal")
 >   - Click "Select theme"
 >   - Adjust the README.md and commit
 >   - Browse your page on `http://username.github.io/repository` (adjust "username" and "repository")
 > - Make a change to the repository after the webpage has been deployed for the first time
-> - Verify that the change shows up on the website a minute or two later
->
-> The documentation for GitHub Pages is very good so no need for us to duplicate
-> screenshots: <https://pages.github.com/>
+> - Please wait few minutes and then Verify that the change shows up on the website
+
 {: .challenge}
 
 > ## Real-life examples
