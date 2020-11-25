@@ -50,7 +50,7 @@ material is hosted.
 > ## Real-life examples
 >
 > - Research Software Hour
->   - Source: <https://raw.githubusercontent.com/ResearchSoftwareHour/researchsoftwarehour.github.io/master/about.md>
+>   - Source: <https://raw.githubusercontent.com/ResearchSoftwareHour/researchsoftwarehour.github.io/main/content/about.md>
 >   - Result: <https://researchsoftwarehour.github.io/about/>
 > - This lesson
 >   - Source: <https://raw.githubusercontent.com/coderefinery/documentation/gh-pages/_episodes/06-gh-pages.md>
