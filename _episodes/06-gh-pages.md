@@ -27,7 +27,7 @@ material is hosted.
 
 ---
 
-<img src="{{ site.baseurl }}/img/gh-pagesV2.jpg" width="50%">
+<img src="{{ site.baseurl }}/img/gh-pages.jpg" width="50%">
 
 ---
 
