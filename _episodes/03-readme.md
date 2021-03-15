@@ -28,7 +28,7 @@ Use it to communicate important information about your project!
 > It will prompt the user for a file name, print the columns in the spreadsheet, and print the mean
 > temperature.
 > 
-> That's all there is to this project!
+> That's all there is to this project! (You can ignore the other files in the repository, we'll get back to them in episode 4)
 >
 > ### The exercise
 > 1. Fork the [the example project](https://github.com/escience-academy/coderefinery-documentation-example-project) to your own github namespace
