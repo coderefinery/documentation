@@ -11,8 +11,51 @@ objectives:
     - Write docstrings according to best practices
     - Know where and when to put comments
 keypoints:
-  - In-code documentation should describe the why for code.
+  - Comments should describe the why for your code not the what.
+  - Writing docstrings is an easy way to write documentation while you type code.
 ---
+## Comments
+> ## Exercise: Comments
+> Let's take a look at two example comments (comments in python start with `#`):
+> 
+> ### Comment A
+>```python
+># Now we check if temperature is larger then -50:
+>if temperature > -50:
+>    print('do something')
+>```
+>
+> ### Comment B
+>```python
+># We regard temperatures below -50 degrees as measurement errors
+>if temperature > -50:
+>    print('do something')
+>```
+> Which of these comments is best? Can you explain why? 
+>
+> > ## Solution
+> > Comment A describes **what** happens in this piece of code,
+> > whereas comment B describes **why** this piece of code is there, i.e. its **purpose**.
+> > Comments in the form of B are much more useful, comments of form A are redundant and we should avoid them.
+> >  
+> {: .solution}
+{: .challenge}
+
+> ## Do not use comments for:
+> ### Keeping zombie code
+> ```python
+> # Do not run this code!:
+> # if temperature > 0:]
+> #     print('It is warm')
+> ```
+> 
+> ### Replacing git
+> ```python
+> # removed on August 5
+> # if() ...
+> # Now it connects to the API with o-auth2, updated 05/05/2016
+> ```
+{: .callout}
 
 ## Writing docstrings in python
 Let's look at the following function:
@@ -70,7 +113,7 @@ Python parses docstrings, for example calling the `help` function will display i
 > Writing docstrings makes you generate your documentation as you are generating the code!
 {: .callout}
 
-> ## Exercise 1: Adding in-code documentation
+> ## Exercise: Adding in-code documentation
 >
 > Update this code snippet so it is well-documented:
 >
@@ -113,4 +156,9 @@ Python parses docstrings, for example calling the `help` function will display i
 > {: .solution}
 {: .challenge}
 
-
+>
+> ## Naming **is** documentation.
+> Giving explicit, descriptive names to your code segments (functions, classes, variables) already provides very useful 
+> and important documentation. In practice you will find that for simple functions it is unnecessary to add a docstring 
+> when the function name and variable names already give enough information. 
+{: .callout}
