@@ -127,6 +127,7 @@ keypoints:
 > ## Keep it simple
 > For most scientific projects in-code documentation 
 > and a well thought out README file is enough. 
+> Think about the audience and purpose. 
 {: .callout}
 ---
 
