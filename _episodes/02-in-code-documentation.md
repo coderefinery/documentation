@@ -95,20 +95,20 @@ In python there are several styles that describe how docstrings should be format
 Here we use [Google style docstrings](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
 
 Python parses docstrings, for example calling the `help` function will display it:
->```python
->help(mean_temperature)
+```python
+help(mean_temperature)
+```
 >```
->>```
->>Help on function mean_temperature in module __main__:
->>mean_temperature(data)
->>    Get the mean temperature
->>    
->>    Args:
->>        data (pandas.DataFrame): A pandas dataframe with air temperature measurements.
->>    
->>    Returns:
->>        The mean air temperature
->>```
+>Help on function mean_temperature in module __main__:
+>mean_temperature(data)
+>    Get the mean temperature
+>    
+>    Args:
+>        data (pandas.DataFrame): A pandas dataframe with air temperature measurements.
+>    
+>    Returns:
+>        The mean air temperature
+>```
 
 It is common to write docstrings for functions, classes & modules.
 
