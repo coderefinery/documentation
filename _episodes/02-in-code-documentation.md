@@ -79,17 +79,17 @@ def mean_temperature(data):
         data (pandas.DataFrame): A pandas dataframe with air temperature measurements.
     
     Returns:
-        The mean air temperature
+        The mean air temperature (float)
     """
     temperatures = data['Air temperature (degC)']
-    return sum(temperatures)/len(temperatures)
+    return float(sum(temperatures)/len(temperatures))
 ```
 A docstring is a structured comment associated to a segment of code (i.e. function or class)
 
-The docstring describes:
+Good docstrings describe:
 * What the function does
-* What goes in
-* What goes out
+* What goes in (including the type of the input variables)
+* What goes out (including the return type)
 
 In python there are several styles that describe how docstrings should be formatted.
 Here we use [Google style docstrings](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
