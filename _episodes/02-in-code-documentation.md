@@ -14,7 +14,9 @@ keypoints:
   - Comments should describe the why for your code not the what.
   - Writing docstrings is an easy way to write documentation while you type code.
 ---
-## Comments
+In this episode we will learn how to write good documentation inside your code.
+
+## Writing good comments
 > ## Exercise: Comments
 > Let's take a look at two example comments (comments in python start with `#`):
 > 
@@ -107,6 +109,8 @@ Python parses docstrings, for example calling the `help` function will display i
 >>    Returns:
 >>        The mean air temperature
 >>```
+
+It is common to write docstrings for functions, classes & modules.
 
 >
 > ## Small effort, large gain.
