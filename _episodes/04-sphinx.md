@@ -15,8 +15,8 @@ keypoints:
 What if a README file and in-code documentation is not enough? 
 What if you want a more extensive documentation because you expect more users or collaborators?
 
-A popular and nice solution is to use `Sphinx` together with `ReadtheDocs`
-- `Sphinx` let's you create nicely-formatted HTML pages out of simple markdown files.
+A very popular and nice solution is to use `Sphinx` together with `ReadtheDocs`:
+- `Sphinx` let's you create nicely-formatted HTML pages out of simple markdown files. It is language-independent.
 - `ReadtheDocs` easily connects to your github page and automatically deploys your Sphinx documentation for free!
 
 The aim of this episode is to give you a glimpse of what you can accomplish with `Sphinx` + `ReadtheDocs`.
