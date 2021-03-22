@@ -115,6 +115,21 @@ help(mean_temperature)
 It is common to write docstrings for functions, classes & modules.
 
 >
+> ## Script docstrings
+>You can also add a **structured** docstring at the top of a script to document what the script does and how to run it.
+> ~~~python
+> """Prints information about the mean air temperature.
+> 
+> Usage:
+>     ./temperature.py
+>
+> Author:
+>     Sven van der Burg - 2021-03-2021
+> """
+> {: .source}
+
+
+>
 > ## Small effort, large gain.
 > Writing docstrings makes you generate your documentation as you are generating the code!
 {: .callout}
