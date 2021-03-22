@@ -38,7 +38,7 @@ keypoints:
 > 2. Think of projects for which you don't like the documentation. What don't you like about them?
 >    Are you missing anything?
 >
-> **NB: You can choose a mature library with lot's of users for this exercise, but try to also
+> **NB: You can choose a mature library with lots of users for this exercise, but try to also
 > think of less mature projects you had to collaborate on, or papers you had to reproduce.**  
 {: .challenge}
 
