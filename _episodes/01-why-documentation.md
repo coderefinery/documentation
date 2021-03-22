@@ -10,8 +10,7 @@ objectives:
   - Arrive at a checklist for designing and deploying code documentation.
 keypoints:
   - Documentation is part of the code and should be versionable.
-  - Documentation (sources) should be tracked with the corresponding code in the same repository.
-  - Use lightweight and standard markup languages such as reStructuredText or Markdown.
+  - For research projects a README file and in-code documentation is often enough.
 ---
 
 ## Why documenting code?
@@ -33,55 +32,14 @@ keypoints:
 {: .solution}
 
 ---
-
-### Own examples
-
-We would like to show you some examples which are not ideal but we do not want
-to point at others.
-
-Instead we list some of the projects we have contributed to (possibly long time
-ago), with varying quality of documentation:
-
-- [Dalton](https://daltonprogram.org/documentation/) (check the PDF
-  manuals, e.g. [Dalton 2018](https://daltonprogram.org/manuals/dalton2018manual.pdf))
-- [Cubicle](https://github.com/bast/cubicle)
-- [Numgrid](https://github.com/dftlibs/numgrid)
-- [MNE-Python](https://mne.tools)
-
-Discuss in groups what you like / or don't like about each before discussing it
-as a class.
-
-If you have examples of your own which you would like to share (on this website
-or verbally), please do!
-
----
-
 ## What do we expect from a suitably good documentation?
-
-> ## Documentation comes in different forms - what *is* documentation?
+> ## Exercise
+> 1. Think of projects of which you like the documentation. What do you like about them?
+> 2. Think of projects for which you don't like the documentation. What don't you like about them?
+>    Are you missing anything?
 >
-> (This is adapted from: [What nobody tells you about documentation](https://www.divio.com/blog/documentation/))
->
-> - **Tutorials**: learning-oriented, allows the newcomer to get started
-> - **How-to guides**: goal-oriented, shows how to solve a specific problem
-> - **Explanation**: understanding-oriented, explains a concept
-> - **Reference**: information-oriented, describes the machinery
->
-> These are distinct. For an excellent discussion,
-> please see [What nobody tells you about documentation](https://www.divio.com/blog/documentation/).
-{: .discussion}
-
-**There is no one size fits all**: often for small projects a `README.md` or
-`README.rst` can be enough (more about these formats later).
-
----
-
-> ## Exercise in the main room: Create a wishlist
->
-> - **Use the collaborative document**.
-> - Let us create a wishlist for how we would like documentation to be.
-> - Below are some of our ideas but please do not look at them yet.
-> - We are sure you will come up with ideas we did not think about.
+> **NB: You can choose a mature library with lots of users for this exercise, but try to also
+> think of less mature projects you had to collaborate on, or papers you had to reproduce.**  
 {: .challenge}
 
 > ## Our wishlist (but let us brainstorm first)
@@ -165,6 +123,12 @@ or verbally), please do!
 > - Contribution guide
 {: .discussion}
 
+
+> ## Keep it simple
+> For most scientific projects in-code documentation 
+> and a well thought out README file is enough. 
+> Think about the audience and purpose. 
+{: .callout}
 ---
 
 ### Good resources
