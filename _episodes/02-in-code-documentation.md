@@ -47,9 +47,10 @@ In this episode we will learn how to write good documentation inside your code.
 > ### Keeping zombie code
 > ```python
 > # Do not run this code!:
-> # if temperature > 0:]
+> # if temperature > 0:
 > #     print('It is warm')
 > ```
+> Instead: just remove the code, you can always find it back in a previous version of your code in git.
 > 
 > ### Replacing git
 > ```python
@@ -57,6 +58,7 @@ In this episode we will learn how to write good documentation inside your code.
 > # if() ...
 > # Now it connects to the API with o-auth2, updated 05/05/2016
 > ```
+> Instead: use git to keep track of different versions of your code.
 {: .callout}
 
 ## Writing docstrings in python
