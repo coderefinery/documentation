@@ -1,5 +1,5 @@
 fork_me_ribbon_url: https://github.com/coderefinery/documentation
-baseurl: "/documentation"
+baseurl: "/coderefinery-documentation"
 title: "Code documentation lesson"
 
 source: .
