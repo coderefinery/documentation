@@ -22,7 +22,7 @@ The approach that we will learn will be transferable to
 [GitLab Pages](https://about.gitlab.com/features/pages/) and
 [Bitbucket Pages](https://pages.bitbucket.io).
 
-Although we often use Python as an example language, everything that you will learn will is independent of programming
+Although we often use Python as an example language, everything that you will learn is independent of programming
 languages.
 
 > ## Prerequisites
