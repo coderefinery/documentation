@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
-   sodipodi:docname="gh-pages_update_light.svg">
+   sodipodi:docname="gh-pages.svg">
   <defs
      id="defs2">
     <marker
@@ -126,7 +126,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -157,9 +157,9 @@
          x="-83.204758"
          y="82.131058"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';stroke-width:0.26458332">https://github.com/<tspan
-   style="fill:#ff6600"
+   style="fill:#ff7f2a"
    id="tspan5690">myorganization</tspan>/<tspan
-   style="fill:#ff6600"
+   style="fill:#ff7f2a"
    id="tspan5696">myorganization</tspan>.github.io</tspan></text>
     <text
        id="text3741"
@@ -172,7 +172,7 @@
          x="-83.204758"
          id="tspan3739"
          sodipodi:role="line">https://<tspan
-   style="fill:#ff6600"
+   style="fill:#ff7f2a"
    id="tspan5698">myorganization</tspan>.github.io</tspan></text>
     <text
        id="text3749"
@@ -196,9 +196,9 @@
          x="-83.204758"
          id="tspan3751"
          sodipodi:role="line">https://github.com/<tspan
-   style="fill:#55d400"
+   style="fill:#ff0000"
    id="tspan5700">myuser</tspan>/<tspan
-   style="fill:#55d400"
+   style="fill:#ff0000"
    id="tspan5702">myuser</tspan>.github.io</tspan></text>
     <text
        xml:space="preserve"
@@ -211,7 +211,7 @@
          x="-83.204758"
          y="223.55966"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';stroke-width:0.26458332">https://<tspan
-   style="fill:#55d400"
+   style="fill:#ff0000"
    id="tspan5704">myuser</tspan>.github.io</tspan></text>
     <text
        id="text3761"
@@ -251,9 +251,9 @@
          x="-83.204758"
          id="tspan3767"
          sodipodi:role="line">https://github.com/<tspan
-   style="fill:#ff6600"
+   style="fill:#ff7f2a"
    id="tspan5706">myorganization</tspan>/<tspan
-   style="fill:#00aad4"
+   style="fill:#0044aa"
    id="tspan5720">myproject</tspan></tspan></text>
     <text
        xml:space="preserve"
@@ -266,9 +266,9 @@
          x="-83.204758"
          y="334.16391"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';stroke-width:0.26458332">https://<tspan
-   style="fill:#ff6600"
+   style="fill:#ff7f2a"
    id="tspan5708">myorganization</tspan>.github.io/<tspan
-   style="fill:#00aad4"
+   style="fill:#0044aa"
    id="tspan5718">myproject</tspan></tspan><tspan
          sodipodi:role="line"
          x="-83.204758"
@@ -286,9 +286,9 @@
          x="-83.204758"
          y="388.27496"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';stroke-width:0.26458332">https://github.com/<tspan
-   style="fill:#55d400"
+   style="fill:#ff0000"
    id="tspan5710">myuser</tspan>/<tspan
-   style="fill:#00aad4"
+   style="fill:#0044aa"
    id="tspan5716">myproject</tspan></tspan></text>
     <text
        id="text3785"
@@ -301,9 +301,9 @@
          x="-83.204758"
          id="tspan3781"
          sodipodi:role="line">https://<tspan
-   style="fill:#55d400"
+   style="fill:#ff0000"
    id="tspan5712">myuser</tspan>.github.io/<tspan
-   style="fill:#00aad4"
+   style="fill:#0044aa"
    id="tspan5714">myproject</tspan></tspan><tspan
          id="tspan3783"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';stroke-width:0.26458332"
