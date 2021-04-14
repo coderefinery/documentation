@@ -243,7 +243,7 @@ RST syntax along the way.
 > - \*Emphasized text\* and \*\*bold text\*\*
 > - Headings
 >
-> ```
+> ```text
 > Level 1
 > =======
 >
