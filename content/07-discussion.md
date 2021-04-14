@@ -1,8 +1,5 @@
----
-layout: episode
-title: "Discussion after the exercises"
-teaching: 5
-exercises: 0
+# Discussion after the exercises
+
 questions:
   - What recommendations can we take home?
 ---

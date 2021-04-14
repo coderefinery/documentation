@@ -1,8 +1,3 @@
----
-layout: default
-permalink: /guide/
----
-
 # Instructor guide
 
 * [Why we teach this lesson](#why-we-teach-this-lesson)

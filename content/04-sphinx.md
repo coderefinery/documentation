@@ -1,8 +1,5 @@
----
-layout: episode
-title: "Sphinx and reStructuredText"
-teaching: 5
-exercises: 15
+# Sphinx and reStructuredText
+
 questions:
   - How do we get started on writing Sphinx documentation in RST?
 objectives:

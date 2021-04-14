@@ -1,8 +1,5 @@
----
-layout: episode
-title: "Deploying Sphinx documentation to Read the Docs"
-teaching: 0
-exercises: 20
+# Deploying Sphinx documentation to Read the Docs
+
 questions:
   - How do Python projects deploy their documentation?
   - Can we use their solutions for projects which do not use Python?
@@ -31,13 +28,13 @@ objectives:
 
 > ## Exercise: Deploy Sphinx documentation to Read the Docs
 >
-> In this exercise we will make a copy of an [example repository](https://github.com/coderefinery/word-count/) on GitHub and
+> In this exercise we will fork an [example repository](https://gitlab.com/svenvanderburg/word-count) on GitLab and
 > deploy it to Read the Docs. The example project contains a script for
 > counting the frequency distribution of words in a given file and some
 > documentation generated using Sphinx. For bigger projects, we will have much
 > more source files.
 >
-> We will use GitHub for this exercise but it will also work with any Git
+> We will use GitLab for this exercise but it will also work with any Git
 > repository with public read access.
 >
 > 1. In the first step, we will make a copy of the example repository and then
@@ -46,7 +43,7 @@ objectives:
 >    commit and push some changes and check that the documentation is
 >    automatically rebuilt.
 >
-> ### Step 1: Go to the [word-count project template](https://github.com/coderefinery/word-count/generate) and copy it to your namespace
+> ### Step 1: Go to the [word-count project](https://gitlab.com/svenvanderburg/word-count) and fork it to your namespace
 >
 > **Clone the repository**
 >
@@ -76,12 +73,12 @@ objectives:
 >
 > ### Step 2: Enable the project on [Read the Docs](https://readthedocs.org)
 >
-> **Import a project to Read the Docs by connecting to GitHub**
+> **Import a project to Read the Docs by connecting to GitLab**
 >
 > - Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
 > - Click "Import a Project"
-> - Select "Connect to GitHub", and choose the word-count repository
-> - Rename the project to user-word-count (replacing "user" with your GitHub username: we need a unique project name)
+> - Select "Connect to GitLab", and choose the word-count repository (if you don't see this check your [connections](https://readthedocs.org/accounts/social/connections/)
+> - Rename the project to user-word-count (replacing "user" with your GitLab username: we need a unique project name)
 > - Click "Next"
 >
 > **Verify the result**

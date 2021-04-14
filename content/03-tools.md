@@ -1,8 +1,5 @@
----
-layout: episode
-title: "Popular tools and solutions"
-teaching: 10
-exercises: 0
+# Popular tools and solutions
+
 questions:
   - What tools are out there?
   - What are their pros and cons?
@@ -10,7 +7,7 @@ objectives:
   - Choose the right tool for the right reason.
 keypoints:
   - Some popular solutions make reproducibility and maintenance of multiple code versions difficult.
----
+
 
 ## What tools and solutions are out there?
 
