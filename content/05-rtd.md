@@ -1,11 +1,13 @@
 # Deploying Sphinx documentation to Read the Docs
 
-questions:
-  - How do Python projects deploy their documentation?
-  - Can we use their solutions for projects which do not use Python?
-objectives:
-  - Create a basic workflow which you can take home and adapt for your project.
----
+```{questions}
+- How do Python projects deploy their documentation?
+- Can we use their solutions for projects which do not use Python?
+```
+
+```{objectives}
+- Create a basic workflow which you can take home and adapt for your project.
+```
 
 ## [Read the Docs](https://readthedocs.org)
 

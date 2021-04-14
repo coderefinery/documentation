@@ -1,8 +1,8 @@
 # Discussion after the exercises
 
-questions:
-  - What recommendations can we take home?
----
+```{questions}
+- What recommendations can we take home?
+```
 
 ## Back in the main room: Questions and answers, discussion
 

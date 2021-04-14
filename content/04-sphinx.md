@@ -1,12 +1,12 @@
 # Sphinx and reStructuredText
 
-questions:
-  - How do we get started on writing Sphinx documentation in RST?
-objectives:
-  - Create example Sphinx documentation and learn some RST along the way.
-keypoints:
-  - Sphinx and RST are relatively lightweight options for writing documentation.
----
+```{questions}
+- How do we get started on writing Sphinx documentation in RST?
+```
+
+```{objectives}
+- Create example Sphinx documentation and learn some RST along the way.
+```
 
 ## Group exercise: Build Sphinx documentation using RST
 
@@ -369,3 +369,9 @@ RST syntax along the way.
   and the [quick-reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
 - For Sphinx additions to standard RST, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/1.7/markup/index.html).
 - [https://docs.python-guide.org/writing/documentation/](https://docs.python-guide.org/writing/documentation/)
+
+---
+
+```{keypoints}
+- Sphinx and RST are relatively lightweight options for writing documentation.
+```
