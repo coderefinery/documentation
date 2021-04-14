@@ -1,2 +1,3 @@
 .jupyter_cache/
 _build/
+venv/
