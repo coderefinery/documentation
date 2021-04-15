@@ -1,18 +1,13 @@
----
-layout: episode
-title: "Motivation and wishlist"
-teaching: 15
-exercises: 25
-questions:
-  - Why documenting code?
-  - What is our wishlist on a suitably good documentation?
-objectives:
-  - Arrive at a checklist for designing and deploying code documentation.
-keypoints:
-  - Documentation is part of the code and should be versionable.
-  - Documentation (sources) should be tracked with the corresponding code in the same repository.
-  - Use lightweight and standard markup languages such as reStructuredText or Markdown.
----
+# Motivation and wishlist
+
+```{questions}
+- Why documenting code?
+- What is our wishlist on a suitably good documentation?
+```
+
+```{objectives}
+- Arrive at a checklist for designing and deploying code documentation.
+```
 
 ## Why documenting code?
 
@@ -171,3 +166,9 @@ or verbally), please do!
 
 - [A beginner’s guide to writing documentation](http://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)
 - [What nobody tells you about documentation](https://www.divio.com/blog/documentation/)
+
+```{keypoints}
+- Documentation is part of the code and should be versionable.
+- Documentation (sources) should be tracked with the corresponding code in the same repository.
+- Use lightweight and standard markup languages such as reStructuredText or Markdown.
+```
