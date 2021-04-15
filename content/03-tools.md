@@ -1,16 +1,13 @@
----
-layout: episode
-title: "Popular tools and solutions"
-teaching: 10
-exercises: 0
-questions:
-  - What tools are out there?
-  - What are their pros and cons?
-objectives:
-  - Choose the right tool for the right reason.
-keypoints:
-  - Some popular solutions make reproducibility and maintenance of multiple code versions difficult.
----
+# Popular tools and solutions
+
+```{questions}
+- What tools are out there?
+- What are their pros and cons?
+```
+
+```{objectives}
+- Choose the right tool for the right reason.
+```
 
 ## What tools and solutions are out there?
 
@@ -158,3 +155,9 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - [GitHub Pages](https://pages.github.com)
 - [Bitbucket Pages](https://pages.bitbucket.io/)
 - [GitLab Pages](https://pages.gitlab.io)
+
+---
+
+```{keypoints}
+- Some popular solutions make reproducibility and maintenance of multiple code versions difficult.
+```

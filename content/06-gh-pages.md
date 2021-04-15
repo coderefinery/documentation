@@ -1,11 +1,8 @@
----
-layout: episode
-title: Hosting websites/homepages on GitHub Pages
-teaching: 0
-exercises: 20
-questions:
-  - How to serve a website/homepage using GitHub
----
+# Hosting websites/homepages on GitHub Pages
+
+```{questions}
+- How to serve a website/homepage using GitHub
+```
 
 ## Hosting websites/homepages on GitHub Pages
 
@@ -27,7 +24,11 @@ material is hosted.
 
 ---
 
-<img src="{{ site.baseurl }}/img/gh-pages.jpg" width="50%">
+```{figure} img/gh-pages.svg
+:alt: Scheme that describes how branch names end up websites
+
+Scheme that describes how branch names end up websites.
+```
 
 ---
 
