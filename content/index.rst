@@ -38,7 +38,6 @@ The approach that we will learn will be transferable to
    15 min ; :doc:`01-wishlist`
    10 min ; :doc:`03-tools`
    20 min ; :doc:`04-sphinx`
-   20 min ; :doc:`05-rtd-gitlab`
    20 min ; :doc:`05-rtd`
    20 min ; :doc:`06-gh-pages`
    5 min ; :doc:`07-discussion`
@@ -51,7 +50,6 @@ The approach that we will learn will be transferable to
    01-wishlist.md
    03-tools.md
    04-sphinx.md
-   05-rtd-gitlab.md
    05-rtd.md
    06-gh-pages.md
    07-discussion.md
