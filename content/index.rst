@@ -35,24 +35,24 @@ The approach that we will learn will be transferable to
    :widths: auto
    :delim: ;
 
-   15 min ; :doc:`01-wishlist`
-   10 min ; :doc:`03-tools`
-   20 min ; :doc:`04-sphinx`
-   20 min ; :doc:`05-rtd`
-   20 min ; :doc:`06-gh-pages`
-   5 min ; :doc:`07-discussion`
+   15 min ; :doc:`wishlist`
+   10 min ; :doc:`tools`
+   20 min ; :doc:`sphinx`
+   20 min ; :doc:`rtd`
+   20 min ; :doc:`gh-pages`
+   5 min  ; :doc:`discussion`
 
 
 .. toctree::
    :maxdepth: 1
    :caption: The lesson
 
-   01-wishlist.md
-   03-tools.md
-   04-sphinx.md
-   05-rtd.md
-   06-gh-pages.md
-   07-discussion.md
+   wishlist.md
+   tools.md
+   sphinx.md
+   rtd.md
+   gh-pages.md
+   discussion.md
 
 
 .. toctree::
