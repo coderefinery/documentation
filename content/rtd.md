@@ -29,132 +29,98 @@
 ---
 
 ``````{challenge} Exercise: Deploy Sphinx documentation to Read the Docs
+
+  In this exercise we will fork an example repository on GitHub/GitLab and
+  deploy it to Read the Docs. The example project contains a script for counting the frequency distribution of words in a given file and some documentation generated using Sphinx. For bigger projects, we will have much more source files.
+
+  We will use GitHub/GitLab for this exercise but it will also work with any Git repository with public read access.
+
+  1. In the first step, we will fork the example repository and then clone the newly created repository to our laptop.
+  2. In the second step, we will enable the project on Read the Docs, then commit and push some changes and check that the documentation is automatically rebuilt.
+
   `````{tabs}
     ````{tab} GitHub
 
-      In this exercise we will fork an [example repository](https://github.com/coderefinery/word-count/) on GitHub and deploy it to Read the Docs. The example project contains a script for counting the frequency distribution of words in a given file and some documentation generated using Sphinx. For bigger projects, we will have much more source files.
-
-      We will use GitHub for this exercise but it will also work with any Git repository with public read access.
-
-      1. In the first step, we will fork the example repository and then clone the newly created repository to our laptop.
-      2. In the second step, we will enable the project on Read the Docs, then commit and push some changes and check that the documentation is automatically rebuilt.
-
-      **Step 1:** Go to the [word-count project template](https://github.com/coderefinery/word-count/generate) and fork it to your namespace
-
-      **Clone the repository**
-
-      The repository contains following two folders, among few other files and folders:
-      - **source** folder contains the source code
-      - **doc** folder contains the Sphinx documentation
-
-      The doc folder contains the Sphinx configuration file (`conf.py`) and the index file (`index.rst`) and some contents (other RST files).
-      The `conf.py` file has been adjusted to be able to autogenerate documentation from sources.
-
-
-      **Build HTML pages locally**
-
-      Inside the cloned repository, build the documentation and verify the result in your browser:
-
-      ```shell
-      $ sphinx-build doc _build
-      ```
-
-      **Test HTML pages links**
-
-      Inside the cloned repository, check the integrity of all external links:
-
-      ```
-      $ sphinx-build doc -W -b linkcheck -d _build/doctrees _build/html
-      ```
-
-      **Step 2:** Enable the project on [Read the Docs](https://readthedocs.org)
-
-      **Import a project to Read the Docs by connecting to GitHub**
-
-      - Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
-      - Click "Import a Project"
-      - Select "Connect to GitHub", and choose the word-count repository
-      - Rename the project to user-word-count (replacing "user" with your GitHub username: we need a unique project name)
-      - Click "Next"
-
-      **Verify the result**
-
-      That's it! Your site should now be live on
-      http://user-word-count.readthedocs.io (replace project name).
-
-      **Verify refreshing the documentation**
-
-      Finally, make some changes to your documentation
-      - Add documentation related to other functions
-      - Prerequisites and how to use the program
-      - Rules for contribution
-      - Some example results (figures, tables, ...)
-      - Commit and push them, and verify that the documentation website refreshes after your changes (can take few seconds or a minute)
+    **Step 1:** Go to the [word-count project template](https://github.com/coderefinery/word-count/generate)
+    and fork it to your namespace
     ````
 
     ````{tab} Gitlab
-      
-      In this exercise we will fork an [example repository](https://gitlab.com/svenvanderburg/word-count) on GitLab and
-      deploy it to Read the Docs. The example project contains a script for counting the frequency distribution of words in a given file and some documentation generated using Sphinx. For bigger projects, we will have much more source files.
 
-      We will use GitLab for this exercise but it will also work with any Git repository with public read access.
-
-      1. In the first step, we will fork the example repository and then clone the newly created repository to our laptop.
-      2. In the second step, we will enable the project on Read the Docs, then commit and push some changes and check that the documentation is automatically rebuilt.
-
-      **Step 1:** Go to the [word-count project](https://gitlab.com/svenvanderburg/word-count) and fork it to your namespace
-
-      **Clone the repository**
-
-      The repository contains following two folders, among few other files and folders:
-      - **source** folder contains the source code
-      - **doc** folder contains the Sphinx documentation
-
-      The doc folder contains the Sphinx configuration file (`conf.py`) and the index file (`index.rst`) and some contents (other RST files).
-      The `conf.py` file has been adjusted to be able to autogenerate documentation from sources.
-
-
-      **Build HTML pages locally**
-
-      Inside the cloned repository, build the documentation and verify the result in your browser:
-
-      ```shell
-      $ sphinx-build doc _build
-      ```
-
-      **Test HTML pages links**
-
-      Inside the cloned repository, check the integrity of all external links:
-      
-      ```
-      $ sphinx-build doc -W -b linkcheck -d _build/doctrees _build/html
-      ```
-
-      **Step 2:** Enable the project on [Read the Docs](https://readthedocs.org)
-
-      **Import a project to Read the Docs by connecting to GitLab**
-
-      - Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
-      - Click "Import a Project"
-      - Select "Connect to GitLab", and choose the word-count repository (if you don't see this check your [connections](https://readthedocs.org/accounts/social/connections/)
-      - Rename the project to user-word-count (replacing "user" with your GitLab username: we need a unique project name)
-      - Click "Next"
-
-      **Verify the result**
-
-      That's it! Your site should now be live on
-      http://user-word-count.readthedocs.io (replace project name).
-
-      **Verify refreshing the documentation**
-
-      Finally, make some changes to your documentation
-        - Add documentation related to other functions
-        - Prerequisites and how to use the program
-        - Rules for contribution
-        - Some example results (figures, tables, ...)
-        - Commit and push them, and verify that the documentation website refreshes after your changes (can take few seconds or a minute)
+    **Step 1:** Go to the [word-count project template](https://gitlab.com/svenvanderburg/word-count)
+    and fork it to your namespace
     ````
   `````
+
+  **Clone the repository**
+
+  The repository contains following two folders, among few other files and folders:
+  - **source** folder contains the source code
+  - **doc** folder contains the Sphinx documentation
+
+  The doc folder contains the Sphinx configuration file (`conf.py`) and the index file (`index.rst`) and some contents (other RST files).
+  The `conf.py` file has been adjusted to be able to autogenerate documentation from sources.
+
+
+  **Build HTML pages locally**
+
+  Inside the cloned repository, build the documentation and verify the result in your browser:
+
+  ```shell
+  $ sphinx-build doc _build
+  ```
+
+  **Test HTML pages links**
+
+  Inside the cloned repository, check the integrity of all external links:
+
+  ```
+  $ sphinx-build doc -W -b linkcheck -d _build/doctrees _build/html
+  ```
+
+  `````{tabs}
+    ````{tab} GitHub
+
+    **Step 2:** Enable the project on [Read the Docs](https://readthedocs.org)
+
+    **Import a project to Read the Docs by connecting to GitHub**
+
+    - Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
+    - Click "Import a Project"
+    - Select "Connect to GitHub", and choose the word-count repository
+      (if you don't see this check your [connections](https://readthedocs.org/accounts/social/connections/)
+    - Rename the project to user-word-count (replacing "user" with your GitHub username: we need a unique project name)
+    - Click "Next"
+    ````
+
+    ````{tab} GitLab
+
+    **Step 2:** Enable the project on [Read the Docs](https://readthedocs.org)
+
+    **Import a project to Read the Docs by connecting to GitLab**
+
+    - Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
+    - Click "Import a Project"
+    - Select "Connect to GitLab", and choose the word-count repository
+      (if you don't see this check your [connections](https://readthedocs.org/accounts/social/connections/)
+    - Rename the project to user-word-count (replacing "user" with your GitLab username: we need a unique project name)
+    - Click "Next"
+    ````
+  `````
+
+  **Verify the result**
+
+  That's it! Your site should now be live on
+  http://user-word-count.readthedocs.io (replace project name).
+
+  **Verify refreshing the documentation**
+
+  Finally, make some changes to your documentation
+  - Add documentation related to other functions
+  - Prerequisites and how to use the program
+  - Rules for contribution
+  - Some example results (figures, tables, ...)
+  - Commit and push them, and verify that the documentation website refreshes after your changes (can take few seconds or a minute)
 ``````
 
 ```{callout} Do not add the generated build directory to your repository
