@@ -40,6 +40,7 @@ The approach that we will learn will be transferable to
    20 min ; :doc:`sphinx`
    20 min ; :doc:`rtd`
    20 min ; :doc:`gh-pages`
+   20 min ; :doc:`in-code-documentation`
    5 min  ; :doc:`discussion`
 
 
@@ -52,6 +53,7 @@ The approach that we will learn will be transferable to
    sphinx.md
    rtd.md
    gh-pages.md
+   in-code-documentation.md
    discussion.md
 
 
