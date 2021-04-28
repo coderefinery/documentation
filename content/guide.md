@@ -77,7 +77,7 @@ and it feels familiar.
 
 ### Different combinations of episodes
 The lesson is setup in a modular way, episodes can be mixed and matched to tailor 
-the lesson to the audiance. Here are two logical 'itineraries':
+the lesson to the audience. Here are two logical 'itineraries':
 
 #### A lesson with a focus on Sphinx and ReadTheDocs:
 1. Wishlist
