@@ -75,6 +75,25 @@ We have tried this lesson on day one and it felt too early and disconnected/abru
 It works best after the reproducibility lesson since we then reuse the example
 and it feels familiar.
 
+### Different combinations of episodes
+The lesson is setup in a modular way, episodes can be mixed and matched to tailor 
+the lesson to the audiance. Here are two logical 'itineraries':
+
+#### A lesson with a focus on Sphinx and ReadTheDocs:
+1. Wishlist
+2. Tools
+3. Sphinx
+4. ReadTheDocs
+5. Github Pages
+6. Discussion
+
+#### A lesson with a focus on in-code-documentation and readme files:
+1. Wishlist
+2. In-code-documentation
+3. Readme files
+4. A quick demo of sphinx and ReadTheDocs, you can use [this example project](https://github.com/escience-academy/coderefinery-documentation-example-project)
+that is deployed to ReadTheDocs [here](https://temperature-analysis-of-excel-files.readthedocs.io/en/latest/)
+5. Discussion
 
 ### Optional sections
 
