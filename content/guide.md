@@ -190,6 +190,14 @@ These are some of the successes and problems (which hopefully crystallize in a d
   - has four "levels": tutorials, how-to guides (examples), explanation pages and API reference
   - this level of documentation is overkill for small projects, but serves as a great source of ideas
 
+As an alternative to discussing these examples you can also ask students:
+- Think of projects of which you like the documentation. What do you like about them?
+- Think of projects for which you don’t like the documentation. What don’t you like about them? Are you missing anything?
+
+**NB: You can choose a mature library with lots of users for this exercise, 
+but try to also think of less mature projects you had to collaborate on, 
+or papers you had to reproduce.**
+
 
 ### Live better than reading the website material
 
