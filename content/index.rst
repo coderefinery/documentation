@@ -41,6 +41,7 @@ The approach that we will learn will be transferable to
    20 min ; :doc:`rtd`
    20 min ; :doc:`gh-pages`
    20 min ; :doc:`in-code-documentation`
+   30 min ; :doc:`readme`
    5 min  ; :doc:`discussion`
 
 
@@ -54,6 +55,7 @@ The approach that we will learn will be transferable to
    rtd.md
    gh-pages.md
    in-code-documentation.md
+   readme.md
    discussion.md
 
 
