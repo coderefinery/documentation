@@ -32,33 +32,33 @@ Scheme that describes how branch names end up websites.
 
 ---
 
-> ## Exercise
->
-> - Deploy own website reusing a template:
->   - Follow the steps from GitHub Pages <https://pages.github.com/>. The documentation there is very good so there is no need for us to duplicate the screenshots
->   - Select "Project site"
->   - Select "Choose a theme" (for instance "Minimal")
->   - Click "Select theme"
->   - Adjust the README.md and commit
->   - Browse your page on `http://username.github.io/repository` (adjust "username" and "repository")
-> - Make a change to the repository after the webpage has been deployed for the first time
-> - Please wait few minutes and then verify that the change shows up on the website
+```{challenge} Exercise: Your own github page
 
-{: .challenge}
+ - Deploy own website reusing a template:
+   - Follow the steps from GitHub Pages <https://pages.github.com/. The documentation there is very good so there is no need for us to duplicate the screenshots
+   - Select "Project site"
+   - Select "Choose a theme" (for instance "Minimal")
+   - Click "Select theme"
+   - Adjust the README.md and commit
+   - Browse your page on `http://username.github.io/repository` (adjust "username" and "repository")
+ - Make a change to the repository after the webpage has been deployed for the first time
+ - Please wait few minutes and then verify that the change shows up on the website
+```
 
-> ## Real-life examples
->
-> - Research Software Hour
->   - Source: <https://raw.githubusercontent.com/ResearchSoftwareHour/researchsoftwarehour.github.io/main/content/about.md>
->   - Result: <https://researchsoftwarehour.github.io/about/>
-> - This lesson
->   - Source: <https://raw.githubusercontent.com/coderefinery/documentation/gh-pages/_episodes/06-gh-pages.md>
->   - Result: this page
-{: .prereq}
 
-> ## Discussion
->
-> - You can use HTML directly or another static site generator if you prefer
->   to not use the default [Jekyll](https://jekyllrb.com/).
-> - It is no problem to use a custom domain instead of `*.github.io`.
-{: .discussion}
+```{callout} Real-life examples
+
+ - Research Software Hour
+   - Source: <https://raw.githubusercontent.com/ResearchSoftwareHour/researchsoftwarehour.github.io/main/content/about.md>
+   - Result: <https://researchsoftwarehour.github.io/about/>
+ - This lesson
+   - Source: <https://raw.githubusercontent.com/coderefinery/documentation/gh-pages/_episodes/06-gh-pages.md>
+   - Result: this page
+```
+
+```{discussion}
+
+ - You can use HTML directly or another static site generator if you prefer
+   to not use the default [Jekyll](https://jekyllrb.com/).
+ - It is no problem to use a custom domain instead of `*.github.io`.
+```

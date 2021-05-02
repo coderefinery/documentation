@@ -9,27 +9,25 @@
 - Arrive at a checklist for designing and deploying code documentation.
 ```
 
-## Why documenting code?
+```{challenge} Why documenting code?
 
-> ## Exercise in the main room
->
-> - **Use the collaborative document**.
-> - Is project documentation important? Why?
-> - How would you describe a useful documentation?
-> - How can you motivate your colleagues to contribute to the documentation?
-{: .challenge}
+- **Use the collaborative document**.
+- Is project documentation important? Why?
+- How would you describe a useful documentation?
+- How can you motivate your colleagues to contribute to the documentation?
+```
 
-> ## Our motivation (but let us brainstorm first)
->
-> - You will probably use your code in the future and may forget details.
-> - You may want others to use your code (almost impossible without documentation).
-> - You may want others to contribute to the code.
-> - Shield your limited time and let the documentation answer FAQs.
-{: .solution}
+```{solution} Our motivation (but let us brainstorm first)
+
+- You will probably use your code in the future and may forget details.
+- You may want others to use your code (almost impossible without documentation).
+- You may want others to contribute to the code.
+- Shield your limited time and let the documentation answer FAQs.
+```
 
 ---
 
-### Own examples
+## Own examples
 
 We would like to show you some examples which are not ideal but we do not want
 to point at others.
