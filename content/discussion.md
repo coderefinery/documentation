@@ -1,4 +1,4 @@
-# Discussion after the exercises
+# Documentation summary
 
 ```{questions}
 - What recommendations can we take home?

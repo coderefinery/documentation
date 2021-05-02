@@ -37,7 +37,8 @@ That's all there is to this project! (You can ignore the other files in the repo
 4. Note that the README file is nicely rendered on the github repository page.
 5. Compare your README file with that of others, is all the essential information in there?
 NB: The `README.md` file is written in 'Markdown' a very popular lightweight markup language, all you need to know for now is this syntax:
-```markdown
+
+```
 # A section title
 ## A subsection title
 Normal text
@@ -53,7 +54,7 @@ A list with items
 ``````{solution}
 A README file for this project could look like this:
 
-````markdown
+````
 ### Temperature analysis in spreadsheets
 A python script for the analysis of temperatures in excel files.
 
