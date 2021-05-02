@@ -42,13 +42,13 @@
     ````{tab} GitHub
 
     **Step 1:** Go to the [word-count project template](https://github.com/coderefinery/word-count/generate)
-    and fork it to your namespace
+     on GitHub and fork it to your namespace
     ````
 
     ````{tab} Gitlab
 
     **Step 1:** Go to the [word-count project template](https://gitlab.com/svenvanderburg/word-count)
-    and fork it to your namespace
+    on GitLab and fork it to your namespace
     ````
   `````
 
