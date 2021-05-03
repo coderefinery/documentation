@@ -1,18 +1,23 @@
 # Writing good README files
-````{questions}
-  - What should be included as a bare minimum in README files?
-````
 
-````{objectives}
-- Write a README file according to best practices.
-````
+```{questions}
+- What should be included as a bare minimum in README files?
+```
+
+```{objectives}
+- Write a README file according to good practices.
+```
+
 ---
-The `README` file is usually the first thing users/collaborators see when visiting your github repository.
-Use it to communicate important information about your project!
 
-````{challenge} Exercise: Write a README file
-You are going to write a README file for an example project.
+The `README` file (often `README.md` or `README.rst`) is usually the first
+thing users/collaborators see when visiting your GitHub repository.  Use it to
+communicate important information about your project!
 
+
+## Exercises
+
+````{challenge} Exercise README-1: Write a README file for an example project
 **The example project**
 
 Here's [the example project](https://github.com/escience-academy/coderefinery-documentation-example-project).
@@ -51,23 +56,30 @@ A list with items
 (Optional): Use [https://hemingwayapp.com/](https://hemingwayapp.com/) to analyse your README file and make your writing bold and clear!
 ````
 
-``````{solution}
+`````{solution}
 A README file for this project could look like this:
 
 ````
 ### Temperature analysis in spreadsheets
+
 A python script for the analysis of temperatures in excel files.
 
+
 ### Why should I use this project ?
+
 It makes it easy to analyse excel files with temperatures in them.
 
+
 ### Setup
+
 You need `python>3.5` to run this script.
 
 The project depends on the `pandas` library, install it with pip:
 `pip install pandas`
 
+
 ### How to run?
+
 You can run the script from the command-line using
 ```
 python analyse_spreadsheet.py
@@ -80,32 +92,42 @@ from analyse_spreadsheet import mean_temperature
 print(mean_temperature(data))
 ```
 
+
 ### How to cite this project?
+
 Please email `training@esciencecenter.nl` to get instructions on how to properly cite this project.
 
+
 ### Contributing
-You are welcome to contribute to the code via pull requests.
-Please have a look at the [NLeSC guide](https://nlesc.gitbooks.io/guide/content/software/software_overview.html) for guidelines about software development.
+
+You are welcome to contribute to the code via pull requests.  Please have a
+look at the [NLeSC
+guide](https://nlesc.gitbooks.io/guide/content/software/software_overview.html)
+for guidelines about software development.
 ````
-``````
+`````
 
 ---
 
-## What makes up a good `README` file?
-As a bare minimum a `README` file should include:
+## What makes up a good README file?
+
+As a bare minimum a README file should include:
 * A descriptive project title
 * Motivation (why the project exists)
 * How to setup
 * Copy-pastable quick start code example
 * Recommended citation
 
-````{callout} User experience
+```{callout} User experience
 Think about the user (which can be a future you) of your project, what does this user need to know to use or
 contribute to the project? And how do you make your project attractive to use or contribute to?
-````
+```
 
 ---
 
-````{keypoints}
+```{keypoints}
 - A good README file is key to provide information about your project.
-````
+- A README file can be "enough" for many projects.
+- While it's nice to have in-code documentation for the readers of the *code*, the *users of the code*
+  will appreciate a README file.
+```
