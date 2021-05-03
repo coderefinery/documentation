@@ -17,6 +17,13 @@ communicate important information about your project!
 
 ## Exercises
 
+```{instructor-note}
+- Groups can choose to work on either exercise README-1, or on exercises README-2 + README-3.
+- Exercise README-1 creates and discusses a README for an example Python project.
+- Exercise README-2 can be interesting if learners already have a project/code of their own.
+- Exercise README-3 (constructively) discusses READMEs of projects which you have recently used.
+```
+
 ````{challenge} Exercise README-1: Write a README file for an example project
 **The example project**
 
@@ -106,6 +113,31 @@ guide](https://nlesc.gitbooks.io/guide/content/software/software_overview.html)
 for guidelines about software development.
 ````
 `````
+
+```{challenge} Exercise README-2: Draft or review a README for one of your recent projects
+Try to draft a brief README or review a README which you have written for one
+of your projects.
+
+You can do that either by screensharing and discussing or working individually.
+
+Please note observations and recommendations in the collaborative notes.
+```
+
+```{challenge} Exercise README-3: Review and discuss a README of a project that you have used
+In this exercise we will review and discuss a README of a project which you
+have used. You can also review a library which is popular in your domain of
+research and discuss their README.
+
+You can do that either by screensharing and discussing or working individually.
+
+When discussing other people's projects please remember to be respectful and
+constructive. The goal of this exercise is not to criticize other projects but
+to learn from other projects and to collect the aspects that you enjoyed
+finding in a README and to also collect aspects which you have searched for but
+which are sometimes missing.
+
+Please note observations and recommendations in the collaborative notes.
+```
 
 ---
 
