@@ -38,7 +38,7 @@ The approach that we will learn will be transferable to
    15 min ; :doc:`wishlist`
    10 min ; :doc:`tools`
    20 min ; :doc:`in-code-documentation`
-   30 min ; :doc:`readme`
+   30 min ; :doc:`writing-readme-files`
    30 min ; :doc:`sphinx`
    20 min ; :doc:`rtd`
    20 min ; :doc:`gh-pages`
@@ -52,7 +52,7 @@ The approach that we will learn will be transferable to
    wishlist.md
    tools.md
    in-code-documentation.md
-   readme.md
+   writing-readme-files.md
    sphinx.md
    rtd.md
    gh-pages.md
