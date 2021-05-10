@@ -42,7 +42,7 @@ The approach that we will learn will be transferable to
    30 min ; :doc:`sphinx`
    20 min ; :doc:`rtd`
    20 min ; :doc:`gh-pages`
-   5 min  ; :doc:`discussion`
+   5 min  ; :doc:`summary`
 
 
 .. toctree::
@@ -56,7 +56,7 @@ The approach that we will learn will be transferable to
    sphinx.md
    rtd.md
    gh-pages.md
-   discussion.md
+   summary.md
 
 
 .. toctree::
