@@ -7,7 +7,7 @@
 
 ```{objectives}
 - Write docstrings according to best practices
-- Know where and when to put comments                                       
+- Know where and when to put comments
 ```
 
 In this episode we will learn how to write good documentation inside your code.
@@ -15,7 +15,7 @@ In this episode we will learn how to write good documentation inside your code.
 ## Writing good comments
 ````{challenge} Exercise: Comments
 Let's take a look at two example comments (comments in python start with `#`):
- 
+
 **Comment A**
 ```python
 # Now we check if temperature is larger then -50:
@@ -29,16 +29,16 @@ if temperature > -50:
 if temperature > -50:
     print('do something')
 ```
-Which of these comments is best? Can you explain why? 
+Which of these comments is best? Can you explain why?
 ````
 ````{solution} Solution
  Comment A describes **what** happens in this piece of code,
  whereas comment B describes **why** this piece of code is there, i.e. its **purpose**.
  Comments in the form of B are much more useful, comments of form A are redundant and we should avoid them.
-  
+
 ````
 
-````{callout} 
+````{callout}
 Do not use comments for:
 
 **Keeping zombie code**
@@ -73,10 +73,10 @@ We can add a **docstring** (the string in between the two `"""`):
 def mean_temperature(data):
     """
     Get the mean temperature
-    
+
     Args:
         data (pandas.DataFrame): A pandas dataframe with air temperature measurements.
-    
+
     Returns:
         The mean air temperature (float)
     """
@@ -101,10 +101,10 @@ help(mean_temperature)
 >Help on function mean_temperature in module __main__:
 >mean_temperature(data)
 >    Get the mean temperature
->    
+>
 >    Args:
 >        data (pandas.DataFrame): A pandas dataframe with air temperature measurements.
->    
+>
 >    Returns:
 >        The mean air temperature
 >```
@@ -164,9 +164,9 @@ def get_spreadsheet_columns(file_loc, print_columns=False):
 ````
 
 ````{callout} Naming **is** documentation.
-Giving explicit, descriptive names to your code segments (functions, classes, variables) already provides very useful 
-and important documentation. In practice you will find that for simple functions it is unnecessary to add a docstring 
-when the function name and variable names already give enough information. 
+Giving explicit, descriptive names to your code segments (functions, classes, variables) already provides very useful
+and important documentation. In practice you will find that for simple functions it is unnecessary to add a docstring
+when the function name and variable names already give enough information.
 ````
 
 ````{keypoints}

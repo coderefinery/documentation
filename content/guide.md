@@ -76,7 +76,7 @@ It works best after the reproducibility lesson since we then reuse the example
 and it feels familiar.
 
 ### Different combinations of episodes
-The lesson is setup in a modular way, episodes can be mixed and matched to tailor 
+The lesson is setup in a modular way, episodes can be mixed and matched to tailor
 the lesson to the audience. Here are two logical 'itineraries':
 
 #### A lesson with a focus on Sphinx and ReadTheDocs:
@@ -213,8 +213,8 @@ As an alternative to discussing these examples you can also ask students:
 - Think of projects of which you like the documentation. What do you like about them?
 - Think of projects for which you don’t like the documentation. What don’t you like about them? Are you missing anything?
 
-**NB: You can choose a mature library with lots of users for this exercise, 
-but try to also think of less mature projects you had to collaborate on, 
+**NB: You can choose a mature library with lots of users for this exercise,
+but try to also think of less mature projects you had to collaborate on,
 or papers you had to reproduce.**
 
 
