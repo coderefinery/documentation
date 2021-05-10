@@ -9,16 +9,6 @@
 - Choose the right tool for the right reason.
 ```
 
-## What tools and solutions are out there?
-
-- [Comments in the source code](#comments-in-the-source-code)
-- [README files in the source tree](#readme-files-in-the-source-tree)
-- [Wikis](#wikis)
-- [LaTeX/PDF](#latexpdf)
-- [Doxygen](#doxygen)
-- [reStructuredText and Markdown](#restructuredtext-and-markdown)
-- [HTML static site generators](#html-static-site-generators)
-
 ---
 
 ### Comments in the source code
