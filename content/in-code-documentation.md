@@ -1,4 +1,7 @@
+(in-code-documentation)=
+
 # In-code documentation
+
 ```{questions}
 - What can I do to make my code more easily understandable?
 - What information should go into comments?

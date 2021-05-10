@@ -11,7 +11,7 @@
 
 ---
 
-### In-code documentation
+## In-code documentation
 
 - Advantages
   - Good for programmers
@@ -20,23 +20,24 @@
 - Disadvantage
   - Probably not enough for users
 
+We will have a closer look at this in the {ref}`in-code-documentation` episode.
+
 ---
 
-### README files
+## README files
 
 - Advantage
   - Versioned (goes with the code development)
   - It is often good enough to have a `README.md` or `README.rst` along with your code/script
-- Disadvantage
-  - You need a terminal or GitHub/GitLab browser to read them
-  - Sometimes users have no access to the source tree
 - If you use README files, use either
   [RST](http://docutils.sourceforge.net/rst.html) or
-  [Markdown](https://commonmark.org/help/) markup
+  [Markdown](https://commonmark.org/help/)
+
+We will have a closer look at this in the {ref}`writing-readme-files` episode.
 
 ---
 
-### reStructuredText and Markdown
+## reStructuredText and Markdown
 
 - Two of the most popular lightweight markup languages.
 - reStructuredText (RST) has more features than Markdown but the choice is a matter of taste.
@@ -69,7 +70,8 @@ There is more: images,            There is more: images,
 tables, links, ...                tables, links, ...
 ```
 
-- We will use RST in a Sphinx example and Markdown in a GiHub pages example
+- We will use RST in the {ref}`sphinx` episode
+  and Markdown in the {ref}`gh-pages` example
 
 Experiment with Markdown:
 - [Learn Markdown in 60 seconds](http://commonmark.org/help/)
@@ -78,7 +80,7 @@ Experiment with Markdown:
 
 ---
 
-### HTML static site generators
+## HTML static site generators
 
 There are many tools that can turn RST or Markdown into beautiful HTML pages:
 
@@ -99,6 +101,7 @@ There are many tools that can turn RST or Markdown into beautiful HTML pages:
 - [GitBook](https://www.gitbook.com/)
 - [Hugo](https://gohugo.io)
 - [Hexo](https://hexo.io)
+- [Zola](https://www.getzola.org/)
 
 There are many more ...
 
@@ -109,7 +112,7 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 
 ---
 
-### Wikis
+## Wikis
 
 - Popular solutions (but many others exist):
   - [MediaWiki](https://www.mediawiki.org)
@@ -124,7 +127,7 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 
 ---
 
-### LaTeX/PDF
+## LaTeX/PDF
 
 - Advantage
   - Popular and familiar in the physics and mathematics community
@@ -134,7 +137,7 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 
 ---
 
-### Doxygen
+## Doxygen
 
 - Auto-generates API documentation
 - Documented directly in the source code
