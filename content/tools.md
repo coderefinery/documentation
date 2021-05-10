@@ -11,7 +11,7 @@
 
 ---
 
-### Comments in the source code
+### In-code documentation
 
 - Advantages
   - Good for programmers
@@ -22,7 +22,7 @@
 
 ---
 
-### README files in the source tree
+### README files
 
 - Advantage
   - Versioned (goes with the code development)
@@ -33,45 +33,6 @@
 - If you use README files, use either
   [RST](http://docutils.sourceforge.net/rst.html) or
   [Markdown](https://commonmark.org/help/) markup
-
----
-
-### Wikis
-
-- Popular solutions (but many others exist):
-  - [MediaWiki](https://www.mediawiki.org)
-  - [Dokuwiki](https://www.dokuwiki.org)
-- Advantage
-  - Barrier to write and edit is low
-- Disadvantages
-  - Typically disconnected from source code repository (**reproducibility**)
-  - Difficult to serve multiple versions
-  - Difficult to check out a specific old version
-  - Typically needs to be hosted and maintained
-
----
-
-### LaTeX/PDF
-
-- Advantage
-  - Popular and familiar in the physics and mathematics community
-- Disadvantages
-  - PDF format is not ideal for copy-paste ability of examples
-  - Possible, but not trivial to automate rebuilding documentation after every Git push
-
----
-
-### Doxygen
-
-- Auto-generates API documentation
-- Documented directly in the source code
-- Popular in the C++ community
-- Has support for C, Fortran, Python, Java, etc.,
-  see [Doxygen Github Repo](https://github.com/doxygen/doxygen)
-- Many keywords are understood by Doxygen:
-  [Doxygen special commands](http://www.doxygen.nl/manual/commands.html)
-- Can be used to also generate higher-level ("human") documentation
-- Can be deployed to GiHub/GitLab/Bitbucket Pages
 
 ---
 
@@ -145,6 +106,45 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - [GitHub Pages](https://pages.github.com)
 - [Bitbucket Pages](https://pages.bitbucket.io/)
 - [GitLab Pages](https://pages.gitlab.io)
+
+---
+
+### Wikis
+
+- Popular solutions (but many others exist):
+  - [MediaWiki](https://www.mediawiki.org)
+  - [Dokuwiki](https://www.dokuwiki.org)
+- Advantage
+  - Barrier to write and edit is low
+- Disadvantages
+  - Typically disconnected from source code repository (**reproducibility**)
+  - Difficult to serve multiple versions
+  - Difficult to check out a specific old version
+  - Typically needs to be hosted and maintained
+
+---
+
+### LaTeX/PDF
+
+- Advantage
+  - Popular and familiar in the physics and mathematics community
+- Disadvantages
+  - PDF format is not ideal for copy-paste ability of examples
+  - Possible, but not trivial to automate rebuilding documentation after every Git push
+
+---
+
+### Doxygen
+
+- Auto-generates API documentation
+- Documented directly in the source code
+- Popular in the C++ community
+- Has support for C, Fortran, Python, Java, etc.,
+  see [Doxygen Github Repo](https://github.com/doxygen/doxygen)
+- Many keywords are understood by Doxygen:
+  [Doxygen special commands](http://www.doxygen.nl/manual/commands.html)
+- Can be used to also generate higher-level ("human") documentation
+- Can be deployed to GiHub/GitLab/Bitbucket Pages
 
 ---
 
