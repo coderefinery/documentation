@@ -78,6 +78,9 @@ Experiment with Markdown:
 - [https://dillinger.io](http://dillinger.io)
 - [https://stackedit.io](https://stackedit.io)
 
+To convert between MD and RST (and many other formats):
+- [Pandoc](https://pandoc.org/)
+
 ---
 
 ## HTML static site generators
