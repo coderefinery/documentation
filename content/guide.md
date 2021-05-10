@@ -1,24 +1,5 @@
 # Instructor guide
 
-* [Why we teach this lesson](#why-we-teach-this-lesson)
-   * [Intended learning outcomes](#intended-learning-outcomes)
-* [Timing and lesson placement](#timing-and-lesson-placement)
-   * [Timing](#timing)
-   * [Place this lesson towards the end of the workshop](#place-this-lesson-towards-the-end-of-the-workshop)
-   * [Optional sections](#optional-sections)
-* [Requirements and troubleshooting](#requirements-and-troubleshooting)
-   * [Typical pitfalls](#typical-pitfalls)
-      * [Anaconda shell, Git, and Nano on Windows](#anaconda-shell-git-and-nano-on-windows)
-      * [Character encoding issues](#character-encoding-issues)
-* [How to teach this lesson](#how-to-teach-this-lesson)
-   * [Things to prepare as instructor](#things-to-prepare-as-instructor)
-   * [How to start](#how-to-start)
-   * [Questions to involve participants](#questions-to-involve-participants)
-   * [Share your experience](#share-your-experience)
-   * [Own examples](#own-examples)
-   * [Live better than reading the website material](#live-better-than-reading-the-website-material)
-   * [What worked well in past workshops](#what-worked-well-in-past-workshops)
-
 
 ## Why we teach this lesson
 
