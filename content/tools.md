@@ -156,6 +156,10 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - Fortran
   - [Fortran Documenter (FORD)](https://github.com/Fortran-FOSS-Programmers/ford)
 
+- Julia
+  - [Franklin](https://franklinjl.org/): static site generator
+  - [Documenter.jl](https://juliadocs.github.io/Documenter.jl/stable/)
+
 ---
 
 ```{keypoints}
