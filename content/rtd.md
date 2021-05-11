@@ -89,6 +89,7 @@ $ sphinx-build doc -W -b linkcheck -d _build/doctrees _build/html
 
 That's it! Your site should now be live on
 http://youruser-word-count.readthedocs.io (replace project name).
+Note that if your Git repo name contained underscores, they get converted to hyphens.
 
 **Verify refreshing the documentation**
 
