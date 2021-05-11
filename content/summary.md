@@ -1,23 +1,20 @@
-# Documentation summary
+# Summary
 
 ```{questions}
 - What recommendations can we take home?
 ```
 
-## Back in the main room: Questions and answers, discussion
-
-> ## Discussion
->
-> - Please write your questions in the collaborative notes document.
-> - Any other ideas?
->     - e.g. Any incremental improvements that can benefit your projects?
->     - e.g. What's nice but overkill for your work?
->     - Some of the recommendations below can be used as food for thought.
-{: .discussion}
+```{discussion}
+- Please write your questions in the collaborative notes document.
+- Any other ideas?
+    - Any incremental improvements that can benefit your projects?
+    - What's nice but overkill for your work?
+    - Some of the recommendations below can be used as food for thought.
+```
 
 ---
 
-### There is not the one right way: it is always a balance
+## There is not the one right way: it is always a balance
 
 
 **Jupyter notebooks can be good documentation for scripts**
@@ -29,7 +26,10 @@
 **README.md or README.rst?**
 
 - Functionality-wise both Markdown and RST are very similar.
-- With RST it is a one-liner to generate a table of contents automatically.
+- With RST you can generate a table of contents (TOC) automatically by adding `.. contents:: Table of Contents`.
+- On GitLab you can generate a TOC in Markdown with `[[_TOC_]]`.
+- Nowadays also GitHub generates a
+  [TOC for README.md](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes#auto-generated-table-of-contents-for-readme-files).
 - If you need math equations, RST/Sphinx might be a good fit.
 - Resizing images in README.rst on GitHub is currently not easy.
 
