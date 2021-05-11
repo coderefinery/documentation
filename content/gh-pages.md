@@ -48,11 +48,13 @@ Scheme that describes how branch names end up websites.
 ```
 
 ```{callout} Real-life examples
-- Research Software Hour
-  - Source: <https://raw.githubusercontent.com/ResearchSoftwareHour/researchsoftwarehour.github.io/main/content/about.md>
+- Research Software Hour (built using [Zola](https://www.getzola.org/))
+  - [Source](https://raw.githubusercontent.com/ResearchSoftwareHour/researchsoftwarehour.github.io/main/content/about.md)
   - Result: <https://researchsoftwarehour.github.io/about/>
-- This lesson
-  - Source: <https://raw.githubusercontent.com/coderefinery/documentation/gh-pages/_episodes/06-gh-pages.md>
+- This lesson (built using [Sphinx](https://www.sphinx-doc.org/)
+    and [MyST](https://myst-parser.readthedocs.io/)
+    and [sphinx-lesson](https://coderefinery.github.io/sphinx-lesson/))
+  - [Source](https://raw.githubusercontent.com/coderefinery/documentation/main/content/gh-pages.md)
   - Result: this page
 ```
 
