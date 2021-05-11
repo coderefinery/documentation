@@ -26,8 +26,10 @@
 **README.md or README.rst?**
 
 - Functionality-wise both Markdown and RST are very similar.
-- With RST it is a one-liner to generate a table of contents (TOC) automatically.
-  But nowadays also GitHub generates a TOC for README.md.
+- With RST you can generate a table of contents (TOC) automatically by adding `.. contents:: Table of Contents`.
+- On GitLab you can generate a TOC in Markdown with `[[_TOC_]]`.
+- Nowadays also GitHub generates a
+  [TOC for README.md](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes#auto-generated-table-of-contents-for-readme-files).
 - If you need math equations, RST/Sphinx might be a good fit.
 - Resizing images in README.rst on GitHub is currently not easy.
 
