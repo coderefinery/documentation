@@ -87,13 +87,13 @@ To convert between MD and RST (and many other formats):
 
 There are many tools that can turn RST or Markdown into beautiful HTML pages:
 
-- [Sphinx](http://sphinx-doc.org) **<- we will exercise this**
+- [Sphinx](http://sphinx-doc.org) **<- we will exercise this, this is how this lesson material is built**
   - Generate HTML/PDF/LaTeX from RST and Markdown.
   - Basically all Python projects use Sphinx but **Sphinx is not limited to Python**
   - [Read the docs](http://readthedocs.org)
     hosts public Sphinx documentation for free!
 
-- [Jekyll](https://jekyllrb.com) **<- this is how this lesson material is built**
+- [Jekyll](https://jekyllrb.com)
   - Generates HTML from Markdown.
   - GitHub supports this without adding extra build steps.
 
@@ -104,7 +104,7 @@ There are many tools that can turn RST or Markdown into beautiful HTML pages:
 - [GitBook](https://www.gitbook.com/)
 - [Hugo](https://gohugo.io)
 - [Hexo](https://hexo.io)
-- [Zola](https://www.getzola.org/)
+- [Zola](https://www.getzola.org/) **<- this is what we use for our project website and workshop websites**
 
 There are many more ...
 
