@@ -1,3 +1,5 @@
+(writing-readme-files)=
+
 # Writing good README files
 
 ```{questions}

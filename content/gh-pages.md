@@ -1,3 +1,5 @@
+(gh-pages)=
+
 # Hosting websites/homepages on GitHub Pages
 
 ```{questions}

@@ -9,19 +9,9 @@
 - Choose the right tool for the right reason.
 ```
 
-## What tools and solutions are out there?
-
-- [Comments in the source code](#comments-in-the-source-code)
-- [README files in the source tree](#readme-files-in-the-source-tree)
-- [Wikis](#wikis)
-- [LaTeX/PDF](#latexpdf)
-- [Doxygen](#doxygen)
-- [reStructuredText and Markdown](#restructuredtext-and-markdown)
-- [HTML static site generators](#html-static-site-generators)
-
 ---
 
-### Comments in the source code
+## In-code documentation
 
 - Advantages
   - Good for programmers
@@ -30,62 +20,24 @@
 - Disadvantage
   - Probably not enough for users
 
+We will have a closer look at this in the {ref}`in-code-documentation` episode.
+
 ---
 
-### README files in the source tree
+## README files
 
 - Advantage
   - Versioned (goes with the code development)
   - It is often good enough to have a `README.md` or `README.rst` along with your code/script
-- Disadvantage
-  - You need a terminal or GitHub/GitLab browser to read them
-  - Sometimes users have no access to the source tree
 - If you use README files, use either
   [RST](http://docutils.sourceforge.net/rst.html) or
-  [Markdown](https://commonmark.org/help/) markup
+  [Markdown](https://commonmark.org/help/)
+
+We will have a closer look at this in the {ref}`writing-readme-files` episode.
 
 ---
 
-### Wikis
-
-- Popular solutions (but many others exist):
-  - [MediaWiki](https://www.mediawiki.org)
-  - [Dokuwiki](https://www.dokuwiki.org)
-- Advantage
-  - Barrier to write and edit is low
-- Disadvantages
-  - Typically disconnected from source code repository (**reproducibility**)
-  - Difficult to serve multiple versions
-  - Difficult to check out a specific old version
-  - Typically needs to be hosted and maintained
-
----
-
-### LaTeX/PDF
-
-- Advantage
-  - Popular and familiar in the physics and mathematics community
-- Disadvantages
-  - PDF format is not ideal for copy-paste ability of examples
-  - Possible, but not trivial to automate rebuilding documentation after every Git push
-
----
-
-### Doxygen
-
-- Auto-generates API documentation
-- Documented directly in the source code
-- Popular in the C++ community
-- Has support for C, Fortran, Python, Java, etc.,
-  see [Doxygen Github Repo](https://github.com/doxygen/doxygen)
-- Many keywords are understood by Doxygen:
-  [Doxygen special commands](http://www.doxygen.nl/manual/commands.html)
-- Can be used to also generate higher-level ("human") documentation
-- Can be deployed to GiHub/GitLab/Bitbucket Pages
-
----
-
-### reStructuredText and Markdown
+## reStructuredText and Markdown
 
 - Two of the most popular lightweight markup languages.
 - reStructuredText (RST) has more features than Markdown but the choice is a matter of taste.
@@ -118,16 +70,20 @@ There is more: images,            There is more: images,
 tables, links, ...                tables, links, ...
 ```
 
-- We will use RST in a Sphinx example and Markdown in a GiHub pages example
+- We will use RST in the {ref}`sphinx` episode
+  and Markdown in the {ref}`gh-pages` example
 
 Experiment with Markdown:
 - [Learn Markdown in 60 seconds](http://commonmark.org/help/)
 - [https://dillinger.io](http://dillinger.io)
 - [https://stackedit.io](https://stackedit.io)
 
+To convert between MD and RST (and many other formats):
+- [Pandoc](https://pandoc.org/)
+
 ---
 
-### HTML static site generators
+## HTML static site generators
 
 There are many tools that can turn RST or Markdown into beautiful HTML pages:
 
@@ -148,6 +104,7 @@ There are many tools that can turn RST or Markdown into beautiful HTML pages:
 - [GitBook](https://www.gitbook.com/)
 - [Hugo](https://gohugo.io)
 - [Hexo](https://hexo.io)
+- [Zola](https://www.getzola.org/)
 
 There are many more ...
 
@@ -155,6 +112,56 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - [GitHub Pages](https://pages.github.com)
 - [Bitbucket Pages](https://pages.bitbucket.io/)
 - [GitLab Pages](https://pages.gitlab.io)
+
+---
+
+## Wikis
+
+- Popular solutions (but many others exist):
+  - [MediaWiki](https://www.mediawiki.org)
+  - [Dokuwiki](https://www.dokuwiki.org)
+- Advantage
+  - Barrier to write and edit is low
+- Disadvantages
+  - Typically disconnected from source code repository (**reproducibility**)
+  - Difficult to serve multiple versions
+  - Difficult to check out a specific old version
+  - Typically needs to be hosted and maintained
+
+---
+
+## LaTeX/PDF
+
+- Advantage
+  - Popular and familiar in the physics and mathematics community
+- Disadvantages
+  - PDF format is not ideal for copy-paste ability of examples
+  - Possible, but not trivial to automate rebuilding documentation after every Git push
+
+---
+
+## Doxygen
+
+- Auto-generates API documentation
+- Documented directly in the source code
+- Popular in the C++ community
+- Has support for C, Fortran, Python, Java, etc.,
+  see [Doxygen Github Repo](https://github.com/doxygen/doxygen)
+- Many keywords are understood by Doxygen:
+  [Doxygen special commands](http://www.doxygen.nl/manual/commands.html)
+- Can be used to also generate higher-level ("human") documentation
+- Can be deployed to GiHub/GitLab/Bitbucket Pages
+
+---
+
+## Other tools
+
+- Fortran
+  - [Fortran Documenter (FORD)](https://github.com/Fortran-FOSS-Programmers/ford)
+
+- Julia
+  - [Franklin](https://franklinjl.org/): static site generator
+  - [Documenter.jl](https://juliadocs.github.io/Documenter.jl/stable/)
 
 ---
 
