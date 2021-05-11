@@ -41,10 +41,14 @@ We will use GitHub/GitLab for this exercise but it will also work with any Git r
    on GitHub and fork it to your namespace.
   ````
 
-  ````{tab} Gitlab
+  ````{tab} GitLab
 
-  **Step 1:** Go to the [word-count project template](https://gitlab.com/svenvanderburg/word-count)
-  on GitLab and fork it to your namespace.
+  **Step 1:** Import the example project to GitLab:
+  - Visit <https://gitlab.com/projects/new#import_project>
+  - Select "Repo by URL" button
+  - Git repository URL is https://github.com/coderefinery/word-count.git
+  - Select "Public"
+  - Click "Create project"
   ````
 `````
 
