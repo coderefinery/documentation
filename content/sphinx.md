@@ -86,36 +86,15 @@ Project language [en]: <hit enter>
 
 A couple of files and directories are created:
 
-<table style="width:50%;">
-  <tr>
-    <th style="text-align: center; border: 1px solid black; padding: 3px; width:15%"> File/directory </th>
-    <th style="text-align: center; border: 1px solid black; padding: 3px; width:35%"> Contents </th>
-  </tr>
-  <tr>
-    <td style="text-align: left; border: 1px solid black; padding: 3px;"> conf.py </td>
-    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Documentation configuration file </td>
-  </tr>
-  <tr>
-    <td style="text-align: left; border: 1px solid black; padding: 3px;"> index.rst </td>
-    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Documentation master file </td>
-  </tr>
-  <tr>
-    <td style="text-align: left; border: 1px solid black; padding: 3px;"> _build/ </td>
-    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Directory where docs are built </td>
-  </tr>
-  <tr>
-    <td style="text-align: left; border: 1px solid black; padding: 3px;"> _templates/ </td>
-    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Your own HTML templates </td>
-  </tr>
-  <tr>
-    <td style="text-align: left; border: 1px solid black; padding: 3px;"> _static/ </td>
-    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Static files (images, styles, etc.) copied to output directory on build </td>
-  </tr>
-  <tr>
-    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Makefile & make.bat </td>
-    <td style="text-align: left; border: 1px solid black; padding: 3px;"> Makefiles to build documentation using make </td>
-  </tr>
-</table>
+| File/directory | Contents |
+| -------------- | -------- |
+| conf.py        | Documentation configuration file |
+| index.rst      | Main file list other RST files to parse |
+| _build/        | Directory where docs are built (you can decide the name) |
+| _templates/    | Your own HTML templates |
+| _static/       | Static files (images, styles, etc.) copied to output directory on build |
+| Makefile       | Makefile to build documentation using make |
+| make.bat       | Makefile to build documentation using make (Windows) |
 
 `Makefile` and `make.bat` (for Windows) are build scripts that wrap the sphinx commands, but
 we will be doing it explicitly.
