@@ -20,6 +20,8 @@ RST syntax along the way.
 ```{discussion} This lesson is built with Sphinx
 - [Source code](https://raw.githubusercontent.com/coderefinery/documentation/main/content/sphinx.md)
 - Try to compare the source code and the result side by side
+- However, note that in this example we have used Markdown whereas in the following we will
+  demonstrate reStructuredText which is more typical in combination with Sphinx
 ```
 
 ````{callout} Prerequisites: Check whether we have the software we need
