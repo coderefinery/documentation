@@ -67,7 +67,7 @@ please follow our
 Create a directory for the example documentation, step into it, and inside
 generate the basic documentation template:
 
-```shell
+```console
 $ mkdir doc-example
 $ cd doc-example
 $ sphinx-quickstart
@@ -122,18 +122,18 @@ we will be doing it explicitly.
 
 Let's have a look at the `index.rst` file, which is the main file of your documentation:
 
-```
+```rst
 .. myproject documentation master file, created by
-  sphinx-quickstart on Mon Oct 21 21:46:06 2019.
-  You can adapt this file completely to your liking, but it should at least
-  contain the root `toctree` directive.
+   sphinx-quickstart on Tue May 11 18:38:22 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
 
 Welcome to myproject's documentation!
 =====================================
 
 .. toctree::
-  :maxdepth: 2
-  :caption: Contents:
+   :maxdepth: 2
+   :caption: Contents:
 
 
 
@@ -149,20 +149,20 @@ Indices and tables
 - The top four lines, starting with `..`, are a comment.
 - The next lines are the table of contents. We can add content below:
 
-```
+```rst
 .. toctree::
   :maxdepth: 2
   :caption: Contents:
 
-  feature-a
+  feature-a.rst
 ```
 A common gotcha with directives is that **the first line of the content must be indented to the same level as the options (i.e., :maxdepth)**.
 
-`feature-a` refers to a file `feature-a.rst`. Let's create it:
+Let's create the file `feature-a.rst` which `index.rst` refers to:
 
-```
-Feature A
-=========
+```rst
+Some Feature A
+==============
 
 Subsection
 ----------
@@ -181,14 +181,14 @@ Let's make a list (empty surrounding lines required):
 
 We now build the site:
 
-```shell
+```console
 $ ls
 
 _build  _static  _templates  conf.py  feature-a.rst  index.rst
 
 $ sphinx-build . _build
 
-Running Sphinx v1.5.1
+Running Sphinx v3.5.4
 loading pickled environment... done
 building [mo]: targets for 0 po files that are out of date
 building [html]: targets for 1 source files that are out of date
@@ -215,15 +215,15 @@ _sources  _static  feature-a.html  genindex.html  index.html  objects.inv search
 Now open the file `_build/index.html` in your browser by:
 
 Linux users type:
-```
+```console
 $ xdg-open _build/index.html
 ```
 macOS users type:
-```
+```console
 $ open _build/index.html
 ```
 Windows users type:
-```
+```console
 $ start _build/index.html
 ```
 
@@ -240,7 +240,7 @@ Note that you can change the styling by editing `conf.py` and changing the value
 
 ````{challenge} Exercise 2: Add content to your example documentation
 
-1. Add a entry below feature-a labeled *feature-b* to the `index.rst` file.
+1. Add a entry below feature-a.rst labeled *feature-b.rst* to the `index.rst` file.
 2. Create a file `feature-b.rst` in the same directory as your `feature-a.rst` file.
 3. Add some content to feature-b, rebuild with `sphinx-build`, and refresh the browser to look at the results
   ([Help](http://docutils.sourceforge.net/docs/ref/rst/directives.html)).
@@ -250,7 +250,7 @@ Experiment with the following RST syntax:
 - \*Emphasized text\* and \*\*bold text\*\*
 - Headings
 
-```text
+```rst
 Level 1
 =======
 
@@ -268,7 +268,7 @@ Level 4
 - \`A link \<http://www.google.com\>\`_
 - Numbered lists (can be automatic using `#`)
 
-```
+```rst
 1. item 1
 2. item 2
 #. item 3
@@ -277,7 +277,7 @@ Level 4
 
 - Simple tables
 
-```
+```rst
 ====== ======
 No.    Prime
 ====== ======
@@ -290,7 +290,7 @@ No.    Prime
 
 - Code block using special marker `::`
 
-```
+```rst
 The following is a code block::
 
   def hello():
@@ -299,7 +299,7 @@ The following is a code block::
 
 - Code block specifying syntax highlighting for other language than Python
 
-```
+```rst
 .. code-block:: c
 
   #include <stdio.h>
@@ -311,21 +311,22 @@ The following is a code block::
 ```
 - You could include the contents of an external file using `literalinclude` directive, as follows:
 
-```
+```rst
 .. literalinclude:: filename
 ```
 
 - It is possible to combine `literalinclude` with code highlighting, line numbering, and even line highlighting.
 - We can also use jupyter notebooks (*.ipynb) with sphinx. It requires `nbsphinx` extension to be installed. See [nbsphinx documentation](http://nbsphinx.readthedocs.io/en/latest/) for more information
-```
+```rst
 .. toctree::
   :maxdepth: 2
   :caption: Contents:
 
-  feature-a
+  feature-a.rst
   <python_notebook_name>.ipynb
 ```
 ````
+
 ````{challenge} Rendering (LaTeX) math equations
 
 There are two different ways to display mathematical equations within Sphinx:
@@ -337,18 +338,18 @@ your mathematical equations.
 To enable `MathJax` in Sphinx, you need first to add `sphinx.ext.mathjax` to
 the list of extensions in `conf.py`:
 
-```shell
+```python
 extensions = ['sphinx.ext.mathjax']
 ```
 
 The following shows how to inline mathematics within a text:
 
-```
+```rst
 This is an inline equation embedded :math:`a^2 + b^2 = c^2` in text.
 ```
 
 An equation and equation array:
-```
+```rst
 .. math::
   :label: myequation
 
@@ -364,7 +365,6 @@ An equation and equation array:
 ```
 
 These equations can then be referenced using ``:eq:`myequation` `` and ``:eq:`myarray` ``.
-
 ````
 
 ---
