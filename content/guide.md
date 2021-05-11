@@ -93,31 +93,7 @@ discussion with your learners to make them aware of what the training material c
 
 ---
 
-## Requirements and troubleshooting
-
-- Python
-- Sphinx
-- GitHub accounts
-
-
-### Typical pitfalls
-
-#### Anaconda shell, Git, and Nano on Windows
-
-Windows users (probably) need to use the Anaconda prompt to run sphinx commands
-(sphinx-build, sphinx-quickstart).
-
-Git can be also be installed in the standard anaconda installation:
-
-```
-$ conda install git
-```
-
-The command above needs to be done into an Anaconda prompt or using Anaconda Navigator.
-
-For editing files, learners should be encouraged to use their favorite editor.
-
-Nano cannot be installed through Anaconda but is available by default in git-bash. So a good working solution seems to be that Windows users have two terminals side-by-side, one with Anaconda prompt and another with git-bash.
+## Troubleshooting
 
 
 #### Character encoding issues
