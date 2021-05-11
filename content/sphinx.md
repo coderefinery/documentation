@@ -25,32 +25,38 @@ RST syntax along the way.
 ````{callout} Prerequisites: Check whether we have the software we need
 
 Before we start, make sure that Sphinx is part of your Python installation or
-environment. If you use Anaconda, you are set. If you use Miniconda or virtual
-environments, make sure Sphinx is installed into the Miniconda or virtual
-environment.
+Conda environment.
 
 Test Sphinx installation within Python:
 
-```shell
+```console
 $ python --version
+
 Python 3.7.0
+```
 
-$ python -c "import sphinx; print(sphinx.__version__)"
-2.0.1
+```console
+$ sphinx-build --version
 
+sphinx-build 3.5.4
+```
+
+```console
 $ python -c "import sphinx_rtd_theme"
-# this should produce no output
+
+(no output)
 ```
 
 Test Sphinx tool installation:
 
-```shell
+```console
 $ sphinx-quickstart --version
-sphinx-quickstart 2.0.1
+
+sphinx-quickstart 3.5.4
 ```
 
 The the above commands produce an error
-instead of printing versions (any version would do)
+instead of printing versions (the precise versions are not too important)
 e.g. command not found or ModuleNotFoundError
 please follow our
 [installation instructions](https://coderefinery.github.io/installation/python/#installing-required-packages).
