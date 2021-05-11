@@ -2,10 +2,6 @@
 
 # Sphinx and reStructuredText
 
-```{questions}
-- How do we get started on writing Sphinx documentation in RST?
-```
-
 ```{objectives}
 - Create example Sphinx documentation and learn some RST along the way.
 ```
