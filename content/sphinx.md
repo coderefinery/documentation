@@ -17,6 +17,11 @@ RST syntax along the way.
 - Please write your questions in the collaborative HackMD document so that we can answer
   them and discuss them together after the group sessions.
 
+```{discussion} This lesson is built with Sphinx
+- [Source code](https://raw.githubusercontent.com/coderefinery/documentation/main/content/sphinx.md)
+- Try to compare the source code and the result side by side
+```
+
 ````{callout} Prerequisites: Check whether we have the software we need
 
 Before we start, make sure that Sphinx is part of your Python installation or
