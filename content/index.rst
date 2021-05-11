@@ -10,8 +10,7 @@ with others) and how to
 deploy it to `Read the Docs <https://readthedocs.org>`__, a service which hosts
 open documentation for free.
 
-This demonstration will be **independent of programming languages** and relevant
-also for your Fortran, C, C++, R, or Matlab projects.
+This demonstration will be **independent of programming languages**.
 
 We will also learn how
 to deploy a **project website or personal homepage** to `GitHub Pages <https://pages.github.com>`__.
@@ -27,8 +26,7 @@ The approach that we will learn will be transferable to
    2. You need to have `Sphinx <http://www.sphinx-doc.org>`__ installed (as
       part of your Python environment installation).
 
-   3. You need a `GitHub <https://github.com>`__ account
-      (if you want to deploy the documentation via GitHub).
+   3. For the `GitHub Pages <https://pages.github.com>`__ part you need a `GitHub <https://github.com>`__ account.
 
 
 .. csv-table::
