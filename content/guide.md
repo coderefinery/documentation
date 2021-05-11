@@ -188,36 +188,6 @@ time to get everybody on board with Sphinx.  It can be nice to make a short
 break if you need more time to fix problems.
 
 
-### Own examples
-
-Here we mention few of our own examples: <https://coderefinery.github.io/documentation/01-wishlist/#own-examples>
-
-These are some of the successes and problems (which hopefully crystallize in a discussion):
-
-- Dalton:
-  - try to copy paste input snippets from the PDF
-  - manual is generated manually by running LaTeX, so in practice it is often behind
-- Cubicle:
-  - no usage examples
-  - one has to go into the source code to find out how to use it
-- Numgrid:
-  - contains copy-paste-able examples
-  - contains recommended citation
-  - no tutorials with clear narration
-- MNE-Python:
-  - easy to select version of docs
-  - has four "levels": tutorials, how-to guides (examples), explanation pages and API reference
-  - this level of documentation is overkill for small projects, but serves as a great source of ideas
-
-As an alternative to discussing these examples you can also ask students:
-- Think of projects of which you like the documentation. What do you like about them?
-- Think of projects for which you don’t like the documentation. What don’t you like about them? Are you missing anything?
-
-**NB: You can choose a mature library with lots of users for this exercise,
-but try to also think of less mature projects you had to collaborate on,
-or papers you had to reproduce.**
-
-
 ### Live better than reading the website material
 
 It is better to demonstrate the commands live and type-along. Ideally connecting

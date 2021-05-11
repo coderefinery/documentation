@@ -1,13 +1,6 @@
 # Motivation and wishlist
 
-```{questions}
-- Why documenting code?
-- What is our wishlist on a suitably good documentation?
-```
-
-```{objectives}
-- Arrive at a checklist for designing and deploying code documentation.
-```
+## Motivation
 
 ```{challenge} Why documenting code?
 
@@ -25,29 +18,6 @@
 - Shield your limited time and let the documentation answer FAQs.
 ```
 
----
-
-## Own examples
-
-We would like to show you some examples which are not ideal but we do not want
-to point at others.
-
-Instead we list some of the projects we have contributed to (possibly long time
-ago), with varying quality of documentation:
-
-- [Dalton](https://daltonprogram.org/documentation/) (check the PDF
-  manuals, e.g. [Dalton 2018](https://daltonprogram.org/manuals/dalton2018manual.pdf))
-- [Cubicle](https://github.com/bast/cubicle)
-- [Numgrid](https://github.com/dftlibs/numgrid)
-- [MNE-Python](https://mne.tools)
-
-Discuss in groups what you like / or don't like about each before discussing it
-as a class.
-
-If you have examples of your own which you would like to share (on this website
-or verbally), please do!
-
----
 
 ## What do we expect from a suitably good documentation?
 
@@ -66,7 +36,49 @@ or verbally), please do!
 **There is no one size fits all**: often for small projects a `README.md` or
 `README.rst` can be enough (more about these formats later).
 
----
+
+### Own examples
+
+```{instructor-note}
+- One option is to discuss the examples below either as group discussion or in plenum.
+- As an alternative to discussing these examples you can also ask students:
+  - Think of projects of which you like the documentation. What do you like about them?
+  - Think of projects for which you don’t like the documentation. What don’t you like about them? Are you missing anything?
+- You can choose a mature library with lots of users for this exercise,
+  but try to also think of less mature projects you had to collaborate on,
+  or papers you had to reproduce.
+```
+
+We would like to show you some examples which are not ideal but we do not want
+to point at others.
+Instead we list some of the projects we have contributed to (possibly long time
+ago), with varying quality of documentation:
+
+- [Dalton](https://daltonprogram.org/documentation/) (check the PDF
+  manuals, e.g. [Dalton 2018](https://daltonprogram.org/manuals/dalton2018manual.pdf))
+- [Cubicle](https://github.com/bast/cubicle)
+- [Numgrid](https://github.com/dftlibs/numgrid)
+- [MNE-Python](https://mne.tools)
+
+```{discussion} Pros and cons of these examples
+- Dalton:
+  - try to copy paste input snippets from the PDF
+  - manual is generated manually by running LaTeX, so in practice it is often behind
+- Cubicle:
+  - no usage examples
+  - one has to go into the source code to find out how to use it
+- Numgrid:
+  - contains copy-paste-able examples
+  - contains recommended citation
+  - no tutorials with clear narration
+- MNE-Python:
+  - easy to select version of docs
+  - has four "levels": tutorials, how-to guides (examples), explanation pages and API reference
+  - this level of documentation is overkill for small projects, but serves as a great source of ideas
+```
+
+
+## Creating a checklist
 
 ```{challenge} Exercise in the main room: Create a wishlist
 
