@@ -62,11 +62,12 @@ the lesson to the audience. Here are two logical 'itineraries':
 
 #### A lesson with a focus on Sphinx and ReadTheDocs:
 1. Wishlist
-2. Tools
-3. Sphinx
-4. ReadTheDocs
-5. Github Pages
-6. Discussion
+2. Tools (briefly)
+3. Readme files
+4. Sphinx
+5. ReadTheDocs (demo)
+6. Github Pages (briefly)
+7. Discussion
 
 #### A lesson with a focus on in-code-documentation and readme files:
 1. Wishlist
