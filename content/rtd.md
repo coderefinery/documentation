@@ -122,7 +122,8 @@ If you want to know more about it, look at:
 - [https://pypi.org/project/sphinx-autobuild/](https://pypi.org/project/sphinx-autobuild/)
 - [https://pypi.org/project/sphinx-server/](https://pypi.org/project/sphinx-server/)
 
-You can also build Sphinx using GitHub Actions or GitLab CI.
+You can also build Sphinx using GitHub Actions or GitLab CI
+([example workflow for building this lesson](https://github.com/coderefinery/documentation/blob/main/.github/workflows/sphinx.yml)).
 
 
 ## Migrating your own documentation to Sphinx/ Read the Docs
