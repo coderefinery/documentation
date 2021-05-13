@@ -15,7 +15,9 @@
 
 In this episode we will learn how to write good documentation inside your code.
 
+
 ## Writing good comments
+
 ````{challenge} Exercise: Comments
 Let's take a look at two example comments (comments in python start with `#`):
 
@@ -34,12 +36,11 @@ if temperature > -50:
 ```
 Which of these comments is best? Can you explain why?
 ````
-````{solution} Solution
- Comment A describes **what** happens in this piece of code,
- whereas comment B describes **why** this piece of code is there, i.e. its **purpose**.
- Comments in the form of B are much more useful, comments of form A are redundant and we should avoid them.
-
-````
+```{solution} Solution
+Comment A describes **what** happens in this piece of code,
+whereas comment B describes **why** this piece of code is there, i.e. its **purpose**.
+Comments in the form of B are much more useful, comments of form A are redundant and we should avoid them.
+```
 
 ````{callout}
 Do not use comments for:
@@ -62,6 +63,7 @@ Instead: use git to keep track of different versions of your code.
 ````
 
 ## Writing docstrings in python
+
 Let's look at the following function:
 ```python
 def mean_temperature(data):
@@ -100,19 +102,21 @@ Python parses docstrings, for example calling the `help` function will display i
 ```python
 help(mean_temperature)
 ```
->```
->Help on function mean_temperature in module __main__:
->mean_temperature(data)
->    Get the mean temperature
->
->    Args:
->        data (pandas.DataFrame): A pandas dataframe with air temperature measurements.
->
->    Returns:
->        The mean air temperature
->```
+Python will print this help text:
+```
+Help on function mean_temperature in module __main__:
 
-It is common to write docstrings for functions, classes & modules.
+mean_temperature(data)
+    Get the mean temperature
+
+    Args:
+        data (pandas.DataFrame): A pandas dataframe with air temperature measurements.
+
+    Returns:
+        The mean air temperature (float)
+```
+
+It is common to write docstrings for functions, classes, and modules.
 
 
 ````{callout} Script docstrings
@@ -146,6 +150,7 @@ def x(a, print_columns=False):
    return column_headers
 ```
 ````
+
 ````{solution}
 ```python
 import pandas as pd
