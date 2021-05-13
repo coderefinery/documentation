@@ -26,7 +26,7 @@ communicate important information about your project!
 - Exercise README-3 (constructively) discusses READMEs of projects which you have recently used.
 ```
 
-````{challenge} Exercise README-1: Write a README file for an example project
+````{challenge} Exercise README-1: Write a README file for an example Python project
 **The example project**
 
 Here's [the example project](https://github.com/escience-academy/coderefinery-documentation-example-project).
@@ -143,25 +143,26 @@ Please note observations and recommendations in the collaborative notes.
 
 ---
 
-## What makes up a good README file?
+## Table of contents in README files
 
-As a bare minimum a README file should include:
-* A descriptive project title
-* Motivation (why the project exists)
-* How to setup
-* Copy-pastable quick start code example
-* Recommended citation
-
-```{callout} User experience
-Think about the user (which can be a future you) of your project, what does this user need to know to use or
-contribute to the project? And how do you make your project attractive to use or contribute to?
-```
+- With RST you can generate a table of contents (TOC) automatically by adding `.. contents:: Table of Contents`.
+- On GitLab you can generate a TOC in Markdown with `[[_TOC_]]`.
+- GitHub generates a [TOC for README.md](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes#auto-generated-table-of-contents-for-readme-files).
 
 ---
 
+## What makes up a good README file?
+
 ```{keypoints}
-- A good README file is key to provide information about your project.
-- A README file can be "enough" for many projects.
-- While it's nice to have in-code documentation for the readers of the *code*, the *users of the code*
-  will appreciate a README file.
+As a bare minimum a README file should include:
+- A descriptive project title
+- Motivation (why the project exists)
+- How to setup
+- Copy-pastable quick start code example
+- Recommended citation
+```
+
+```{callout} User experience
+Think about the user (**which can be a future you**) of your project, what does this user need to know to use or
+contribute to the project? And how do you make your project attractive to use or contribute to?
 ```
