@@ -5,9 +5,10 @@
 ```{challenge} Why documenting code?
 
 - **Use the collaborative document**.
-- Is project documentation important? Why?
-- How would you describe a useful documentation?
-- How can you motivate your colleagues to contribute to the documentation?
+Now that we have our basic skeleton,
+let's document the project.
+As you might have guessed from the name,
+we'll be documenting a basic web crawler.
 ```
 
 ```{solution} Our motivation (but let us brainstorm first)
