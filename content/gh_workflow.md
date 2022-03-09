@@ -77,8 +77,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
       - name: Install dependencies
         run: |
           pip install sphinx sphinx_rtd_theme
