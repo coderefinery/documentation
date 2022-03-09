@@ -52,7 +52,7 @@ The approach that we will learn will be transferable to
    in-code-documentation.md
    writing-readme-files.md
    sphinx.md
-   rtd.md
+   in-code-documentation.md
    gh-pages.md
    summary.md
 
