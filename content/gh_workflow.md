@@ -17,7 +17,7 @@
 - Equations and images no problem
 - Can use Sphinx styles
 
-### Typical workflow
+## Typical workflow
 
 - Host source code with documentation sources on a public Git repository.
 - Each time you `git push` to the repository, a GitHub action triggers to
@@ -28,19 +28,15 @@
 
 ## Exercise
 
-``````{challenge} Exercise: Deploy Sphinx documentation to Read the Docs
-In this exercise we will fork an example repository on GitHub/GitLab and
-deploy it to Read the Docs. The example project contains a script for
+``````{challenge} Exercise: Deploy Sphinx documentation to GitHub Pages.
+In this exercise we will fork an example repository on GitHub and
+deploy it to GitHub Pages. The example project contains a script for
 counting the frequency distribution of words in a given file and some
 documentation generated using Sphinx. For bigger projects, we can have
 more source files.
 
-We will use GitHub/GitLab for this exercise but it will also work with any Git repository with public read access.
-
-`````{tabs}
-  **Step 1:** Go to the [word-count project template](https://github.com/coderefinery/word-count/generate)
-   on GitHub and fork it to your namespace.
-`````
+**Step 1:** Go to the [word-count project template](https://github.com/coderefinery/word-count/generate)
+on GitHub and fork it to your namespace.
 
 **Clone the repository**
 
