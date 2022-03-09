@@ -81,7 +81,7 @@ jobs:
           python-version: 3.8
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          $CONDA/bin/conda env update --file environment.yml --name base
       - name: Sphinx build
         run: |
           sphinx-build doc _build
