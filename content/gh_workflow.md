@@ -81,7 +81,7 @@ jobs:
           python-version: 3.8
       - name: Install dependencies
         run: |
-          $CONDA/bin/conda env update --file environment.yml --name base
+          pip install sphinx sphinx_rtd_theme
       - name: Sphinx build
         run: |
           sphinx-build doc _build
