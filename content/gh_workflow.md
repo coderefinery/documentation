@@ -95,6 +95,9 @@ jobs:
           force_orphan: true
 ```
 
+You don't need to understand all of the above, but you
+might spot familiar commands in the `run:` sections.
+
 - Add, commit and push to GitHub
 - Check the action at https://github.com/myuser/word-count/actions
 
