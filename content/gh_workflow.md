@@ -1,56 +1,42 @@
-# Deploying Sphinx documentation to Read the Docs
+# Deploying Sphinx documentation to GitHub Pages
 
 ```{objectives}
 - Create a basic workflow which you can take home and adapt for your project.
 ```
 
-## [Read the Docs](https://readthedocs.org)
+## [GitHub Pages](https://pages.github.com/)
 
-- Runs Sphinx and converts RST or Markdown to HTML and PDF and hosts them for you
+- Serve websites from a GitHub repository
+- It is no problem to serve using your own URL `http://myproject.org` instead of `http://myuser.github.io/myproject`
+
+
+## [GitHub Actions](https://github.com/features/actions/)
+
+- Automatically runs code when your repository changes
+- We will run Sphinx build and make the result available to GitHub Pages
 - Equations and images no problem
-- Layout can be styled
-- Many projects use [Read the Docs](https://readthedocs.org) as their main site
-- It is no problem to serve using your own URL `http://myproject.org` instead of `http://myproject.readthedocs.io`
+- Can use Sphinx styles
 
-### Typical Read the Docs workflow
+## Typical workflow
 
 - Host source code with documentation sources on a public Git repository.
-- Each time you `git push` to the repository, a `post-receive` hook triggers
-  Read the Docs to rebuild the documentation.
-- Read the Docs then clones the repository, runs Sphinx,
-  and rebuilds HTML and PDF.
-- No problem to build several branches (versions) of your documentation.
+- Each time you `git push` to the repository, a GitHub action triggers to
+  rebuild the documentation.
+- The documentation is pushed to a separate branch called 'gh-pages'.
 
 ---
 
 ## Exercise
 
-``````{challenge} Exercise: Deploy Sphinx documentation to Read the Docs
-In this exercise we will fork an example repository on GitHub/GitLab and
-deploy it to Read the Docs. The example project contains a script for
+``````{challenge} Exercise: Deploy Sphinx documentation to GitHub Pages.
+In this exercise we will fork an example repository on GitHub and
+deploy it to GitHub Pages. The example project contains a script for
 counting the frequency distribution of words in a given file and some
 documentation generated using Sphinx. For bigger projects, we can have
 more source files.
 
-We will use GitHub/GitLab for this exercise but it will also work with any Git repository with public read access.
-
-`````{tabs}
-  ````{tab} GitHub
-
-  **Step 1:** Go to the [word-count project template](https://github.com/coderefinery/word-count/generate)
-   on GitHub and fork it to your namespace.
-  ````
-
-  ````{tab} GitLab
-
-  **Step 1:** Import the example project to GitLab:
-  - Visit <https://gitlab.com/projects/new#import_project>
-  - Select "Repo by URL" button
-  - Git repository URL is https://github.com/coderefinery/word-count.git
-  - Select "Public"
-  - Click "Create project"
-  ````
-`````
+**Step 1:** Go to the [word-count project template](https://github.com/coderefinery/word-count/generate)
+on GitHub and fork it to your namespace.
 
 **Clone the repository**
 
@@ -78,22 +64,55 @@ Inside the cloned repository, check the integrity of all internal and external l
 $ sphinx-build doc -W -b linkcheck -d _build/doctrees _build/html
 ```
 
-**Step 2:** Enable the project on [Read the Docs](https://readthedocs.org)
+**Step 2:** Add the GitHub Action
 
-**Import a project to Read the Docs by connecting to GitHub or GitLab**
+- Create a new file at `.github/workflows/documentation.yaml` with the contents
 
-- Log into [Read the Docs](https://readthedocs.org) and visit your [dashboard](https://readthedocs.org/dashboard/)
-- Click "Import a Project"
-- Select "Connect to GitHub" or "Connect to GitLab", and choose the word-count repository
-  (if you don't see this check your [connections](https://readthedocs.org/accounts/social/connections/))
-- Rename the project to a unique name (e.g. "youruser-word-count")
-- Click "Next"
+```
+name: Docs
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - name: Install dependencies
+        run: |
+          pip install sphinx sphinx_rtd_theme
+      - name: Sphinx build
+        run: |
+          sphinx-build doc _build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _build/
+          force_orphan: true
+```
+
+You don't need to understand all of the above, but you
+might spot familiar commands in the `run:` sections.
+
+- Add, commit and push to GitHub
+- Check the action at https://github.com/myuser/word-count/actions
+
+**Step 2:** Enable GitHub Pages
+
+- Go to https://github.com/myuser/word-count/settings/pages
+- In the "Source" section, choose "gh-pages" in the dropdown menu and click
+  save
+- Your documentation will appear at
+  https://github.com/myuser/word-count/settings/pages
+
 
 **Verify the result**
 
 That's it! Your site should now be live on
-http://youruser-word-count.readthedocs.io (replace project name).
-Note that if your Git repo name contained underscores, they get converted to hyphens.
+https://github.com/myuser/word-count/settings/pages (replace username and
+project name).
 
 **Verify refreshing the documentation**
 
@@ -116,8 +135,12 @@ repository.
 
 ## Alternatives to Read the Docs
 
-Instead of using Read the Docs to host your documentation, you can host your own Sphinx server.
-If you want to know more about it, look at:
+[GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/) and [GitLab CI](https://docs.gitlab.com/ee/ci/) can create a very similar workflow.
+
+[Read the Docs](https://readthedocs.org) is the most common alternative to
+hosting in GitHub Pages.
+
+You can host your own Sphinx server. If you want to know more about it, look at:
 - [https://docs.readthedocs.io/en/latest/install.html](https://docs.readthedocs.io/en/latest/install.html)
 - [https://pypi.org/project/sphinx-autobuild/](https://pypi.org/project/sphinx-autobuild/)
 - [https://pypi.org/project/sphinx-server/](https://pypi.org/project/sphinx-server/)
@@ -126,7 +149,7 @@ You can also build Sphinx using GitHub Actions or GitLab CI
 ([example workflow for building this lesson](https://github.com/coderefinery/documentation/blob/main/.github/workflows/sphinx.yml)).
 
 
-## Migrating your own documentation to Sphinx/ Read the Docs
+## Migrating your own documentation to Sphinx
 
 - First convert your documentation to RST using [Pandoc](https://pandoc.org)
 - Create a file `index.rst` which lists all other RST files and provides the
@@ -135,4 +158,4 @@ You can also build Sphinx using GitHub Actions or GitLab CI
   `index.rst` with `sphinx-quickstart`, or you can take the examples in this
   lesson as inspiration.
 - Test building the documentation locally with `sphinx-build`.
-- Once this works, enable the project on Read the Docs and try to push a change to your documentation.
+- Once this works, follow the above steps to build and deploy to GitHub Pages.
