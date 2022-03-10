@@ -135,6 +135,8 @@ repository.
 
 ## Alternatives to Read the Docs
 
+[GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/) and [GitLab CI](https://docs.gitlab.com/ee/ci/) can create a very similar workflow.
+
 [Read the Docs](https://readthedocs.org) is the most common alternative to
 hosting in GitHub Pages.
 
