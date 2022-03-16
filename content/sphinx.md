@@ -333,10 +333,14 @@ The following shows how to inline mathematics within a text:
 This is an inline equation embedded {math}`a^2 + b^2 = c^2` in text.
 ```
 
-An equation and equation array:
-xxx
+An equation:
 
-These equations can then be referenced using xxx.
+:math:`a^2 + b^2 = c^2`
+
+or:
+.. math::
+`a^2 + b^2 = c^2`
+
 ````
 
 ---
