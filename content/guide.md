@@ -97,7 +97,7 @@ discussion with your learners to make them aware of what the training material c
 ## Troubleshooting
 
 
-#### Character encoding issues
+### Character encoding issues
 
 Can arise when using non-utf8 characters in conf.py. Diagnose this with ``file -i conf.py``
 and ``locale``.
