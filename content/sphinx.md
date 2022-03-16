@@ -89,7 +89,7 @@ A couple of files and directories are created:
 | File/directory | Contents |
 | -------------- | -------- |
 | conf.py        | Documentation configuration file |
-| index.rst      | Main file in reStructuredText |
+| index.rst      | Main file in Sphinx |
 | _build/        | Directory where docs are built (you can decide the name) |
 | _templates/    | Your own HTML templates |
 | _static/       | Static files (images, styles, etc.) copied to output directory on build |
