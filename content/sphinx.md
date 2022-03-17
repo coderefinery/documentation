@@ -263,17 +263,17 @@ Experiment with the following RST syntax:
 
 - Code block
 
-```md
+~~~md
 The following is a code block:
 ```
   def hello():
       print("Hello world")
 ```
-```
+~~~
 
 - Code block specifying syntax highlighting for other language than Python
 
-```md
+~~~md
  ```c
 
   #include <stdio.h>
@@ -283,7 +283,7 @@ The following is a code block:
       return 0;
   }
  ```
-```
+~~~
 - You could include the contents of an external file using `{include}` directive, as follows:
 
 ```md
