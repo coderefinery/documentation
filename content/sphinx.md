@@ -291,12 +291,16 @@ The following is a code block:
  ```
 ```
 
+<!--
 Note, that this will not resolve e.g. image paths within README.md, use experimental feature `{literalinclude}` instead:
 
-```md
-{literalinclude} ../README.md
-:language: md
-```
+~~~md
+ ```
+ {literalinclude} ../README.md
+ :language: md
+ ```
+~~~
+-->
 
 - It is possible to combine `{include}` with code highlighting, line numbering, and even line highlighting.
 - We can also use jupyter notebooks (*.ipynb) with sphinx. It requires `nbsphinx` extension to be installed. See [nbsphinx documentation](http://nbsphinx.readthedocs.io/en/latest/) for more information
