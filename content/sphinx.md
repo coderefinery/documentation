@@ -1,15 +1,15 @@
 (sphinx)=
 
-# Sphinx and reStructuredText
+# Sphinx and Markdown
 
 ```{objectives}
-- Create example Sphinx documentation and learn some RST along the way.
+- Create example Sphinx documentation and learn some Markdown along the way.
 ```
 
-## Group exercise: Build Sphinx documentation using RST
+## Group exercise: Build Sphinx documentation using Markdown
 
 We will take the first steps in creating documentation using Sphinx, and learn some
-RST syntax along the way.
+Markdown syntax along the way.
 
 - Our goal in this episode is to build HTML pages locally on our computers.
 - In the next episode we will learn how to deploy the documentation to a cloud service
@@ -20,8 +20,6 @@ RST syntax along the way.
 ```{discussion} This lesson is built with Sphinx
 - [Source code](https://raw.githubusercontent.com/coderefinery/documentation/main/content/sphinx.md)
 - Try to compare the source code and the result side by side
-- However, note that in this example we have used Markdown whereas in the following we will
-  demonstrate reStructuredText which is more typical in combination with Sphinx
 ```
 
 ````{callout} Prerequisites: Check whether we have the software we need
@@ -91,7 +89,7 @@ A couple of files and directories are created:
 | File/directory | Contents |
 | -------------- | -------- |
 | conf.py        | Documentation configuration file |
-| index.rst      | Main file list other RST files to parse |
+| index.rst      | Main file in Sphinx |
 | _build/        | Directory where docs are built (you can decide the name) |
 | _templates/    | Your own HTML templates |
 | _static/       | Static files (images, styles, etc.) copied to output directory on build |
@@ -139,14 +137,12 @@ Indices and tables
 ```
 A common gotcha with directives is that **the first line of the content must be indented to the same level as the options (i.e., :maxdepth)**.
 
-Let's create the file `feature-a.rst` which `index.rst` refers to:
+Let's create the file `feature-a.md` which `index.rst` refers to:
 
-```rst
-Some Feature A
-==============
+```md
+# Some Feature A
 
-Subsection
-----------
+## Subsection
 
 Exciting documentation in here.
 Let's make a list (empty surrounding lines required):
@@ -165,7 +161,7 @@ We now build the site:
 ```console
 $ ls
 
-_build  _static  _templates  conf.py  feature-a.rst  index.rst
+_build  _static  _templates  conf.py  feature-a.md  index.rst
 
 $ sphinx-build . _build
 
@@ -221,8 +217,8 @@ Note that you can change the styling by editing `conf.py` and changing the value
 
 ````{challenge} Exercise 2: Add content to your example documentation
 
-1. Add a entry below feature-a.rst labeled *feature-b.rst* to the `index.rst` file.
-2. Create a file `feature-b.rst` in the same directory as your `feature-a.rst` file.
+1. Add a entry below feature-a.md labeled *feature-b.md* to the `index.rst` file.
+2. Create a file `feature-b.md` in the same directory as your `feature-a.md` file.
 3. Add some content to feature-b, rebuild with `sphinx-build`, and refresh the browser to look at the results
   ([Help](http://docutils.sourceforge.net/docs/ref/rst/directives.html)).
 
@@ -231,25 +227,21 @@ Experiment with the following RST syntax:
 - \*Emphasized text\* and \*\*bold text\*\*
 - Headings
 
-```rst
-Level 1
-=======
+```md
+# Level 1
 
-Level 2
--------
+## Level 2
 
-Level 3
-^^^^^^^
+### Level 3
 
-Level 4
-"""""""
+#### Level 4
 ```
 
-- An image: `.. image:: image.png`
-- \`A link \<http://www.google.com\>\`_
+- An image: `![](image.png)`
+- `[A link](http://www.google.com)`
 - Numbered lists (can be automatic using `#`)
 
-```rst
+```md
 1. item 1
 2. item 2
 #. item 3
@@ -258,30 +250,31 @@ Level 4
 
 - Simple tables
 
-```rst
-====== ======
-No.    Prime
-====== ======
-1      No
-2      Yes
-3      Yes
-4      No
-====== ======
+```md
+
+| No.  |  Prime |
+| ---- | ------ |
+| 1    |  No    |
+| 2    |  Yes   |
+| 3    |  Yes   |
+| 4    |  No    |
+
 ```
 
-- Code block using special marker `::`
+- Code block
 
-```rst
-The following is a code block::
-
+~~~md
+The following is a code block:
+```
   def hello():
       print("Hello world")
 ```
+~~~
 
 - Code block specifying syntax highlighting for other language than Python
 
-```rst
-.. code-block:: c
+~~~md
+ ```c
 
   #include <stdio.h>
   int main()
@@ -289,21 +282,30 @@ The following is a code block::
       printf("Hello, World!");
       return 0;
   }
-```
-- You could include the contents of an external file using `literalinclude` directive, as follows:
+ ```
+~~~
+- You could include the contents of an external file using `{include}` directive, as follows:
 
-```rst
-.. literalinclude:: filename
+```md
+ ```{include} ../README.md
+ ```
 ```
 
-- It is possible to combine `literalinclude` with code highlighting, line numbering, and even line highlighting.
+Note, that this will not resolve e.g. image paths within README.md, use experimental feature `{literalinclude}` instead:
+
+```md
+{literalinclude} ../README.md
+:language: md
+```
+
+- It is possible to combine `{include}` with code highlighting, line numbering, and even line highlighting.
 - We can also use jupyter notebooks (*.ipynb) with sphinx. It requires `nbsphinx` extension to be installed. See [nbsphinx documentation](http://nbsphinx.readthedocs.io/en/latest/) for more information
 ```rst
 .. toctree::
   :maxdepth: 2
   :caption: Contents:
 
-  feature-a.rst
+  feature-a.md
   <python_notebook_name>.ipynb
 ```
 ````
@@ -323,42 +325,38 @@ the list of extensions in `conf.py`:
 extensions = ['sphinx.ext.mathjax']
 ```
 
+**Add here: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-amsmath**
+
 The following shows how to inline mathematics within a text:
 
-```rst
-This is an inline equation embedded :math:`a^2 + b^2 = c^2` in text.
+```md
+This is an inline equation embedded {math}`a^2 + b^2 = c^2` in text.
 ```
 
-An equation and equation array:
-```rst
+An equation:
+
+{math}`a^2 + b^2 = c^2`
+
+or:
 .. math::
-  :label: myequation
-
-  a^2 + b^2 = c^2
-
-.. math::
-  :label: myarray
-
-  \begin{eqnarray}
-    x^2 & : x < 0 \\
-    x^3 & : x \ge 0 \\
-  \end{eqnarray}
+a^2 + b^2 = c^2
 ```
+~~~
 
-These equations can then be referenced using ``:eq:`myequation` `` and ``:eq:`myarray` ``.
 ````
 
 ---
 
 ### Where to find more
 
-- For more RST functionality, see the [Sphinx documentation](http://www.sphinx-doc.org/en/stable/rest.html)
-  and the [quick-reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
-- For Sphinx additions to standard RST, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/1.7/markup/index.html).
+- For more Markdown functionality, see the [Mardown guide](https://www.markdownguide.org/basic-syntax/).
+- For Sphinx additions, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/1.7/markup/index.html).
 - [https://docs.python-guide.org/writing/documentation/](https://docs.python-guide.org/writing/documentation/)
 
 ---
 
 ```{keypoints}
-- Sphinx and RST are relatively lightweight options for writing documentation.
+- Sphinx and Markdown are relatively lightweight options for writing documentation.
+- Another option is to use reStructuredText, see the [Sphinx documentation](http://www.sphinx-doc.org/en/stable/rest.html)
+  and the [quick-reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
 ```
