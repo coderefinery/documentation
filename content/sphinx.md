@@ -335,10 +335,13 @@ This is an inline equation embedded {math}`a^2 + b^2 = c^2` in text.
 
 An equation:
 
+~~~
 {math}`a^2 + b^2 = c^2`
+~~~
 
 or:
-.. math::
+~~~
+```{math}
 a^2 + b^2 = c^2
 ```
 ~~~
