@@ -70,8 +70,8 @@ There is more: images,            There is more: images,
 tables, links, ...                tables, links, ...
 ```
 
-- We will use RST in the {ref}`sphinx` episode
-  and Markdown in the {ref}`gh-pages` example
+- We will use Markdown in the {ref}`sphinx` episode
+  and the {ref}`gh-pages` example
 
 Experiment with Markdown:
 - [Learn Markdown in 60 seconds](http://commonmark.org/help/)
