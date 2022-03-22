@@ -70,8 +70,9 @@ There is more: images,            There is more: images,
 tables, links, ...                tables, links, ...
 ```
 
-- We will use Markdown in the {ref}`sphinx` episode
-  and the {ref}`gh-pages` example
+- We will use [MyST](https://myst-parser.readthedocs.io/en/latest/)
+  flavored Markdown in the {ref}`sphinx` episode and the
+  {ref}`gh-pages` example
 
 Experiment with Markdown:
 - [Learn Markdown in 60 seconds](http://commonmark.org/help/)
