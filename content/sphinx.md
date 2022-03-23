@@ -133,9 +133,28 @@ Indices and tables
   :maxdepth: 2
   :caption: Contents:
 
-  feature-a.rst
+  feature-a.md
 ```
 A common gotcha with directives is that **the first line of the content must be indented to the same level as the options (i.e., :maxdepth)**.
+
+We now need to tell Sphinx to use markdown files. To do this, we open
+`conf.py` and replace the lines
+
+```python
+extensions = [
+]
+```
+
+with
+
+```python
+extensions = ['myst_parser']
+
+source_suffix = ['.rst', '.md']
+```
+
+The first part tells Sphinx to use and extension to parse Markdown files
+and the second part tells it to actually look for those files.
 
 Let's create the file `feature-a.md` which `index.rst` refers to:
 
@@ -286,17 +305,21 @@ The following is a code block:
 ~~~
 - You could include the contents of an external file using `{include}` directive, as follows:
 
-```md
+~~~md
  ```{include} ../README.md
  ```
-```
+~~~
 
+<!--
 Note, that this will not resolve e.g. image paths within README.md, use experimental feature `{literalinclude}` instead:
 
-```md
-{literalinclude} ../README.md
-:language: md
-```
+~~~md
+ ```
+ {literalinclude} ../README.md
+ :language: md
+ ```
+~~~
+-->
 
 - It is possible to combine `{include}` with code highlighting, line numbering, and even line highlighting.
 - We can also use jupyter notebooks (*.ipynb) with sphinx. It requires `nbsphinx` extension to be installed. See [nbsphinx documentation](http://nbsphinx.readthedocs.io/en/latest/) for more information
@@ -325,8 +348,6 @@ the list of extensions in `conf.py`:
 extensions = ['sphinx.ext.mathjax']
 ```
 
-**Add here: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-amsmath**
-
 The following shows how to inline mathematics within a text:
 
 ```md
@@ -334,17 +355,13 @@ This is an inline equation embedded {math}`a^2 + b^2 = c^2` in text.
 ```
 
 An equation:
-
-~~~
-{math}`a^2 + b^2 = c^2`
-~~~
-
-or:
 ~~~
 ```{math}
 a^2 + b^2 = c^2
 ```
 ~~~
+
+For more math syntax, check [the MyST documentation](https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-amsmath).
 
 ````
 
