@@ -62,7 +62,7 @@ please follow our
 [installation instructions](https://coderefinery.github.io/installation/python/#installing-required-packages).
 ````
 
-````{challenge} Exercise 1: Generate the basic documentation template
+````{challenge} Sphinx-1: Generate the basic documentation template
 
 Create a directory for the example documentation, step into it, and inside
 generate the basic documentation template:
@@ -234,7 +234,7 @@ Note that you can change the styling by editing `conf.py` and changing the value
 (for instance you can set it to `sphinx_rtd_theme` to have the Read the Docs look).
 ````
 
-````{challenge} Exercise 2: Add content to your example documentation
+````{challenge} Sphinx-2: Add content to your example documentation
 
 1. Add a entry below feature-a.md labeled *feature-b.md* to the `index.rst` file.
 2. Create a file `feature-b.md` in the same directory as your `feature-a.md` file.
@@ -333,7 +333,7 @@ Note, that this will not resolve e.g. image paths within README.md, use experime
 ```
 ````
 
-````{challenge} Rendering (LaTeX) math equations
+````{challenge} (optional) Sphinx-3: Rendering (LaTeX) math equations
 
 There are two different ways to display mathematical equations within Sphinx:
 `pngmath` and `MathJax`.  While `pngmath` displays an equation as an image,

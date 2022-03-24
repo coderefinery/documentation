@@ -34,7 +34,9 @@ Scheme that describes how branch names end up websites.
 
 ---
 
-```{challenge} Exercise: Your own github page
+## Exercise - Your own github page
+
+```{challenge} gh-pages-2: Host your own github page
 - Deploy own website reusing a template:
   - Follow the steps from GitHub Pages <https://pages.github.com/>.
     The documentation there is very good so there is no need for us to duplicate the screenshots
@@ -58,7 +60,7 @@ Scheme that describes how branch names end up websites.
   - Result: this page
 ```
 
-```{discussion}
+```{note}
 - You can use HTML directly or another static site generator if you prefer
   to not use the default [Jekyll](https://jekyllrb.com/).
 - It is no problem to use a custom domain instead of `*.github.io`.
