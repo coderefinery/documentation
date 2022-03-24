@@ -21,7 +21,7 @@
 
 ## What do we expect from a suitably good documentation?
 
-```{discussion} Documentation comes in different forms - what *is* documentation?
+```{note} Documentation comes in different forms - what *is* documentation?
 
   (This is adapted from: [What nobody tells you about documentation](https://www.divio.com/blog/documentation/))
 
@@ -155,7 +155,7 @@ ago), with varying quality of documentation:
 
 ---
 
-```{discussion} Documentation checklist
+```{note} Documentation checklist
 
   Which items to include depends on the number of users apart from yourself.
 
