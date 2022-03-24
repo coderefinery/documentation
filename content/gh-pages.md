@@ -60,7 +60,7 @@ Scheme that describes how branch names end up websites.
   - Result: this page
 ```
 
-```{discussion}
+```{note}
 - You can use HTML directly or another static site generator if you prefer
   to not use the default [Jekyll](https://jekyllrb.com/).
 - It is no problem to use a custom domain instead of `*.github.io`.
