@@ -32,6 +32,7 @@ We will have a closer look at this in the {ref}`in-code-documentation` episode.
 - If you use README files, use either
   [RST](http://docutils.sourceforge.net/rst.html) or
   [Markdown](https://commonmark.org/help/)
+- A great guide to README files: [MakeaREADME](https://www.makeareadme.com/)
 
 We will have a closer look at this in the {ref}`writing-readme-files` episode.
 
