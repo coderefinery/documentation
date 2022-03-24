@@ -26,9 +26,9 @@
 
 ---
 
-## Exercise
+## Exercise - Deploy Sphinx documentation to GitHub Pages
 
-``````{challenge} Exercise: Deploy Sphinx documentation to GitHub Pages.
+``````{challenge} gh-pages-1: Deploy Sphinx documentation to GitHub Pages
 In this exercise we will fork an example repository on GitHub and
 deploy it to GitHub Pages. The example project contains a script for
 counting the frequency distribution of words in a given file and some
@@ -133,7 +133,7 @@ repository.
 ```
 
 
-## Alternatives to Read the Docs
+## Alternatives to GitHub Pages
 
 [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/) and [GitLab CI](https://docs.gitlab.com/ee/ci/) can create a very similar workflow.
 
