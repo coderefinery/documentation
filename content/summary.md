@@ -34,10 +34,10 @@
 - Resizing images in README.rst on GitHub is currently not easy.
 
 
-**READMEs or Read the Docs?**
+**READMEs or Sphinx?**
 
 - For smaller projects READMEs can be absolutely enough.
-- If the code is closed-source, you probably prefer Read the Docs (or similar).
+- If the code is closed-source, you probably prefer Sphinx (or similar).
 
 
 **How to make sure that code changes come together with documentation changes?**
