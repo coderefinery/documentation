@@ -44,7 +44,7 @@ The repository contains following two folders, among few other files and folders
 - **source** folder contains the source code
 - **doc** folder contains the Sphinx documentation
 
-The doc folder contains the Sphinx configuration file (`conf.py`) and the index file (`index.rst`) and some contents (other RST files).
+The doc folder contains the Sphinx configuration file (`conf.py`) and the index file (`index.rst`) and some contents (Markdown files).
 The `conf.py` file has been adjusted to be able to autogenerate documentation from sources.
 
 
