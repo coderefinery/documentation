@@ -239,9 +239,9 @@ Note that you can change the styling by editing `conf.py` and changing the value
 1. Add a entry below feature-a.md labeled *feature-b.md* to the `index.rst` file.
 2. Create a file `feature-b.md` in the same directory as your `feature-a.md` file.
 3. Add some content to feature-b, rebuild with `sphinx-build`, and refresh the browser to look at the results
-  ([Help](http://docutils.sourceforge.net/docs/ref/rst/directives.html)).
+  ([Help](https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html)).
 
-Experiment with the following RST syntax:
+Experiment with the following Markdown syntax:
 
 - \*Emphasized text\* and \*\*bold text\*\*
 - Headings
@@ -345,7 +345,7 @@ To enable `MathJax` in Sphinx, you need first to add `sphinx.ext.mathjax` to
 the list of extensions in `conf.py`:
 
 ```python
-extensions = ['sphinx.ext.mathjax']
+extensions = ['myst_parser', 'sphinx.ext.mathjax']
 ```
 
 The following shows how to inline mathematics within a text:
@@ -354,12 +354,18 @@ The following shows how to inline mathematics within a text:
 This is an inline equation embedded {math}`a^2 + b^2 = c^2` in text.
 ```
 
-An equation:
+This is an inline equation embedded {math}`a^2 + b^2 = c^2` in text.
+
+This creates an equation or it's own line:
 ~~~
 ```{math}
 a^2 + b^2 = c^2
 ```
 ~~~
+
+```{math}
+a^2 + b^2 = c^2
+```
 
 For more math syntax, check [the MyST documentation](https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-amsmath).
 

@@ -44,7 +44,7 @@ The repository contains following two folders, among few other files and folders
 - **source** folder contains the source code
 - **doc** folder contains the Sphinx documentation
 
-The doc folder contains the Sphinx configuration file (`conf.py`) and the index file (`index.rst`) and some contents (other RST files).
+The doc folder contains the Sphinx configuration file (`conf.py`) and the index file (`index.rst`) and some contents (Markdown files).
 The `conf.py` file has been adjusted to be able to autogenerate documentation from sources.
 
 
@@ -97,22 +97,22 @@ You don't need to understand all of the above, but you
 might spot familiar commands in the `run:` sections.
 
 - Add, commit and push to GitHub
-- Check the action at https://github.com/myuser/word-count/actions
+- Check the action at `https://github.com/<myuser>/word-count/actions`.
+Replace `<myuser>` with your GitHub username.
 
 **Step 2:** Enable GitHub Pages
 
-- Go to https://github.com/myuser/word-count/settings/pages
+- Go to `https://github.com/<myuser>/word-count/settings/pages`
 - In the "Source" section, choose "gh-pages" in the dropdown menu and click
   save
 - Your documentation will appear at
-  https://github.com/myuser/word-count/settings/pages
+  `https://github.com/<myuser>/word-count/settings/pages`
 
 
 **Verify the result**
 
 That's it! Your site should now be live on
-https://github.com/myuser/word-count/settings/pages (replace username and
-project name).
+`https://github.com/<myuser>/word-count/settings/pages` (replace username).
 
 **Verify refreshing the documentation**
 
@@ -151,7 +151,7 @@ You can also build Sphinx using GitHub Actions or GitLab CI
 
 ## Migrating your own documentation to Sphinx
 
-- First convert your documentation to RST using [Pandoc](https://pandoc.org)
+- First convert your documentation to markdown using [Pandoc](https://pandoc.org)
 - Create a file `index.rst` which lists all other RST files and provides the
   table of contents.
 - Add a `conf.py` file. You can generate a starting point for `conf.py` and
