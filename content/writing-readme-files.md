@@ -145,9 +145,9 @@ Please note observations and recommendations in the collaborative notes.
 
 ## Table of contents in README files
 
-- With RST you can generate a table of contents (TOC) automatically by adding `.. contents:: Table of Contents`.
-- On GitLab you can generate a TOC in Markdown with `[[_TOC_]]`.
 - GitHub generates a [TOC for README.md](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes#auto-generated-table-of-contents-for-readme-files).
+- On GitLab you can generate a TOC in Markdown with `[[_TOC_]]`.
+- With RST you can generate a table of contents (TOC) automatically by adding `.. contents:: Table of Contents`.
 
 ---
 
