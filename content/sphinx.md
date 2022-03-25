@@ -239,9 +239,9 @@ Note that you can change the styling by editing `conf.py` and changing the value
 1. Add a entry below feature-a.md labeled *feature-b.md* to the `index.rst` file.
 2. Create a file `feature-b.md` in the same directory as your `feature-a.md` file.
 3. Add some content to feature-b, rebuild with `sphinx-build`, and refresh the browser to look at the results
-  ([Help](http://docutils.sourceforge.net/docs/ref/rst/directives.html)).
+  ([Help](https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html)).
 
-Experiment with the following RST syntax:
+Experiment with the following Markdown syntax:
 
 - \*Emphasized text\* and \*\*bold text\*\*
 - Headings
