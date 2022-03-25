@@ -112,8 +112,7 @@ Replace `<myuser>` with your GitHub username.
 **Verify the result**
 
 That's it! Your site should now be live on
-`https://github.com/<myuser>/word-count/settings/pages` (replace username and
-project name).
+`https://github.com/<myuser>/word-count/settings/pages` (replace username).
 
 **Verify refreshing the documentation**
 
