@@ -354,12 +354,18 @@ The following shows how to inline mathematics within a text:
 This is an inline equation embedded {math}`a^2 + b^2 = c^2` in text.
 ```
 
-An equation:
+This is an inline equation embedded {math}`a^2 + b^2 = c^2` in text.
+
+This creates an equation or it's own line:
 ~~~
 ```{math}
 a^2 + b^2 = c^2
 ```
 ~~~
+
+```{math}
+a^2 + b^2 = c^2
+```
 
 For more math syntax, check [the MyST documentation](https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-amsmath).
 
