@@ -345,7 +345,7 @@ To enable `MathJax` in Sphinx, you need first to add `sphinx.ext.mathjax` to
 the list of extensions in `conf.py`:
 
 ```python
-extensions = ['sphinx.ext.mathjax']
+extensions = ['myst_parser', 'sphinx.ext.mathjax']
 ```
 
 The following shows how to inline mathematics within a text:
