@@ -29,14 +29,15 @@
 ## Exercise - Deploy Sphinx documentation to GitHub Pages
 
 ``````{challenge} gh-pages-1: Deploy Sphinx documentation to GitHub Pages
-In this exercise we will fork an example repository on GitHub and
+In this exercise we will create an example repository on GitHub and
 deploy it to GitHub Pages. The example project contains a script for
 counting the frequency distribution of words in a given file and some
 documentation generated using Sphinx. For bigger projects, we can have
 more source files.
 
 **Step 1:** Go to the [word-count project template](https://github.com/coderefinery/word-count/generate)
-on GitHub and fork it to your namespace.
+on GitHub and create a copy to your namespace ("Generate", since this
+is a template repository).
 
 **Clone the repository**
 
