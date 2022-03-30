@@ -153,7 +153,7 @@ extensions = ['myst_parser']
 source_suffix = ['.rst', '.md']
 ```
 
-The first part tells Sphinx to use and extension to parse Markdown files
+The first part tells Sphinx to use an extension to parse Markdown files
 and the second part tells it to actually look for those files.
 
 Let's create the file `feature-a.md` which `index.rst` refers to:
