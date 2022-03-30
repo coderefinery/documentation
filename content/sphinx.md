@@ -367,7 +367,7 @@ a^2 + b^2 = c^2
 a^2 + b^2 = c^2
 ```
 
-For more math syntax, check [the MyST documentation](https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-amsmath).
+For more math syntax (separate to what is above, not needed for this exercise), check [the MyST documentation](https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-amsmath).
 
 ````
 
