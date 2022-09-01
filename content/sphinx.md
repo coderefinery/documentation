@@ -208,6 +208,16 @@ $ ls _build
 _sources  _static  feature-a.html  genindex.html  index.html  objects.inv search.html  searchindex.js
 ```
 
+~~~{callout}
+If you are not using the CodeRefinery Conda environment, you may see the error
+```console
+Extension error:
+Could not import extension myst_parser (exception: No module named 'myst_parser')
+```
+
+To fix this follow the [instructions](https://coderefinery.github.io/installation/conda-environment/#conda-environment) for installing the conda environment.
+~~~
+
 Now open the file `_build/index.html` in your browser by:
 
 Linux users type:
