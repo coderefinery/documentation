@@ -386,6 +386,7 @@ For more math syntax (separate to what is above, not needed for this exercise), 
 
 ### Where to find more
 
+- [Sphinx documentation](https://coderefinery.github.io/installation/conda-environment/#conda-environment)
 - For more Markdown functionality, see the [Mardown guide](https://www.markdownguide.org/basic-syntax/).
 - For Sphinx additions, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/1.7/markup/index.html).
 - [https://docs.python-guide.org/writing/documentation/](https://docs.python-guide.org/writing/documentation/)
