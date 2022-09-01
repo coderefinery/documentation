@@ -208,6 +208,16 @@ $ ls _build
 _sources  _static  feature-a.html  genindex.html  index.html  objects.inv search.html  searchindex.js
 ```
 
+~~~{callout}
+If you are not using the CodeRefinery Conda environment, you may see the error
+```console
+Extension error:
+Could not import extension myst_parser (exception: No module named 'myst_parser')
+```
+
+To fix this follow the [instructions](https://coderefinery.github.io/installation/conda-environment/#conda-environment) for installing the conda environment.
+~~~
+
 Now open the file `_build/index.html` in your browser by:
 
 Linux users type:
@@ -376,6 +386,7 @@ For more math syntax (separate to what is above, not needed for this exercise), 
 
 ### Where to find more
 
+- [Sphinx documentation](https://coderefinery.github.io/installation/conda-environment/#conda-environment)
 - For more Markdown functionality, see the [Mardown guide](https://www.markdownguide.org/basic-syntax/).
 - For Sphinx additions, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/1.7/markup/index.html).
 - [https://docs.python-guide.org/writing/documentation/](https://docs.python-guide.org/writing/documentation/)
