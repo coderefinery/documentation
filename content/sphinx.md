@@ -258,13 +258,14 @@ Experiment with the following Markdown syntax:
 
 - An image: `![](image.png)`
 - `[A link](http://www.google.com)`
-- Numbered lists (can be automatic using `#`)
+- Numbered lists (numbers adjusted automatically)
 
 ```md
 1. item 1
 2. item 2
-#. item 3
-#. item 4
+3. item 3
+1. item 4
+1. item 5
 ```
 
 - Simple tables
