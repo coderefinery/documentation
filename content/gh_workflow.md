@@ -69,7 +69,7 @@ $ sphinx-build doc -W -b linkcheck -d _build/doctrees _build/html
 
 - Create a new file at `.github/workflows/documentation.yaml` with the contents
 
-```
+```yaml
 name: Docs
 on: [push, pull_request, workflow_dispatch]
 jobs:
