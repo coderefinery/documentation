@@ -9,7 +9,7 @@
 ## Group exercise: Build Sphinx documentation using Markdown
 
 We will take the first steps in creating documentation using Sphinx, and learn some
-Markdown syntax along the way.
+MyST flavored Markdown syntax along the way.
 
 - Our goal in this episode is to build HTML pages locally on our computers.
 - In the next episode we will learn how to deploy the documentation to a cloud service
