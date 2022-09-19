@@ -165,6 +165,8 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
   - [Franklin](https://franklinjl.org/): static site generator
   - [Documenter.jl](https://juliadocs.github.io/Documenter.jl/stable/)
 
+- [Quarto](https://quarto.org/) converts markdown to websites, pdfs, ebooks and many other things
+
 ---
 
 ```{keypoints}

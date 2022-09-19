@@ -9,7 +9,7 @@
 ## Group exercise: Build Sphinx documentation using Markdown
 
 We will take the first steps in creating documentation using Sphinx, and learn some
-Markdown syntax along the way.
+MyST flavored Markdown syntax along the way.
 
 - Our goal in this episode is to build HTML pages locally on our computers.
 - In the next episode we will learn how to deploy the documentation to a cloud service
@@ -388,7 +388,6 @@ For more math syntax (separate to what is above, not needed for this exercise), 
 - [Sphinx guide](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/index.html)
 - For more Markdown functionality, see the [Mardown guide](https://www.markdownguide.org/basic-syntax/).
 - For Sphinx additions, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/1.7/markup/index.html).
-- [Quarto](https://quarto.org/) converts markdown to websites, pdfs, ebooks and many other things
 - [https://docs.python-guide.org/writing/documentation/](https://docs.python-guide.org/writing/documentation/)
 
 ---
