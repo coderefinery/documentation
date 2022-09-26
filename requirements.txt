@@ -1,4 +1,5 @@
 sphinx_rtd_theme
+git+https://github.com/rkdarst/sphinx-copybutton.git@exclude-unselectable-3
 sphinx-lesson
 sphinx_rtd_theme_ext_color_contrast
 https://github.com/coderefinery/sphinx-coderefinery-branding/archive/master.zip
