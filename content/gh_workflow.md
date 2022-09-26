@@ -141,13 +141,9 @@ repository.
 [Read the Docs](https://readthedocs.org) is the most common alternative to
 hosting in GitHub Pages.
 
-You can host your own Sphinx server. If you want to know more about it, look at:
-- [https://docs.readthedocs.io/en/latest/install.html](https://docs.readthedocs.io/en/latest/install.html)
-- [https://pypi.org/project/sphinx-autobuild/](https://pypi.org/project/sphinx-autobuild/)
-- [https://pypi.org/project/sphinx-server/](https://pypi.org/project/sphinx-server/)
-
-You can also build Sphinx using GitHub Actions or GitLab CI
-([example workflow for building this lesson](https://github.com/coderefinery/documentation/blob/main/.github/workflows/sphinx.yml)).
+Sphinx simply builds HTML files, and you can host them anywhere, for
+example your university's web space or own web server.  This is the
+whole point of **static site generators**.
 
 
 ## Migrating your own documentation to Sphinx

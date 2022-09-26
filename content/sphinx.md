@@ -382,6 +382,10 @@ For more math syntax (separate to what is above, not needed for this exercise), 
 
 ````
 
+[sphinx-autobuild](https://pypi.org/project/sphinx-autobuild/)
+provides a local web server that will automatically refresh your view
+every time you save a file - which makes writing and testing much easier.
+
 ---
 
 ### Where to find more
