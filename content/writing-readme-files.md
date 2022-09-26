@@ -26,7 +26,7 @@ communicate important information about your project!
 - Exercise README-3 (constructively) discusses READMEs of projects which you have recently used.
 ```
 
-````{challenge} Exercise README-1: Write a README file for an example Python project
+````{exercise} Exercise README-1: Write a README file for an example Python project
 **The example project**
 
 Here's [the example project](https://github.com/escience-academy/coderefinery-documentation-example-project).
@@ -52,7 +52,7 @@ That's all there is to this project! (You can ignore the other files in the repo
 5. Compare your README file with that of others, is all the essential information in there?
 NB: The `README.md` file is written in 'Markdown' a very popular lightweight markup language, all you need to know for now is this syntax:
 
-```
+```markdown
 # A section title
 ## A subsection title
 Normal text
@@ -68,7 +68,7 @@ A list with items
 `````{solution}
 A README file for this project could look like this:
 
-````
+````markdown
 ### Temperature analysis in spreadsheets
 
 A python script for the analysis of temperatures in excel files.
@@ -116,7 +116,7 @@ for guidelines about software development.
 ````
 `````
 
-```{challenge} Exercise README-2: Draft or review a README for one of your recent projects
+```{exercise} Exercise README-2: Draft or review a README for one of your recent projects
 Try to draft a brief README or review a README which you have written for one
 of your projects.
 
@@ -125,7 +125,7 @@ You can do that either by screensharing and discussing or working individually.
 Please note observations and recommendations in the collaborative notes.
 ```
 
-```{challenge} Exercise README-3: Review and discuss a README of a project that you have used
+```{exercise} Exercise README-3: Review and discuss a README of a project that you have used
 In this exercise we will review and discuss a README of a project which you
 have used. You can also review a library which is popular in your domain of
 research and discuss their README.

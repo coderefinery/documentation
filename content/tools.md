@@ -13,6 +13,7 @@
 
 ## In-code documentation
 
+- Comments, function docstrings, ...
 - Advantages
   - Good for programmers
   - Version controlled alongside code
@@ -89,11 +90,13 @@ To convert between MD and RST (and many other formats):
 
 There are many tools that can turn RST or Markdown into beautiful HTML pages:
 
-- [Sphinx](http://sphinx-doc.org) **<- we will exercise this, this is how this lesson material is built**
+- [Sphinx](http://sphinx-doc.org) **← we will exercise this, this is how this lesson material is built**
   - Generate HTML/PDF/LaTeX from RST and Markdown.
   - Basically all Python projects use Sphinx but **Sphinx is not limited to Python**
   - [Read the docs](http://readthedocs.org)
     hosts public Sphinx documentation for free!
+  - Also hostable anywhere else, like Github pages.
+  - API documentation possible
 
 - [Jekyll](https://jekyllrb.com)
   - Generates HTML from Markdown.

@@ -2,7 +2,7 @@
 
 ## Motivation
 
-```{challenge} Why documenting code?
+```{discussion} Motivation-1: Why documenting code?
 
 - **Use the collaborative document**.
 - Is project documentation important? Why?
@@ -60,7 +60,7 @@ ago), with varying quality of documentation:
 - [Numgrid](https://github.com/dftlibs/numgrid)
 - [MNE-Python](https://mne.tools)
 
-```{discussion} Pros and cons of these examples
+```{discussion} Motivation-2: Pros and cons of these examples
 - Dalton:
   - try to copy paste input snippets from the PDF
   - manual is generated manually by running LaTeX, so in practice it is often behind
@@ -80,7 +80,7 @@ ago), with varying quality of documentation:
 
 ## Creating a checklist
 
-```{challenge} Exercise in the main room: Create a wishlist
+```{discussion} Motivation-3: Create a wishlist
 
   - **Use the collaborative document**.
   - Let us create a wishlist for how we would like documentation to be.

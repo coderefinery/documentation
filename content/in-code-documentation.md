@@ -18,7 +18,7 @@ In this episode we will learn how to write good documentation inside your code.
 
 ## Exercise - Writing good comments
 
-````{challenge} In-code-1: Comments
+````{exercise} In-code-1: Comments
 Let's take a look at two example comments (comments in python start with `#`):
 
 **Comment A**
@@ -42,7 +42,7 @@ whereas comment B describes **why** this piece of code is there, i.e. its **purp
 Comments in the form of B are much more useful, comments of form A are redundant and we should avoid them.
 ```
 
-````{callout}
+````{note}
 Do not use comments for:
 
 **Keeping zombie code**
@@ -139,7 +139,7 @@ Writing docstrings makes you generate your documentation as you are generating t
 
 ### Exercise: Adding in-code documentation
 
-````{challenge} In-code-2: add in-code documentation
+````{exercise} In-code-2: add in-code documentation
 Update this code snippet so it is well-documented:
 ```python
 import pandas as pd

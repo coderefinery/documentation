@@ -35,7 +35,7 @@
 - Make documentation part of your code review.
 
 
-**Sphinx or GitHub pages or both?**
+**ReadTheDocs or GitHub pages or both?**
 
 - GitHub pages typically serves one version (one branch).
 - Read the Docs can serve several versions (several branches/tags) at the same time.
