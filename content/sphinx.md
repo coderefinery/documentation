@@ -3,6 +3,8 @@
 # Sphinx and Markdown
 
 ```{objectives}
+- Understand how static site generators build websites out of plain
+  text files.
 - Create example Sphinx documentation and learn some Markdown along the way.
 ```
 
@@ -25,7 +27,8 @@ MyST flavored Markdown syntax along the way.
 ````{callout} Prerequisites: Check whether we have the software we need
 
 Before we start, make sure that Sphinx is part of your Python installation or
-Conda environment.
+Conda environment.  [CodeRefinery installation
+instructions](https://coderefinery.github.io/installation/conda-environment/).
 
 Test Sphinx installation within Python:
 
@@ -62,7 +65,7 @@ please follow our
 [installation instructions](https://coderefinery.github.io/installation/python/#installing-required-packages).
 ````
 
-````{challenge} Sphinx-1: Generate the basic documentation template
+````{exercise} Sphinx-1: Generate the basic documentation template
 
 Create a directory for the example documentation, step into it, and inside
 generate the basic documentation template:
@@ -135,7 +138,7 @@ Indices and tables
 
   feature-a.md
 ```
-A common gotcha with directives is that **the first line of the content must be indented to the same level as the options (i.e., :maxdepth)**.
+A common gotcha with directives is that **the first line of the content must be indented to the same level as the options (i.e., :maxdepth:)**.
 
 We now need to tell Sphinx to use markdown files. To do this, we open
 `conf.py` and replace the lines
@@ -156,7 +159,8 @@ source_suffix = ['.rst', '.md']
 The first part tells Sphinx to use an extension to parse Markdown files
 and the second part tells it to actually look for those files.
 
-Let's create the file `feature-a.md` which `index.rst` refers to:
+Let's create the file `feature-a.md` which we have just added to
+`index.rst` (note that one is `.rst` and one is `.md`):
 
 ```md
 # Some Feature A
@@ -244,7 +248,7 @@ Note that you can change the styling by editing `conf.py` and changing the value
 (for instance you can set it to `sphinx_rtd_theme` to have the Read the Docs look).
 ````
 
-````{challenge} Sphinx-2: Add content to your example documentation
+````{exercise} Sphinx-2: Add content to your example documentation
 
 1. Add a entry below feature-a.md labeled *feature-b.md* to the `index.rst` file.
 2. Create a file `feature-b.md` in the same directory as your `feature-a.md` file.
@@ -344,7 +348,7 @@ Note, that this will not resolve e.g. image paths within README.md, use experime
 ```
 ````
 
-````{challenge} (optional) Sphinx-3: Rendering (LaTeX) math equations
+````{exercise} (optional) Sphinx-3: Rendering (LaTeX) math equations
 
 There are two different ways to display mathematical equations within Sphinx:
 `pngmath` and `MathJax`.  While `pngmath` displays an equation as an image,
@@ -389,9 +393,10 @@ every time you save a file - which makes writing and testing much easier.
 ---
 
 ### Where to find more
-- [Sphinx guide](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/index.html)
+- [Sphinx documentation](https://www.sphinx-doc.org/)
+- [Sphinx + ReadTheDocs guide](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/index.html)
 - For more Markdown functionality, see the [Mardown guide](https://www.markdownguide.org/basic-syntax/).
-- For Sphinx additions, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/1.7/markup/index.html).
+- For Sphinx additions, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/master/markup/index.html).
 - [https://docs.python-guide.org/writing/documentation/](https://docs.python-guide.org/writing/documentation/)
 
 ---
