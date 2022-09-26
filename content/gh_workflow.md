@@ -160,3 +160,13 @@ You can also build Sphinx using GitHub Actions or GitLab CI
   lesson as inspiration.
 - Test building the documentation locally with `sphinx-build`.
 - Once this works, follow the above steps to build and deploy to GitHub Pages.
+
+
+
+---
+
+```{keypoints}
+- Sphinx makes simple HTML (and more) files, so it is easy to find a place to host them.
+- Github Pages + Github Actions provides a convenient way to make
+  sites and host them on the web.
+```
