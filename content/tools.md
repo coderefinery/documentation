@@ -47,7 +47,7 @@ We will have a closer look at this in the {ref}`writing-readme-files` episode.
   but for larger and more complicated documents RST may be a better option.
 - There are (unfortunately) [many flavors of Markdown](https://github.com/jgm/CommonMark/wiki/Markdown-Flavors).
 
-```
+```markdown
 # This is a section in Markdown   This is a section in RST
                                   ========================
 
