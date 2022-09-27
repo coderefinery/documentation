@@ -36,7 +36,7 @@ Scheme that describes how branch names end up websites.
 
 ## Exercise - Your own github page
 
-```{challenge} gh-pages-2: Host your own github page
+```{exercise} gh-pages-2: Host your own github page
 - Deploy own website reusing a template:
   - Follow the steps from GitHub Pages <https://pages.github.com/>.
     The documentation there is very good so there is no need for us to duplicate the screenshots
