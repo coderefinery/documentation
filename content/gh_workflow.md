@@ -28,7 +28,7 @@
 
 ## Exercise - Deploy Sphinx documentation to GitHub Pages
 
-``````{challenge} gh-pages-1: Deploy Sphinx documentation to GitHub Pages
+``````{exercise} gh-pages-1: Deploy Sphinx documentation to GitHub Pages
 In this exercise we will create an example repository on GitHub and
 deploy it to GitHub Pages. The example project contains a script for
 counting the frequency distribution of words in a given file and some

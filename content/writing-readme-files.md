@@ -26,6 +26,8 @@ communicate important information about your project!
 - Exercise README-3 (constructively) discusses READMEs of projects which you have recently used.
 ```
 
+### Exercise: Basic readme
+
 ````{exercise} Exercise README-1: Write a README file for an example Python project
 **The example project**
 
@@ -116,6 +118,9 @@ for guidelines about software development.
 ````
 `````
 
+
+### Exercise: Readme of your own project
+
 ```{exercise} Exercise README-2: Draft or review a README for one of your recent projects
 Try to draft a brief README or review a README which you have written for one
 of your projects.
@@ -124,6 +129,8 @@ You can do that either by screensharing and discussing or working individually.
 
 Please note observations and recommendations in the collaborative notes.
 ```
+
+### Exercise: Readme of another project
 
 ```{exercise} Exercise README-3: Review and discuss a README of a project that you have used
 In this exercise we will review and discuss a README of a project which you

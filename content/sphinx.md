@@ -65,6 +65,10 @@ please follow our
 [installation instructions](https://coderefinery.github.io/installation/python/#installing-required-packages).
 ````
 
+
+
+### Exercise: Sphinx basics
+
 ````{exercise} Sphinx-1: Generate the basic documentation template
 
 Create a directory for the example documentation, step into it, and inside
@@ -248,6 +252,10 @@ Note that you can change the styling by editing `conf.py` and changing the value
 (for instance you can set it to `sphinx_rtd_theme` to have the Read the Docs look).
 ````
 
+
+
+### Exercise: Sphinx content
+
 ````{exercise} Sphinx-2: Add content to your example documentation
 
 1. Add a entry below feature-a.md labeled *feature-b.md* to the `index.rst` file.
@@ -347,6 +355,10 @@ Note, that this will not resolve e.g. image paths within README.md, use experime
   <python_notebook_name>.ipynb
 ```
 ````
+
+
+
+### Exercise: Sphinx LaTeX
 
 ````{exercise} (optional) Sphinx-3: Rendering (LaTeX) math equations
 
