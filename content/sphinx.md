@@ -62,9 +62,8 @@ The the above commands produce an error
 instead of printing versions (the precise versions are not too important)
 e.g. command not found or ModuleNotFoundError
 please follow our
-[installation instructions](https://coderefinery.github.io/installation/python/#installing-required-packages).
+[installation instructions](https://coderefinery.github.io/installation/conda-environment/).
 ````
-
 
 
 ### Exercise: Sphinx basics
