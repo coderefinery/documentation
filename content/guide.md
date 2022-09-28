@@ -161,3 +161,50 @@ It is good if participants see how they can `sphinx-quickstart` a project from
 zero.
 
 Then they learn how to deploy an existing project to RTD.
+
+## Field reports
+
+### 2022 September
+
+We were pressed for time (we started 5-10 minutes late, relative to
+the schedule below), so we made most of the first lessons fast.  In
+the schedule below, note that we had the first 10 minutes for
+"Motivation" *and* "Popular tools", which we didn't fully realize so
+that put us even further behind.  Doing these introduction
+parts quickly was hard but was probably worth it since we had plenty
+of time in the end.  For the "tools", one person summarized the point
+of each section on the page quickly.  The README episode was done
+quickly, we basically skipped the exercises to get to Sphinx, and this
+put us back on schedule.
+
+For Sphinx, we did it a lot like you see in the schedule: first
+exercise (the basic setup) was type-along, but it was a bit too much
+to do in the 10 minutes we had allotted (we typed too fast).  But,
+people then had a nice long time to make it up and do everything.  It
+seemed to work well.  The Github pages deployment could then be done
+as a nice, slow demo, and we had plenty of time to ask questions.
+
+Overall, I think this was the right track, but we could have practiced
+doing the first parts even faster, and warned people that we focus on
+the Sphinx exercises.
+
+
+```markdown
+* 10:45 - 12:30 Documentation
+    - 10:45 - 10:55 Motivation and tools
+        - create a wishlist in HackMD
+    - 10:55 - 11:05 Break
+    - 11:00 - 11:20 Writing good README files
+        - brief discussion
+        - 15 minutes for exercises, choosing either 1, 2 or 3 (or do multiple of time allows)
+        - brief discussion
+    - 11:20 - 12:00 Sphinx and markdown
+        - discussion (5 min)
+        - Exercise 1 as type along (10min)
+        - Exercise 2 in groups, exercise 3 if time allows (20 min)
+        - Discussion, going over exercise (5 min)
+    - 12:00 - 12:10 Break
+    - 12:10 - 12:25 Deploying
+        - Exercise 1 as demo
+    - 12:25 - 12:30 Summary
+```
