@@ -106,14 +106,13 @@ Replace `<myuser>` with your GitHub username.
 - Go to `https://github.com/<myuser>/word-count/settings/pages`
 - In the "Source" section, choose "gh-pages" in the dropdown menu and click
   save
-- Your documentation will appear at
-  `https://github.com/<myuser>/word-count/settings/pages`
+- (You should be able to verify the pages deployment in the Actions list)
 
 
 **Verify the result**
 
 That's it! Your site should now be live on
-`https://<myuser>.github.com/word-count/settings/pages` (replace username).
+`https://<myuser>.github.io/word-count/` (replace username).
 
 **Verify refreshing the documentation**
 
