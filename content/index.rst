@@ -1,5 +1,5 @@
-Code documentation lesson
-=========================
+Code documentation
+==================
 
 In this lesson we will discuss different solutions for implementing and
 deploying code documentation.
