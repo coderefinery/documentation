@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Code documentation lesson"
+project = "Code documentation"
 copyright = "2021, CodeRefinery team"
 author = "CodeRefinery team"
 github_user = "coderefinery"
