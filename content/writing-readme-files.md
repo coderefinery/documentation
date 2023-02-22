@@ -14,10 +14,14 @@
 
 The `README` file (often `README.md` or `README.rst`) is usually the first
 thing users/collaborators see when visiting your GitHub repository.  Use it to
-communicate important information about your project!
+communicate important information about your project!  For many
+smaller or mid-size projects, this is enough documentation.  It's not
+that hard to make a basic one, and it's easy to expand as needed.
 
 
 ## Exercises
+
+This lesson is exercise-based with some hints at the bottom.
 
 ```{instructor-note}
 - Groups can choose to work on either exercise README-1, or on exercises README-2 + README-3.
@@ -71,17 +75,17 @@ A list with items
 A README file for this project could look like this:
 
 ````markdown
-### Temperature analysis in spreadsheets
+# Temperature analysis in spreadsheets
 
 A python script for the analysis of temperatures in excel files.
 
 
-### Why should I use this project ?
+## Why should I use this project ?
 
 It makes it easy to analyse excel files with temperatures in them.
 
 
-### Setup
+## Setup
 
 You need `python>3.5` to run this script.
 
@@ -89,7 +93,7 @@ The project depends on the `pandas` library, install it with pip:
 `pip install pandas`
 
 
-### How to run?
+## How to run?
 
 You can run the script from the command-line using
 ```
@@ -104,12 +108,12 @@ print(mean_temperature(data))
 ```
 
 
-### How to cite this project?
+## How to cite this project?
 
 Please email `training@esciencecenter.nl` to get instructions on how to properly cite this project.
 
 
-### Contributing
+## Contributing
 
 You are welcome to contribute to the code via pull requests.  Please have a
 look at the [NLeSC
@@ -163,10 +167,12 @@ Please note observations and recommendations in the collaborative notes.
 ```{keypoints}
 As a bare minimum a README file should include:
 - A descriptive project title
-- Motivation (why the project exists)
-- How to setup
+- Motivation (why the project exists) and basics
+- Installation / How to setup
 - Copy-pastable quick start code example
-- Recommended citation
+- Usage reference (if not elsewhere)
+- Recommended citation if someone uses it
+- Other related tools ("see also")
 ```
 
 ```{callout} User experience
