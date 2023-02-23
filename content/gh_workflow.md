@@ -35,13 +35,13 @@ counting the frequency distribution of words in a given file and some
 documentation generated using Sphinx. For bigger projects, we can have
 more source files.
 
-**Step 1:** Go to the [word-count project template](https://github.com/coderefinery/word-count/generate)
+**Step 1:** Go to the [documentation-example project template](https://github.com/coderefinery/documentation-example/generate)
 on GitHub and create a copy to your namespace ("Generate", since this
 is a template repository).
 
 **Clone the repository**
 
-The repository contains following two folders, among few other files and folders:
+The repository contains following two folders, among few other files:
 - **source** folder contains the source code
 - **doc** folder contains the Sphinx documentation
 
@@ -98,12 +98,12 @@ You don't need to understand all of the above, but you
 might spot familiar commands in the `run:` sections.
 
 - Add, commit and push to GitHub
-- Check the action at `https://github.com/<myuser>/word-count/actions`.
+- Check the action at `https://github.com/<myuser>/documentation-example/actions`.
 Replace `<myuser>` with your GitHub username.
 
 **Step 2:** Enable GitHub Pages
 
-- Go to `https://github.com/<myuser>/word-count/settings/pages`
+- Go to `https://github.com/<myuser>/documentation-example/settings/pages`
 - In the "Source" section, choose "gh-pages" in the dropdown menu and click
   save
 - (You should be able to verify the pages deployment in the Actions list)
@@ -112,7 +112,7 @@ Replace `<myuser>` with your GitHub username.
 **Verify the result**
 
 That's it! Your site should now be live on
-`https://<myuser>.github.io/word-count/` (replace username).
+`https://<myuser>.github.io/documentation-example/` (replace username).
 
 **Verify refreshing the documentation**
 
