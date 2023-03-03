@@ -72,12 +72,14 @@ $ sphinx-build doc -W -b linkcheck -d _build/doctrees _build/html
 ```yaml
 name: Docs
 on: [push, pull_request, workflow_dispatch]
+permissions:
+    contents: write
 jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
           pip install sphinx sphinx_rtd_theme
@@ -86,7 +88,7 @@ jobs:
           sphinx-build doc _build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
