@@ -44,6 +44,27 @@ lecture for those who want to find out more. If you go through each bullet point
 in detail, the motivation can easily take up 30 minutes and you will run out
 of time.
 
+### Detailed schedule
+
+```markdown
+* 10:45 - 12:30 Documentation
+    - 10:45 - 10:55 Motivation and tools
+        - create a wishlist in HackMD
+    - 10:55 - 11:05 Break
+    - 11:00 - 11:20 Writing good README files
+        - brief discussion
+        - 15 minutes for exercises, choosing either 1, 2 or 3 (or do multiple of time allows)
+        - brief discussion
+    - 11:20 - 12:00 Sphinx and markdown
+        - discussion (5 min)
+        - Exercise 1 as type along (10min)
+        - Exercise 2, exercise 3 if time allows (20 min)
+        - Discussion, going over exercise (5 min)
+    - 12:00 - 12:10 Break
+    - 12:10 - 12:25 Deploying Sphinx documentation to GitHub Pages
+        - Exercise 1 as demo
+    - 12:25 - 12:30 Summary
+```
 
 ### Place this lesson towards the end of the workshop
 
@@ -187,24 +208,3 @@ as a nice, slow demo, and we had plenty of time to ask questions.
 Overall, I think this was the right track, but we could have practiced
 doing the first parts even faster, and warned people that we focus on
 the Sphinx exercises.
-
-
-```markdown
-* 10:45 - 12:30 Documentation
-    - 10:45 - 10:55 Motivation and tools
-        - create a wishlist in HackMD
-    - 10:55 - 11:05 Break
-    - 11:00 - 11:20 Writing good README files
-        - brief discussion
-        - 15 minutes for exercises, choosing either 1, 2 or 3 (or do multiple of time allows)
-        - brief discussion
-    - 11:20 - 12:00 Sphinx and markdown
-        - discussion (5 min)
-        - Exercise 1 as type along (10min)
-        - Exercise 2 in groups, exercise 3 if time allows (20 min)
-        - Discussion, going over exercise (5 min)
-    - 12:00 - 12:10 Break
-    - 12:10 - 12:25 Deploying
-        - Exercise 1 as demo
-    - 12:25 - 12:30 Summary
-```
