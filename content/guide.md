@@ -58,7 +58,7 @@ of time.
     - 11:20 - 12:00 Sphinx and markdown
         - discussion (5 min)
         - Exercise 1 as type along (10min)
-        - Exercise 2 in groups, exercise 3 if time allows (20 min)
+        - Exercise 2, exercise 3 if time allows (20 min)
         - Discussion, going over exercise (5 min)
     - 12:00 - 12:10 Break
     - 12:10 - 12:25 Deploying Sphinx documentation to GitHub Pages
