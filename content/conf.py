@@ -88,6 +88,12 @@ html_context = {
     "conf_py_path": conf_py_path,
 }
 
+import os
+if os.environ.get('GITHUB_REF', '') == 'refs/heads/'+github_version:
+    html_js_files = [
+        ('https://plausible.cs.aalto.fi/js/script.js', {"data-domain": "coderefinery.github.io", "defer": "defer"}),
+    ]
+
 # Intersphinx mapping.  For example, with this you can use
 # :py:mod:`multiprocessing` to link straight to the Python docs of that module.
 # List all available references:
