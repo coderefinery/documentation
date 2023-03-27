@@ -107,7 +107,7 @@ Replace `<myuser>` with your GitHub username.
 
 - Go to `https://github.com/<myuser>/documentation-example/settings/pages`
 - In the "Source" section, choose "Deploy form a branch" in the dropdown menu
-- In the "Branch" section choose "gh-pages" in the dropdown menu and click
+- In the "Branch" section choose "gh-pages" and "/docs" in the dropdown menus and click
   save
 - (You should be able to verify the pages deployment in the Actions list)
 
