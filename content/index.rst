@@ -23,7 +23,7 @@ The approach that we will learn will be transferable to
 
    1. Basic understanding of Git.
 
-   2. You need to have `Sphinx <http://www.sphinx-doc.org>`__ installed (as
+   2. You need to have `sphinx <http://www.sphinx-doc.org>`__ and `sphinx_rtd_theme <https://sphinx-rtd-theme.readthedocs.io/>`__ installed (as
       part of your Python environment installation).
 
    3. For the `GitHub Pages <https://pages.github.com>`__ part you need a `GitHub <https://github.com>`__ account.
