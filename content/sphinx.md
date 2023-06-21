@@ -397,6 +397,43 @@ For more math syntax (separate to what is above, not needed for this exercise), 
 
 ````
 
+### Exercise: Sphinx autodoc
+
+````{exercise} (optional) Sphinx-4: Auto-generating documentation from docstrings.
+
+1. In the the folder `doc-example` add a file `API.rst` with the following contents:
+
+```rst
+Python API
+==========
+
+my-module
++++++++++
+
+.. automodule:: my-module
+   :members:
+```
+
+2. In the file `conf.py` add:
+
+```python
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath("../"))
+
+# in extensions add "sphinx.ext.autodoc"
+extensions = ['myst_parser', "sphinx.ext.autodoc"]
+```
+
+~~~{callout}
+If your working tree is different you might have to adapt the path passed in `sys.path.insert(0, os.path.abspath("../"))` such that it points to the python module.
+~~~
+
+3. In `index.rst` add `API` below `feature-a.md`. This will add a section with the contents of `API.rst`.
+
+````
+
 [sphinx-autobuild](https://pypi.org/project/sphinx-autobuild/)
 provides a local web server that will automatically refresh your view
 every time you save a file - which makes writing and testing much easier.
