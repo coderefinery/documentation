@@ -401,7 +401,22 @@ For more math syntax (separate to what is above, not needed for this exercise), 
 
 ````{exercise} (optional) Sphinx-4: Auto-generating documentation from docstrings.
 
-1. In the the folder `doc-example` add a file `API.rst` with the following contents:
+1. Write some docstrings in functions and/or class definitions of `my-module` python module. You can use sphinx syntax as follows:
+
+```python
+def mean_temperature(data):
+    """
+    Get the mean temperature
+
+    :param data (pandas.DataFrame): A pandas dataframe with air temperature measurements.
+
+    :returns: The mean air temperature (float)
+    """
+    temperatures = data['Air temperature (degC)']
+    return float(sum(temperatures)/len(temperatures))
+```
+
+2. In the the folder `doc-example` add a file `API.rst` with the following contents:
 
 ```rst
 Python API
@@ -414,7 +429,7 @@ my-module
    :members:
 ```
 
-2. In the file `conf.py` add:
+3. In the file `conf.py` add:
 
 ```python
 import os
@@ -430,7 +445,13 @@ extensions = ['myst_parser', "sphinx.ext.autodoc"]
 If your working tree is different you might have to adapt the path passed in `sys.path.insert(0, os.path.abspath("../"))` such that it points to the python module.
 ~~~
 
-3. In `index.rst` add `API` below `feature-a.md`. This will add a section with the contents of `API.rst`.
+4. In `index.rst` add `API` below `feature-a.md`. This will add a section with the contents of `API.rst`.
+5. Re-build the documentation and check the `API` section and how the docstrings get rendered.
+
+```bash
+cd doc-example
+sphinx-build . _build
+```
 
 ````
 
