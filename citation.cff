@@ -27,6 +27,7 @@ authors:
 - family-names: "Orozco"
   given-names: "Luisa"
 title: "CodeRefinery Documentation lesson"
+abstract: "The documentation lesson gives an overview of the different ways how a code project can be documented: from small projects to larger projects. Markdown and Sphinx are central tools in this lesson."
 version: 1.0.0
 date-released: 2023-08-08
 url: "https://coderefinery.github.io/documentation/"
