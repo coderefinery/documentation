@@ -1,5 +1,5 @@
-Code documentation
-==================
+How to document your research software
+======================================
 
 In this lesson we will discuss different solutions for implementing and
 deploying code documentation.
