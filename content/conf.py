@@ -17,8 +17,8 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Code documentation"
-copyright = "2021, CodeRefinery team"
+project = "How to document your research software"
+copyright = "CodeRefinery team"
 author = "CodeRefinery team"
 github_user = "coderefinery"
 github_repo_name = "documentation"  # auto-detected from dirname if blank
