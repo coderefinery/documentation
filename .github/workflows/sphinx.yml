@@ -58,6 +58,10 @@ jobs:
         run: |
           make dirhtml
 
+      - name: Generate PDF
+        run: |
+          make pyppeteer
+          mv _build/pyppeteer/*.pdf _build/dirhtml/_static/lesson.pdf
 
       # The following supports building all branches and combining on
       # gh-pages
