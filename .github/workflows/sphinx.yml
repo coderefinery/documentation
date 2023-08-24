@@ -60,6 +60,7 @@ jobs:
 
       - name: Generate PDF
         run: |
+          pip install https://github.com/rkdarst/sphinx_pyppeteer_builder/archive/refs/heads/main.zip
           make pyppeteer
           mv _build/pyppeteer/*.pdf _build/dirhtml/_static/lesson.pdf
 
