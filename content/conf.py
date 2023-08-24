@@ -17,8 +17,8 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Code documentation"
-copyright = "2021, CodeRefinery team"
+project = "How to document your research software"
+copyright = "CodeRefinery team"
 author = "CodeRefinery team"
 github_user = "coderefinery"
 github_repo_name = "documentation"  # auto-detected from dirname if blank
@@ -41,10 +41,7 @@ extensions = [
 
 # Settings for myst_nb:
 # https://myst-nb.readthedocs.io/en/latest/use/execute.html#triggering-notebook-execution
-# jupyter_execute_notebooks = "off"
-# jupyter_execute_notebooks = "auto"   # *only* execute if at least one output is missing.
-# jupyter_execute_notebooks = "force"
-jupyter_execute_notebooks = "cache"
+nb_execution_mode = "cache"
 
 # Add any paths that contain templates here, relative to this directory.
 # templates_path = ['_templates']

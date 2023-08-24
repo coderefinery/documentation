@@ -47,7 +47,7 @@ of time.
 ### Detailed schedule
 
 ```markdown
-* 10:45 - 12:30 Documentation
+* 10:45 - 12:30 How to document your research software
     - 10:45 - 10:55 Motivation and tools
         - create a wishlist in HackMD
     - 10:55 - 11:05 Break
