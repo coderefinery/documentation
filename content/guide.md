@@ -44,27 +44,21 @@ lecture for those who want to find out more. If you go through each bullet point
 in detail, the motivation can easily take up 30 minutes and you will run out
 of time.
 
+
 ### Detailed schedule
 
-```markdown
-* 10:45 - 12:30 How to document your research software
-    - 10:45 - 10:55 Motivation and tools
-        - create a wishlist in HackMD
-    - 10:55 - 11:05 Break
-    - 11:00 - 11:20 Writing good README files
-        - brief discussion
-        - 15 minutes for exercises, choosing either 1, 2 or 3 (or do multiple of time allows)
-        - brief discussion
-    - 11:20 - 12:00 Sphinx and markdown
-        - discussion (5 min)
-        - Exercise 1 as type along (10min)
-        - Exercise 2, exercise 3 if time allows (20 min)
-        - Discussion, going over exercise (5 min)
-    - 12:00 - 12:10 Break
-    - 12:10 - 12:25 Deploying Sphinx documentation to GitHub Pages
-        - Exercise 1 as demo
-    - 12:25 - 12:30 Summary
-```
+- 09:00 - 09:10 Motivation and tools - create a wishlist in HackMD
+- 09:10 - 09:15 Writing good README files - brief discussion
+- 09:15 - 09:35 **Exercises**, choosing either 1, 2 or 3 (or do multiple of time allows)
+- 09:35 - 09:40 Discussion
+- 09:40 - 09:50 Sphinx and markdown - discussion 
+- 09:50 - 10:00 Break
+- 10:00 - 10:10 Exercise 1 as type along 
+- 10:10 - 10:30 **Exercise 2**, exercise 3 if time allows
+- 10:30 - 10:35 Discussion, going over exercise
+- 10:35 - 10:50 [Deploying Sphinx documentation to GitHub Pages](https://coderefinery.github.io/documentation/gh_workflow/#deploying-sphinx-documentation-to-github-pages) - Exercise 1 as demo
+- 10:50 - 11:00 Summary
+
 
 ### Place this lesson towards the end of the workshop
 
