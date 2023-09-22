@@ -90,7 +90,7 @@ jobs:
       - name: Generate singlehtml
         run: |
           make singlehtml
-          mv _build/singlehtml/ _build/dirhtml/singlhtml/
+          mv _build/singlehtml/ _build/dirhtml/singlehtml/
 
       # PDF if requested
       - name: Generate PDF
