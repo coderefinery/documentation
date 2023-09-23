@@ -27,44 +27,33 @@
 
 ## Exercise - Deploy Sphinx documentation to GitHub Pages
 
-``````{exercise} gh-pages-1: Deploy Sphinx documentation to GitHub Pages
+````{exercise} GH-Pages-1: Deploy Sphinx documentation to GitHub Pages
 In this exercise we will create an example repository on GitHub and
-deploy it to GitHub Pages. The example project contains a script for
-counting the frequency distribution of words in a given file and some
-documentation generated using Sphinx. For bigger projects, we can have
-more source files.
+deploy it to GitHub Pages.
 
-**Step 1:** Go to the [documentation-example project template](https://github.com/coderefinery/documentation-example/generate)
-on GitHub and create a copy to your namespace ("Generate", since this
-is a template repository).
+**Step 1**: Go to the [documentation-example](https://github.com/coderefinery/documentation-example/generate) project template
+on GitHub and create a copy to your namespace.
+- Give it a name, for instance "documentation-example".
+- You don't need to "Include all branches"
+- Click on "Create a repository".
 
-**Clone the repository**
-
-The repository contains following two folders, among few other files:
-- **source** folder contains the source code
-- **doc** folder contains the Sphinx documentation
-
-The doc folder contains the Sphinx configuration file (`conf.py`) and the index file (`index.rst`) and some contents (Markdown files).
-The `conf.py` file has been adjusted to be able to autogenerate documentation from sources.
+**Step 2**: Browse the new repository.
+- It will look very familar to the previous episode.
+- However, we have moved the documentation part under `doc/` (many projects do it this
+  way). But it is still a Sphinx documentation project.
+- The source code for your project could then go under `src/`.
 
 
-**Build HTML pages locally**
-
-Inside the cloned repository, build the documentation and verify the result in your browser:
-
-```console
-$ sphinx-build doc _build
-```
-
-**Step 2:** Add the GitHub Action
-
-- Create a new file at `.github/workflows/documentation.yaml` with the contents
-
+**Step 3**: Add the GitHub Action to your new Git repository.
+- Add a new file at `.github/workflows/documentation.yml` (either through terminal or web interface), containing:
 ```yaml
-name: Docs
+name: documentation
+
 on: [push, pull_request, workflow_dispatch]
+
 permissions:
-    contents: write
+  contents: write
+
 jobs:
   docs:
     runs-on: ubuntu-latest
@@ -73,11 +62,11 @@ jobs:
       - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
-          pip install sphinx sphinx_rtd_theme
+          pip install sphinx sphinx_rtd_theme myst_parser
       - name: Sphinx build
         run: |
           sphinx-build doc _build
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
@@ -86,37 +75,27 @@ jobs:
           publish_dir: _build/
           force_orphan: true
 ```
+- You don't need to understand all of the above, but you
+  might spot familiar commands in the `run:` sections.
+- After the file has been committed (and pushed),
+  check the action at `https://github.com/USER/documentation-example/actions`
+  (replace `USER` with your GitHub username).
 
-You don't need to understand all of the above, but you
-might spot familiar commands in the `run:` sections.
-
-- Add, commit and push to GitHub
-- Check the action at `https://github.com/<myuser>/documentation-example/actions`.
-Replace `<myuser>` with your GitHub username.
-
-**Step 2:** Enable GitHub Pages
-
-- Go to `https://github.com/<myuser>/documentation-example/settings/pages`
-- In the "Source" section, choose "Deploy form a branch" in the dropdown menu
+**Step 4**: Enable GitHub Pages
+- On GitHub go to "Settings" -> "Pages".
+- In the "Source" section, choose "Deploy form a branch" in the dropdown menu.
 - In the "Branch" section choose "gh-pages" and "/root" in the dropdown menus and click
-  save
-- (You should be able to verify the pages deployment in the Actions list)
+  save.
+- You should now be able to verify the pages deployment in the Actions list).
 
+**Step 5**: Verify the result
+- Your site should now be live on `https://USER.github.io/documentation-example/` (replace USER).
 
-**Verify the result**
+**Step 6**: Verify refreshing the documentation
+- Commit some changes to your documentation
+- Verify that the documentation website refreshes after your changes (can take few seconds or a minute)
+````
 
-That's it! Your site should now be live on
-`https://<myuser>.github.io/documentation-example/` (replace username).
-
-**Verify refreshing the documentation**
-
-Finally, make some changes to your documentation
-- Add documentation related to other functions
-- Prerequisites and how to use the program
-- Rules for contribution
-- Some example results (figures, tables, ...)
-- Commit and push them, and verify that the documentation website refreshes after your changes (can take few seconds or a minute)
-``````
 
 ## Alternatives to GitHub Pages
 
