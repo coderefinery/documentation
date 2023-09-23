@@ -16,7 +16,7 @@
 - We will let it run `sphinx-build` and make the result available to GitHub Pages.
 
 
-## Our goal
+## Our goal: putting it all together
 
 - Host source code with documentation sources on a public Git repository.
 - Each time we `git push` to the repository, a GitHub action triggers to
