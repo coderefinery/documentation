@@ -307,43 +307,31 @@ int main()
 
 ## Exercise: Sphinx and LaTeX
 
-````{exercise} (optional) Sphinx-3: Rendering (LaTeX) math equations
+`````{exercise} Sphinx-3: Rendering (LaTeX) math equations
 
-There are two different ways to display mathematical equations within Sphinx:
-`pngmath` and `MathJax`.  While `pngmath` displays an equation as an image,
-`MathJax` is using scalable vector graphics (quality remains the same after
-zooming). For this reason, we strongly encourage you to use `MathJax` for
-your mathematical equations.
-
-To enable `MathJax` in Sphinx, you need first to add `sphinx.ext.mathjax` to
-the list of extensions in `conf.py`:
-
+Math equations should work out of the box. In some older versions, you might need
+to edit `conf.py` and add `sphinx.ext.mathjax`:
 ```python
 extensions = ['myst_parser', 'sphinx.ext.mathjax']
 ```
 
-The following shows how to inline mathematics within a text:
-
-```md
-This is an inline equation embedded {math}`a^2 + b^2 = c^2` in text.
-```
-
-This is an inline equation embedded {math}`a^2 + b^2 = c^2` in text.
-
-This creates an equation or it's own line:
-~~~
-```{math}
-a^2 + b^2 = c^2
-```
-~~~
-
+Try this (result below):
+````markdown
+This creates an equation:
 ```{math}
 a^2 + b^2 = c^2
 ```
 
-For more math syntax (separate to what is above, not needed for this exercise), check [the MyST documentation](https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-amsmath).
-
+This is an in-line equation, {math}`a^2 + b^2 = c^2`, embedded in text.
 ````
+
+This creates an equation:
+```{math}
+a^2 + b^2 = c^2
+```
+
+This is an in-line equation, {math}`a^2 + b^2 = c^2`, embedded in text.
+`````
 
 
 ## Exercise: Sphinx autodoc
