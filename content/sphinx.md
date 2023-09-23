@@ -344,17 +344,9 @@ Note, that this will not resolve e.g. image paths within README.md, use experime
 -->
 
 - It is possible to combine `{include}` with code highlighting, line numbering, and even line highlighting.
-- We can also use jupyter notebooks (*.ipynb) with sphinx. It requires `nbsphinx` extension to be installed. See [nbsphinx documentation](http://nbsphinx.readthedocs.io/en/latest/) for more information
-```rst
-.. toctree::
-  :maxdepth: 2
-  :caption: Contents:
-
-  feature-a.md
-  <python_notebook_name>.ipynb
-```
+- We can also use Jupyter notebooks (*.ipynb) with Sphinx. It requires the
+  [myst-nb](https://myst-nb.readthedocs.io/) extension to be installed.
 ````
-
 
 
 ### Exercise: Sphinx LaTeX
