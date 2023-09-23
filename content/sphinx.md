@@ -51,11 +51,6 @@ and the result side by side.
   ```console
   $ python -c "import myst_parser"
   ```
-
-  Check whether a specific Sphinx theme is available
-  (you should see no output):
-  ```console
-  $ python -c "import sphinx_rtd_theme"
   ```
 
 If the above commands produce an error
