@@ -55,7 +55,7 @@ to make a basic one, and it's easy to expand as needed.
   ![please replace with alt text](https://img.shields.io/badge/anytext-youlike-blue)
   ```
 
-- Know about other tips and tricks? Please share them with others.
+- Know about other tips and tricks? Please share them (send a pull request to this lesson).
 ````
 
 
