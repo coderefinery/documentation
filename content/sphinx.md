@@ -61,7 +61,7 @@ tools.
 ````
 
 
-## Exercise: Sphinx basics
+## Exercise: Sphinx quickstart
 
 ````{exercise} Sphinx-1: Generate the basic documentation template
 
