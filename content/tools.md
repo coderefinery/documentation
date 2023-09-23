@@ -19,7 +19,7 @@
   - Version controlled alongside code
   - Can be used to auto-generate documentation for functions/classes
 - Disadvantage
-  - Probably not enough for users
+  - Probably not enough for users of the code
 
 We will have a closer look at this in the {ref}`in-code-documentation` episode.
 
@@ -27,7 +27,7 @@ We will have a closer look at this in the {ref}`in-code-documentation` episode.
 
 ## README files
 
-- Advantage
+- Advantages
   - Versioned (goes with the code development)
   - It is often good enough to have a `README.md` or `README.rst` along with your code/script
 - If you use README files, use either
@@ -43,8 +43,6 @@ We will have a closer look at this in the {ref}`writing-readme-files` episode.
 
 - Two of the most popular lightweight markup languages.
 - reStructuredText (RST) has more features than Markdown but the choice is a matter of taste.
-- Markdown convenient for smaller documents,
-  but for larger and more complicated documents RST may be a better option.
 - There are (unfortunately) [many flavors of Markdown](https://github.com/jgm/CommonMark/wiki/Markdown-Flavors).
 
 ```markdown
@@ -74,15 +72,9 @@ tables, links, ...                tables, links, ...
 
 - We will use [MyST](https://myst-parser.readthedocs.io/en/latest/)
   flavored Markdown in the {ref}`sphinx` episode and the
-  {ref}`gh-pages` example
-
-Experiment with Markdown:
-- [Learn Markdown in 60 seconds](http://commonmark.org/help/)
-- [https://dillinger.io](http://dillinger.io)
-- [https://stackedit.io](https://stackedit.io)
-
-To convert between MD and RST (and many other formats):
-- [Pandoc](https://pandoc.org/)
+  {ref}`gh-pages` example.
+- Nice resource to learn Markdown: [Learn Markdown in 60 seconds](http://commonmark.org/help/)
+- [Pandoc](https://pandoc.org/) can convert between MD and RST (and many other formats).
 
 ---
 
@@ -92,11 +84,11 @@ There are many tools that can turn RST or Markdown into beautiful HTML pages:
 
 - [Sphinx](http://sphinx-doc.org) **← we will exercise this, this is how this lesson material is built**
   - Generate HTML/PDF/LaTeX from RST and Markdown.
-  - Basically all Python projects use Sphinx but **Sphinx is not limited to Python**
+  - Basically all Python projects use Sphinx but **Sphinx is not limited to Python**.
   - [Read the docs](http://readthedocs.org)
     hosts public Sphinx documentation for free!
   - Also hostable anywhere else, like Github pages.
-  - API documentation possible
+  - API documentation possible.
 
 - [Jekyll](https://jekyllrb.com)
   - Generates HTML from Markdown.
@@ -110,8 +102,7 @@ There are many tools that can turn RST or Markdown into beautiful HTML pages:
 - [Hugo](https://gohugo.io)
 - [Hexo](https://hexo.io)
 - [Zola](https://www.getzola.org/) **<- this is what we use for our project website and workshop websites**
-
-There are many more ...
+- There are many more ...
 
 GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - [GitHub Pages](https://pages.github.com)
@@ -140,7 +131,7 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - Advantage
   - Popular and familiar in the physics and mathematics community
 - Disadvantages
-  - PDF format is not ideal for copy-paste ability of examples
+  - PDF format is not ideal for copy-pasting of examples
   - Possible, but not trivial to automate rebuilding documentation after every Git push
 
 ---
