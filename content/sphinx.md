@@ -51,13 +51,11 @@ and the result side by side.
   ```console
   $ python -c "import myst_parser"
   ```
-  ```
 
 If the above commands produce an error
-(command not found or module not found or ModuleNotFoundError)
+(**command not found** or **module not found** or **ModuleNotFoundError**),
 please follow our
 [installation instructions](https://coderefinery.github.io/installation/conda-environment/).
-
 But please don't give up if you don't have these - the episodes after this one will work even without these
 tools.
 ````
