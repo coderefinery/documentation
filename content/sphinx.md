@@ -8,8 +8,6 @@
 - Create example Sphinx documentation and learn some Markdown along the way.
 ```
 
-## Group exercise: Build Sphinx documentation using Markdown
-
 We will take the first steps in creating documentation using Sphinx, and learn some
 MyST flavored Markdown syntax along the way.
 
@@ -66,7 +64,7 @@ please follow our
 ````
 
 
-### Exercise: Sphinx basics
+## Exercise: Sphinx basics
 
 ````{exercise} Sphinx-1: Generate the basic documentation template
 
@@ -252,8 +250,7 @@ Note that you can change the styling by editing `conf.py` and changing the value
 ````
 
 
-
-### Exercise: Sphinx content
+## Exercise: Sphinx content
 
 ````{exercise} Sphinx-2: Add content to your example documentation
 
@@ -349,7 +346,7 @@ Note, that this will not resolve e.g. image paths within README.md, use experime
 ````
 
 
-### Exercise: Sphinx LaTeX
+## Exercise: Sphinx and LaTeX
 
 ````{exercise} (optional) Sphinx-3: Rendering (LaTeX) math equations
 
@@ -453,7 +450,8 @@ every time you save a file - which makes writing and testing much easier.
 
 ---
 
-### Where to find more
+## Where to find more
+
 - [Sphinx documentation](https://www.sphinx-doc.org/)
 - [Sphinx + ReadTheDocs guide](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/index.html)
 - For more Markdown functionality, see the [Mardown guide](https://www.markdownguide.org/basic-syntax/).
