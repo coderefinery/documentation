@@ -38,6 +38,8 @@
 `README.rst` can be enough (more about these formats later).
 
 
+(checklist)=
+
 ## Creating a checklist
 
 ```{discussion} Motivation-2: Create a wishlist
