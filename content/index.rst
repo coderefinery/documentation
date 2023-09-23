@@ -38,7 +38,7 @@ The approach that we will learn will be transferable to
    :widths: auto
    :delim: ;
 
-   15 min ; :doc:`wishlist`
+   10 min ; :doc:`wishlist`
    10 min ; :doc:`tools`
    20 min ; :doc:`in-code-documentation`
    30 min ; :doc:`writing-readme-files`

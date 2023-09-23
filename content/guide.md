@@ -47,17 +47,17 @@ of time.
 
 ### Detailed schedule
 
-- 09:00 - 09:10 Motivation and tools - create a wishlist in HackMD
-- 09:10 - 09:15 Writing good README files - brief discussion
-- 09:15 - 09:35 **Exercises**, choosing either 1, 2 or 3 (or do multiple of time allows)
-- 09:35 - 09:40 Discussion
-- 09:40 - 09:50 Sphinx and markdown - discussion
-- 09:50 - 10:00 Break
-- 10:00 - 10:10 Exercise 1 as type along
-- 10:10 - 10:30 **Exercise 2**, exercise 3 if time allows
-- 10:30 - 10:35 Discussion, going over exercise
-- 10:35 - 10:50 [Deploying Sphinx documentation to GitHub Pages](https://coderefinery.github.io/documentation/gh_workflow/#deploying-sphinx-documentation-to-github-pages) - Exercise 1 as demo
-- 10:50 - 11:00 Summary
+- 09:00 - 09:10 Motivation and tools
+  - create a wishlist in collaborative notes
+- 09:10 - 09:20 Writing good README files
+  - brief discussion
+- 09:20 - 09:40 **Exercises**: README-1, README-2, README-3 (choose one or multiple)
+- 09:40 - 10:00 Sphinx and Markdown: Sphinx-1 as type along
+
+- 10:00 - 10:10 Break
+
+- 10:10 - 10:40 **Exercises**, Sphinx-2, Sphinx-3, GH-Pages-1
+- 10:40 - 11:00 Discussion, GH Pages, Summary
 
 
 ### Place this lesson towards the end of the workshop
