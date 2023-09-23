@@ -385,7 +385,8 @@ For more math syntax (separate to what is above, not needed for this exercise), 
 
 ````
 
-### Exercise: Sphinx autodoc
+
+## Exercise: Sphinx autodoc
 
 ````{exercise} (optional) Sphinx-4: Auto-generating documentation from docstrings.
 
