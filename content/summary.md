@@ -4,14 +4,6 @@
 - What recommendations can we take home?
 ```
 
-```{discussion}
-- Please write your questions in the collaborative notes document.
-- Any other ideas?
-    - Any incremental improvements that can benefit your projects?
-    - What's nice but overkill for your work?
-    - Some of the recommendations below can be used as food for thought.
-```
-
 ---
 
 ## There is not the one right way: it is always a balance
@@ -21,12 +13,14 @@
 
 - For simple scripts and post-processing, Jupyter notebooks can form a nice
   self-documenting pipeline.
+- They can be a nice way to accompany a paper that analyzed some data.
 
 
 **READMEs or Sphinx?**
 
 - For smaller projects READMEs can be absolutely enough.
-- If the code is closed-source, you probably prefer Sphinx (or similar).
+- If the code is closed-source (and hence nobody can see the README), you
+  probably prefer Sphinx (or similar).
 - If you need math equations, Sphinx might be a good fit.
 
 
@@ -37,6 +31,7 @@
 
 **ReadTheDocs or GitHub pages or both?**
 
-- GitHub pages typically serves one version (one branch).
+- GitHub pages typically serves one version (one branch). However, it is possible to build
+  several or all branches as part of a workflow.
 - Read the Docs can serve several versions (several branches/tags) at the same time.
 - Some projects use both.
