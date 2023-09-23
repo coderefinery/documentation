@@ -11,16 +11,15 @@
 We will take the first steps in creating documentation using Sphinx, and learn some
 MyST flavored Markdown syntax along the way.
 
+```{discussion} This lesson is built with Sphinx
+Try to compare the [source
+code](https://raw.githubusercontent.com/coderefinery/documentation/main/content/sphinx.md)
+and the result side by side.
+```
+
 - Our goal in this episode is to build HTML pages locally on our computers.
 - In the next episode we will learn how to deploy the documentation to a cloud service
   upon every `git push`.
-- Please write your questions in the collaborative HackMD document so that we can answer
-  them and discuss them together after the group sessions.
-
-```{discussion} This lesson is built with Sphinx
-- [Source code](https://raw.githubusercontent.com/coderefinery/documentation/main/content/sphinx.md)
-- Try to compare the source code and the result side by side
-```
 
 ````{callout} Prerequisites: Check whether we have the software we need
 
