@@ -29,7 +29,7 @@
 - Make documentation part of your code review.
 
 
-**ReadTheDocs or GitHub pages or both?**
+**Read the Docs or GitHub pages or both?**
 
 - GitHub pages typically serves one version (one branch). However, it is possible to build
   several or all branches as part of a workflow.
