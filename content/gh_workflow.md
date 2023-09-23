@@ -6,21 +6,20 @@
 
 ## [GitHub Pages](https://pages.github.com/)
 
-- Serve websites from a GitHub repository
-- It is no problem to serve using your own URL `http://myproject.org` instead of `http://myuser.github.io/myproject`
+- Serve websites from a GitHub repository.
+- It is no problem to serve using your own URL `http://myproject.org` instead of `http://myuser.github.io/myproject`.
 
 
 ## [GitHub Actions](https://github.com/features/actions/)
 
-- Automatically runs code when your repository changes
-- We will run Sphinx build and make the result available to GitHub Pages
-- Equations and images no problem
-- Can use Sphinx styles
+- Automatically runs code when your repository changes.
+- We will let it run `sphinx-build` and make the result available to GitHub Pages.
 
-## Typical workflow
+
+## Our goal
 
 - Host source code with documentation sources on a public Git repository.
-- Each time you `git push` to the repository, a GitHub action triggers to
+- Each time we `git push` to the repository, a GitHub action triggers to
   rebuild the documentation.
 - The documentation is pushed to a separate branch called 'gh-pages'.
 
@@ -138,28 +137,26 @@ repository.
 
 ## Alternatives to GitHub Pages
 
-[GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/) and [GitLab CI](https://docs.gitlab.com/ee/ci/) can create a very similar workflow.
+- [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/)
+  and [GitLab CI](https://docs.gitlab.com/ee/ci/) can create a very similar workflow.
 
-[Read the Docs](https://readthedocs.org) is the most common alternative to
-hosting in GitHub Pages.
+- [Read the Docs](https://readthedocs.org) is the most common alternative to
+  hosting in GitHub Pages.
 
-Sphinx simply builds HTML files, and you can host them anywhere, for
-example your university's web space or own web server.  This is the
-whole point of **static site generators**.
+- Sphinx builds HTML files (this is what static site generators do), and you
+  can host them anywhere, for example your university's web space or own web server.
 
 
 ## Migrating your own documentation to Sphinx
 
-- First convert your documentation to markdown using [Pandoc](https://pandoc.org)
-- Create a file `index.rst` which lists all other RST files and provides the
+- First convert your documentation to Markdown using [Pandoc](https://pandoc.org).
+- Create a file `index.rst` which lists all other Markdown files and provides the
   table of contents.
 - Add a `conf.py` file. You can generate a starting point for `conf.py` and
   `index.rst` with `sphinx-quickstart`, or you can take the examples in this
   lesson as inspiration.
 - Test building the documentation locally with `sphinx-build`.
-- Once this works, follow the above steps to build and deploy to GitHub Pages.
-
-
+- Once this works, follow the above steps to build and deploy to GitHub Pages or some other web space.
 
 ---
 
