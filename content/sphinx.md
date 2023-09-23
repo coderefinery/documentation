@@ -21,45 +21,50 @@ and the result side by side.
 - In the next episode we will learn how to deploy the documentation to a cloud service
   upon every `git push`.
 
-````{callout} Prerequisites: Check whether we have the software we need
+````{prereq} Before we start, let us verify whether we have the software we need
+  Check whether Python is available
+  (you should see a version; precise version is not so important):
+  ```console
+  $ python --version
 
-Before we start, make sure that Sphinx is part of your Python installation or
-Conda environment.  [CodeRefinery installation
-instructions](https://coderefinery.github.io/installation/conda-environment/).
+  Python 3.11.5
+  ```
 
-Test Sphinx installation within Python:
+  Check whether Sphinx is available
+  (you should see a version; precise version is not so important):
+  ```console
+  $ sphinx-build --version
 
-```console
-$ python --version
+  sphinx-build 5.3.0
+  ```
 
-Python 3.7.0
-```
+  Check whether the quickstart tool is available
+  (you should see a version; precise version is not so important):
+  ```console
+  $ sphinx-quickstart --version
 
-```console
-$ sphinx-build --version
+  sphinx-quickstart 5.3.0
+  ```
 
-sphinx-build 3.5.4
-```
+  Check whether MyST parser is available
+  (you should see no output):
+  ```console
+  $ python -c "import myst_parser"
+  ```
 
-```console
-$ python -c "import sphinx_rtd_theme"
+  Check whether a specific Sphinx theme is available
+  (you should see no output):
+  ```console
+  $ python -c "import sphinx_rtd_theme"
+  ```
 
-(no output)
-```
-
-Test Sphinx tool installation:
-
-```console
-$ sphinx-quickstart --version
-
-sphinx-quickstart 3.5.4
-```
-
-The the above commands produce an error
-instead of printing versions (the precise versions are not too important)
-e.g. command not found or ModuleNotFoundError
+If the above commands produce an error
+(command not found or module not found or ModuleNotFoundError)
 please follow our
 [installation instructions](https://coderefinery.github.io/installation/conda-environment/).
+
+But please don't give up if you don't have these - the episodes after this one will work even without these
+tools.
 ````
 
 
@@ -211,16 +216,6 @@ $ ls _build
 
 _sources  _static  feature-a.html  genindex.html  index.html  objects.inv search.html  searchindex.js
 ```
-
-~~~{callout}
-If you are not using the CodeRefinery Conda environment, you may see the error
-```console
-Extension error:
-Could not import extension myst_parser (exception: No module named 'myst_parser')
-```
-
-To fix this follow the [instructions](https://coderefinery.github.io/installation/conda-environment/#conda-environment) for installing the conda environment.
-~~~
 
 Now open the file `_build/index.html` in your browser by:
 
