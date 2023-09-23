@@ -17,9 +17,7 @@ code](https://raw.githubusercontent.com/coderefinery/documentation/main/content/
 and the result side by side.
 ```
 
-- Our goal in this episode is to build HTML pages locally on our computers.
-- In the next episode we will learn how to deploy the documentation to a cloud service
-  upon every `git push`.
+Our goal in this episode is to build HTML pages locally on our computers.
 
 ````{prereq} Before we start, let us verify whether we have the software we need
   Check whether Python is available
@@ -378,23 +376,22 @@ extensions = ['myst_parser', "sphinx.ext.autodoc"]
 5. Re-build the documentation and check the "API reference" section.
 `````
 
----
 
-## Next steps
+## References and next steps
 
 - [sphinx-autobuild](https://pypi.org/project/sphinx-autobuild/)
   provides a local web server that will automatically refresh your view
   every time you save a file - which makes writing and testing much easier.
 - [Sphinx documentation](https://www.sphinx-doc.org/)
 - [Sphinx + ReadTheDocs guide](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/index.html)
-- For more Markdown functionality, see the [Mardown guide](https://www.markdownguide.org/basic-syntax/).
+- For more Markdown functionality, see the [Markdown guide](https://www.markdownguide.org/basic-syntax/).
 - For Sphinx additions, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/master/markup/index.html).
 - [https://docs.python-guide.org/writing/documentation/](https://docs.python-guide.org/writing/documentation/)
 
----
-
 ```{keypoints}
-- Sphinx and Markdown are relatively lightweight options for writing documentation.
+- Sphinx and Markdown is a powerful duo for writing documentation.
 - Another option is to use reStructuredText, see the [Sphinx documentation](http://www.sphinx-doc.org/en/stable/rest.html)
   and the [quick-reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
+- In the next episode we will learn how to deploy the documentation to a cloud service and update it
+  upon every `git push`.
 ```
