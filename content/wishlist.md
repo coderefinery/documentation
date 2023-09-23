@@ -4,7 +4,7 @@
 
 ```{discussion} Motivation-1: Why documenting code?
 
-- **Use the collaborative document**.
+**Use the collaborative document**:
 - Is project documentation important? Why?
 - How would you describe a useful documentation?
 - How can you motivate your colleagues to contribute to the documentation?
@@ -23,66 +23,26 @@
 
 ```{note} Documentation comes in different forms - what *is* documentation?
 
-  (This is adapted from: [What nobody tells you about documentation](https://www.divio.com/blog/documentation/))
-
   - **Tutorials**: learning-oriented, allows the newcomer to get started
   - **How-to guides**: goal-oriented, shows how to solve a specific problem
   - **Explanation**: understanding-oriented, explains a concept
   - **Reference**: information-oriented, describes the machinery
 
-  These are distinct. For an excellent discussion, please see [What nobody tells you about documentation](https://www.divio.com/blog/documentation/).
+  Read more:
+  - <https://www.divio.com/blog/documentation/>
+  - <https://diataxis.fr/>
+  - <https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/>
 ```
 
 **There is no one size fits all**: often for small projects a `README.md` or
 `README.rst` can be enough (more about these formats later).
 
 
-### Own examples
-
-```{instructor-note}
-- One option is to discuss the examples below either as group discussion or in plenum.
-- As an alternative to discussing these examples you can also ask students:
-  - Think of projects of which you like the documentation. What do you like about them?
-  - Think of projects for which you don’t like the documentation. What don’t you like about them? Are you missing anything?
-- You can choose a mature library with lots of users for this exercise,
-  but try to also think of less mature projects you had to collaborate on,
-  or papers you had to reproduce.
-```
-
-We would like to show you some examples which are not ideal but we do not want
-to point at others.
-Instead we list some of the projects we have contributed to (possibly long time
-ago), with varying quality of documentation:
-
-- [Dalton](https://daltonprogram.org/documentation/) (check the PDF
-  manuals, e.g. [Dalton 2018](https://daltonprogram.org/manuals/dalton2018manual.pdf))
-- [Cubicle](https://github.com/bast/cubicle)
-- [Numgrid](https://github.com/dftlibs/numgrid)
-- [MNE-Python](https://mne.tools)
-
-```{discussion} Motivation-2: Pros and cons of these examples
-- Dalton:
-  - try to copy paste input snippets from the PDF
-  - manual is generated manually by running LaTeX, so in practice it is often behind
-- Cubicle:
-  - no usage examples
-  - one has to go into the source code to find out how to use it
-- Numgrid:
-  - contains copy-paste-able examples
-  - contains recommended citation
-  - no tutorials with clear narration
-- MNE-Python:
-  - easy to select version of docs
-  - has four "levels": tutorials, how-to guides (examples), explanation pages and API reference
-  - this level of documentation is overkill for small projects, but serves as a great source of ideas
-```
-
-
 ## Creating a checklist
 
-```{discussion} Motivation-3: Create a wishlist
+```{discussion} Motivation-2: Create a wishlist
 
-  - **Use the collaborative document**.
+**Use the collaborative document**:
   - Let us create a wishlist for how we would like documentation to be.
   - Below are some of our ideas but please do not look at them yet.
   - We are sure you will come up with ideas we did not think about.
@@ -153,9 +113,8 @@ ago), with varying quality of documentation:
     Your **documentation provides a platform for your first contributions**.
 ````
 
----
 
-```{note} Documentation checklist
+```{admonition} Documentation checklist
 
   Which items to include depends on the number of users apart from yourself.
 
@@ -173,15 +132,9 @@ ago), with varying quality of documentation:
   - Contribution guide
 ```
 
----
-
-### Good resources
-
-- [A beginner’s guide to writing documentation](http://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)
-- [What nobody tells you about documentation](https://www.divio.com/blog/documentation/)
 
 ```{keypoints}
 - Documentation is part of the code and should be versionable.
 - Documentation (sources) should be tracked with the corresponding code in the same repository.
-- Use lightweight and standard markup languages such as reStructuredText or Markdown.
+- Use standard markup languages such as reStructuredText or Markdown.
 ```
