@@ -4,7 +4,10 @@ How to document your research software
 In this lesson we will discuss different solutions for implementing and
 deploying code documentation.
 
-We will learn how to build documentation with the
+We will start with a discussion about **what makes a good README**. For many
+projects, a README is more than enough.
+
+We will then learn how to build documentation with the
 **documentation generator** `Sphinx <http://www.sphinx-doc.org>`__ (and compare it
 with others) and how to
 deploy it to `Read the Docs <https://readthedocs.org>`__, a service which hosts
@@ -23,8 +26,10 @@ The approach that we will learn will be transferable to
 
    1. Basic understanding of Git.
 
-   2. You need to have `sphinx <http://www.sphinx-doc.org>`__ and `sphinx_rtd_theme <https://sphinx-rtd-theme.readthedocs.io/>`__ installed (as
-      part of your Python environment installation).
+   2. For the Sphinx part, You need to have `sphinx
+      <http://www.sphinx-doc.org>`__ and `sphinx_rtd_theme
+      <https://sphinx-rtd-theme.readthedocs.io/>`__ installed (they are part of
+      the `coderefinery environment <https://coderefinery.github.io/installation/conda-environment/>`__).
 
    3. For the `GitHub Pages <https://pages.github.com>`__ part you need a `GitHub <https://github.com>`__ account.
 
