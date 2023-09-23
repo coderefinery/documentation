@@ -41,10 +41,6 @@ We will have a closer look at this in the {ref}`writing-readme-files` episode.
 
 ## reStructuredText and Markdown
 
-- Two of the most popular lightweight markup languages.
-- reStructuredText (RST) has more features than Markdown but the choice is a matter of taste.
-- There are (unfortunately) [many flavors of Markdown](https://github.com/jgm/CommonMark/wiki/Markdown-Flavors).
-
 ```markdown
 # This is a section in Markdown   This is a section in RST
                                   ========================
@@ -70,6 +66,11 @@ There is more: images,            There is more: images,
 tables, links, ...                tables, links, ...
 ```
 
+- Two of the most popular lightweight markup languages.
+- reStructuredText (RST) has more features than Markdown but the choice is a matter of taste.
+- There are (unfortunately) [many flavors of Markdown](https://github.com/jgm/CommonMark/wiki/Markdown-Flavors).
+- Motivation to stick to a standard text-based format: **They make it easier to move the documentation to other tools
+  which also expect a standard format, as the project/organization grows**.
 - We will use [MyST](https://myst-parser.readthedocs.io/en/latest/)
   flavored Markdown in the {ref}`sphinx` episode and the
   {ref}`gh-pages` example.
