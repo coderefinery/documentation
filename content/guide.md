@@ -51,9 +51,9 @@ of time.
 - 09:10 - 09:15 Writing good README files - brief discussion
 - 09:15 - 09:35 **Exercises**, choosing either 1, 2 or 3 (or do multiple of time allows)
 - 09:35 - 09:40 Discussion
-- 09:40 - 09:50 Sphinx and markdown - discussion 
+- 09:40 - 09:50 Sphinx and markdown - discussion
 - 09:50 - 10:00 Break
-- 10:00 - 10:10 Exercise 1 as type along 
+- 10:00 - 10:10 Exercise 1 as type along
 - 10:10 - 10:30 **Exercise 2**, exercise 3 if time allows
 - 10:30 - 10:35 Discussion, going over exercise
 - 10:35 - 10:50 [Deploying Sphinx documentation to GitHub Pages](https://coderefinery.github.io/documentation/gh_workflow/#deploying-sphinx-documentation-to-github-pages) - Exercise 1 as demo
