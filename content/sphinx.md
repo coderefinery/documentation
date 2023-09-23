@@ -377,11 +377,23 @@ extensions = ['myst_parser', "sphinx.ext.autodoc"]
 `````
 
 
-## References and next steps
+## Good to know
 
+- The `_build` directory is a generated directory
+  and should not be part of the Git repository.  We recommend to add `_build`
+  to `.gitignore` to prevent you from accidentally adding files below
+  `_build` to the Git repository.
 - [sphinx-autobuild](https://pypi.org/project/sphinx-autobuild/)
   provides a local web server that will automatically refresh your view
   every time you save a file - which makes writing and testing much easier.
+- This is useful if you want to check the integrity of all internal and external links:
+  ```console
+  $ sphinx-build . -W -b linkcheck _build
+  ```
+
+
+## References
+
 - [Sphinx documentation](https://www.sphinx-doc.org/)
 - [Sphinx + ReadTheDocs guide](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/index.html)
 - For more Markdown functionality, see the [Markdown guide](https://www.markdownguide.org/basic-syntax/).

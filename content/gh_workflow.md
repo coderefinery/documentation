@@ -56,14 +56,6 @@ Inside the cloned repository, build the documentation and verify the result in y
 $ sphinx-build doc _build
 ```
 
-**Test HTML pages links**
-
-Inside the cloned repository, check the integrity of all internal and external links:
-
-```console
-$ sphinx-build doc -W -b linkcheck -d _build/doctrees _build/html
-```
-
 **Step 2:** Add the GitHub Action
 
 - Create a new file at `.github/workflows/documentation.yaml` with the contents
@@ -125,15 +117,6 @@ Finally, make some changes to your documentation
 - Some example results (figures, tables, ...)
 - Commit and push them, and verify that the documentation website refreshes after your changes (can take few seconds or a minute)
 ``````
-
-```{callout} Do not add the generated build directory to your repository
-The `_build` directory is generated locally with the command `sphinx-build
-doc _build` and allows you to check the content locally but it should not be
-part of the Git repository.  We recommend to add `_build` to `.gitignore` to
-prevent you from accidentally adding files below `_build` to the Git
-repository.
-```
-
 
 ## Alternatives to GitHub Pages
 
