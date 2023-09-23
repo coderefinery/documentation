@@ -336,70 +336,55 @@ This is an in-line equation, {math}`a^2 + b^2 = c^2`, embedded in text.
 
 ## Exercise: Sphinx autodoc
 
-````{exercise} (optional) Sphinx-4: Auto-generating documentation from docstrings.
+`````{exercise} (optional) Sphinx-4: Auto-generating documentation from Python docstrings
 
-1. Write some docstrings in functions and/or class definitions of `my-module` python module. You can use sphinx syntax as follows:
-
+1. Write some docstrings in functions and/or class definitions of an `example` python module:
 ```python
-def mean_temperature(data):
+def multiply(a: float, b: float) -> float:
     """
-    Get the mean temperature
+    Multiply two numbers.
 
-    :param data (pandas.DataFrame): A pandas dataframe with air temperature measurements.
-
-    :returns: The mean air temperature (float)
+    :param a: First number.
+    :param b: Second number.
+    :return: The product of a and b.
     """
-    temperatures = data['Air temperature (degC)']
-    return float(sum(temperatures)/len(temperatures))
+    return a * b
 ```
 
-2. In the the folder `doc-example` add a file `API.rst` with the following contents:
+2. Add a file `api.md` in the same folder as `index.rst`, with the following content:
+````md
+# API reference
 
-```rst
-Python API
-==========
+## example
 
-my-module
-+++++++++
-
-.. automodule:: my-module
+```{eval-rst}
+.. automodule:: example
    :members:
 ```
+````
 
-3. In the file `conf.py` add:
-
+3. In the file `conf.py` add 3 lines and modify "extensions":
 ```python
+# this is a trick to make sphinx find the modules in the parent directory
 import os
 import sys
+sys.path.insert(0, os.path.abspath("."))
 
-sys.path.insert(0, os.path.abspath("../"))
-
-# in extensions add "sphinx.ext.autodoc"
 extensions = ['myst_parser', "sphinx.ext.autodoc"]
 ```
 
-~~~{callout}
-If your working tree is different you might have to adapt the path passed in `sys.path.insert(0, os.path.abspath("../"))` such that it points to the python module.
-~~~
+4. List the `api.md` file in `index.rst`.
 
-4. In `index.rst` add `API` below `feature-a.md`. This will add a section with the contents of `API.rst`.
-5. Re-build the documentation and check the `API` section and how the docstrings get rendered.
-
-```bash
-cd doc-example
-sphinx-build . _build
-```
-
-````
-
-[sphinx-autobuild](https://pypi.org/project/sphinx-autobuild/)
-provides a local web server that will automatically refresh your view
-every time you save a file - which makes writing and testing much easier.
+5. Re-build the documentation and check the "API reference" section.
+`````
 
 ---
 
-## Where to find more
+## Next steps
 
+- [sphinx-autobuild](https://pypi.org/project/sphinx-autobuild/)
+  provides a local web server that will automatically refresh your view
+  every time you save a file - which makes writing and testing much easier.
 - [Sphinx documentation](https://www.sphinx-doc.org/)
 - [Sphinx + ReadTheDocs guide](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/index.html)
 - For more Markdown functionality, see the [Mardown guide](https://www.markdownguide.org/basic-syntax/).
