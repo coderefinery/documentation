@@ -85,11 +85,11 @@ The quickstart utility will ask you some questions. For this exercise, you can g
 with the default answers except to specify a project name, author name, and project release:
 
 ```
-Separate source and build directories (y/n) [n]: <hit enter>
-Project name: <your project name>
-Author name(s): <your name>
-Project release [0.1]: 0.1
-Project language [en]: <hit enter>
+> Separate source and build directories (y/n) [n]: <hit enter>
+> Project name: <your project name>
+> Author name(s): <your name>
+> Project release []: 0.1
+> Project language [en]: <hit enter>
 ```
 
 A couple of files and directories are created:
@@ -111,7 +111,7 @@ Let's have a look at the `index.rst` file, which is the main file of your docume
 
 ```rst
 .. myproject documentation master file, created by
-   sphinx-quickstart on Tue May 11 18:38:22 2021.
+   sphinx-quickstart on Sat Sep 23 17:35:26 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
@@ -121,7 +121,6 @@ Welcome to myproject's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
 
 
 Indices and tables
@@ -138,37 +137,29 @@ Indices and tables
 
 ```rst
 .. toctree::
-  :maxdepth: 2
-  :caption: Contents:
+   :maxdepth: 2
+   :caption: Contents:
 
-  feature-a.md
+   some-feature.md
 ```
-A common gotcha with directives is that **the first line of the content must be indented to the same level as the options (i.e., :maxdepth:)**.
+Note that `some-feature.md` needs to be indented to align with `:caption:`.
 
 We now need to tell Sphinx to use markdown files. To do this, we open
-`conf.py` and replace the lines
-
+`conf.py` and replace the line:
 ```python
-extensions = [
-]
+extensions = []
 ```
 
-with
-
+with this line so that Sphinx can parse Markdown files:
 ```python
 extensions = ['myst_parser']
-
-source_suffix = ['.rst', '.md']
 ```
 
-The first part tells Sphinx to use an extension to parse Markdown files
-and the second part tells it to actually look for those files.
-
-Let's create the file `feature-a.md` which we have just added to
-`index.rst` (note that one is `.rst` and one is `.md`):
+Let's create the file `some-feature.md` (in Markdown format) which we have just listed in
+`index.rst` (which uses reStructured Text format).
 
 ```md
-# Some Feature A
+# Some feature
 
 ## Subsection
 
@@ -187,60 +178,57 @@ Let's make a list (empty surrounding lines required):
 We now build the site:
 
 ```console
-$ ls
+$ ls -1
 
-_build  _static  _templates  conf.py  feature-a.md  index.rst
+_static
+_templates
+conf.py
+index.rst
+make.bat
+Makefile
+some-feature.md
 
 $ sphinx-build . _build
 
-Running Sphinx v3.5.4
-loading pickled environment... done
-building [mo]: targets for 0 po files that are out of date
-building [html]: targets for 1 source files that are out of date
-updating environment: 1 added, 1 changed, 0 removed
-reading sources... [100%] index
-looking for now-outdated files... none found
-pickling environment... done
-checking consistency... done
-preparing documents... done
-writing output... [100%] index
-generating indices... genindex
-writing additional pages... search
-copying static files... done
-copying extra files... done
-dumping search index in English (code: en) ... done
-dumping object inventory... done
+... lots of output ...
 build succeeded.
 
-$ ls _build
+The HTML pages are in _build.
 
-_sources  _static  feature-a.html  genindex.html  index.html  objects.inv search.html  searchindex.js
+$ ls -1 _build
+
+_sources
+_static
+genindex.html
+index.html
+objects.inv
+search.html
+searchindex.js
+some-feature.html
 ```
 
-Now open the file `_build/index.html` in your browser by:
-
-Linux users type:
-```console
-$ xdg-open _build/index.html
-```
-macOS users type:
-```console
-$ open _build/index.html
-```
-Windows users type:
-```console
-$ start _build/index.html
-```
-
-Others:
-
-enter `file:///home/user/doc-example/_build/index.html` in your browser (adapting the path to your case).
+Now open the file `_build/index.html` in your browser.
+- Linux users, type:
+  ```console
+  r xdg-open _build/index.html
+  ```
+- macOS users, type:
+  ```console
+  $ open _build/index.html
+  ```
+- Windows users, type:
+  ```console
+  $ start _build/index.html
+  ```
+- If the above does not work:
+  Enter `file:///home/user/doc-example/_build/index.html` in your browser (adapting the path to your case).
 
 Hopefully you can now see a website. If so, then you are able to build Sphinx pages locally.
 This is useful to check how things look before pushing changes to GitHub or elsewhere.
 
 Note that you can change the styling by editing `conf.py` and changing the value `html_theme`
-(for instance you can set it to `sphinx_rtd_theme` to have the Read the Docs look).
+(for instance you can set it to `sphinx_rtd_theme` (if you have that Python package installed)
+to have the Read the Docs look).
 ````
 
 
