@@ -225,20 +225,20 @@ to have the Read the Docs look).
 ````
 
 
-## Exercise: Sphinx content
+## Exercise: Adding more Sphinx content
 
-````{exercise} Sphinx-2: Add content to your example documentation
+`````{exercise} Sphinx-2: Add more content to your example documentation
 
-1. Add a entry below feature-a.md labeled *feature-b.md* to the `index.rst` file.
-2. Create a file `feature-b.md` in the same directory as your `feature-a.md` file.
-3. Add some content to feature-b, rebuild with `sphinx-build`, and refresh the browser to look at the results
-  ([Help](https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html)).
+1. Add a entry below `some-feature.md` labeled `another-feature.md` (or a better name) to the `index.rst` file.
+2. Create a file `another-feature.md` in the same directory as the `index.rst` file.
+3. Add some content to `another-feature.md`, rebuild with `sphinx-build . _build`, and refresh the browser to look at the results.
+4. Use the [MyST Typography](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html) page as help.
 
 Experiment with the following Markdown syntax:
 
 - \*Emphasized text\* and \*\*bold text\*\*
-- Headings
 
+- Headings:
 ```md
 # Level 1
 
@@ -249,10 +249,11 @@ Experiment with the following Markdown syntax:
 #### Level 4
 ```
 
-- An image: `![](image.png)`
-- `[A link](http://www.google.com)`
-- Numbered lists (numbers adjusted automatically)
+- An image: `![alt text](image.png)`
 
+- `[A link](http://www.google.com)`
+
+- Numbered lists (numbers adjusted automatically):
 ```md
 1. item 1
 2. item 2
@@ -261,64 +262,47 @@ Experiment with the following Markdown syntax:
 1. item 5
 ```
 
-- Simple tables
-
+- Simple tables:
 ```md
-
 | No.  |  Prime |
 | ---- | ------ |
 | 1    |  No    |
 | 2    |  Yes   |
 | 3    |  Yes   |
 | 4    |  No    |
-
 ```
 
-- Code block
-
-~~~md
-The following is a code block:
-```
+- Code blocks:
+````markdown
+The following is a Python code block:
+```python
   def hello():
       print("Hello world")
 ```
-~~~
 
-- Code block specifying syntax highlighting for other language than Python
+And this is a C code block:
+```c
+#include <stdio.h>
+int main()
+{
+    printf("Hello, World!");
+    return 0;
+}
+```
+````
 
-~~~md
- ```c
+- You could include an external file (here we assume a file called "example.py"
+  exists; at the same time we highlight lines 2 and 3):
+````markdown
+```{literalinclude} example.py
+:language: python
+:emphasize-lines: 2-3
+```
+````
 
-  #include <stdio.h>
-  int main()
-  {
-      printf("Hello, World!");
-      return 0;
-  }
- ```
-~~~
-- You could include the contents of an external file using `{include}` directive, as follows:
-
-~~~md
- ```{include} ../README.md
- ```
-~~~
-
-<!--
-Note, that this will not resolve e.g. image paths within README.md, use experimental feature `{literalinclude}` instead:
-
-~~~md
- ```
- {literalinclude} ../README.md
- :language: md
- ```
-~~~
--->
-
-- It is possible to combine `{include}` with code highlighting, line numbering, and even line highlighting.
 - We can also use Jupyter notebooks (*.ipynb) with Sphinx. It requires the
   [myst-nb](https://myst-nb.readthedocs.io/) extension to be installed.
-````
+`````
 
 
 ## Exercise: Sphinx and LaTeX
