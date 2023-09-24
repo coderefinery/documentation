@@ -35,3 +35,12 @@
   several or all branches as part of a workflow.
 - Read the Docs can serve several versions (several branches/tags) at the same time.
 - Some projects use both.
+
+
+**Consider making your development tutorial-driven**
+
+- Writing documentation is as important as writing software.
+- Focus on how you use the software.
+- If there is no tutorial on it, the feature "doesn't exist".
+- Don't keep tutorial in sync with code, keep code in sync with tutorial - change the tutorial first.
+- Read more in this [fantastic slide-deck](https://virtual.oxfordabstracts.com/#/event/public/3101/submission/11) about tutorial-driven development.
