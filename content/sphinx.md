@@ -377,6 +377,17 @@ extensions = ['myst_parser', "sphinx.ext.autodoc"]
 `````
 
 
+## Confused about reStructuredText vs. Markdown vs. MyST?
+
+- At the beginning there was reStructuredText and Sphinx was built for reStructuredText.
+- Independently, Markdown was invented and evolved into a couple of flavors.
+- Markdown became more and more popular but was limited compared to reStructuredText.
+- Later, [MyST](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html)
+  was invented to be able to write
+  something that looks like Markdown but in addition can do everything that
+  reStructuredText can do with extra directives.
+
+
 ## Good to know
 
 - The `_build` directory is a generated directory
