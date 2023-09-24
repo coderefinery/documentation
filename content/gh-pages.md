@@ -26,8 +26,8 @@ Here below, NAMESPACE can either be a username or an organizational account.
 - Generated from: https://github.com/**NAMESPACE**/**NAMESPACE**.github.io (main branch)
 
 **Project website**
-- Generated URL: https://**NAMESPACE**.github.io/**PROJECT**
-- Generated from: https://github.com/**NAMESPACE**/**PROJECT** (gh-pages branch)
+- Generated URL: https://**NAMESPACE**.github.io/**REPOSITORY**
+- Generated from: https://github.com/**NAMESPACE**/**REPOSITORY** (gh-pages branch)
 
 
 ## Exercise - Your own website on GitHub Pages
@@ -37,10 +37,9 @@ Here below, NAMESPACE can either be a username or an organizational account.
   - Follow the steps from GitHub Pages <https://pages.github.com/>.
     The documentation there is very good so there is no need for us to duplicate the screenshots.
   - Select "Project site".
-  - Select "Choose a theme" (for instance "Minimal").
-  - Click "Select theme".
-  - Adjust the README.md and commit.
-  - Browse your page on `http://username.github.io/repository` (adjust "username" and "repository").
+  - Select "Choose a theme".
+  - Follow the instructions on <https://pages.github.com/>.
+  - Browse your page on https://**USERNAME**.github.io/**REPOSITORY** (adjust "USERNAME" and "REPOSITORY").
 - Make a change to the repository after the webpage has been deployed for the first time.
 - Please wait few minutes and then verify that the change shows up on the website.
 ```
