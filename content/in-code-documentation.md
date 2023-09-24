@@ -8,178 +8,177 @@
 - What are docstrings and what information should go into docstrings?
 ```
 
-```{objectives}
-- Write docstrings according to best practices
-- Know where and when to put comments
-```
-
 In this episode we will learn how to write good documentation inside your code.
 
 
 ## Exercise - Writing good comments
 
 ````{exercise} In-code-1: Comments
-Let's take a look at two example comments (comments in python start with `#`):
+  Let's take a look at two example comments (comments in Python start with `#`):
 
-**Comment A**
-```python
-# Now we check if temperature is larger then -50:
-if temperature > -50:
-    print('do something')
-```
+  **Comment A**
+  ```python
+  # now we check if temperature is larger than -50
+  if temperature > -50:
+      print("ERROR: temperature is too low")
+  ```
 
-**Comment B**
-```python
-# We regard temperatures below -50 degrees as measurement errors
-if temperature > -50:
-    print('do something')
-```
-Which of these comments is best? Can you explain why?
-````
-```{solution} Solution
-Comment A describes **what** happens in this piece of code,
-whereas comment B describes **why** this piece of code is there, i.e. its **purpose**.
-Comments in the form of B are much more useful, comments of form A are redundant and we should avoid them.
-```
+  **Comment B**
+  ```python
+  # we regard temperatures below -50 degrees as measurement errors
+  if temperature > -50:
+      print("ERROR: temperature is too low")
+  ```
+  Which of these comments is more useful? Can you explain why?
 
-````{note}
-Do not use comments for:
+  ```{solution} Solution
+  - Comment A describes **what** happens in this piece of code. This can be
+    useful for somebody who has never seen Python or a program, but for somebody
+    who has, it can feel like a redundant commentary.
 
-**Keeping zombie code**
-```python
-# Do not run this code!:
-# if temperature > 0:
-#     print('It is warm')
-```
-Instead: just remove the code, you can always find it back in a previous version of your code in git.
-
-**Replacing git**
-```python
-# removed on August 5
-# if() ...
-# Now it connects to the API with o-auth2, updated 05/05/2016
-```
-Instead: use git to keep track of different versions of your code.
+  - Comment B is probably more useful as it describes **why** this piece of code
+    is there, i.e. its **purpose**.
+  ```
 ````
 
-## Writing docstrings in python
 
-Let's look at the following function:
-```python
-def mean_temperature(data):
-    temperatures = data['Air temperature (degC)']
-    return sum(temperatures)/len(temperatures)
-```
-It computes the mean temperature for a given dataset.
-How can we make it clearer what this function does and how to use it?
+## Sometimes version control is better than a comment
 
-We can add a **docstring** (the string in between the two `"""`):
-```python
-def mean_temperature(data):
-    """
-    Get the mean temperature
+````{admonition} Examples for code comments where Git is a better solution
+  **Keeping zombie code** "just in case" (rather use version control):
+  ```python
+  # do not run this code!
+  # if temperature > 0:
+  #     print("It is warm")
+  ```
+  Instead: Remove the code, you can always find it back in a previous version of your code in Git.
 
-    Args:
-        data (pandas.DataFrame): A pandas dataframe with air temperature measurements.
+  **Emulating version control**:
+  ```python
+  # John Doe: threshold changed from 0 to 15 on August 5, 2013
+  if temperature > 15:
+      print("It is warm")
+  ```
+  Instead: You can get this information from `git log` or `git show` or `git
+  annotate` or similar.
+````
 
-    Returns:
-        The mean air temperature (float)
-    """
-    temperatures = data['Air temperature (degC)']
-    return float(sum(temperatures)/len(temperatures))
-```
-A docstring is a structured comment associated to a segment of code (i.e. function or class)
 
-Good docstrings describe:
-* What the function does
-* What goes in (including the type of the input variables)
-* What goes out (including the return type)
+## What are "docstrings" and how can they be useful?
 
-In python there are several styles that describe how docstrings should be formatted.
-Here we use [Google style docstrings](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
+Here is function `fahrenheit_to_celsius` which converts temperature in
+Fahrenheit to Celsius, implemented in a couple of different languages.
+Your language is missing? Please contribute an example.
 
-Python parses docstrings, for example calling the `help` function will display it:
-```python
-help(mean_temperature)
-```
-Python will print this help text:
-```
-Help on function mean_temperature in module __main__:
+The first set of examples uses **regular comments**:
+````{tabs}
+  ```{group-tab} Python
+    ```{literalinclude} code/fahrenheit_to_celsius.py
+    :language: python
+    ```
+  ```
 
-mean_temperature(data)
-    Get the mean temperature
+  ```{group-tab} R
+    ```{literalinclude} code/fahrenheit_to_celsius.R
+    :language: R
+    ```
+  ```
 
-    Args:
-        data (pandas.DataFrame): A pandas dataframe with air temperature measurements.
+  ```{group-tab} Julia
+    ```{literalinclude} code/fahrenheit_to_celsius.jl
+    :language: Julia
+    ```
+  ```
 
-    Returns:
-        The mean air temperature (float)
-```
+  ```{group-tab} Fortran
+    ```{literalinclude} code/fahrenheit_to_celsius.f90
+    :language: fortran
+    ```
+  ```
+
+  ```{group-tab} C++
+    ```{literalinclude} code/fahrenheit_to_celsius.cpp
+    :language: C++
+    ```
+  ```
+
+  ```{group-tab} Rust
+    ```{literalinclude} code/fahrenheit_to_celsius.rs
+    :language: rust
+    ```
+  ```
+````
+
+The second set uses **docstrings or similar concepts**. Please compare the two
+(above and below):
+````{tabs}
+  ```{group-tab} Python
+    ```{literalinclude} code/fahrenheit_to_celsius_docstring.py
+    :language: python
+    ```
+    Read more: <https://peps.python.org/pep-0257/>
+  ```
+
+  ```{group-tab} R
+    ```{literalinclude} code/fahrenheit_to_celsius_docstring.R
+    :language: R
+    ```
+    Read more: <https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html>
+  ```
+
+  ```{group-tab} Julia
+    ```{literalinclude} code/fahrenheit_to_celsius_docstring.jl
+    :language: Julia
+    ```
+    Read more: <https://docs.julialang.org/en/v1/manual/documentation/>
+  ```
+
+  ```{group-tab} Fortran
+    ```{literalinclude} code/fahrenheit_to_celsius_docstring.f90
+    :language: fortran
+    ```
+    Read more: <https://en.wikibooks.org/wiki/Fortran/Documenting_Fortran>
+  ```
+
+  ```{group-tab} C++
+    ```{literalinclude} code/fahrenheit_to_celsius_docstring.cpp
+    :language: C++
+    ```
+    Read more: <https://www.doxygen.nl>
+  ```
+
+  ```{group-tab} Rust
+    ```{literalinclude} code/fahrenheit_to_celsius_docstring.rs
+    :language: rust
+    ```
+    Read more: <https://doc.rust-lang.org/rust-by-example/meta/doc.html>
+  ```
+````
+
+Docstrings can do a bit more than just comments:
+- Tools can generate help text automatically from the docstrings.
+- Tools can generate documentation pages automatically from code.
 
 It is common to write docstrings for functions, classes, and modules.
 
+Good docstrings describe:
+- What the function does
+- What goes in (including the type of the input variables)
+- What goes out (including the return type)
 
-````{callout} Script docstrings
-You can also add a **structured** docstring at the top of a script to document what the script does and how to run it.
-```python
-"""Prints information about the mean air temperature.
+**Naming is documentation**:
+Giving explicit, descriptive names to your code segments (functions, classes,
+variables) already provides very useful and important documentation. In
+practice you will find that for simple functions it is unnecessary to add a
+docstring when the function name and variable names already give enough
+information.
 
-Usage:
- ./temperature.py
+---
 
-Author:
- Sven van der Burg - 2021-03-2021
-"""
-```
-````
-
-````{callout} Small effort, large gain.
-Writing docstrings makes you generate your documentation as you are generating the code!
-````
-
-### Exercise: Adding in-code documentation
-
-````{exercise} In-code-2: add in-code documentation
-Update this code snippet so it is well-documented:
-```python
-import pandas as pd
-
-def x(a, print_columns=False):
-   b = pd.read_excel(a)
-   column_headers = list(b.columns.values)
-   if print_columns:
-       print("\n".join(column_headers))
-   return column_headers
-```
-````
-
-````{solution}
-```python
-import pandas as pd
-
-def get_spreadsheet_columns(file_loc, print_columns=False):
-   """Gets and prints the spreadsheet's header columns
-   Args:
-       file_loc (str): The file location of the spreadsheet
-       print_columns (bool, optional) : A flag used to print the columns to the console (default is False)
-   Returns:
-       a list of strings used that are the header columns
-   """
-   file_data = pd.read_excel(file_loc)
-   column_headers = list(file_data.columns.values)
-   if print_columns:
-       print("\n".join(column_headers))
-   return column_headers
-```
-````
-
-````{callout} Naming **is** documentation.
-Giving explicit, descriptive names to your code segments (functions, classes, variables) already provides very useful
-and important documentation. In practice you will find that for simple functions it is unnecessary to add a docstring
-when the function name and variable names already give enough information.
-````
-
-````{keypoints}
+```{keypoints}
 - Comments should describe the why for your code not the what.
-- Writing docstrings is an easy way to write documentation while you type code.
-````
+- Writing docstrings can be a good way to write documentation while you type
+  code since it also makes it possible
+  to query that information from outside the code or to auto-generate
+  documentation pages.
+```
