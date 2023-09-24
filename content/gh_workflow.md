@@ -7,7 +7,7 @@
 ## [GitHub Pages](https://pages.github.com/)
 
 - Serve websites from a GitHub repository.
-- It is no problem to serve using your own URL `http://myproject.org` instead of `http://myuser.github.io/myproject`.
+- It is no problem to serve using your own URL `https://myproject.org` instead of `https://myuser.github.io/myproject`.
 
 
 ## [GitHub Actions](https://github.com/features/actions/)

@@ -249,7 +249,7 @@ Experiment with the following Markdown syntax:
 
 - An image: `![alt text](image.png)`
 
-- `[A link](http://www.google.com)`
+- `[A link](https://www.example.org)`
 
 - Numbered lists (numbers adjusted automatically):
 ```md
@@ -408,13 +408,13 @@ extensions = ['myst_parser', "sphinx.ext.autodoc"]
 - [Sphinx documentation](https://www.sphinx-doc.org/)
 - [Sphinx + ReadTheDocs guide](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/index.html)
 - For more Markdown functionality, see the [Markdown guide](https://www.markdownguide.org/basic-syntax/).
-- For Sphinx additions, see [Sphinx Markup Constructs](http://www.sphinx-doc.org/en/master/markup/index.html).
+- For Sphinx additions, see [Sphinx Markup Constructs](https://www.sphinx-doc.org/en/master/markup/index.html).
 - [https://docs.python-guide.org/writing/documentation/](https://docs.python-guide.org/writing/documentation/)
 
 ```{keypoints}
 - Sphinx and Markdown is a powerful duo for writing documentation.
-- Another option is to use reStructuredText, see the [Sphinx documentation](http://www.sphinx-doc.org/en/stable/rest.html)
-  and the [quick-reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
+- Another option is to use reStructuredText, see the [Sphinx documentation](https://www.sphinx-doc.org/en/stable/rest.html)
+  and the [quick-reference](https://docutils.sourceforge.net/docs/user/rst/quickref.html)
 - In the next episode we will learn how to deploy the documentation to a cloud service and update it
   upon every `git push`.
 ```

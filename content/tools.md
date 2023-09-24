@@ -31,7 +31,7 @@ We will have a closer look at this in the {ref}`in-code-documentation` episode.
   - Versioned (goes with the code development)
   - It is often good enough to have a `README.md` or `README.rst` along with your code/script
 - If you use README files, use either
-  [RST](http://docutils.sourceforge.net/rst.html) or
+  [RST](https://docutils.sourceforge.net/rst.html) or
   [Markdown](https://commonmark.org/help/)
 - A great guide to README files: [MakeaREADME](https://www.makeareadme.com/)
 
@@ -74,7 +74,7 @@ tables, links, ...                tables, links, ...
 - We will use [MyST](https://myst-parser.readthedocs.io/en/latest/)
   flavored Markdown in the {ref}`sphinx` episode and the
   {ref}`gh-pages` example.
-- Nice resource to learn Markdown: [Learn Markdown in 60 seconds](http://commonmark.org/help/)
+- Nice resource to learn Markdown: [Learn Markdown in 60 seconds](https://commonmark.org/help/)
 - [Pandoc](https://pandoc.org/) can convert between MD and RST (and many other formats).
 
 ---
@@ -83,10 +83,10 @@ tables, links, ...                tables, links, ...
 
 There are many tools that can turn RST or Markdown into beautiful HTML pages:
 
-- [Sphinx](http://sphinx-doc.org) **← we will exercise this, this is how this lesson material is built**
+- [Sphinx](https://sphinx-doc.org) **← we will exercise this, this is how this lesson material is built**
   - Generate HTML/PDF/LaTeX from RST and Markdown.
   - Basically all Python projects use Sphinx but **Sphinx is not limited to Python**.
-  - [Read the docs](http://readthedocs.org)
+  - [Read the docs](https://readthedocs.org)
     hosts public Sphinx documentation for free!
   - Also hostable anywhere else, like Github pages.
   - API documentation possible.
@@ -145,7 +145,7 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - Has support for C, Fortran, Python, Java, etc.,
   see [Doxygen Github Repo](https://github.com/doxygen/doxygen)
 - Many keywords are understood by Doxygen:
-  [Doxygen special commands](http://www.doxygen.nl/manual/commands.html)
+  [Doxygen special commands](https://www.doxygen.nl/manual/commands.html)
 - Can be used to also generate higher-level ("human") documentation
 - Can be deployed to GiHub/GitLab/Bitbucket Pages
 

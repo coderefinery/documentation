@@ -74,8 +74,8 @@
   ```
   - offers formatting flexibility, enforces a basic document structure and the rendered documents can be exported to other formats (e.g. for printing). Also, the source can be read by humans without knowledge of the language in case the rendered document is unavailable.
   - We suggest to use either
-    [reStructuredText (RST)](http://docutils.sourceforge.net/rst.html) or
-    [Markdown](http://daringfireball.net/projects/markdown/) markup.
+    [reStructuredText (RST)](https://docutils.sourceforge.net/rst.html) or
+    [Markdown](https://daringfireball.net/projects/markdown/) markup.
   - GitHub and GitLab automatically render `README.md` or `README.rst` files.
 
 
