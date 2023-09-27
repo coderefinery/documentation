@@ -20,6 +20,14 @@ and the result side by side.
 Our goal in this episode is to build HTML pages locally on our computers.
 
 ````{prereq} Before we start, let us verify whether we have the software we need
+
+  You may need to activate your CodeRefinery conda environment we set up
+  in the installation instructions.  This was covered as part of the
+  installation instructions, but the most usual command to do this is:
+  ```console
+  $ conda activate coderefinery
+  ```
+
   Check whether Python is available
   (you should see a version; precise version is not so important):
   ```console
