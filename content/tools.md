@@ -83,7 +83,7 @@ tables, links, ...                tables, links, ...
 
 There are many tools that can turn RST or Markdown into beautiful HTML pages:
 
-- [Sphinx](https://sphinx-doc.org) **← we will exercise this, this is how this lesson material is built**
+- [Sphinx](https://www.sphinx-doc.org) **← we will exercise this, this is how this lesson material is built**
   - Generate HTML/PDF/LaTeX from RST and Markdown.
   - Basically all Python projects use Sphinx but **Sphinx is not limited to Python**.
   - [Read the docs](https://readthedocs.org)
