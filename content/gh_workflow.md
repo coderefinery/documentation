@@ -83,7 +83,7 @@ jobs:
 
 **Step 4**: Enable GitHub Pages
 - On GitHub go to "Settings" -> "Pages".
-- In the "Source" section, choose "Deploy form a branch" in the dropdown menu.
+- In the "Source" section, choose "Deploy from a branch" in the dropdown menu.
 - In the "Branch" section choose "gh-pages" and "/root" in the dropdown menus and click
   save.
 - You should now be able to verify the pages deployment in the Actions list).
