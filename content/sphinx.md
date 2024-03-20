@@ -209,7 +209,7 @@ some-feature.html
 Now open the file `_build/index.html` in your browser.
 - Linux users, type:
   ```console
-  r xdg-open _build/index.html
+  $ xdg-open _build/index.html
   ```
 - macOS users, type:
   ```console
