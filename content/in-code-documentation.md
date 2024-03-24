@@ -18,15 +18,15 @@ In this episode we will learn how to write good documentation inside your code.
 
   **Comment A**
   ```python
-  # now we check if temperature is larger than -50
-  if temperature > -50:
+  # now we check if temperature is below -50
+  if temperature < -50:
       print("ERROR: temperature is too low")
   ```
 
   **Comment B**
   ```python
   # we regard temperatures below -50 degrees as measurement errors
-  if temperature > -50:
+  if temperature < -50:
       print("ERROR: temperature is too low")
   ```
   Which of these comments is more useful? Can you explain why?
