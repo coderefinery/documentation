@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Popular tools and solutions &mdash; How to document your research software  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=187304be"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=582ca9e2"></script>
+        <script src="../_static/minipres.js?v=a0d29692"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="In-code documentation" href="../in-code-documentation/" />
+    <link rel="prev" title="Motivation and wishlist" href="../wishlist/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            How to document your research software
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">The lesson</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../wishlist/">Motivation and wishlist</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Popular tools and solutions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#in-code-documentation">In-code documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#readme-files">README files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#restructuredtext-and-markdown">reStructuredText and Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#html-static-site-generators">HTML static site generators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wikis">Wikis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#latex-pdf">LaTeX/PDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#doxygen">Doxygen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-tools">Other tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../in-code-documentation/">In-code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing-readme-files/">Writing good README files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/">Sphinx and Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh_workflow/">Deploying Sphinx documentation to GitHub Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh-pages/">Hosting websites/homepages on GitHub Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">Credit and license</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">How to document your research software</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Popular tools and solutions</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/documentation/blob/main/content/tools.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="popular-tools-and-solutions">
+<h1>Popular tools and solutions<a class="headerlink" href="#popular-tools-and-solutions" title="Link to this heading"></a></h1>
+<div class="admonition-questions questions admonition" id="questions-0">
+<p class="admonition-title">Questions</p>
+<ul class="simple">
+<li><p>What tools are out there?</p></li>
+<li><p>What are their pros and cons?</p></li>
+</ul>
+</div>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Choose the right tool for the right reason.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<section id="in-code-documentation">
+<h2>In-code documentation<a class="headerlink" href="#in-code-documentation" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Comments, function docstrings, …</p></li>
+<li><p>Advantages</p>
+<ul>
+<li><p>Good for programmers</p></li>
+<li><p>Version controlled alongside code</p></li>
+<li><p>Can be used to auto-generate documentation for functions/classes</p></li>
+</ul>
+</li>
+<li><p>Disadvantage</p>
+<ul>
+<li><p>Probably not enough for users of the code</p></li>
+</ul>
+</li>
+</ul>
+<p>We will have a closer look at this in the <a class="reference internal" href="../in-code-documentation/#in-code-documentation"><span class="std std-ref">In-code documentation</span></a> episode.</p>
+</section>
+<hr class="docutils" />
+<section id="readme-files">
+<h2>README files<a class="headerlink" href="#readme-files" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Advantages</p>
+<ul>
+<li><p>Versioned (goes with the code development)</p></li>
+<li><p>It is often good enough to have a <code class="docutils literal notranslate"><span class="pre">README.md</span></code> or <code class="docutils literal notranslate"><span class="pre">README.rst</span></code> along with your code/script</p></li>
+</ul>
+</li>
+<li><p>If you use README files, use either
+<a class="reference external" href="https://docutils.sourceforge.net/rst.html">RST</a> or
+<a class="reference external" href="https://commonmark.org/help/">Markdown</a></p></li>
+<li><p>A great guide to README files: <a class="reference external" href="https://www.makeareadme.com/">MakeaREADME</a></p></li>
+</ul>
+<p>We will have a closer look at this in the <a class="reference internal" href="../writing-readme-files/#writing-readme-files"><span class="std std-ref">Writing good README files</span></a> episode.</p>
+</section>
+<hr class="docutils" />
+<section id="restructuredtext-and-markdown">
+<h2>reStructuredText and Markdown<a class="headerlink" href="#restructuredtext-and-markdown" title="Link to this heading"></a></h2>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># This is a section in Markdown   This is a section in RST</span>
+                                  ========================
+
+<span class="gu">## This is a subsection           This is a subsection</span>
+                                  --------------------
+
+Nothing special needed for        Nothing special needed for
+a normal paragraph.               a normal paragraph.
+
+                                  ::
+
+    This is a code block          This is a code block
+
+
+<span class="gs">**Bold**</span> and <span class="ge">*emphasized*</span>.        <span class="gs">**Bold**</span> and <span class="ge">*emphasized*</span>.
+
+A list:                           A list:
+<span class="k">-</span><span class="w"> </span>this is an item                 - this is an item
+<span class="k">-</span><span class="w"> </span>another item                    - another item
+
+There is more: images,            There is more: images,
+tables, links, ...                tables, links, ...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Two of the most popular lightweight markup languages.</p></li>
+<li><p>reStructuredText (RST) has more features than Markdown but the choice is a matter of taste.</p></li>
+<li><p>There are (unfortunately) <a class="reference external" href="https://github.com/jgm/CommonMark/wiki/Markdown-Flavors">many flavors of Markdown</a>.</p></li>
+<li><p>Motivation to stick to a standard text-based format: <strong>They make it easier to move the documentation to other tools
+which also expect a standard format, as the project/organization grows</strong>.</p></li>
+<li><p>We will use <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">MyST</a>
+flavored Markdown in the <a class="reference internal" href="../sphinx/#sphinx"><span class="std std-ref">Sphinx and Markdown</span></a> episode and the
+<a class="reference internal" href="../gh-pages/#gh-pages"><span class="std std-ref">Hosting websites/homepages on GitHub Pages</span></a> example.</p></li>
+<li><p>Nice resource to learn Markdown: <a class="reference external" href="https://commonmark.org/help/">Learn Markdown in 60 seconds</a></p></li>
+<li><p><a class="reference external" href="https://pandoc.org/">Pandoc</a> can convert between MD and RST (and many other formats).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="html-static-site-generators">
+<h2>HTML static site generators<a class="headerlink" href="#html-static-site-generators" title="Link to this heading"></a></h2>
+<p>There are many tools that can turn RST or Markdown into beautiful HTML pages:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.sphinx-doc.org">Sphinx</a> <strong>← we will exercise this, this is how this lesson material is built</strong></p>
+<ul>
+<li><p>Generate HTML/PDF/LaTeX from RST and Markdown.</p></li>
+<li><p>Basically all Python projects use Sphinx but <strong>Sphinx is not limited to Python</strong>.</p></li>
+<li><p><a class="reference external" href="https://readthedocs.org">Read the docs</a>
+hosts public Sphinx documentation for free!</p></li>
+<li><p>Also hostable anywhere else, like Github pages.</p></li>
+<li><p>API documentation possible.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://jekyllrb.com">Jekyll</a></p>
+<ul>
+<li><p>Generates HTML from Markdown.</p></li>
+<li><p>GitHub supports this without adding extra build steps.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://pkgdown.r-lib.org/">pkgdown</a></p>
+<ul>
+<li><p>Popular in the R community</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.mkdocs.org/">MkDocs</a></p></li>
+<li><p><a class="reference external" href="https://www.gitbook.com/">GitBook</a></p></li>
+<li><p><a class="reference external" href="https://gohugo.io">Hugo</a></p></li>
+<li><p><a class="reference external" href="https://hexo.io">Hexo</a></p></li>
+<li><p><a class="reference external" href="https://www.getzola.org/">Zola</a> <strong>&lt;- this is what we use for our project website and workshop websites</strong></p></li>
+<li><p>There are many more …</p></li>
+</ul>
+<p>GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pages.github.com">GitHub Pages</a></p></li>
+<li><p><a class="reference external" href="https://pages.bitbucket.io/">Bitbucket Pages</a></p></li>
+<li><p><a class="reference external" href="https://pages.gitlab.io">GitLab Pages</a></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="wikis">
+<h2>Wikis<a class="headerlink" href="#wikis" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Popular solutions (but many others exist):</p>
+<ul>
+<li><p><a class="reference external" href="https://www.mediawiki.org">MediaWiki</a></p></li>
+<li><p><a class="reference external" href="https://www.dokuwiki.org">Dokuwiki</a></p></li>
+</ul>
+</li>
+<li><p>Advantage</p>
+<ul>
+<li><p>Barrier to write and edit is low</p></li>
+</ul>
+</li>
+<li><p>Disadvantages</p>
+<ul>
+<li><p>Typically disconnected from source code repository (<strong>reproducibility</strong>)</p></li>
+<li><p>Difficult to serve multiple versions</p></li>
+<li><p>Difficult to check out a specific old version</p></li>
+<li><p>Typically needs to be hosted and maintained</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="latex-pdf">
+<h2>LaTeX/PDF<a class="headerlink" href="#latex-pdf" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Advantage</p>
+<ul>
+<li><p>Popular and familiar in the physics and mathematics community</p></li>
+</ul>
+</li>
+<li><p>Disadvantages</p>
+<ul>
+<li><p>PDF format is not ideal for copy-pasting of examples</p></li>
+<li><p>Possible, but not trivial to automate rebuilding documentation after every Git push</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="doxygen">
+<h2>Doxygen<a class="headerlink" href="#doxygen" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Auto-generates API documentation</p></li>
+<li><p>Documented directly in the source code</p></li>
+<li><p>Popular in the C++ community</p></li>
+<li><p>Has support for C, Fortran, Python, Java, etc.,
+see <a class="reference external" href="https://github.com/doxygen/doxygen">Doxygen Github Repo</a></p></li>
+<li><p>Many keywords are understood by Doxygen:
+<a class="reference external" href="https://www.doxygen.nl/manual/commands.html">Doxygen special commands</a></p></li>
+<li><p>Can be used to also generate higher-level (“human”) documentation</p></li>
+<li><p>Can be deployed to GiHub/GitLab/Bitbucket Pages</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="other-tools">
+<h2>Other tools<a class="headerlink" href="#other-tools" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Fortran</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/Fortran-FOSS-Programmers/ford">Fortran Documenter (FORD)</a></p></li>
+</ul>
+</li>
+<li><p>Julia</p>
+<ul>
+<li><p><a class="reference external" href="https://franklinjl.org/">Franklin</a>: static site generator</p></li>
+<li><p><a class="reference external" href="https://juliadocs.github.io/Documenter.jl/stable/">Documenter.jl</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://quarto.org/">Quarto</a> converts markdown to websites, pdfs, ebooks and many other things</p></li>
+</ul>
+<hr class="docutils" />
+<div class="admonition-keypoints keypoints admonition" id="keypoints-0">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>Some popular solutions make reproducibility and maintenance of multiple code versions difficult.</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../wishlist/" class="btn btn-neutral float-left" title="Motivation and wishlist" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../in-code-documentation/" class="btn btn-neutral float-right" title="In-code documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

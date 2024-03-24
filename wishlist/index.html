@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motivation and wishlist &mdash; How to document your research software  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=187304be"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=582ca9e2"></script>
+        <script src="../_static/minipres.js?v=a0d29692"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Popular tools and solutions" href="../tools/" />
+    <link rel="prev" title="How to document your research software" href="../" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            How to document your research software
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">The lesson</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Motivation and wishlist</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#motivation">Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-do-we-expect-from-a-suitably-good-documentation">What do we expect from a suitably good documentation?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-checklist">Creating a checklist</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/">Popular tools and solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../in-code-documentation/">In-code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing-readme-files/">Writing good README files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/">Sphinx and Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh_workflow/">Deploying Sphinx documentation to GitHub Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh-pages/">Hosting websites/homepages on GitHub Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">Credit and license</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">How to document your research software</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Motivation and wishlist</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/documentation/blob/main/content/wishlist.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="motivation-and-wishlist">
+<h1>Motivation and wishlist<a class="headerlink" href="#motivation-and-wishlist" title="Link to this heading"></a></h1>
+<section id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Link to this heading"></a></h2>
+<div class="admonition-motivation-1-why-documenting-code discussion important admonition" id="discussion-0">
+<p class="admonition-title">Motivation-1: Why documenting code?</p>
+<p><strong>Use the collaborative document</strong>:</p>
+<ul class="simple">
+<li><p>Is project documentation important? Why?</p></li>
+<li><p>How would you describe a useful documentation?</p></li>
+<li><p>How can you motivate your colleagues to contribute to the documentation?</p></li>
+</ul>
+</div>
+<div class="admonition-our-motivation-but-let-us-brainstorm-first solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Our motivation (but let us brainstorm first)</p>
+<ul class="simple">
+<li><p>You will probably use your code in the future and may forget details.</p></li>
+<li><p>You may want others to use your code (almost impossible without documentation).</p></li>
+<li><p>You may want others to contribute to the code.</p></li>
+<li><p>Shield your limited time and let the documentation answer FAQs.</p></li>
+</ul>
+</div>
+</section>
+<section id="what-do-we-expect-from-a-suitably-good-documentation">
+<h2>What do we expect from a suitably good documentation?<a class="headerlink" href="#what-do-we-expect-from-a-suitably-good-documentation" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Documentation comes in different forms - what <em>is</em> documentation?</p>
+<ul class="simple">
+<li><p><strong>Tutorials</strong>: learning-oriented, allows the newcomer to get started</p></li>
+<li><p><strong>How-to guides</strong>: goal-oriented, shows how to solve a specific problem</p></li>
+<li><p><strong>Explanation</strong>: understanding-oriented, explains a concept</p></li>
+<li><p><strong>Reference</strong>: information-oriented, describes the machinery</p></li>
+</ul>
+<p>Read more:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.divio.com/blog/documentation/">https://www.divio.com/blog/documentation/</a></p></li>
+<li><p><a class="reference external" href="https://diataxis.fr/">https://diataxis.fr/</a></p></li>
+<li><p><a class="reference external" href="https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/">https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/</a></p></li>
+</ul>
+</div>
+<p><strong>There is no one size fits all</strong>: often for small projects a <code class="docutils literal notranslate"><span class="pre">README.md</span></code> or
+<code class="docutils literal notranslate"><span class="pre">README.rst</span></code> can be enough (more about these formats later).</p>
+</section>
+<section id="creating-a-checklist">
+<span id="checklist"></span><h2>Creating a checklist<a class="headerlink" href="#creating-a-checklist" title="Link to this heading"></a></h2>
+<div class="admonition-motivation-2-create-a-wishlist discussion important admonition" id="discussion-1">
+<p class="admonition-title">Motivation-2: Create a wishlist</p>
+<p><strong>Use the collaborative document</strong>:</p>
+<ul class="simple">
+<li><p>Let us create a wishlist for how we would like documentation to be.</p></li>
+<li><p>Below are some of our ideas but please do not look at them yet.</p></li>
+<li><p>We are sure you will come up with ideas we did not think about.</p></li>
+</ul>
+</div>
+<div class="admonition-our-wishlist-but-let-us-brainstorm-first solution important dropdown admonition" id="solution-1">
+<p class="admonition-title">Our wishlist (but let us brainstorm first)</p>
+<p><strong>Versions</strong></p>
+<ul class="simple">
+<li><p>Your code project should be versioned (version control).</p></li>
+<li><p>Enable reproducibility and avoid confusion: <strong>documentation should be versioned</strong> as well.</p></li>
+<li><p>Have you ever seen: <em>“We will soon release a new version and are updating the documentation.
+Some features may not be available in the version you have downloaded.”</em>?</p></li>
+</ul>
+<p><strong>Documentation should be placed and tracked close to the source code</strong></p>
+<ul class="simple">
+<li><p>Documenting <strong>close to the source code</strong> (e.g. subdirectory <code class="docutils literal notranslate"><span class="pre">doc/</span></code>) minimizes barrier to contribute.</p></li>
+<li><p>I should not need to log in to another machine or service and jump through hoops to contribute.</p></li>
+<li><p>It is often good enough to have a <code class="docutils literal notranslate"><span class="pre">README.md</span></code> or <code class="docutils literal notranslate"><span class="pre">README.rst</span></code> along with your code/script.</p></li>
+</ul>
+<p><strong>Use a standard markup language</strong></p>
+<div class="admonition-markup instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Markup</p>
+<p>Markup is a set of human readable instructions that is used to tell the computer how a document shall be styled and structured. By using a markup language we can for example write a <code class="docutils literal notranslate"><span class="pre">*</span></code> or <code class="docutils literal notranslate"><span class="pre">-</span></code> where we want a bullet point to appear in the rendered document.</p>
+</div>
+<ul class="simple">
+<li><p>offers formatting flexibility, enforces a basic document structure and the rendered documents can be exported to other formats (e.g. for printing). Also, the source can be read by humans without knowledge of the language in case the rendered document is unavailable.</p></li>
+<li><p>We suggest to use either
+<a class="reference external" href="https://docutils.sourceforge.net/rst.html">reStructuredText (RST)</a> or
+<a class="reference external" href="https://daringfireball.net/projects/markdown/">Markdown</a> markup.</p></li>
+<li><p>GitHub and GitLab automatically render <code class="docutils literal notranslate"><span class="pre">README.md</span></code> or <code class="docutils literal notranslate"><span class="pre">README.rst</span></code> files.</p></li>
+</ul>
+<p><strong>Copy-paste-able</strong></p>
+<ul class="simple">
+<li><p>PDF alone is not enough since <strong>copy-pasting out of a PDF document can be difficult</strong>.</p></li>
+<li><p>It is OK to provide a generated PDF in addition to a copy-paste-able format.</p></li>
+</ul>
+<p><strong>Written by humans</strong></p>
+<ul class="simple">
+<li><p>Automatically generated documentation (e.g. API documentation) is useful as
+complementary documentation but it does not replace tutorials written by
+humans.</p></li>
+</ul>
+<p><strong>Installation instructions</strong></p>
+<ul class="simple">
+<li><p>Give <strong>step by step instructions for the basic case</strong>.
+Additional information and caveats can be linked from there.</p></li>
+<li><p>List requirements and dependencies (libraries, compilers, environment).</p></li>
+<li><p>Include instructions for how to test for correctness after installation.</p></li>
+</ul>
+<p><strong>Make the license explicit</strong></p>
+<ul class="simple">
+<li><p><strong>Include a LICENSE file</strong> with your source code.</p></li>
+<li><p>Without a license, your work is under exclusive copyright by default:
+others are not allowed to re-use or modify anything.</p></li>
+<li><p>GitHub and GitLab allows to choose a license from common license templates.</p></li>
+</ul>
+<p><strong>Information for contributors</strong></p>
+<ul class="simple">
+<li><p>Make it easy for others to contribute: <strong>document how you prefer others to contribute</strong>.</p></li>
+<li><p>Users of your code may be shy to contribute code.
+Your <strong>documentation provides a platform for your first contributions</strong>.</p></li>
+</ul>
+</div>
+<div class="admonition-documentation-checklist admonition">
+<p class="admonition-title">Documentation checklist</p>
+<p>Which items to include depends on the number of users apart from yourself.</p>
+<ul class="simple">
+<li><p>Purpose</p></li>
+<li><p>Authors</p></li>
+<li><p>License</p></li>
+<li><p>Recommended citation</p></li>
+<li><p>Copy-paste-able example to get started</p></li>
+<li><p>Dependencies and their versions or version ranges</p></li>
+<li><p>Installation instructions</p></li>
+<li><p>Tutorials covering key functionality</p></li>
+<li><p>Reference documentation (e.g. API) covering all functionality</p></li>
+<li><p>How do you want to be asked questions (mailing list or forum or chat or issue tracker)</p></li>
+<li><p>Possibly a FAQ section</p></li>
+<li><p>Contribution guide</p></li>
+</ul>
+</div>
+<div class="admonition-keypoints keypoints admonition" id="keypoints-0">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>Documentation is part of the code and should be versionable.</p></li>
+<li><p>Documentation (sources) should be tracked with the corresponding code in the same repository.</p></li>
+<li><p>Use standard markup languages such as reStructuredText or Markdown.</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../" class="btn btn-neutral float-left" title="How to document your research software" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../tools/" class="btn btn-neutral float-right" title="Popular tools and solutions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

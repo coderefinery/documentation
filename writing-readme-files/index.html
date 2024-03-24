@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing good README files &mdash; How to document your research software  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=187304be"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=582ca9e2"></script>
+        <script src="../_static/minipres.js?v=a0d29692"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Sphinx and Markdown" href="../sphinx/" />
+    <link rel="prev" title="In-code documentation" href="../in-code-documentation/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            How to document your research software
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">The lesson</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../wishlist/">Motivation and wishlist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/">Popular tools and solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../in-code-documentation/">In-code documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Writing good README files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#exercise-have-fun-testing-some-readme-features">Exercise: Have fun testing some README features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercise-improve-the-readme-for-your-own-project">Exercise: Improve the README for your own project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercise-discuss-the-readme-of-a-project-that-you-use">Exercise: Discuss the README of a project that you use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table-of-contents-in-readme-files">Table of contents in README files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/">Sphinx and Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh_workflow/">Deploying Sphinx documentation to GitHub Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh-pages/">Hosting websites/homepages on GitHub Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">Credit and license</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">How to document your research software</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Writing good README files</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/documentation/blob/main/content/writing-readme-files.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="writing-good-readme-files">
+<span id="writing-readme-files"></span><h1>Writing good README files<a class="headerlink" href="#writing-good-readme-files" title="Link to this heading"></a></h1>
+<p>The README file (often <code class="docutils literal notranslate"><span class="pre">README.md</span></code> or <code class="docutils literal notranslate"><span class="pre">README.rst</span></code>) is usually the first thing
+users/collaborators see when visiting your GitHub repository.</p>
+<p>Use it to communicate important information about your project!  For many
+smaller or mid-size projects, this is enough documentation.  It’s not that hard
+to make a basic one, and it’s easy to expand as needed.</p>
+<section id="exercise-have-fun-testing-some-readme-features">
+<h2>Exercise: Have fun testing some README features<a class="headerlink" href="#exercise-have-fun-testing-some-readme-features" title="Link to this heading"></a></h2>
+<div class="admonition-exercise-readme-1-have-fun-testing-some-readme-features-you-may-not-have-heard-about exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise README-1: Have fun testing some README features you may not have heard about</p>
+<ul>
+<li><p>Test the effect of adding the following to your GitHub README (<a class="reference external" href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts">read
+more</a>):</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">&gt; </span><span class="ge">[!NOTE]</span>
+<span class="k">&gt; </span><span class="ge">Highlights information that users should take into account, even when skimming.</span>
+
+<span class="k">&gt; </span><span class="ge">[!IMPORTANT]</span>
+<span class="k">&gt; </span><span class="ge">Crucial information necessary for users to succeed.</span>
+
+<span class="k">&gt; </span><span class="ge">[!WARNING]</span>
+<span class="k">&gt; </span><span class="ge">Critical content demanding immediate user attention due to potential risks.</span>
+</pre></div>
+</div>
+</li>
+<li><p>For more detailed descriptions which you don’t want to show by default you
+might find this useful (please try it out):</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>&lt;details&gt;
+&lt;summary&gt;
+Short summary
+&lt;/summary&gt;
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+&lt;/details&gt;
+</pre></div>
+</div>
+</li>
+<li><p>Would you like to add a badge like this one: <a class="reference external" href="https://example.org"><img alt="please replace with alt text" src="https://img.shields.io/badge/anytext-youlike-blue" /></a>?</p>
+<p>Badge that links to a website (see also <a class="reference external" href="https://shields.io/">https://shields.io/</a>):</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>[<span class="nt">![please replace with alt text</span>](<span class="na">https://img.shields.io/badge/anytext-youlike-blue</span>)](https://example.org)
+</pre></div>
+</div>
+<p>Badge without link:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>![<span class="nt">please replace with alt text</span>](<span class="na">https://img.shields.io/badge/anytext-youlike-blue</span>)
+</pre></div>
+</div>
+</li>
+<li><p>Know about other tips and tricks? Please share them (send a pull request to this lesson).</p></li>
+</ul>
+</div>
+</section>
+<section id="exercise-improve-the-readme-for-your-own-project">
+<h2>Exercise: Improve the README for your own project<a class="headerlink" href="#exercise-improve-the-readme-for-your-own-project" title="Link to this heading"></a></h2>
+<div class="admonition-exercise-readme-2-draft-or-improve-a-readme-for-one-of-your-recent-projects exercise important admonition" id="exercise-1">
+<p class="admonition-title">Exercise README-2: Draft or improve a README for one of your recent projects</p>
+<p>Try to draft a brief README or review a README which you have written for one
+of your projects.</p>
+<ul class="simple">
+<li><p>You can do that either by screensharing and discussing or working individually.</p></li>
+<li><p>Use the <a class="reference internal" href="../wishlist/#checklist"><span class="std std-ref">checklist</span></a> which we have discussed earlier.</p></li>
+<li><p>Think about the user (<strong>which can be a future you</strong>) of your project, what does this user need to know to use or
+contribute to the project? And how do you make your project attractive to use or contribute to?</p></li>
+<li><p>(Optional): Try the <a class="reference external" href="https://hemingwayapp.com/">https://hemingwayapp.com/</a> to analyse your README file and make your writing bold and clear.</p></li>
+<li><p>Please note observations and recommendations in the collaborative notes.</p></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exercise-discuss-the-readme-of-a-project-that-you-use">
+<h2>Exercise: Discuss the README of a project that you use<a class="headerlink" href="#exercise-discuss-the-readme-of-a-project-that-you-use" title="Link to this heading"></a></h2>
+<div class="admonition-exercise-readme-3-review-and-discuss-a-readme-of-a-project-that-you-have-used exercise important admonition" id="exercise-2">
+<p class="admonition-title">Exercise README-3: Review and discuss a README of a project that you have used</p>
+<p>In this exercise we will review and discuss a README of a project which you
+have used. You can also review a library which is popular in your domain of
+research and discuss their README.</p>
+<ul class="simple">
+<li><p>You can do that either by screensharing and discussing or working individually.</p></li>
+<li><p>When discussing other people’s projects please remember to be respectful and
+constructive. The goal of this exercise is not to criticize other projects but
+to learn from other projects and to collect the aspects that you enjoyed
+finding in a README and to also collect aspects which you have searched for but
+which are sometimes missing.</p></li>
+<li><p>Please note observations and recommendations in the collaborative notes.</p></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="table-of-contents-in-readme-files">
+<h2>Table of contents in README files<a class="headerlink" href="#table-of-contents-in-readme-files" title="Link to this heading"></a></h2>
+<ul>
+<li><p>GitHub automatically generates a <a class="reference external" href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes#auto-generated-table-of-contents-for-readme-files">table of contents for README.md files</a>.</p></li>
+<li><p>On GitLab you can generate a TOC in Markdown with:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>[[_TOC_]]
+</pre></div>
+</div>
+</li>
+<li><p>With RST you can generate a table of contents (TOC) automatically by adding:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">contents</span><span class="p">::</span> Table of Contents
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../in-code-documentation/" class="btn btn-neutral float-left" title="In-code documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../sphinx/" class="btn btn-neutral float-right" title="Sphinx and Markdown" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

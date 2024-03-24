@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deploying Sphinx documentation to GitHub Pages &mdash; How to document your research software  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=187304be"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=582ca9e2"></script>
+        <script src="../_static/minipres.js?v=a0d29692"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Hosting websites/homepages on GitHub Pages" href="../gh-pages/" />
+    <link rel="prev" title="Sphinx and Markdown" href="../sphinx/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            How to document your research software
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">The lesson</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../wishlist/">Motivation and wishlist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/">Popular tools and solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../in-code-documentation/">In-code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing-readme-files/">Writing good README files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/">Sphinx and Markdown</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Deploying Sphinx documentation to GitHub Pages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#github-pages">GitHub Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github-actions">GitHub Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#our-goal-putting-it-all-together">Our goal: putting it all together</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercise-deploy-sphinx-documentation-to-github-pages">Exercise - Deploy Sphinx documentation to GitHub Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#alternatives-to-github-pages">Alternatives to GitHub Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#migrating-your-own-documentation-to-sphinx">Migrating your own documentation to Sphinx</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gh-pages/">Hosting websites/homepages on GitHub Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">Credit and license</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">How to document your research software</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Deploying Sphinx documentation to GitHub Pages</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/documentation/blob/main/content/gh_workflow.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="deploying-sphinx-documentation-to-github-pages">
+<h1>Deploying Sphinx documentation to GitHub Pages<a class="headerlink" href="#deploying-sphinx-documentation-to-github-pages" title="Link to this heading"></a></h1>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Create a basic workflow which you can take home and adapt for your project.</p></li>
+</ul>
+</div>
+<section id="github-pages">
+<h2><a class="reference external" href="https://pages.github.com/">GitHub Pages</a><a class="headerlink" href="#github-pages" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Serve websites from a GitHub repository.</p></li>
+<li><p>It is no problem to serve using your own URL <code class="docutils literal notranslate"><span class="pre">https://myproject.org</span></code> instead of <code class="docutils literal notranslate"><span class="pre">https://myuser.github.io/myproject</span></code>.</p></li>
+</ul>
+</section>
+<section id="github-actions">
+<h2><a class="reference external" href="https://github.com/features/actions/">GitHub Actions</a><a class="headerlink" href="#github-actions" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Automatically runs code when your repository changes.</p></li>
+<li><p>We will let it run <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> and make the result available to GitHub Pages.</p></li>
+</ul>
+</section>
+<section id="our-goal-putting-it-all-together">
+<h2>Our goal: putting it all together<a class="headerlink" href="#our-goal-putting-it-all-together" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Host source code with documentation sources on a public Git repository.</p></li>
+<li><p>Each time we <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> to the repository, a GitHub action triggers to
+rebuild the documentation.</p></li>
+<li><p>The documentation is pushed to a separate branch called ‘gh-pages’.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="exercise-deploy-sphinx-documentation-to-github-pages">
+<h2>Exercise - Deploy Sphinx documentation to GitHub Pages<a class="headerlink" href="#exercise-deploy-sphinx-documentation-to-github-pages" title="Link to this heading"></a></h2>
+<div class="admonition-gh-pages-1-deploy-sphinx-documentation-to-github-pages exercise important admonition" id="exercise-0">
+<p class="admonition-title">GH-Pages-1: Deploy Sphinx documentation to GitHub Pages</p>
+<p>In this exercise we will create an example repository on GitHub and
+deploy it to GitHub Pages.</p>
+<p><strong>Step 1</strong>: Go to the <a class="reference external" href="https://github.com/coderefinery/documentation-example/generate">documentation-example</a> project template
+on GitHub and create a copy to your namespace.</p>
+<ul class="simple">
+<li><p>Give it a name, for instance “documentation-example”.</p></li>
+<li><p>You don’t need to “Include all branches”</p></li>
+<li><p>Click on “Create a repository”.</p></li>
+</ul>
+<p><strong>Step 2</strong>: Browse the new repository.</p>
+<ul class="simple">
+<li><p>It will look very familar to the previous episode.</p></li>
+<li><p>However, we have moved the documentation part under <code class="docutils literal notranslate"><span class="pre">doc/</span></code> (many projects do it this
+way). But it is still a Sphinx documentation project.</p></li>
+<li><p>The source code for your project could then go under <code class="docutils literal notranslate"><span class="pre">src/</span></code>.</p></li>
+</ul>
+<p><strong>Step 3</strong>: Add the GitHub Action to your new Git repository.</p>
+<ul class="simple">
+<li><p>Add a new file at <code class="docutils literal notranslate"><span class="pre">.github/workflows/documentation.yml</span></code> (either through terminal or web interface), containing:</p></li>
+</ul>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">documentation</span>
+
+<span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">pull_request</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">workflow_dispatch</span><span class="p p-Indicator">]</span>
+
+<span class="nt">permissions</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">docs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v3</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">pip install sphinx sphinx_rtd_theme myst_parser</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sphinx build</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">sphinx-build doc _build</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to GitHub Pages</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peaceiris/actions-gh-pages@v3</span>
+<span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.event_name == &#39;push&#39; &amp;&amp; github.ref == &#39;refs/heads/main&#39; }}</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">publish_branch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gh-pages</span>
+<span class="w">          </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
+<span class="w">          </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">_build/</span>
+<span class="w">          </span><span class="nt">force_orphan</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>You don’t need to understand all of the above, but you
+might spot familiar commands in the <code class="docutils literal notranslate"><span class="pre">run:</span></code> sections.</p></li>
+<li><p>After the file has been committed (and pushed),
+check the action at <code class="docutils literal notranslate"><span class="pre">https://github.com/USER/documentation-example/actions</span></code>
+(replace <code class="docutils literal notranslate"><span class="pre">USER</span></code> with your GitHub username).</p></li>
+</ul>
+<p><strong>Step 4</strong>: Enable GitHub Pages</p>
+<ul class="simple">
+<li><p>On GitHub go to “Settings” -&gt; “Pages”.</p></li>
+<li><p>In the “Source” section, choose “Deploy from a branch” in the dropdown menu.</p></li>
+<li><p>In the “Branch” section choose “gh-pages” and “/root” in the dropdown menus and click
+save.</p></li>
+<li><p>You should now be able to verify the pages deployment in the Actions list).</p></li>
+</ul>
+<p><strong>Step 5</strong>: Verify the result</p>
+<ul class="simple">
+<li><p>Your site should now be live on <code class="docutils literal notranslate"><span class="pre">https://USER.github.io/documentation-example/</span></code> (replace USER).</p></li>
+</ul>
+<p><strong>Step 6</strong>: Verify refreshing the documentation</p>
+<ul class="simple">
+<li><p>Commit some changes to your documentation</p></li>
+<li><p>Verify that the documentation website refreshes after your changes (can take few seconds or a minute)</p></li>
+</ul>
+</div>
+</section>
+<section id="alternatives-to-github-pages">
+<h2>Alternatives to GitHub Pages<a class="headerlink" href="#alternatives-to-github-pages" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.gitlab.com/ee/user/project/pages/">GitLab Pages</a>
+and <a class="reference external" href="https://docs.gitlab.com/ee/ci/">GitLab CI</a> can create a very similar workflow.</p></li>
+<li><p><a class="reference external" href="https://readthedocs.org">Read the Docs</a> is the most common alternative to
+hosting in GitHub Pages.</p></li>
+<li><p>Sphinx builds HTML files (this is what static site generators do), and you
+can host them anywhere, for example your university’s web space or own web server.</p></li>
+</ul>
+</section>
+<section id="migrating-your-own-documentation-to-sphinx">
+<h2>Migrating your own documentation to Sphinx<a class="headerlink" href="#migrating-your-own-documentation-to-sphinx" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>First convert your documentation to Markdown using <a class="reference external" href="https://pandoc.org">Pandoc</a>.</p></li>
+<li><p>Create a file <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> which lists all other Markdown files and provides the
+table of contents.</p></li>
+<li><p>Add a <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file. You can generate a starting point for <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> and
+<code class="docutils literal notranslate"><span class="pre">index.rst</span></code> with <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>, or you can take the examples in this
+lesson as inspiration.</p></li>
+<li><p>Test building the documentation locally with <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code>.</p></li>
+<li><p>Once this works, follow the above steps to build and deploy to GitHub Pages or some other web space.</p></li>
+</ul>
+<hr class="docutils" />
+<div class="admonition-keypoints keypoints admonition" id="keypoints-0">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>Sphinx makes simple HTML (and more) files, so it is easy to find a place to host them.</p></li>
+<li><p>Github Pages + Github Actions provides a convenient way to make
+sites and host them on the web.</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../sphinx/" class="btn btn-neutral float-left" title="Sphinx and Markdown" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../gh-pages/" class="btn btn-neutral float-right" title="Hosting websites/homepages on GitHub Pages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

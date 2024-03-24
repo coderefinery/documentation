@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instructor guide &mdash; How to document your research software  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=187304be"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=582ca9e2"></script>
+        <script src="../_static/minipres.js?v=a0d29692"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Credit and license" href="../license/" />
+    <link rel="prev" title="List of exercises" href="../exercises/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            How to document your research software
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">The lesson</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../wishlist/">Motivation and wishlist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/">Popular tools and solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../in-code-documentation/">In-code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing-readme-files/">Writing good README files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/">Sphinx and Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh_workflow/">Deploying Sphinx documentation to GitHub Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh-pages/">Hosting websites/homepages on GitHub Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Instructor guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#why-we-teach-this-lesson">Why we teach this lesson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#intended-learning-outcomes">Intended learning outcomes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#timing">Timing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#detailed-schedule">Detailed schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#place-this-lesson-towards-the-end-of-the-workshop">Place this lesson towards the end of the workshop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#character-encoding-issues">Character encoding issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#live-better-than-reading-the-website-material">Live better than reading the website material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#field-reports">Field reports</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#september">2022 September</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">Credit and license</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">How to document your research software</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Instructor guide</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/documentation/blob/main/content/guide.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="instructor-guide">
+<h1>Instructor guide<a class="headerlink" href="#instructor-guide" title="Link to this heading"></a></h1>
+<section id="why-we-teach-this-lesson">
+<h2>Why we teach this lesson<a class="headerlink" href="#why-we-teach-this-lesson" title="Link to this heading"></a></h2>
+<p>Everyone should document their code, even if they’re working alone.</p>
+<p>These are the main points:</p>
+<ul class="simple">
+<li><p>Code documentation has to be versionnable and branchable</p></li>
+<li><p>Code documentation should be tracked together with the source code</p></li>
+<li><p>README is often enough</p></li>
+</ul>
+<p><strong>Please do not skim over the two above points</strong>. Please take few minutes to
+explain why documentation (sources) should be tracked together with the source
+code.  Please discuss this aspect with workshop participants and connect it to
+<strong>reproducibility</strong>. This is for me (Radovan) the most important take-home
+message.</p>
+<p>Specific motivations:</p>
+<ul class="simple">
+<li><p>Code documentation becomes quickly unmanageable if not part of the source code.</p></li>
+<li><p>It helps people to quickly use your code thus reducing the time spent to explain over and again to new users.</p></li>
+<li><p>It helps people to collaborate.</p></li>
+<li><p>It improves the design of your code.</p></li>
+</ul>
+</section>
+<section id="intended-learning-outcomes">
+<h2>Intended learning outcomes<a class="headerlink" href="#intended-learning-outcomes" title="Link to this heading"></a></h2>
+<p>By the end of this lesson, learners should:</p>
+<ul class="simple">
+<li><p>Understand the importance of writing code documentation together with the source code</p></li>
+<li><p>Know what makes a good documentation</p></li>
+<li><p>Learn what tools can be used for writing documentation</p></li>
+<li><p>Be able to motivate a balanced decision: sometimes READMEs are absolutely enough</p></li>
+</ul>
+</section>
+<section id="timing">
+<h2>Timing<a class="headerlink" href="#timing" title="Link to this heading"></a></h2>
+<p>As an instructor you should prepare all bullet points but do not go through
+each bullet point in detail. Only highlight the main points and rather give
+time for a discussion. Leave details for a later lecture for those who want to
+find out more. If you go through each bullet point in detail, the motivation
+can easily take up 30 minutes and you will run out of time.</p>
+<p>The lesson does not fit into 1.5 hours if you go through everything. Optimize
+for discussions and prepare well to be able to jump over bullet points which
+can be left for a later lecture. Some sections can be skipped if needed (see
+below). However, we recommend to have a discussion with your learners to make
+them aware of what the training material contains.</p>
+<ul class="simple">
+<li><p>Do not insist on practicing Markdown or RST syntax.</p></li>
+<li><p>The section <em>Rendering (LaTeX) math equations</em> may be optional if your
+attendees do not have to deal with equations.</p></li>
+<li><p>In the GitHub Pages episode, the
+goal is not anymore to write code documentation but to show how to build
+project website with GitHub. If time is tight, the GitHub pages episode can be
+skipped or can be done as demonstration instead of exercise.</p></li>
+</ul>
+</section>
+<section id="detailed-schedule">
+<h2>Detailed schedule<a class="headerlink" href="#detailed-schedule" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>09:00 - 09:10 Motivation and tools</p>
+<ul>
+<li><p>create a wishlist in collaborative notes</p></li>
+</ul>
+</li>
+<li><p>09:10 - 09:20 Writing good README files</p>
+<ul>
+<li><p>brief discussion</p></li>
+</ul>
+</li>
+<li><p>09:20 - 09:40 <strong>Exercises</strong>: README-1, README-2, README-3 (choose one or multiple)</p></li>
+<li><p>09:40 - 10:00 Sphinx and Markdown: Sphinx-1 as type along</p></li>
+<li><p>10:00 - 10:10 Break</p></li>
+<li><p>10:10 - 10:40 <strong>Exercises</strong>, Sphinx-2, Sphinx-3, GH-Pages-1</p></li>
+<li><p>10:40 - 11:00 Discussion, GH Pages, Summary</p></li>
+</ul>
+</section>
+<section id="place-this-lesson-towards-the-end-of-the-workshop">
+<h2>Place this lesson towards the end of the workshop<a class="headerlink" href="#place-this-lesson-towards-the-end-of-the-workshop" title="Link to this heading"></a></h2>
+<p>Reason is that with collaborative Git we can create more interesting
+documentation exercises. Currently there are some elements of forking and
+pushing and this is only really introduced on day two.  We have tried this
+lesson on day one and it felt too early and disconnected/abrupt.  It works best
+after the reproducibility lesson since we then reuse the example and it feels
+familiar.</p>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<section id="character-encoding-issues">
+<h3>Character encoding issues<a class="headerlink" href="#character-encoding-issues" title="Link to this heading"></a></h3>
+<p>Can arise when using non-utf8 characters in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>. Diagnose this with <code class="docutils literal notranslate"><span class="pre">file</span> <span class="pre">-i</span> <span class="pre">conf.py</span></code>
+and <code class="docutils literal notranslate"><span class="pre">locale</span></code>.</p>
+</section>
+</section>
+<section id="live-better-than-reading-the-website-material">
+<h2>Live better than reading the website material<a class="headerlink" href="#live-better-than-reading-the-website-material" title="Link to this heading"></a></h2>
+<p>It is better to demonstrate the commands live and type-along. Ideally connecting
+to examples discussed earlier.</p>
+<p>In online workshops most of the type-along becomes group exercise work where groups
+can share screen and discuss.</p>
+</section>
+<section id="field-reports">
+<h2>Field reports<a class="headerlink" href="#field-reports" title="Link to this heading"></a></h2>
+<section id="september">
+<h3>2022 September<a class="headerlink" href="#september" title="Link to this heading"></a></h3>
+<p>We were pressed for time (we started 5-10 minutes late, relative to
+the schedule below), so we made most of the first lessons fast.  In
+the schedule below, note that we had the first 10 minutes for
+“Motivation” <em>and</em> “Popular tools”, which we didn’t fully realize so
+that put us even further behind.  Doing these introduction
+parts quickly was hard but was probably worth it since we had plenty
+of time in the end.  For the “tools”, one person summarized the point
+of each section on the page quickly.  The README episode was done
+quickly, we basically skipped the exercises to get to Sphinx, and this
+put us back on schedule.</p>
+<p>For Sphinx, we did it a lot like you see in the schedule: first
+exercise (the basic setup) was type-along, but it was a bit too much
+to do in the 10 minutes we had allotted (we typed too fast).  But,
+people then had a nice long time to make it up and do everything.  It
+seemed to work well.  The GitHub pages deployment could then be done
+as a nice, slow demo, and we had plenty of time to ask questions.</p>
+<p>Overall, I think this was the right track, but we could have practiced
+doing the first parts even faster, and warned people that we focus on
+the Sphinx exercises.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../exercises/" class="btn btn-neutral float-left" title="List of exercises" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../license/" class="btn btn-neutral float-right" title="Credit and license" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
