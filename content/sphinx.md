@@ -363,10 +363,9 @@ def multiply(a: float, b: float) -> float:
 
 ## example
 
-```{eval-rst}
-.. automodule:: example
-   :members:
-```
+:::{automodule} example
+:members: 
+:::
 ````
 
 3. In the file `conf.py` add 3 lines and modify "extensions":
