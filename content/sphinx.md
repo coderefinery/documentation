@@ -359,7 +359,7 @@ def multiply(a: float, b: float) -> float:
 
 2. In the file `conf.py` modify "extensions" and add 3 lines:
 ```python
-extensions = ['myst_parser', "sphinx.ext.autodoc"]
+extensions = ['myst_parser', "autodoc2"]
 
 autodoc2_packages = [
     "multiply.py"
