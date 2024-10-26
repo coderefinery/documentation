@@ -357,29 +357,24 @@ def multiply(a: float, b: float) -> float:
     return a * b
 ```
 
-2. Add a file `api.md` in the same folder as `index.rst`, with the following content:
-````md
-# API reference
-
-## example
-
-```{eval-rst}
-.. automodule:: example
-   :members:
-```
-````
-
-3. In the file `conf.py` add 3 lines and modify "extensions":
+2. In the file `conf.py` modify "extensions" and add 3 lines:
 ```python
-# this is a trick to make sphinx find the modules in the parent directory
-import os
-import sys
-sys.path.insert(0, os.path.abspath("."))
+extensions = ['myst_parser', "autodoc2"]
 
-extensions = ['myst_parser', "sphinx.ext.autodoc"]
+autodoc2_packages = [
+    "multiply.py"
+]
 ```
 
-4. List the `api.md` file in `index.rst`.
+4. List `apidocs/index` in the toctree in `index.rst`.
+```rst
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   some-feature.md
+   apidocs/index
+```
 
 5. Re-build the documentation and check the "API reference" section.
 `````
