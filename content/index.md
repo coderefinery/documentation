@@ -28,6 +28,9 @@ The approach that we will learn will be transferable to
    (they are part of the [coderefinery environment](https://coderefinery.github.io/installation/conda-environment/)).
 
 3. For the [GitHub Pages](https://pages.github.com) part you need a [GitHub](https://github.com) account.
+
+If you wish to follow in the terminal and are new to the command line, we
+recorded a [short shell crash course](https://youtu.be/xbTTDLA3txI).
 ```
 
 ```{csv-table}
@@ -62,6 +65,7 @@ summary.md
 :maxdepth: 1
 :caption: Reference
 
+Shell crash course <https://youtu.be/xbTTDLA3txI>
 exercises.md
 guide.md
 license.md
