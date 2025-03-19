@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = "How to document your research software"
-copyright = "CodeRefinery team"
-author = "CodeRefinery team"
+copyright = "CodeRefinery contributors"
+author = "CodeRefinery contributors"
 github_user = "coderefinery"
 github_repo_name = "documentation"  # auto-detected from dirname if blank
 github_version = "main"
