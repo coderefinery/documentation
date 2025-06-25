@@ -101,7 +101,7 @@ jobs:
         if: ${{ env.GENERATE_PDF == 'true' }}
         run: |
           pip install https://github.com/rkdarst/sphinx_pyppeteer_builder/archive/refs/heads/main.zip
-          make pyppeteer
+          make SPHINXOPTS="-t pdf" pyppeteer
           mv _build/pyppeteer/*.pdf _build/dirhtml/${PDF_FILENAME}
 
       # Stage all deployed assets in _gh-pages/ for simplicity, and to
