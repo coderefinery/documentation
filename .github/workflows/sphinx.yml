@@ -100,8 +100,8 @@ jobs:
       - name: Generate PDF
         if: ${{ env.GENERATE_PDF == 'true' }}
         run: |
-          pip install https://github.com/rkdarst/sphinx_pyppeteer_builder/archive/refs/heads/main.zip
-          #pip install sphinx_pyppeteer_builder
+          #pip install https://github.com/rkdarst/sphinx_pyppeteer_builder/archive/refs/heads/main.zip
+          pip install sphinx_pyppeteer_builder
           make SPHINXOPTS="-t pdf" pyppeteer
           mv _build/pyppeteer/*.pdf _build/dirhtml/${PDF_FILENAME}
 
