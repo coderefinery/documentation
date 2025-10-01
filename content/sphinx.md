@@ -308,20 +308,8 @@ int main()
 
 - We can also use Jupyter notebooks (*.ipynb) with Sphinx. It requires the
   [myst-nb](https://myst-nb.readthedocs.io/) extension to be installed.
-`````
 
-
-## Exercise: Sphinx and LaTeX
-
-`````{exercise} Sphinx-3: Rendering (LaTeX) math equations
-
-Math equations should work out of the box. In some older versions, you might need
-to edit `conf.py` and add `sphinx.ext.mathjax`:
-```python
-extensions = ['myst_parser', 'sphinx.ext.mathjax']
-```
-
-Try this (result below):
+- Math equations with LaTeX should work out of the box. Try this (result below):
 ````markdown
 This creates an equation:
 ```{math}
@@ -337,6 +325,17 @@ a^2 + b^2 = c^2
 ```
 
 This is an in-line equation, {math}`a^2 + b^2 = c^2`, embedded in text.
+
+
+````{admonition} Older versions of Sphinx
+In some older versions, you might need
+to edit `conf.py` and add `sphinx.ext.mathjax`:
+```python
+extensions = ['myst_parser', 'sphinx.ext.mathjax']
+```
+````
+
+
 `````
 
 
