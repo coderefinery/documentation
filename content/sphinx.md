@@ -122,15 +122,8 @@ Welcome to myproject's documentation!
    :caption: Contents:
 
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 ```
 
-- We will not use the `Indices and tables` section now, so remove it and everything below.
 - The top four lines, starting with `..`, are a comment.
 - The next lines are the table of contents. We can add content below:
 
