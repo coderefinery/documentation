@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>In-code documentation &mdash; How to document your research software  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=582ca9e2"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/tabs.js?v=3030b3cb"></script>
+      <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Writing good README files" href="../writing-readme-files/" />
+    <link rel="prev" title="Popular tools and solutions" href="../tools/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            How to document your research software
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">The lesson</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../wishlist/">Motivation and wishlist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/">Popular tools and solutions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">In-code documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#exercise-writing-good-comments">Exercise - Writing good comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sometimes-version-control-is-better-than-a-comment">Sometimes version control is better than a comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-are-docstrings-and-how-can-they-be-useful">What are “docstrings” and how can they be useful?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../writing-readme-files/">Writing good README files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/">Sphinx and Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh_workflow/">Deploying Sphinx documentation to GitHub Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh-pages/">Hosting websites/homepages on GitHub Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://youtu.be/xbTTDLA3txI">Shell crash course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">Credit and license</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">How to document your research software</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">In-code documentation</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/documentation/blob/main/content/in-code-documentation.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="in-code-documentation">
+<span id="id1"></span><h1>In-code documentation<a class="headerlink" href="#in-code-documentation" title="Link to this heading"></a></h1>
+<div class="admonition-questions questions admonition" id="questions-0">
+<p class="admonition-title">Questions</p>
+<ul class="simple">
+<li><p>What can I do to make my code more easily understandable?</p></li>
+<li><p>What information should go into comments?</p></li>
+<li><p>What are docstrings and what information should go into docstrings?</p></li>
+</ul>
+</div>
+<p>In this episode we will learn how to write good documentation inside your code.</p>
+<section id="exercise-writing-good-comments">
+<h2>Exercise - Writing good comments<a class="headerlink" href="#exercise-writing-good-comments" title="Link to this heading"></a></h2>
+<div class="admonition-in-code-1-comments exercise important admonition" id="exercise-0">
+<p class="admonition-title">In-code-1: Comments</p>
+<p>Let’s take a look at two example comments (comments in Python start with <code class="docutils literal notranslate"><span class="pre">#</span></code>):</p>
+<p><strong>Comment A</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># now we check if temperature is below -50</span>
+<span class="k">if</span> <span class="n">temperature</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">50</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ERROR: temperature is too low&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Comment B</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># we regard temperatures below -50 degrees as measurement errors</span>
+<span class="k">if</span> <span class="n">temperature</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">50</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ERROR: temperature is too low&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Which of these comments is more useful? Can you explain why?</p>
+<div class="admonition-solution solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Comment A describes <strong>what</strong> happens in this piece of code. This can be
+useful for somebody who has never seen Python or a program, but for somebody
+who has, it can feel like a redundant commentary.</p></li>
+<li><p>Comment B is probably more useful as it describes <strong>why</strong> this piece of code
+is there, i.e. its <strong>purpose</strong>.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="sometimes-version-control-is-better-than-a-comment">
+<h2>Sometimes version control is better than a comment<a class="headerlink" href="#sometimes-version-control-is-better-than-a-comment" title="Link to this heading"></a></h2>
+<div class="admonition-examples-for-code-comments-where-git-is-a-better-solution admonition">
+<p class="admonition-title">Examples for code comments where Git is a better solution</p>
+<p><strong>Keeping zombie code</strong> “just in case” (rather use version control):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># do not run this code!</span>
+<span class="c1"># if temperature &gt; 0:</span>
+<span class="c1">#     print(&quot;It is warm&quot;)</span>
+</pre></div>
+</div>
+<p>Instead: Remove the code, you can always find it back in a previous version of your code in Git.</p>
+<p><strong>Emulating version control</strong>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># John Doe: threshold changed from 0 to 15 on August 5, 2013</span>
+<span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;It is warm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Instead: You can get this information from <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code> or <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">show</span></code> or <code class="docutils literal notranslate"><span class="pre">git</span>&#160;&#160; <span class="pre">annotate</span></code> or similar.</p>
+</div>
+</section>
+<section id="what-are-docstrings-and-how-can-they-be-useful">
+<h2>What are “docstrings” and how can they be useful?<a class="headerlink" href="#what-are-docstrings-and-how-can-they-be-useful" title="Link to this heading"></a></h2>
+<p>Here is function <code class="docutils literal notranslate"><span class="pre">fahrenheit_to_celsius</span></code> which converts temperature in
+Fahrenheit to Celsius, implemented in a couple of different languages.
+Your language is missing? Please contribute an example.</p>
+<p>The first set of examples uses <strong>regular comments</strong>:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-0-Ug==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-Ug==" name="Ug==" role="tab" tabindex="-1">R</button><button aria-controls="panel-0-SnVsaWE=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-SnVsaWE=" name="SnVsaWE=" role="tab" tabindex="-1">Julia</button><button aria-controls="panel-0-Rm9ydHJhbg==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-Rm9ydHJhbg==" name="Rm9ydHJhbg==" role="tab" tabindex="-1">Fortran</button><button aria-controls="panel-0-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button><button aria-controls="panel-0-UnVzdA==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-UnVzdA==" name="UnVzdA==" role="tab" tabindex="-1">Rust</button></div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This function converts a temperature in Fahrenheit to Celsius.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">temp_f</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="n">temp_c</span> <span class="o">=</span> <span class="p">(</span><span class="n">temp_f</span> <span class="o">-</span> <span class="mf">32.0</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mf">5.0</span><span class="o">/</span><span class="mf">9.0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">temp_c</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Ug==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-Ug==" name="Ug==" role="tabpanel" tabindex="0"><div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert Fahrenheit to Celsius</span>
+<span class="n">fahrenheit_to_celsius</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">temp_f</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">temp_c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="p">(</span><span class="n">temp_f</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">32.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="m">5.0</span><span class="o">/</span><span class="m">9.0</span><span class="p">)</span>
+<span class="w">  </span><span class="n">temp_c</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-SnVsaWE=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-SnVsaWE=" name="SnVsaWE=" role="tabpanel" tabindex="0"><div class="highlight-Julia notranslate"><div class="highlight"><pre><span></span><span class="c"># This function converts a temperature in Fahrenheit to Celsius.</span>
+<span class="k">function</span><span class="w"> </span><span class="n">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">temp_f</span><span class="p">)</span>
+<span class="w">    </span><span class="n">temp_c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">temp_f</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">32.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">5.0</span><span class="o">/</span><span class="mf">9.0</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">temp_c</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Rm9ydHJhbg==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-Rm9ydHJhbg==" name="Rm9ydHJhbg==" role="tabpanel" tabindex="0"><div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">! Convert Fahrenheit to Celsius</span>
+<span class="k">function </span><span class="n">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">temp_f</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">temp_c</span><span class="p">)</span>
+<span class="w">    </span><span class="k">implicit none</span>
+<span class="k">    </span><span class="kt">real </span><span class="n">temp_f</span>
+<span class="w">    </span><span class="kt">real </span><span class="n">temp_c</span>
+<span class="w">    </span><span class="n">temp_c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">temp_f</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">3</span><span class="mf">2.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">5.0</span><span class="o">/</span><span class="mf">9.0</span><span class="p">)</span>
+<span class="k">end function</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Converts a temperature in Fahrenheit to Celsius</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">fahrenheit_to_celsius</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">temp_f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">temp_c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">temp_f</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">32.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">5.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">9.0</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">temp_c</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-UnVzdA==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-UnVzdA==" name="UnVzdA==" role="tabpanel" tabindex="0"><div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="c1">// Convert Fahrenheit to Celsius</span>
+<span class="k">fn</span><span class="w"> </span><span class="nf">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">temp_f</span><span class="p">:</span><span class="w"> </span><span class="kt">f64</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="kt">f64</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">temp_c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">temp_f</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">32.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">9.0</span>
+<span class="w">    </span><span class="n">temp_c</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></div>
+<p>The second set uses <strong>docstrings or similar concepts</strong>. Please compare the two
+(above and below):</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-1-Ug==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-Ug==" name="Ug==" role="tab" tabindex="-1">R</button><button aria-controls="panel-1-SnVsaWE=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-SnVsaWE=" name="SnVsaWE=" role="tab" tabindex="-1">Julia</button><button aria-controls="panel-1-Rm9ydHJhbg==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-Rm9ydHJhbg==" name="Rm9ydHJhbg==" role="tab" tabindex="-1">Fortran</button><button aria-controls="panel-1-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button><button aria-controls="panel-1-UnVzdA==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-UnVzdA==" name="UnVzdA==" role="tab" tabindex="-1">Rust</button></div><div aria-labelledby="tab-1-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-1-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">temp_f</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a temperature in Fahrenheit to Celsius.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    temp_f : float</span>
+<span class="sd">        The temperature in Fahrenheit.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        The temperature in Celsius.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">temp_c</span> <span class="o">=</span> <span class="p">(</span><span class="n">temp_f</span> <span class="o">-</span> <span class="mf">32.0</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mf">5.0</span><span class="o">/</span><span class="mf">9.0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">temp_c</span>
+</pre></div>
+</div>
+<p>Read more: <a class="reference external" href="https://peps.python.org/pep-0257/">https://peps.python.org/pep-0257/</a></p>
+</div><div aria-labelledby="tab-1-Ug==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-Ug==" name="Ug==" role="tabpanel" tabindex="0"><div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="c1">#&#39; Convert Fahrenheit to Celsius</span>
+<span class="c1">#&#39;</span>
+<span class="c1">#&#39; @param temp_f A numeric vector of temperatures in Fahrenheit.</span>
+<span class="c1">#&#39; @return A numeric vector of temperatures in Celsius.</span>
+<span class="n">fahrenheit_to_celsius</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">temp_f</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">temp_c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="p">(</span><span class="n">temp_f</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">32.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="m">5.0</span><span class="o">/</span><span class="m">9.0</span><span class="p">)</span>
+<span class="w">  </span><span class="n">temp_c</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Read more: <a class="reference external" href="https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html">https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html</a></p>
+</div><div aria-labelledby="tab-1-SnVsaWE=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-SnVsaWE=" name="SnVsaWE=" role="tabpanel" tabindex="0"><div class="highlight-Julia notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">    fahrenheit_to_celsius(temp_f::Float)</span>
+
+<span class="s">Converts temperature in Fahrenheit to Celsius.</span>
+
+<span class="s"># Arguments</span>
+<span class="s">- `temp_f::Float`: Temperature in Fahrenheit.</span>
+
+<span class="s"># Returns</span>
+<span class="s">- `temp_c::Float`: Temperature in Celsius.</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="k">function</span><span class="w"> </span><span class="n">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">temp_f</span><span class="p">)</span>
+<span class="w">    </span><span class="n">temp_c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">temp_f</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">32.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">5.0</span><span class="o">/</span><span class="mf">9.0</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">temp_c</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Read more: <a class="reference external" href="https://docs.julialang.org/en/v1/manual/documentation/">https://docs.julialang.org/en/v1/manual/documentation/</a></p>
+</div><div aria-labelledby="tab-1-Rm9ydHJhbg==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-Rm9ydHJhbg==" name="Rm9ydHJhbg==" role="tabpanel" tabindex="0"><div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="c">!&gt; @brief Convert Fahrenheit to Celsius</span>
+<span class="c">!! @param temp_f Temperature in Fahrenheit</span>
+<span class="c">!! @return Temperature in Celsius</span>
+<span class="k">function </span><span class="n">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">temp_f</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">temp_c</span><span class="p">)</span>
+<span class="w">    </span><span class="k">implicit none</span>
+<span class="k">    </span><span class="kt">real </span><span class="n">temp_f</span>
+<span class="w">    </span><span class="kt">real </span><span class="n">temp_c</span>
+<span class="w">    </span><span class="n">temp_c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">temp_f</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">3</span><span class="mf">2.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">5.0</span><span class="o">/</span><span class="mf">9.0</span><span class="p">)</span>
+<span class="k">end function</span>
+</pre></div>
+</div>
+<p>Read more: <a class="reference external" href="https://en.wikibooks.org/wiki/Fortran/Documenting_Fortran">https://en.wikibooks.org/wiki/Fortran/Documenting_Fortran</a></p>
+</div><div aria-labelledby="tab-1-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// @brief: Converts a temperature in Fahrenheit to Celsius</span>
+<span class="c1">//</span>
+<span class="c1">// @param: temp_f: Temperature in Fahrenheit</span>
+<span class="c1">//</span>
+<span class="c1">// @return: Temperature in Celsius</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">fahrenheit_to_celsius</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">temp_f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">temp_c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">temp_f</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">32.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">5.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">9.0</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">temp_c</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Read more: <a class="reference external" href="https://www.doxygen.nl">https://www.doxygen.nl</a></p>
+</div><div aria-labelledby="tab-1-UnVzdA==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-UnVzdA==" name="UnVzdA==" role="tabpanel" tabindex="0"><div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="sd">/// Convert Fahrenheit to Celsius</span>
+<span class="sd">/// # Arguments</span>
+<span class="sd">/// * `temp_f` - Temperature in Fahrenheit</span>
+<span class="sd">///</span>
+<span class="sd">/// # Returns</span>
+<span class="sd">/// * `temp_c` - Temperature in Celsius</span>
+<span class="k">fn</span><span class="w"> </span><span class="nf">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">temp_f</span><span class="p">:</span><span class="w"> </span><span class="kt">f64</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="kt">f64</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">temp_c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">temp_f</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">32.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">9.0</span>
+<span class="w">    </span><span class="n">temp_c</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Read more: <a class="reference external" href="https://doc.rust-lang.org/rust-by-example/meta/doc.html">https://doc.rust-lang.org/rust-by-example/meta/doc.html</a></p>
+</div></div>
+<p>Docstrings can do a bit more than just comments:</p>
+<ul class="simple">
+<li><p>Tools can generate help text automatically from the docstrings.</p></li>
+<li><p>Tools can generate documentation pages automatically from code.</p></li>
+</ul>
+<p>It is common to write docstrings for functions, classes, and modules.</p>
+<p>Good docstrings describe:</p>
+<ul class="simple">
+<li><p>What the function does</p></li>
+<li><p>What goes in (including the type of the input variables)</p></li>
+<li><p>What goes out (including the return type)</p></li>
+</ul>
+<p><strong>Naming is documentation</strong>:
+Giving explicit, descriptive names to your code segments (functions, classes,
+variables) already provides very useful and important documentation. In
+practice you will find that for simple functions it is unnecessary to add a
+docstring when the function name and variable names already give enough
+information.</p>
+<hr class="docutils" />
+<div class="admonition-keypoints keypoints admonition" id="keypoints-0">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>Comments should describe the why for your code not the what.</p></li>
+<li><p>Writing docstrings can be a good way to write documentation while you type
+code since it also makes it possible
+to query that information from outside the code or to auto-generate
+documentation pages.</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../tools/" class="btn btn-neutral float-left" title="Popular tools and solutions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../writing-readme-files/" class="btn btn-neutral float-right" title="Writing good README files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

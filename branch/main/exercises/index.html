@@ -1,0 +1,750 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>List of exercises &mdash; How to document your research software  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=582ca9e2"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Instructor guide" href="../guide/" />
+    <link rel="prev" title="Summary" href="../summary/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            How to document your research software
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">The lesson</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../wishlist/">Motivation and wishlist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/">Popular tools and solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../in-code-documentation/">In-code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing-readme-files/">Writing good README files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/">Sphinx and Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh_workflow/">Deploying Sphinx documentation to GitHub Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh-pages/">Hosting websites/homepages on GitHub Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference external" href="https://youtu.be/xbTTDLA3txI">Shell crash course</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">List of exercises</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#full-list">Full list</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">Credit and license</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/core/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">How to document your research software</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">List of exercises</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/documentation/blob/main/content/exercises.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="list-of-exercises">
+<h1>List of exercises<a class="headerlink" href="#list-of-exercises" title="Link to this heading"></a></h1>
+<section id="full-list">
+<h2>Full list<a class="headerlink" href="#full-list" title="Link to this heading"></a></h2>
+<p>This is a list of all exercises and solutions in this lesson, mainly
+as a reference for helpers and instructors.  This list is
+automatically generated from all of the other pages in the lesson.
+Any single teaching event will probably cover only a subset of these,
+depending on their interests.</p>
+<section id="motivation-and-wishlist">
+<h3>Motivation and wishlist<a class="headerlink" href="#motivation-and-wishlist" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="../wishlist/#solution-0">In wishlist.md:</a></p>
+<div class="admonition-our-motivation-but-let-us-brainstorm-first solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Our motivation (but let us brainstorm first)</p>
+<ul class="simple">
+<li><p>You will probably use your code in the future and may forget details.</p></li>
+<li><p>You may want others to use your code (almost impossible without documentation).</p></li>
+<li><p>You may want others to contribute to the code.</p></li>
+<li><p>Shield your limited time and let the documentation answer FAQs.</p></li>
+</ul>
+</div>
+<p><a class="reference external" href="../wishlist/#solution-1">In wishlist.md:</a></p>
+<div class="admonition-our-wishlist-but-let-us-brainstorm-first solution important dropdown admonition" id="solution-1">
+<p class="admonition-title">Our wishlist (but let us brainstorm first)</p>
+<p><strong>Versions</strong></p>
+<ul class="simple">
+<li><p>Your code project should be versioned (version control).</p></li>
+<li><p>Enable reproducibility and avoid confusion: <strong>documentation should be versioned</strong> as well.</p></li>
+<li><p>Have you ever seen: <em>“We will soon release a new version and are updating the documentation.
+Some features may not be available in the version you have downloaded.”</em>?</p></li>
+</ul>
+<p><strong>Documentation should be placed and tracked close to the source code</strong></p>
+<ul class="simple">
+<li><p>Documenting <strong>close to the source code</strong> (e.g. subdirectory <code class="docutils literal notranslate"><span class="pre">doc/</span></code>) minimizes barrier to contribute.</p></li>
+<li><p>I should not need to log in to another machine or service and jump through hoops to contribute.</p></li>
+<li><p>It is often good enough to have a <code class="docutils literal notranslate"><span class="pre">README.md</span></code> or <code class="docutils literal notranslate"><span class="pre">README.rst</span></code> along with your code/script.</p></li>
+</ul>
+<p><strong>Use a standard markup language</strong></p>
+<div class="admonition-markup instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Markup</p>
+<p>Markup is a set of human readable instructions that is used to tell the computer how a document shall be styled and structured. By using a markup language we can for example write a <code class="docutils literal notranslate"><span class="pre">*</span></code> or <code class="docutils literal notranslate"><span class="pre">-</span></code> where we want a bullet point to appear in the rendered document.</p>
+</div>
+<ul class="simple">
+<li><p>offers formatting flexibility, enforces a basic document structure and the rendered documents can be exported to other formats (e.g. for printing). Also, the source can be read by humans without knowledge of the language in case the rendered document is unavailable.</p></li>
+<li><p>We suggest to use either
+<a class="reference external" href="https://docutils.sourceforge.net/rst.html">reStructuredText (RST)</a> or
+<a class="reference external" href="https://daringfireball.net/projects/markdown/">Markdown</a> markup.</p></li>
+<li><p>GitHub and GitLab automatically render <code class="docutils literal notranslate"><span class="pre">README.md</span></code> or <code class="docutils literal notranslate"><span class="pre">README.rst</span></code> files.</p></li>
+</ul>
+<p><strong>Copy-paste-able</strong></p>
+<ul class="simple">
+<li><p>PDF alone is not enough since <strong>copy-pasting out of a PDF document can be difficult</strong>.</p></li>
+<li><p>It is OK to provide a generated PDF in addition to a copy-paste-able format.</p></li>
+</ul>
+<p><strong>Written by humans</strong></p>
+<ul class="simple">
+<li><p>Automatically generated documentation (e.g. API documentation) is useful as
+complementary documentation but it does not replace tutorials written by
+humans.</p></li>
+</ul>
+<p><strong>Installation instructions</strong></p>
+<ul class="simple">
+<li><p>Give <strong>step by step instructions for the basic case</strong>.
+Additional information and caveats can be linked from there.</p></li>
+<li><p>List requirements and dependencies (libraries, compilers, environment).</p></li>
+<li><p>Include instructions for how to test for correctness after installation.</p></li>
+</ul>
+<p><strong>Make the license explicit</strong></p>
+<ul class="simple">
+<li><p><strong>Include a LICENSE file</strong> with your source code.</p></li>
+<li><p>Without a license, your work is under exclusive copyright by default:
+others are not allowed to re-use or modify anything.</p></li>
+<li><p>GitHub and GitLab allows to choose a license from common license templates.</p></li>
+</ul>
+<p><strong>Information for contributors</strong></p>
+<ul class="simple">
+<li><p>Make it easy for others to contribute: <strong>document how you prefer others to contribute</strong>.</p></li>
+<li><p>Users of your code may be shy to contribute code.
+Your <strong>documentation provides a platform for your first contributions</strong>.</p></li>
+</ul>
+</div>
+</section>
+<section id="in-code-documentation">
+<h3>In-code documentation<a class="headerlink" href="#in-code-documentation" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="../in-code-documentation/#exercise-0">In in-code-documentation.md:</a></p>
+<div class="admonition-in-code-1-comments exercise important admonition" id="exercise-0">
+<p class="admonition-title">In-code-1: Comments</p>
+<p>Let’s take a look at two example comments (comments in Python start with <code class="docutils literal notranslate"><span class="pre">#</span></code>):</p>
+<p><strong>Comment A</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># now we check if temperature is below -50</span>
+<span class="k">if</span> <span class="n">temperature</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">50</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ERROR: temperature is too low&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Comment B</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># we regard temperatures below -50 degrees as measurement errors</span>
+<span class="k">if</span> <span class="n">temperature</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">50</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ERROR: temperature is too low&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Which of these comments is more useful? Can you explain why?</p>
+<div class="admonition-solution solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Solution</p>
+<ul class="simple">
+<li><p>Comment A describes <strong>what</strong> happens in this piece of code. This can be
+useful for somebody who has never seen Python or a program, but for somebody
+who has, it can feel like a redundant commentary.</p></li>
+<li><p>Comment B is probably more useful as it describes <strong>why</strong> this piece of code
+is there, i.e. its <strong>purpose</strong>.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="writing-good-readme-files">
+<h3>Writing good README files<a class="headerlink" href="#writing-good-readme-files" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="../writing-readme-files/#exercise-0">In writing-readme-files.md:</a></p>
+<div class="admonition-exercise-readme-1-have-fun-testing-some-readme-features-you-may-not-have-heard-about exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise README-1: Have fun testing some README features you may not have heard about</p>
+<ul>
+<li><p>Test the effect of adding the following to your GitHub README (<a class="reference external" href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts">read
+more</a>):</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">&gt; </span><span class="ge">[!NOTE]</span>
+<span class="k">&gt; </span><span class="ge">Highlights information that users should take into account, even when skimming.</span>
+
+<span class="k">&gt; </span><span class="ge">[!IMPORTANT]</span>
+<span class="k">&gt; </span><span class="ge">Crucial information necessary for users to succeed.</span>
+
+<span class="k">&gt; </span><span class="ge">[!WARNING]</span>
+<span class="k">&gt; </span><span class="ge">Critical content demanding immediate user attention due to potential risks.</span>
+</pre></div>
+</div>
+</li>
+<li><p>For more detailed descriptions which you don’t want to show by default you
+might find this useful (please try it out):</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>&lt;details&gt;
+&lt;summary&gt;
+Short summary
+&lt;/summary&gt;
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+&lt;/details&gt;
+</pre></div>
+</div>
+</li>
+<li><p>Would you like to add a badge like this one: <a class="reference external" href="https://example.org"><img alt="please replace with alt text" src="https://img.shields.io/badge/anytext-youlike-blue" /></a>?</p>
+<p>Badge that links to a website (see also <a class="reference external" href="https://shields.io/">https://shields.io/</a>):</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>[<span class="nt">![please replace with alt text</span>](<span class="na">https://img.shields.io/badge/anytext-youlike-blue</span>)](https://example.org)
+</pre></div>
+</div>
+<p>Badge without link:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>![<span class="nt">please replace with alt text</span>](<span class="na">https://img.shields.io/badge/anytext-youlike-blue</span>)
+</pre></div>
+</div>
+</li>
+<li><p>Know about other tips and tricks? Please share them (send a pull request to this lesson).</p></li>
+</ul>
+</div>
+<p><a class="reference external" href="../writing-readme-files/#exercise-1">In writing-readme-files.md:</a></p>
+<div class="admonition-exercise-readme-2-draft-or-improve-a-readme-for-one-of-your-recent-projects exercise important admonition" id="exercise-1">
+<p class="admonition-title">Exercise README-2: Draft or improve a README for one of your recent projects</p>
+<p>Try to draft a brief README or review a README which you have written for one
+of your projects.</p>
+<ul class="simple">
+<li><p>You can do that either by screensharing and discussing or working individually.</p></li>
+<li><p>Use the <a class="reference internal" href="../wishlist/#checklist"><span class="std std-ref">checklist</span></a> which we have discussed earlier.</p></li>
+<li><p>Think about the user (<strong>which can be a future you</strong>) of your project, what does this user need to know to use or
+contribute to the project? And how do you make your project attractive to use or contribute to?</p></li>
+<li><p>(Optional): Try the <a class="reference external" href="https://hemingwayapp.com/">https://hemingwayapp.com/</a> to analyse your README file and make your writing bold and clear.</p></li>
+<li><p>Please note observations and recommendations in the collaborative notes.</p></li>
+</ul>
+</div>
+<p><a class="reference external" href="../writing-readme-files/#exercise-2">In writing-readme-files.md:</a></p>
+<div class="admonition-exercise-readme-3-review-and-discuss-a-readme-of-a-project-that-you-have-used exercise important admonition" id="exercise-2">
+<p class="admonition-title">Exercise README-3: Review and discuss a README of a project that you have used</p>
+<p>In this exercise we will review and discuss a README of a project which you
+have used. You can also review a library which is popular in your domain of
+research and discuss their README.</p>
+<ul class="simple">
+<li><p>You can do that either by screensharing and discussing or working individually.</p></li>
+<li><p>When discussing other people’s projects please remember to be respectful and
+constructive. The goal of this exercise is not to criticize other projects but
+to learn from other projects and to collect the aspects that you enjoyed
+finding in a README and to also collect aspects which you have searched for but
+which are sometimes missing.</p></li>
+<li><p>Please note observations and recommendations in the collaborative notes.</p></li>
+</ul>
+</div>
+</section>
+<section id="sphinx-and-markdown">
+<h3>Sphinx and Markdown<a class="headerlink" href="#sphinx-and-markdown" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="../sphinx/#exercise-0">In sphinx.md:</a></p>
+<div class="admonition-sphinx-1-generate-the-basic-documentation-template exercise important admonition" id="exercise-0">
+<p class="admonition-title">Sphinx-1: Generate the basic documentation template</p>
+<p>Create a directory for the example documentation, step into it, and inside
+generate the basic documentation template:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mkdir<span class="w"> </span>doc-example
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>doc-example
+<span class="gp">$ </span>sphinx-quickstart
+</pre></div>
+</div>
+<p>The quickstart utility will ask you some questions. For this exercise, you can go
+with the default answers except to specify a project name, author name, and project release:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">Separate</span> <span class="n">source</span> <span class="ow">and</span> <span class="n">build</span> <span class="n">directories</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="o">&lt;</span><span class="n">hit</span> <span class="n">enter</span><span class="o">&gt;</span>
+<span class="o">&gt;</span> <span class="n">Project</span> <span class="n">name</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">your</span> <span class="n">project</span> <span class="n">name</span><span class="o">&gt;</span>
+<span class="o">&gt;</span> <span class="n">Author</span> <span class="n">name</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> <span class="o">&lt;</span><span class="n">your</span> <span class="n">name</span><span class="o">&gt;</span>
+<span class="o">&gt;</span> <span class="n">Project</span> <span class="n">release</span> <span class="p">[]:</span> <span class="mf">0.1</span>
+<span class="o">&gt;</span> <span class="n">Project</span> <span class="n">language</span> <span class="p">[</span><span class="n">en</span><span class="p">]:</span> <span class="o">&lt;</span><span class="n">hit</span> <span class="n">enter</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>A couple of files and directories are created:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>File/directory</p></th>
+<th class="head"><p>Contents</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>conf.py</p></td>
+<td><p>Documentation configuration file</p></td>
+</tr>
+<tr class="row-odd"><td><p>index.rst</p></td>
+<td><p>Main file in Sphinx</p></td>
+</tr>
+<tr class="row-even"><td><p>_build/</p></td>
+<td><p>Directory where docs are built (you can decide the name)</p></td>
+</tr>
+<tr class="row-odd"><td><p>_templates/</p></td>
+<td><p>Your own HTML templates</p></td>
+</tr>
+<tr class="row-even"><td><p>_static/</p></td>
+<td><p>Static files (images, styles, etc.) copied to output directory on build</p></td>
+</tr>
+<tr class="row-odd"><td><p>Makefile</p></td>
+<td><p>Makefile to build documentation using make</p></td>
+</tr>
+<tr class="row-even"><td><p>make.bat</p></td>
+<td><p>Makefile to build documentation using make (Windows)</p></td>
+</tr>
+</tbody>
+</table>
+<p><code class="docutils literal notranslate"><span class="pre">Makefile</span></code> and <code class="docutils literal notranslate"><span class="pre">make.bat</span></code> (for Windows) are build scripts that wrap the sphinx commands, but
+we will be doing it explicitly.</p>
+<p>Let’s have a look at the <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> file, which is the main file of your documentation:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="c">.. myproject documentation master file, created by</span>
+<span class="c">   sphinx-quickstart on Sat Sep 23 17:35:26 2023.</span>
+<span class="c">   You can adapt this file completely to your liking, but it should at least</span>
+<span class="c">   contain the root `toctree` directive.</span>
+
+<span class="gh">Welcome to myproject&#39;s documentation!</span>
+<span class="gh">=====================================</span>
+
+<span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:maxdepth:</span> 2
+   <span class="nc">:caption:</span> Contents:
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The top four lines, starting with <code class="docutils literal notranslate"><span class="pre">..</span></code>, are a comment.</p></li>
+<li><p>The next lines are the table of contents. We can add content below:</p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:maxdepth:</span> 2
+   <span class="nc">:caption:</span> Contents:
+
+   some-feature.md
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">some-feature.md</span></code> needs to be indented to align with <code class="docutils literal notranslate"><span class="pre">:caption:</span></code>.</p>
+<p>We now need to tell Sphinx to use markdown files. To do this, we open
+<code class="docutils literal notranslate"><span class="pre">conf.py</span></code> and replace the line:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+<p>with this line so that Sphinx can parse Markdown files:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;myst_parser&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Let’s create the file <code class="docutils literal notranslate"><span class="pre">some-feature.md</span></code> (in Markdown format) which we have just listed in
+<code class="docutils literal notranslate"><span class="pre">index.rst</span></code> (which uses reStructured Text format).</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gh"># Some feature</span>
+
+<span class="gu">## Subsection</span>
+
+Exciting documentation in here.
+Let&#39;s make a list (empty surrounding lines required):
+
+<span class="k">-</span><span class="w"> </span>item 1
+
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>nested item 1
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>nested item 2
+
+<span class="k">-</span><span class="w"> </span>item 2
+<span class="k">-</span><span class="w"> </span>item 3
+</pre></div>
+</div>
+<p>We now build the site:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ls<span class="w"> </span>-1
+
+<span class="go">_static</span>
+<span class="go">_templates</span>
+<span class="go">conf.py</span>
+<span class="go">index.rst</span>
+<span class="go">make.bat</span>
+<span class="go">Makefile</span>
+<span class="go">some-feature.md</span>
+
+<span class="gp">$ </span>sphinx-build<span class="w"> </span>.<span class="w"> </span>_build
+
+<span class="go">... lots of output ...</span>
+<span class="go">build succeeded.</span>
+
+<span class="go">The HTML pages are in _build.</span>
+
+<span class="gp">$ </span>ls<span class="w"> </span>-1<span class="w"> </span>_build
+
+<span class="go">_sources</span>
+<span class="go">_static</span>
+<span class="go">genindex.html</span>
+<span class="go">index.html</span>
+<span class="go">objects.inv</span>
+<span class="go">search.html</span>
+<span class="go">searchindex.js</span>
+<span class="go">some-feature.html</span>
+</pre></div>
+</div>
+<p>Now open the file <code class="docutils literal notranslate"><span class="pre">_build/index.html</span></code> in your browser.</p>
+<ul>
+<li><p>Linux users, type:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>xdg-open<span class="w"> </span>_build/index.html
+</pre></div>
+</div>
+</li>
+<li><p>macOS users, type:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>open<span class="w"> </span>_build/index.html
+</pre></div>
+</div>
+</li>
+<li><p>Windows users, type:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>start<span class="w"> </span>_build/index.html
+</pre></div>
+</div>
+</li>
+<li><p>If the above does not work:
+Enter <code class="docutils literal notranslate"><span class="pre">file:///home/user/doc-example/_build/index.html</span></code> in your browser (adapting the path to your case).</p></li>
+</ul>
+<p>Hopefully you can now see a website. If so, then you are able to build Sphinx pages locally.
+This is useful to check how things look before pushing changes to GitHub or elsewhere.</p>
+<p>Note that you can change the styling by editing <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> and changing the value <code class="docutils literal notranslate"><span class="pre">html_theme</span></code>
+(for instance you can set it to <code class="docutils literal notranslate"><span class="pre">sphinx_rtd_theme</span></code> (if you have that Python package installed)
+to have the Read the Docs look).</p>
+</div>
+<p><a class="reference external" href="../sphinx/#exercise-1">In sphinx.md:</a></p>
+<div class="admonition-sphinx-2-add-more-content-to-your-example-documentation exercise important admonition" id="exercise-1">
+<p class="admonition-title">Sphinx-2: Add more content to your example documentation</p>
+<ol class="arabic simple">
+<li><p>Add a entry below <code class="docutils literal notranslate"><span class="pre">some-feature.md</span></code> labeled <code class="docutils literal notranslate"><span class="pre">another-feature.md</span></code> (or a better name) to the <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> file.</p></li>
+<li><p>Create a file <code class="docutils literal notranslate"><span class="pre">another-feature.md</span></code> in the same directory as the <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> file.</p></li>
+<li><p>Add some content to <code class="docutils literal notranslate"><span class="pre">another-feature.md</span></code>, rebuild with <code class="docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">.</span> <span class="pre">_build</span></code>, and refresh the browser to look at the results.</p></li>
+<li><p>Use the <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/typography.html">MyST Typography</a> page as help.</p></li>
+</ol>
+<p>Experiment with the following Markdown syntax:</p>
+<ul class="simple">
+<li><p>*Emphasized text* and **bold text**</p></li>
+<li><p>Headings:</p></li>
+</ul>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gh"># Level 1</span>
+
+<span class="gu">## Level 2</span>
+
+<span class="gu">### Level 3</span>
+
+<span class="gu">#### Level 4</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>An image: <code class="docutils literal notranslate"><span class="pre">![alt</span> <span class="pre">text](image.png)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[A</span> <span class="pre">link](https://www.example.org)</span></code></p></li>
+<li><p>Numbered lists (numbers adjusted automatically):</p></li>
+</ul>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="k">1.</span> item 1
+<span class="k">2.</span> item 2
+<span class="k">3.</span> item 3
+<span class="k">1.</span> item 4
+<span class="k">1.</span> item 5
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Simple tables:</p></li>
+</ul>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>| No.  |  Prime |
+| ---- | ------ |
+| 1    |  No    |
+| 2    |  Yes   |
+| 3    |  Yes   |
+| 4    |  No    |
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Code blocks:</p></li>
+</ul>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>The following is a Python code block:
+<span class="sb">```python</span>
+  <span class="k">def</span><span class="w"> </span><span class="nf">hello</span><span class="p">():</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+<span class="sb">```</span>
+
+And this is a C code block:
+<span class="sb">```c</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="sb">```</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>You could include an external file (here we assume a file called “example.py”
+exists; at the same time we highlight lines 2 and 3):</p></li>
+</ul>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{literalinclude} example.py
+:language: python
+:emphasize-lines: 2-3
+```
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>We can also use Jupyter notebooks (*.ipynb) with Sphinx. It requires the
+<a class="reference external" href="https://myst-nb.readthedocs.io/">myst-nb</a> extension to be installed.</p></li>
+<li><p>Math equations with LaTeX should work out of the box. Try this (result below):</p></li>
+</ul>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>This creates an equation:
+```{math}
+a^2 + b^2 = c^2
+```
+
+This is an in-line equation, {math}`a^2 + b^2 = c^2`, embedded in text.
+</pre></div>
+</div>
+<p>This creates an equation:</p>
+<div class="math notranslate nohighlight">
+\[a^2 + b^2 = c^2\]</div>
+<p>This is an in-line equation, <span class="math notranslate nohighlight">\(a^2 + b^2 = c^2\)</span>, embedded in text.</p>
+<div class="admonition-older-versions-of-sphinx admonition">
+<p class="admonition-title">Older versions of Sphinx</p>
+<p>In some older versions, you might need
+to edit <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> and add <code class="docutils literal notranslate"><span class="pre">sphinx.ext.mathjax</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;myst_parser&#39;</span><span class="p">,</span> <span class="s1">&#39;sphinx.ext.mathjax&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><a class="reference external" href="../sphinx/#exercise-2">In sphinx.md:</a></p>
+<div class="admonition-optional-sphinx-4-auto-generating-documentation-from-python-docstrings exercise important admonition" id="exercise-2">
+<p class="admonition-title">(optional) Sphinx-4: Auto-generating documentation from Python docstrings</p>
+<ol class="arabic simple">
+<li><p>Write some docstrings in functions and/or class definitions of an <code class="docutils literal notranslate"><span class="pre">example</span></code> python module:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Multiply two numbers.</span>
+
+<span class="sd">    :param a: First number.</span>
+<span class="sd">    :param b: Second number.</span>
+<span class="sd">    :return: The product of a and b.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>In the file <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> modify “extensions” and add 3 lines:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;myst_parser&#39;</span><span class="p">,</span> <span class="s2">&quot;autodoc2&quot;</span><span class="p">]</span>
+
+<span class="n">autodoc2_packages</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;multiply.py&quot;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>List <code class="docutils literal notranslate"><span class="pre">apidocs/index</span></code> in the toctree in <code class="docutils literal notranslate"><span class="pre">index.rst</span></code>.</p></li>
+</ol>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:maxdepth:</span> 2
+   <span class="nc">:caption:</span> Contents:
+
+   some-feature.md
+   apidocs/index
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Re-build the documentation and check the “API reference” section.</p></li>
+</ol>
+</div>
+</section>
+<section id="deploying-sphinx-documentation-to-github-pages">
+<h3>Deploying Sphinx documentation to GitHub Pages<a class="headerlink" href="#deploying-sphinx-documentation-to-github-pages" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="../gh_workflow/#exercise-0">In gh_workflow.md:</a></p>
+<div class="admonition-gh-pages-1-deploy-sphinx-documentation-to-github-pages exercise important admonition" id="exercise-0">
+<p class="admonition-title">GH-Pages-1: Deploy Sphinx documentation to GitHub Pages</p>
+<p>In this exercise we will create an example repository on GitHub and
+deploy it to GitHub Pages.</p>
+<p><strong>Step 1</strong>: Go to the <a class="reference external" href="https://github.com/coderefinery/documentation-example/generate">documentation-example</a> project template
+on GitHub and create a copy to your namespace.</p>
+<ul class="simple">
+<li><p>Give it a name, for instance “documentation-example”.</p></li>
+<li><p>You don’t need to “Include all branches”</p></li>
+<li><p>Click on “Create a repository”.</p></li>
+</ul>
+<p><strong>Step 2</strong>: Browse the new repository.</p>
+<ul class="simple">
+<li><p>It will look very familar to the previous episode.</p></li>
+<li><p>However, we have moved the documentation part under <code class="docutils literal notranslate"><span class="pre">doc/</span></code> (many projects do it this
+way). But it is still a Sphinx documentation project.</p></li>
+<li><p>The source code for your project could then go under <code class="docutils literal notranslate"><span class="pre">src/</span></code>.</p></li>
+</ul>
+<p><strong>Step 3</strong>: Add the GitHub Action to your new Git repository.</p>
+<ul class="simple">
+<li><p>Add a new file at <code class="docutils literal notranslate"><span class="pre">.github/workflows/documentation.yml</span></code> (either through terminal or web interface), containing:</p></li>
+</ul>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">documentation</span>
+
+<span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">pull_request</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">workflow_dispatch</span><span class="p p-Indicator">]</span>
+
+<span class="nt">permissions</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">docs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v5</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">pip install sphinx sphinx_rtd_theme myst_parser</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sphinx build</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">sphinx-build doc _build</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to GitHub Pages</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peaceiris/actions-gh-pages@v3</span>
+<span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.event_name == &#39;push&#39; &amp;&amp; github.ref == &#39;refs/heads/main&#39; }}</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">publish_branch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gh-pages</span>
+<span class="w">          </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
+<span class="w">          </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">_build/</span>
+<span class="w">          </span><span class="nt">force_orphan</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>You don’t need to understand all of the above, but you
+might spot familiar commands in the <code class="docutils literal notranslate"><span class="pre">run:</span></code> sections.</p></li>
+<li><p>After the file has been committed (and pushed),
+check the action at <code class="docutils literal notranslate"><span class="pre">https://github.com/USER/documentation-example/actions</span></code>
+(replace <code class="docutils literal notranslate"><span class="pre">USER</span></code> with your GitHub username).</p></li>
+</ul>
+<p><strong>Step 4</strong>: Enable GitHub Pages</p>
+<ul class="simple">
+<li><p>On GitHub go to “Settings” -&gt; “Pages”.</p></li>
+<li><p>In the “Source” section, choose “Deploy from a branch” in the dropdown menu.</p></li>
+<li><p>In the “Branch” section choose “gh-pages” and “/root” in the dropdown menus and click
+save.</p></li>
+<li><p>You should now be able to verify the pages deployment in the Actions list).</p></li>
+</ul>
+<p><strong>Step 5</strong>: Verify the result</p>
+<ul class="simple">
+<li><p>Your site should now be live on <code class="docutils literal notranslate"><span class="pre">https://USER.github.io/documentation-example/</span></code> (replace USER).</p></li>
+</ul>
+<p><strong>Step 6</strong>: Verify refreshing the documentation</p>
+<ul class="simple">
+<li><p>Commit some changes to your documentation</p></li>
+<li><p>Verify that the documentation website refreshes after your changes (can take few seconds or a minute)</p></li>
+</ul>
+</div>
+</section>
+<section id="hosting-websiteshomepages-on-github-pages">
+<h3>Hosting websites/homepages on GitHub Pages<a class="headerlink" href="#hosting-websiteshomepages-on-github-pages" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="../gh-pages/#exercise-0">In gh-pages.md:</a></p>
+<div class="admonition-gh-pages-2-host-your-own-github-page exercise important admonition" id="exercise-0">
+<p class="admonition-title">GH-Pages-2: Host your own github page</p>
+<ul class="simple">
+<li><p>Deploy own website reusing a template:</p>
+<ul>
+<li><p>Follow the steps from GitHub Pages <a class="reference external" href="https://pages.github.com/">https://pages.github.com/</a>.
+The documentation there is very good so there is no need for us to duplicate the screenshots.</p></li>
+<li><p>Select “Project site”.</p></li>
+<li><p>Select “Choose a theme”.</p></li>
+<li><p>Follow the instructions on <a class="reference external" href="https://pages.github.com/">https://pages.github.com/</a>.</p></li>
+<li><p>Browse your page on https://<strong>USERNAME</strong>.github.io/<strong>REPOSITORY</strong> (adjust “USERNAME” and “REPOSITORY”).</p></li>
+</ul>
+</li>
+<li><p>Make a change to the repository after the webpage has been deployed for the first time.</p></li>
+<li><p>Please wait few minutes and then verify that the change shows up on the website.</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../summary/" class="btn btn-neutral float-left" title="Summary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../guide/" class="btn btn-neutral float-right" title="Instructor guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
