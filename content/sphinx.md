@@ -299,9 +299,6 @@ int main()
 ```
 ````
 
-- We can also use Jupyter notebooks (*.ipynb) with Sphinx. It requires the
-  [myst-nb](https://myst-nb.readthedocs.io/) extension to be installed.
-
 - Math equations with LaTeX should work out of the box. Try this (result below):
 ````markdown
 This creates an equation:
