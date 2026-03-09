@@ -334,7 +334,7 @@ extensions = ["myst_parser", "sphinx.ext.mathjax"]
 
 ## Exercise: Sphinx autodoc
 
-`````{exercise} (optional) Sphinx-4: Auto-generating documentation from Python docstrings
+`````{exercise} Sphinx-3: Auto-generating documentation from Python docstrings
 
 1. Write some docstrings in functions and/or class definitions of an `example` python module:
 ```python
