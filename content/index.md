@@ -43,7 +43,6 @@ recorded a [short shell crash course](https://youtu.be/xbTTDLA3txI).
 30 min ; {doc}`writing-readme-files`
 30 min ; {doc}`sphinx`
 20 min ; {doc}`gh_workflow`
-20 min ; {doc}`gh-pages`
 5 min  ; {doc}`summary`
 ```
 
@@ -57,8 +56,14 @@ in-code-documentation.md
 writing-readme-files.md
 sphinx.md
 gh_workflow.md
-gh-pages.md
 summary.md
+```
+
+```{toctree}
+:maxdepth: 1
+:caption: Supplementary material
+
+gh-pages.md
 ```
 
 ```{toctree}
