@@ -370,6 +370,55 @@ If you already have extensions from another exercise, just add `"autodoc2"` to t
 `````
 
 
+## Exercise: Using Jupyter with Sphinx
+
+`````{exercise} Sphinx-4: Writing Sphinx content with Jupyter
+
+1. Create a text-based notebook files `flower.md` in the same directory as the `index.rst` file. This file will be converted to a Jupyter notebook by the `myst_nb` Sphinx extension and then executed by Jupyter. Fill the file with the following content:
+````md
+---
+file_format: mystnb
+kernelspec:
+  name: python3
+---
+# Flower plot
+
+```{code-cell} ipython3
+import matplotlib.pyplot as plt
+import numpy as np
+
+fig, ax = plt.subplots(1, 1, figsize=(5, 8), subplot_kw={"projection": "polar"})
+theta = np.arange(0, 2 * np.pi, 0.01)
+r = np.sin(5 * theta)
+ax.set_rticks([])
+ax.set_thetagrids([])
+ax.plot(theta, r);
+ax.plot(theta, np.full(len(theta), -1));
+```
+````
+
+2. In the file `conf.py` modify `extensions` to remove `"myst_parser"` and add `"myst_nb"` (you will get an error if you include both):
+```python
+extensions = ["myst_nb"]
+```
+Note that MyST parser functionality is included in MyST NB, so everything else will continue to work as before.
+
+3. List `flower` in the toctree in `index.rst`.
+```rst
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   ...
+   flower.md
+```
+
+4. Re-build the documentation and check the "Flower" section.
+
+5. (Optional) As an alternative to including a text-based notebook with an `.md` file in your documentation, you can add a `.ipynb` files saved from Jupyter notebook or Jupyter lab. Just make sure to 1) start the notebook with a markdown cell with a `# Title` so it can be included in the table of contents 2) save the notebook in the same directory as `index.rst` and 3) list it in the toctree in `index.rst`.
+
+`````
+
 ## Confused about reStructuredText vs. Markdown vs. MyST?
 
 - At the beginning there was reStructuredText and Sphinx was built for reStructuredText.
