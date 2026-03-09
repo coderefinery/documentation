@@ -144,7 +144,7 @@ extensions = []
 
 with this line so that Sphinx can parse Markdown files:
 ```python
-extensions = ['myst_parser']
+extensions = ["myst_parser"]
 ```
 
 Let's create the file `some-feature.md` (in Markdown format) which we have just listed in
@@ -324,7 +324,7 @@ This is an in-line equation, {math}`a^2 + b^2 = c^2`, embedded in text.
 In some older versions, you might need
 to edit `conf.py` and add `sphinx.ext.mathjax`:
 ```python
-extensions = ['myst_parser', 'sphinx.ext.mathjax']
+extensions = ["myst_parser", "sphinx.ext.mathjax"]
 ```
 ````
 
@@ -351,7 +351,7 @@ def multiply(a: float, b: float) -> float:
 
 2. In the file `conf.py` modify "extensions" and add 3 lines:
 ```python
-extensions = ['myst_parser', "autodoc2"]
+extensions = ["myst_parser", "autodoc2"]
 
 autodoc2_packages = [
     "multiply.py"
