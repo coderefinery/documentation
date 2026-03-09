@@ -336,7 +336,7 @@ extensions = ['myst_parser', 'sphinx.ext.mathjax']
 
 `````{exercise} Sphinx-3: Auto-generating documentation from Python docstrings
 
-1. Write some docstrings in functions and/or class definitions of an `example` python module:
+1. Write some docstrings in functions and/or class definitions to a python module `multiply.py`:
 ```python
 def multiply(a: float, b: float) -> float:
     """
@@ -349,7 +349,7 @@ def multiply(a: float, b: float) -> float:
     return a * b
 ```
 
-2. In the file `conf.py` modify "extensions" and add 3 lines:
+2. In the file `conf.py` modify "extensions" and add the `autodoc2_packages` with `"multiply.py"`:
 ```python
 extensions = ['myst_parser', "autodoc2"]
 
@@ -357,14 +357,15 @@ autodoc2_packages = [
     "multiply.py"
 ]
 ```
+If you already have extensions from another exercise, just add `"autodoc2"` to the existing list.
 
-4. List `apidocs/index` in the toctree in `index.rst`.
+4. Add `apidocs/index` to the toctree in `index.rst`.
 ```rst
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   some-feature.md
+   ...
    apidocs/index
 ```
 
