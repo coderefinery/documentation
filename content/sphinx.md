@@ -299,9 +299,6 @@ int main()
 ```
 ````
 
-- We can also use Jupyter notebooks (*.ipynb) with Sphinx. It requires the
-  [myst-nb](https://myst-nb.readthedocs.io/) extension to be installed.
-
 - Math equations with LaTeX should work out of the box. Try this (result below):
 ````markdown
 This creates an equation:
@@ -334,9 +331,9 @@ extensions = ['myst_parser', 'sphinx.ext.mathjax']
 
 ## Exercise: Sphinx autodoc
 
-`````{exercise} (optional) Sphinx-4: Auto-generating documentation from Python docstrings
+`````{exercise} Sphinx-3: Auto-generating documentation from Python docstrings
 
-1. Write some docstrings in functions and/or class definitions of an `example` python module:
+1. Write some docstrings in functions and/or class definitions to a python module `multiply.py`:
 ```python
 def multiply(a: float, b: float) -> float:
     """
@@ -349,7 +346,7 @@ def multiply(a: float, b: float) -> float:
     return a * b
 ```
 
-2. In the file `conf.py` modify "extensions" and add 3 lines:
+2. In the file `conf.py` add `autodoc2` to the "extensions", and add the list `autodoc2_packages` which will mention `"multiply.py"`:
 ```python
 extensions = ['myst_parser', "autodoc2"]
 
@@ -357,20 +354,72 @@ autodoc2_packages = [
     "multiply.py"
 ]
 ```
+If you already have extensions from another exercise, just add `"autodoc2"` to the existing list.
 
-4. List `apidocs/index` in the toctree in `index.rst`.
+4. Add `apidocs/index` to the toctree in `index.rst`.
 ```rst
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   some-feature.md
+   ...
    apidocs/index
 ```
 
 5. Re-build the documentation and check the "API reference" section.
 `````
 
+
+## Exercise: Using Jupyter with Sphinx
+
+`````{exercise} Sphinx-4: Writing Sphinx content with Jupyter
+
+1. For simplicity, create a text-based notebook files `flower.md` in the same directory as the `index.rst` file. This file will be converted to a Jupyter notebook by the `myst_nb` Sphinx extension and then executed by Jupyter. Fill the file with the following content:
+````md
+---
+file_format: mystnb
+kernelspec:
+  name: python3
+---
+# Flower plot
+
+```{code-cell} ipython3
+import matplotlib.pyplot as plt
+import numpy as np
+
+fig, ax = plt.subplots(1, 1, figsize=(5, 8), subplot_kw={"projection": "polar"})
+theta = np.arange(0, 2 * np.pi, 0.01)
+r = np.sin(5 * theta)
+ax.set_rticks([])
+ax.set_thetagrids([])
+ax.plot(theta, r);
+ax.plot(theta, np.full(len(theta), -1));
+```
+````
+Note that there needs to be a title in the notebook (a heading starting with a single `#`), that will be used as an entry and link in the table of content.
+2. In the file `conf.py` modify `extensions` to remove `"myst_parser"` and add `"myst_nb"` ([you will get an error if you include both](https://myst-nb.readthedocs.io/en/latest/quickstart.html)):
+```python
+extensions = ["myst_nb"]
+```
+Note that MyST parser functionality is included in MyST NB, so everything else will continue to work as before.
+
+3. List `flower` in the toctree in `index.rst`.
+```rst
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   ...
+   flower.md
+```
+
+4. Re-build the documentation and check the "Flower" section.
+
+5. You can add a `.ipynb` files saved from Jupyter notebook or Jupyter lab. Just make sure to list it in the toctree in `index.rst` with the correct path.
+
+If you have problems, consider cleaning manually the `jupyter_execute` directory.
+
+`````
 
 ## Confused about reStructuredText vs. Markdown vs. MyST?
 
