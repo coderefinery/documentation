@@ -346,7 +346,7 @@ def multiply(a: float, b: float) -> float:
     return a * b
 ```
 
-2. In the file `conf.py` modify "extensions" and add the `autodoc2_packages` with `"multiply.py"`:
+2. In the file `conf.py` add `autodoc2` to the "extensions", and add the list `autodoc2_packages` which will mention `"multiply.py"`:
 ```python
 extensions = ['myst_parser', "autodoc2"]
 
@@ -374,7 +374,7 @@ If you already have extensions from another exercise, just add `"autodoc2"` to t
 
 `````{exercise} Sphinx-4: Writing Sphinx content with Jupyter
 
-1. Create a text-based notebook files `flower.md` in the same directory as the `index.rst` file. This file will be converted to a Jupyter notebook by the `myst_nb` Sphinx extension and then executed by Jupyter. Fill the file with the following content:
+1. For simplicity, create a text-based notebook files `flower.md` in the same directory as the `index.rst` file. This file will be converted to a Jupyter notebook by the `myst_nb` Sphinx extension and then executed by Jupyter. Fill the file with the following content:
 ````md
 ---
 file_format: mystnb
@@ -396,8 +396,8 @@ ax.plot(theta, r);
 ax.plot(theta, np.full(len(theta), -1));
 ```
 ````
-
-2. In the file `conf.py` modify `extensions` to remove `"myst_parser"` and add `"myst_nb"` (you will get an error if you include both):
+Note that there needs to be a title in the notebook (a heading starting with a single `#`), that will be used as an entry and link in the table of content.
+2. In the file `conf.py` modify `extensions` to remove `"myst_parser"` and add `"myst_nb"` ([you will get an error if you include both](https://myst-nb.readthedocs.io/en/latest/quickstart.html)):
 ```python
 extensions = ["myst_nb"]
 ```
@@ -415,7 +415,9 @@ Note that MyST parser functionality is included in MyST NB, so everything else w
 
 4. Re-build the documentation and check the "Flower" section.
 
-5. (Optional) As an alternative to including a text-based notebook with an `.md` file in your documentation, you can add a `.ipynb` files saved from Jupyter notebook or Jupyter lab. Just make sure to 1) start the notebook with a markdown cell with a `# Title` so it can be included in the table of contents 2) save the notebook in the same directory as `index.rst` and 3) list it in the toctree in `index.rst`.
+5. You can add a `.ipynb` files saved from Jupyter notebook or Jupyter lab. Just make sure to list it in the toctree in `index.rst` with the correct path.
+
+If you have problems, consider cleaning manually the `jupyter_execute` directory.
 
 `````
 
