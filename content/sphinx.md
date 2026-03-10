@@ -415,7 +415,7 @@ Note that MyST parser functionality is included in MyST NB, so everything else w
 
 4. Re-build the documentation and check the "Flower" section.
 
-5. You can add a `.ipynb` files saved from Jupyter notebook or Jupyter lab. Just make sure to list it in the toctree in `index.rst` with the correct path.
+5. Alternatively, you can directly add `.ipynb` files saved from Jupyter notebook or Jupyter lab. Just make sure to list it in the toctree in `index.rst` with the correct path.
 
 If you have problems, consider cleaning manually the `jupyter_execute` directory.
 
