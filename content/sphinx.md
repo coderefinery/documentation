@@ -77,78 +77,51 @@ generate the basic documentation template:
 ```console
 $ mkdir doc-example
 $ cd doc-example
-$ sphinx-quickstart
 ```
 
-The quickstart utility will ask you some questions. For this exercise, you can go
-with the default answers except to specify a project name, author name, and project release:
-
-```
-> Separate source and build directories (y/n) [n]: <hit enter>
-> Project name: <your project name>
-> Author name(s): <your name>
-> Project release []: 0.1
-> Project language [en]: <hit enter>
-```
-
-A couple of files and directories are created:
+We create the basic structure of the project manually.
 
 | File/directory | Contents |
 | -------------- | -------- |
 | conf.py        | Documentation configuration file |
-| index.rst      | Main file in Sphinx |
-| _build/        | Directory where docs are built (you can decide the name) |
-| _templates/    | Your own HTML templates |
-| _static/       | Static files (images, styles, etc.) copied to output directory on build |
-| Makefile       | Makefile to build documentation using make |
-| make.bat       | Makefile to build documentation using make (Windows) |
+| index.md      | Main file in Sphinx |
 
-`Makefile` and `make.bat` (for Windows) are build scripts that wrap the sphinx commands, but
-we will be doing it explicitly.
+Let's create the `index.md` with this content:
 
-Let's have a look at the `index.rst` file, which is the main file of your documentation:
+```md
 
-```rst
-.. myproject documentation master file, created by
-   sphinx-quickstart on Sat Sep 23 17:35:26 2023.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+# Documentation example with Sphinx
 
-Welcome to myproject's documentation!
-=====================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
+```{toctree}
+:maxdepth: 2
+:caption: Contents:
+some-feature.md
+```
 
 ```
 
-- The top four lines, starting with `..`, are a comment.
-- The next lines are the table of contents. We can add content below:
+Note that indentation and spaces play a role here.
 
-```rst
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
 
-   some-feature.md
-```
-Note that `some-feature.md` needs to be indented to align with `:caption:`.
-
-We now need to tell Sphinx to use markdown files. To do this, we open
-`conf.py` and replace the line:
+We also create a `conf.py` configuration file, with this content:
 ```python
-extensions = []
-```
-
-with this line so that Sphinx can parse Markdown files:
-```python
+project = 'Test sphinx project'
+author = 'Alice, Bob'
+release = '0.1'            
+                                                                                
 extensions = ['myst_parser']
+                                                                                
+exclude_patterns = ['_build']
 ```
+
+For more information about the configuration,
+see the [Sphinx documentation](https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration)
+
+™
 
 Let's create the file `some-feature.md` (in Markdown format) which we have just listed in
-`index.rst` (which uses reStructured Text format).
+`index.md` (which uses reStructured Text format).
 
 ```md
 # Some feature
@@ -172,12 +145,8 @@ We now build the site:
 ```console
 $ ls -1
 
-_static
-_templates
 conf.py
-index.rst
-make.bat
-Makefile
+index.md
 some-feature.md
 
 $ sphinx-build . _build
@@ -218,9 +187,15 @@ Now open the file `_build/index.html` in your browser.
 Hopefully you can now see a website. If so, then you are able to build Sphinx pages locally.
 This is useful to check how things look before pushing changes to GitHub or elsewhere.
 
-Note that you can change the styling by editing `conf.py` and changing the value `html_theme`
-(for instance you can set it to `sphinx_rtd_theme` (if you have that Python package installed)
-to have the Read the Docs look).
+Note that you can change the styling by 
+adding the line
+```py
+html_theme = "<my favorite theme>"
+```
+in `conf.py`. 
+For instance you can use`sphinx_rtd_theme` 
+to have the Read the Docs look
+(make sure the `sphinx_rtd_theme` python package is available first)
 ````
 
 
