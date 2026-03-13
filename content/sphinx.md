@@ -67,9 +67,9 @@ tools.
 ````
 
 
-## Exercise: Sphinx quickstart
+## Exercise: Setting up a Sphinx project
 
-````{exercise} Sphinx-1: Generate the basic documentation template
+`````{exercise} Sphinx-1: Generate the basic documentation template
 
 Create a directory for the example documentation, step into it, and inside
 generate the basic documentation template:
@@ -77,78 +77,52 @@ generate the basic documentation template:
 ```console
 $ mkdir doc-example
 $ cd doc-example
-$ sphinx-quickstart
 ```
 
-The quickstart utility will ask you some questions. For this exercise, you can go
-with the default answers except to specify a project name, author name, and project release:
-
-```
-> Separate source and build directories (y/n) [n]: <hit enter>
-> Project name: <your project name>
-> Author name(s): <your name>
-> Project release []: 0.1
-> Project language [en]: <hit enter>
-```
-
-A couple of files and directories are created:
+We create the basic structure of the project manually.
 
 | File/directory | Contents |
 | -------------- | -------- |
 | conf.py        | Documentation configuration file |
-| index.rst      | Main file in Sphinx |
-| _build/        | Directory where docs are built (you can decide the name) |
-| _templates/    | Your own HTML templates |
-| _static/       | Static files (images, styles, etc.) copied to output directory on build |
-| Makefile       | Makefile to build documentation using make |
-| make.bat       | Makefile to build documentation using make (Windows) |
+| index.md      | Main file in Sphinx |
 
-`Makefile` and `make.bat` (for Windows) are build scripts that wrap the sphinx commands, but
-we will be doing it explicitly.
+Let's create the `index.md` with this content:
 
-Let's have a look at the `index.rst` file, which is the main file of your documentation:
+````md
 
-```rst
-.. myproject documentation master file, created by
-   sphinx-quickstart on Sat Sep 23 17:35:26 2023.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+# Documentation example with Sphinx
 
-Welcome to myproject's documentation!
-=====================================
+A small example of how to use Sphinx and MyST 
+to create easily readable and aesthetically pleasing
+documentation.
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-
+```{toctree}
+:maxdepth: 2
+:caption: Contents:
+some-feature.md
 ```
 
-- The top four lines, starting with `..`, are a comment.
-- The next lines are the table of contents. We can add content below:
+````
 
-```rst
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+Note that indentation and spaces play a role here.
 
-   some-feature.md
-```
-Note that `some-feature.md` needs to be indented to align with `:caption:`.
 
-We now need to tell Sphinx to use markdown files. To do this, we open
-`conf.py` and replace the line:
+We also create a `conf.py` configuration file, with this content:
 ```python
-extensions = []
-```
-
-with this line so that Sphinx can parse Markdown files:
-```python
+project = 'Test sphinx project'
+author = 'Alice, Bob'
+release = '0.1'            
+                                                                                
 extensions = ['myst_parser']
+                                                                                
+exclude_patterns = ['_build']
 ```
+
+For more information about the configuration,
+see the [Sphinx documentation](https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration).
 
 Let's create the file `some-feature.md` (in Markdown format) which we have just listed in
-`index.rst` (which uses reStructured Text format).
+`index.md`:
 
 ```md
 # Some feature
@@ -172,12 +146,8 @@ We now build the site:
 ```console
 $ ls -1
 
-_static
-_templates
 conf.py
-index.rst
-make.bat
-Makefile
+index.md
 some-feature.md
 
 $ sphinx-build . _build
@@ -218,10 +188,25 @@ Now open the file `_build/index.html` in your browser.
 Hopefully you can now see a website. If so, then you are able to build Sphinx pages locally.
 This is useful to check how things look before pushing changes to GitHub or elsewhere.
 
-Note that you can change the styling by editing `conf.py` and changing the value `html_theme`
-(for instance you can set it to `sphinx_rtd_theme` (if you have that Python package installed)
-to have the Read the Docs look).
-````
+Note that you can change the styling by 
+adding the line
+```py
+html_theme = "<my favorite theme>"
+```
+in `conf.py`. 
+For instance you can use`sphinx_rtd_theme` 
+to have the Read the Docs look
+(make sure the `sphinx_rtd_theme` python package is available first)
+`````
+
+```{seealso} 
+
+Sphinx also provides a tool called `sphinx-quickstart`
+that guides you in the creation of the project.
+The reason why we do not use it here
+is that it does not use Markdown by default,
+but a more complex format called ReStructured Text (ReST).
+```
 
 
 ## Exercise: Adding more Sphinx content
@@ -357,14 +342,14 @@ autodoc2_packages = [
 If you already have extensions from another exercise, just add `"autodoc2"` to the existing list.
 
 4. Add `apidocs/index` to the toctree in `index.rst`.
-```rst
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+````md
+```{toctree}
+:maxdepth: 2
+:caption: Contents:
 
-   ...
-   apidocs/index
-```
+...
+apidocs/index
+````
 
 5. Re-build the documentation and check the "API reference" section.
 `````
@@ -374,7 +359,7 @@ If you already have extensions from another exercise, just add `"autodoc2"` to t
 
 `````{exercise} Sphinx-4: Writing Sphinx content with Jupyter
 
-1. For simplicity, create a text-based notebook files `flower.md` in the same directory as the `index.rst` file. This file will be converted to a Jupyter notebook by the `myst_nb` Sphinx extension and then executed by Jupyter. Fill the file with the following content:
+1. For simplicity, create a text-based notebook files `flower.md` in the same directory as the `index.md` file. This file will be converted to a Jupyter notebook by the `myst_nb` Sphinx extension and then executed by Jupyter. Fill the file with the following content:
 ````md
 ---
 file_format: mystnb
@@ -403,34 +388,23 @@ extensions = ["myst_nb"]
 ```
 Note that MyST parser functionality is included in MyST NB, so everything else will continue to work as before.
 
-3. List `flower` in the toctree in `index.rst`.
-```rst
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   ...
-   flower.md
+3. List `flower` in the toctree in `index.md`.
+````md
+```{toctree}
+:maxdepth: 2
+:caption: Contents:
+...
+flower.md
 ```
+````
 
 4. Re-build the documentation and check the "Flower" section.
 
-5. Alternatively, you can directly add `.ipynb` files saved from Jupyter notebook or Jupyter lab. Just make sure to list it in the toctree in `index.rst` with the correct path.
+5. Alternatively, you can directly add `.ipynb` files saved from Jupyter notebook or Jupyter lab. Just make sure to list it in the toctree in `index.md` with the correct path.
 
 If you have problems, consider cleaning manually the `jupyter_execute` directory.
 
 `````
-
-## Confused about reStructuredText vs. Markdown vs. MyST?
-
-- At the beginning there was reStructuredText and Sphinx was built for reStructuredText.
-- Independently, Markdown was invented and evolved into a couple of flavors.
-- Markdown became more and more popular but was limited compared to reStructuredText.
-- Later, [MyST](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html)
-  was invented to be able to write
-  something that looks like Markdown but in addition can do everything that
-  reStructuredText can do with extra directives.
-
 
 ## Good to know
 
@@ -457,8 +431,6 @@ If you have problems, consider cleaning manually the `jupyter_execute` directory
 
 ```{keypoints}
 - Sphinx and Markdown is a powerful duo for writing documentation.
-- Another option is to use reStructuredText, see the [Sphinx documentation](https://www.sphinx-doc.org/en/stable/rest.html)
-  and the [quick-reference](https://docutils.sourceforge.net/docs/user/rst/quickref.html)
 - In the next episode we will learn how to deploy the documentation to a cloud service and update it
   upon every `git push`.
 ```
