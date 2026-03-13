@@ -67,9 +67,9 @@ tools.
 ````
 
 (quickstart)=
-## Exercise: Sphinx quickstart
+## Exercise: Setting up a Sphinx project
 
-````{exercise} Sphinx-1: Generate the basic documentation template
+`````{exercise} Sphinx-1: Generate the basic documentation template
 
 Create a directory for the example documentation, step into it, and inside
 generate the basic documentation template:
@@ -88,10 +88,13 @@ We create the basic structure of the project manually.
 
 Let's create the `index.md` with this content:
 
-```md
+````md
 
 # Documentation example with Sphinx
 
+A small example of how to use Sphinx and MyST 
+to create easily readable and aesthetically pleasing
+documentation.
 
 ```{toctree}
 :maxdepth: 2
@@ -99,7 +102,7 @@ Let's create the `index.md` with this content:
 some-feature.md
 ```
 
-```
+````
 
 Note that indentation and spaces play a role here.
 
@@ -116,12 +119,10 @@ exclude_patterns = ['_build']
 ```
 
 For more information about the configuration,
-see the [Sphinx documentation](https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration)
-
-™
+see the [Sphinx documentation](https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration).
 
 Let's create the file `some-feature.md` (in Markdown format) which we have just listed in
-`index.md` (which uses reStructured Text format).
+`index.md`:
 
 ```md
 # Some feature
@@ -196,7 +197,16 @@ in `conf.py`.
 For instance you can use`sphinx_rtd_theme` 
 to have the Read the Docs look
 (make sure the `sphinx_rtd_theme` python package is available first)
-````
+`````
+
+```{seealso} 
+
+Sphinx also provides a tool called `sphinx-quickstart`
+that guides you in the creation of the project.
+The reason why we do not use it here
+is that it does not use Markdown by default,
+but a more complex format called ReStructured Text (ReST).
+```
 
 
 ## Exercise: Adding more Sphinx content
@@ -332,14 +342,14 @@ autodoc2_packages = [
 If you already have extensions from another exercise, just add `"autodoc2"` to the existing list.
 
 4. Add `apidocs/index` to the toctree in `index.rst`.
-```rst
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+````md
+```{toctree}
+:maxdepth: 2
+:caption: Contents:
 
-   ...
-   apidocs/index
-```
+...
+apidocs/index
+````
 
 5. Re-build the documentation and check the "API reference" section.
 `````
@@ -349,7 +359,7 @@ If you already have extensions from another exercise, just add `"autodoc2"` to t
 
 `````{exercise} Sphinx-4: Writing Sphinx content with Jupyter
 
-1. For simplicity, create a text-based notebook files `flower.md` in the same directory as the `index.rst` file. This file will be converted to a Jupyter notebook by the `myst_nb` Sphinx extension and then executed by Jupyter. Fill the file with the following content:
+1. For simplicity, create a text-based notebook files `flower.md` in the same directory as the `index.md` file. This file will be converted to a Jupyter notebook by the `myst_nb` Sphinx extension and then executed by Jupyter. Fill the file with the following content:
 ````md
 ---
 file_format: mystnb
@@ -378,34 +388,23 @@ extensions = ["myst_nb"]
 ```
 Note that MyST parser functionality is included in MyST NB, so everything else will continue to work as before.
 
-3. List `flower` in the toctree in `index.rst`.
-```rst
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   ...
-   flower.md
+3. List `flower` in the toctree in `index.md`.
+````md
+```{toctree}
+:maxdepth: 2
+:caption: Contents:
+...
+flower.md
 ```
+````
 
 4. Re-build the documentation and check the "Flower" section.
 
-5. Alternatively, you can directly add `.ipynb` files saved from Jupyter notebook or Jupyter lab. Just make sure to list it in the toctree in `index.rst` with the correct path.
+5. Alternatively, you can directly add `.ipynb` files saved from Jupyter notebook or Jupyter lab. Just make sure to list it in the toctree in `index.md` with the correct path.
 
 If you have problems, consider cleaning manually the `jupyter_execute` directory.
 
 `````
-
-## Confused about reStructuredText vs. Markdown vs. MyST?
-
-- At the beginning there was reStructuredText and Sphinx was built for reStructuredText.
-- Independently, Markdown was invented and evolved into a couple of flavors.
-- Markdown became more and more popular but was limited compared to reStructuredText.
-- Later, [MyST](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html)
-  was invented to be able to write
-  something that looks like Markdown but in addition can do everything that
-  reStructuredText can do with extra directives.
-
 
 ## Good to know
 
@@ -432,8 +431,6 @@ If you have problems, consider cleaning manually the `jupyter_execute` directory
 
 ```{keypoints}
 - Sphinx and Markdown is a powerful duo for writing documentation.
-- Another option is to use reStructuredText, see the [Sphinx documentation](https://www.sphinx-doc.org/en/stable/rest.html)
-  and the [quick-reference](https://docutils.sourceforge.net/docs/user/rst/quickref.html)
 - In the next episode we will learn how to deploy the documentation to a cloud service and update it
   upon every `git push`.
 ```
