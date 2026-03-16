@@ -25,7 +25,7 @@
 
 ---
 
-## Exercise - Deploy Sphinx documentation to GitHub Pages
+## Demonstration - Deploy Sphinx documentation to GitHub Pages
 
 ````{exercise} GH-Pages-1: Deploy Sphinx documentation to GitHub Pages
 In this exercise we will create an example repository on GitHub and
@@ -95,7 +95,24 @@ jobs:
 - Commit some changes to your documentation
 - Verify that the documentation website refreshes after your changes (can take few seconds or a minute)
 ````
+## Exercise - Sphinx documentation on GitHub Pages
+````{exercise} GH-Pages-2: Deploy Sphinx documentation to GitHub Pages
+1. Follow the above instructions to create a new repository with a Sphinx documentation project;
+2. Try adding one or more of the following to your Sphinx project:
+   a. API documentation (see [previous exercise](#api-exercise))
+   b. Jupyter Notebook (see [previous exercise](#jupyter-exercise))
+   c. change the theme (see the end of [the quickstart](#quickstart))
 
+   ```{important}
+      The computer on which the GitHub actions run is *not* your local machine,
+      and might not have the libraries you need to build the project.
+      Make sure you update the dependencies (installed with `pip` in the demonstration) appropriately.      
+   ```
+   ```{important}
+      Make sure the correct file paths are used where appropriate.
+   ```
+What do you need to change in the workflow file?
+````
 
 ## Alternatives to GitHub Pages
 
