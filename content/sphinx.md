@@ -66,7 +66,7 @@ But please don't give up if you don't have these - the episodes after this one w
 tools.
 ````
 
-
+(quickstart)=
 ## Exercise: Sphinx quickstart
 
 ````{exercise} Sphinx-1: Generate the basic documentation template
@@ -328,7 +328,7 @@ extensions = ['myst_parser', 'sphinx.ext.mathjax']
 
 `````
 
-
+(api-exercise)=
 ## Exercise: Sphinx autodoc
 
 `````{exercise} Sphinx-3: Auto-generating documentation from Python docstrings
@@ -369,7 +369,7 @@ If you already have extensions from another exercise, just add `"autodoc2"` to t
 5. Re-build the documentation and check the "API reference" section.
 `````
 
-
+(jupyter-exercise)=
 ## Exercise: Using Jupyter with Sphinx
 
 `````{exercise} Sphinx-4: Writing Sphinx content with Jupyter
