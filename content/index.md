@@ -50,12 +50,12 @@ recorded a [short shell crash course](https://youtu.be/xbTTDLA3txI).
 :maxdepth: 1
 :caption: The lesson
 
-wishlist.md
-tools.md
 in-code-documentation.md
 writing-readme-files.md
 sphinx.md
 gh_workflow.md
+wishlist.md
+tools.md
 summary.md
 ```
 
