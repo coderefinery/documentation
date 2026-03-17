@@ -21,7 +21,7 @@
 - Disadvantage
   - Probably not enough for users of the code
 
-We will have a closer look at this in the {ref}`in-code-documentation` episode.
+For a closer look at this see the {ref}`in-code-documentation` episode.
 
 ---
 
@@ -35,7 +35,7 @@ We will have a closer look at this in the {ref}`in-code-documentation` episode.
   [Markdown](https://commonmark.org/help/)
 - A great guide to README files: [MakeaREADME](https://www.makeareadme.com/)
 
-We will have a closer look at this in the {ref}`writing-readme-files` episode.
+For a closer look at this see the {ref}`writing-readme-files` episode.
 
 ---
 
@@ -71,7 +71,7 @@ tables, links, ...                tables, links, ...
 - There are (unfortunately) [many flavors of Markdown](https://github.com/jgm/CommonMark/wiki/Markdown-Flavors).
 - Motivation to stick to a standard text-based format: **They make it easier to move the documentation to other tools
   which also expect a standard format, as the project/organization grows**.
-- We will use [MyST](https://myst-parser.readthedocs.io/en/latest/)
+- We use [MyST](https://myst-parser.readthedocs.io/en/latest/)
   flavored Markdown in the {ref}`sphinx` episode and the
   {ref}`gh-pages` example.
 - Nice resource to learn Markdown: [Learn Markdown in 60 seconds](https://commonmark.org/help/)
@@ -83,7 +83,7 @@ tables, links, ...                tables, links, ...
 
 There are many tools that can turn RST or Markdown into beautiful HTML pages:
 
-- [Sphinx](https://www.sphinx-doc.org) **← we will exercise this, this is how this lesson material is built**
+- [Sphinx](https://www.sphinx-doc.org) **← this is how this lesson material is built**
   - Generate HTML/PDF/LaTeX from RST and Markdown.
   - Basically all Python projects use Sphinx but **Sphinx is not limited to Python**.
   - [Read the docs](https://readthedocs.org)
