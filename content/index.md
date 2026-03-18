@@ -3,19 +3,19 @@
 In this lesson we will discuss different solutions for implementing and
 deploying code documentation.
 
-We will start with a discussion about **what makes a good README**. For many
-projects, a README is more than enough.
-
-We will then learn how to build documentation with the
-**documentation generator** [Sphinx](https://www.sphinx-doc.org) (and compare it
-with others) and how to
-deploy it to [Read the Docs](https://readthedocs.org), a service which hosts
-open documentation for free.
-
 This demonstration will be **independent of programming languages**.
 
-We will also learn how
-to deploy a **project website or personal homepage** to [GitHub Pages](https://pages.github.com).
+We will discuss best practices, and briefly discuss the available tools.
+
+Then we will discuss the form of documentation which is the most immediate to write:
+**in-code** comments, and docstrings.
+
+We will step up our game and discuss **what makes a good README**. For many
+projects, a curated README is enough.
+
+We will then learn how to build documentation with the
+**documentation generator** [Sphinx](https://www.sphinx-doc.org) and how to
+deploy it to [GitHub Pages](https://pages.github.com).
 The approach that we will learn will be transferable to
 [GitLab Pages](https://about.gitlab.com/features/pages/) and
 [Bitbucket Pages](https://pages.bitbucket.io).
@@ -32,6 +32,11 @@ The approach that we will learn will be transferable to
 If you wish to follow in the terminal and are new to the command line, we
 recorded a [short shell crash course](https://youtu.be/xbTTDLA3txI).
 ```
+
+An optional episode is about 
+deploying a **project website or personal homepage** 
+to [GitHub Pages](https://pages.github.com).
+
 
 ```{csv-table}
 :widths: auto
