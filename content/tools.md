@@ -39,7 +39,7 @@ For a closer look at this see the {ref}`writing-readme-files` episode.
 
 ---
 
-## reStructuredText and Markdown
+## Plain Text formats: reStructuredText and Markdown
 
 ```markdown
 # This is a section in Markdown   This is a section in RST
@@ -77,38 +77,137 @@ tables, links, ...                tables, links, ...
 - Nice resource to learn Markdown: [Learn Markdown in 60 seconds](https://commonmark.org/help/)
 - [Pandoc](https://pandoc.org/) can convert between MD and RST (and many other formats).
 
+
+
 ---
 
 ## HTML static site generators
 
-There are many tools that can turn RST or Markdown into beautiful HTML pages:
+There are many tools generate documentation 
+that can be 
+viewed locally,
+or hosted on the web.
 
-- [Sphinx](https://www.sphinx-doc.org) **← this is how this lesson material is built**
-  - Generate HTML/PDF/LaTeX from RST and Markdown.
-  - Basically all Python projects use Sphinx but **Sphinx is not limited to Python**.
-  - [Read the docs](https://readthedocs.org)
-    hosts public Sphinx documentation for free!
-  - Also hostable anywhere else, like Github pages.
-  - API documentation possible.
+Here are some HTML static site generators, relevant in our communities.
+These tools offer some or all of these features:
+- **API Reference generation**: source code is read, scan for docstrings and render them
+- **Search**: they offer a "whole site" search feature (non trivial, when viewing only one page).
+              (if you can download )
+- **Validation**: check that the code snipped in the documentation 
+                  match the real behaviour of the code.
+- **Continous checks**: regenerate automatically every time you save, so that you can catch errors early
 
-- [Jekyll](https://jekyllrb.com)
-  - Generates HTML from Markdown.
-  - GitHub supports this without adding extra build steps.
+````{tabs}
+  ```{group-tab} Python
+     - [Sphinx](https://www.sphinx-doc.org) **this is how this lesson material is built**  
+       - Generate HTML/PDF/LaTeX from RST and Markdown (MyST)
+       - Basically all Python projects use Sphinx but **Sphinx is not limited to Python**.
+       - [Read the docs](https://about.readthedocs.com)
+         hosts public Sphinx documentation for free!
+       - **API Reference generation**: via 
+         [autodoc](https://sphinx-autodoc2.readthedocs.io/en/latest/)
+         or [autoapi](https://sphinx-autoapi.readthedocs.io/en/latest/)
+       - **Search:**
+         - limited, keyword-based client-side (Javascript that runs in browser)
+         - Full-text server-side on [Read the docs](https://about.readthedocs.com)
+       - **Validation**: via [doctest](https://docs.python.org/3/library/doctest.html)
 
-- [pkgdown](https://pkgdown.r-lib.org/)
-  - Popular in the R community
+     - [MkDocs](https://www.mkdocs.org/): A Markdown-first static site generator.
+       - **API Reference generation**: via 
+         [mkdocstrings](https://mkdocstrings.github.io/)
+       - **Search:** search plugin for client-side (Javascript that runs in the browser - lunr.js)
+       
+     - [Doxygen](https://www.doxygen.nl/):
+       - **API Reference generation**: has also support for Python
+     
+  ```
+  ```{group-tab} R
+     [pkgdown](https://pkgdown.r-lib.org/)
+     Long-Form Documentation for R is typically contained in [vignettes](https://r-pkgs.org/vignettes.html)
+     - **API Reference generation**: via 
+       [roxygen2](https://roxygen2.r-lib.org/) and 
+     Rdconv 
+     - Uses RMarkdown and a LaTeX-like syntax
+     - **Search:** 
+       - client-side (Javascript that runs in browser - fuse.js)
+       - also typically avaiable in RStudio
+     
+  ```
+  ```{group-tab} C/C++
+     - [Doxygen](https://www.doxygen.nl/) 
+       - **API Reference generation** out of the box, generates static call graph
+       - Focus on Documentation directly in the source code
+       - MarkDown-like syntax, with its own flavour and [special commands](https://www.doxygen.nl/manual/commands.html)
+       - **Search**: 
+         - limited keyword-based client-side
+         - full text search server-side 
+     - [Sphinx](https://www.sphinx-doc.org) can be also used to generate documentation for C++ projects, using the XML output from Doxygen via [Breathe](https://breathe.readthedocs.io/en/latest/)  
 
-- [MkDocs](https://www.mkdocs.org/)
-- [GitBook](https://www.gitbook.com/)
-- [Hugo](https://gohugo.io)
-- [Hexo](https://hexo.io)
-- [Zola](https://www.getzola.org/) **<- this is what we use for our project website and workshop websites**
-- There are many more ...
+  ```
+
+  ```{group-tab} Fortran
+     - [Doxygen](https://www.doxygen.nl/): 
+       - **API Reference generation** out of the box, generates static call graph (but has limited Fortran parsing capabilities)
+       - Focus on Documentation directly in the source code
+       - MarkDown-like syntax, with its own flavour and [special commands](https://www.doxygen.nl/manual/commands.html)
+       - **Search**: 
+         - limited keyword-based client-side
+         - full text search server-side 
+
+     - [FORD](https://forddocs.readthedocs.io/en/stable/)
+       - Python-based
+       - **Search:** client-side (Javascript that runs in the browser - lunr.js)
+       
+  ```
+  ```{group-tab} Julia
+     - [Documenter.jl](https://documenter.juliadocs.org/stable/)
+       - Using MarkDown (JuliaMarkdown flavour)
+       - Parses Julia code and in-code documentation/docstrings
+       - **Search**: client-side (but typically the whole site is loaded for search on every page)
+       - **Validation:** runs the code and checks 
+
+  ```
+
+  ```{group-tab} Rust
+     [RustDoc](https://doc.rust-lang.org/rustdoc/what-is-rustdoc.html)
+     - Uses MarkDown (CommonMark flavour)
+     - **Search**: client-side (Javascript that runs in the browser - elasticlunr.js)
+     - **Validation**: validates code examples when run with `--test`
+  
+  ```
+
+  ```{group-tab} Any 
+     These are general-purpose static website generators
+     that match the philosophy of the other tools presented so far, 
+     but might be better suited for blogging, reports or other kinds of publications:
+
+     - [Hugo](https://gohugo.io)
+     - [Hexo](https://hexo.io)
+     - [Zola](https://www.getzola.org/) **<- this is what we use for our project website and workshop websites**
+     - [Jekyll](https://jekyllrb.com/), default for GitHub pages
+
+     - [Franklin.jl](https://github.com/JuliaDocs/Franklin.jl): focuses on technical blogging for the Julia community
+     - [Quarto](https://quarto.org/) converts markdown to websites, pdfs, ebooks and many other things (dynamic notebook-based documents) 
+  ```
+````
+
+```{discussion}
+
+Do you know an awesome tool or feature that should be in this list? 
+Let us know! (Open a PR)
+
+```
+
+## Hosting Documentation on the Web 
 
 GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 - [GitHub Pages](https://pages.github.com)
 - [Bitbucket Pages](https://pages.bitbucket.io/)
 - [GitLab Pages](https://pages.gitlab.io)
+
+[Read The Docs](https://about.readthedocs.io) is also free to use for open source code,
+and can be [connected](https://docs.readthedocs.com/platform/latest/reference/git-integration.htm) 
+to common software forges.
 
 ---
 
@@ -125,6 +224,9 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
   - Difficult to check out a specific old version
   - Typically needs to be hosted and maintained
 
+
+
+
 ---
 
 ## LaTeX/PDF
@@ -135,34 +237,10 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
   - PDF format is not ideal for copy-pasting of examples
   - Possible, but not trivial to automate rebuilding documentation after every Git push
 
----
 
-## Doxygen
-
-- Auto-generates API documentation
-- Documented directly in the source code
-- Popular in the C++ community
-- Has support for C, Fortran, Python, Java, etc.,
-  see [Doxygen Github Repo](https://github.com/doxygen/doxygen)
-- Many keywords are understood by Doxygen:
-  [Doxygen special commands](https://www.doxygen.nl/manual/commands.html)
-- Can be used to also generate higher-level ("human") documentation
-- Can be deployed to GiHub/GitLab/Bitbucket Pages
 
 ---
 
-## Other tools
-
-- Fortran
-  - [Fortran Documenter (FORD)](https://github.com/Fortran-FOSS-Programmers/ford)
-
-- Julia
-  - [Franklin](https://franklinjl.org/): static site generator
-  - [Documenter.jl](https://juliadocs.github.io/Documenter.jl/stable/)
-
-- [Quarto](https://quarto.org/) converts markdown to websites, pdfs, ebooks and many other things
-
----
 
 ```{keypoints}
 - Some popular solutions make reproducibility and maintenance of multiple code versions difficult.
