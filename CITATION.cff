@@ -26,6 +26,8 @@ authors:
   given-names: "Kjartan Thor"
 - family-names: "Wittke"
   given-names: "Samantha"
+- family-names: "Mesiti"
+  given-names: "Michele"
 title: "How to document your research software"
 type: "dataset"
 abstract: "The lesson 'How to document your research software' gives an overview of the different ways how a code project can be documented: from small projects to larger projects. Markdown and Sphinx are central tools in this lesson."
