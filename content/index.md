@@ -36,13 +36,14 @@ recorded a [short shell crash course](https://youtu.be/xbTTDLA3txI).
 ```{csv-table}
 :widths: auto
 :delim: ;
-
-10 min ; {doc}`wishlist`
+5 min ; Intro
+5 min ; {doc}`in-code-documentation`
+10 min ; {doc}`writing-readme-files`
+35 min ; {doc}`sphinx` (with exercise)
+10 min ; Break
+30 min ; {doc}`gh_workflow` (with exercise)
 10 min ; {doc}`tools`
-20 min ; {doc}`in-code-documentation`
-30 min ; {doc}`writing-readme-files`
-30 min ; {doc}`sphinx`
-20 min ; {doc}`gh_workflow`
+10 min ; {doc}`wishlist`
 5 min  ; {doc}`summary`
 ```
 
@@ -50,12 +51,12 @@ recorded a [short shell crash course](https://youtu.be/xbTTDLA3txI).
 :maxdepth: 1
 :caption: The lesson
 
-wishlist.md
-tools.md
 in-code-documentation.md
 writing-readme-files.md
 sphinx.md
 gh_workflow.md
+wishlist.md
+tools.md
 summary.md
 ```
 
