@@ -83,10 +83,13 @@ jobs:
 
 **Step 4**: Enable GitHub Pages
 - On GitHub go to "Settings" -> "Pages".
-- In the "Source" section, choose "Deploy from a branch" in the dropdown menu.
-- In the "Branch" section choose "gh-pages" and "/root" in the dropdown menus and click
-  save.
-- You should now be able to verify the pages deployment in the Actions list).
+- Under "Build and deployment"
+  - In the **Source** section: choose "Deploy from a branch" in the dropdown menu
+  - In the **Branch** section: choose "gh-pages" and "/ (root)" in the dropdown menus
+  and click the **Save** button.
+- You should now be able to verify the pages deployment in the "Actions" list 
+  ([this is how it looks like](https://github.com/coderefinery/documentation/actions)
+  for this lesson material).
 
 **Step 5**: Verify the result
 - Your site should now be live on `https://USER.github.io/documentation-example/` (replace USER).
