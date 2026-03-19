@@ -3,7 +3,10 @@
 In this lesson we will discuss different solutions for implementing and
 deploying code documentation.
 
-This demonstration will be **independent of programming languages**.
+This demonstration will be mostly **independent of programming languages**
+(you will be able to follow and do all the exercises
+using the [CodeRefinery conda environment](https://coderefinery.github.io/installation/conda-environment/)).
+
 
 We will discuss best practices, and briefly discuss the available tools.
 
