@@ -99,7 +99,7 @@ These tools offer some or all of these features:
 
 ````{tabs}
   ```{group-tab} Python
-     - [Sphinx](https://www.sphinx-doc.org) **this is how this lesson material is built**  
+     - [Sphinx](https://www.sphinx-doc.org) **← this is how this lesson material is built**  
        - Generate HTML/PDF/LaTeX from RST and Markdown (MyST)
        - Basically all Python projects use Sphinx but **Sphinx is not limited to Python**.
        - [Read the docs](https://about.readthedocs.com)
@@ -122,15 +122,16 @@ These tools offer some or all of these features:
      
   ```
   ```{group-tab} R
-     [pkgdown](https://pkgdown.r-lib.org/)
-     Long-Form Documentation for R is typically contained in [vignettes](https://r-pkgs.org/vignettes.html)
-     - **API Reference generation**: via 
-       [roxygen2](https://roxygen2.r-lib.org/) and 
-     Rdconv 
-     - Uses RMarkdown and a LaTeX-like syntax
-     - **Search:** 
-       - client-side (Javascript that runs in browser - fuse.js)
-       - also typically avaiable in RStudio
+     - [pkgdown](https://pkgdown.r-lib.org/)  
+       - **API Reference generation**: via 
+         [roxygen2](https://roxygen2.r-lib.org/) and 
+       Rdconv 
+       - Uses RMarkdown and a LaTeX-like syntax
+       - **Search:** 
+         - client-side (Javascript that runs in browser - fuse.js)
+         - also typically avaiable in RStudio
+
+       Long-Form Documentation for R is typically contained in [vignettes](https://r-pkgs.org/vignettes.html).
      
   ```
   ```{group-tab} C/C++
@@ -183,7 +184,7 @@ These tools offer some or all of these features:
 
      - [Hugo](https://gohugo.io)
      - [Hexo](https://hexo.io)
-     - [Zola](https://www.getzola.org/) **<- this is what we use for our project website and workshop websites**
+     - [Zola](https://www.getzola.org/) **← this is what we use for our project website and workshop websites**
      - [Jekyll](https://jekyllrb.com/), default for GitHub pages
 
      - [Franklin.jl](https://github.com/JuliaDocs/Franklin.jl): focuses on technical blogging for the Julia community
