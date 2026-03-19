@@ -213,8 +213,8 @@ but a more complex format called ReStructured Text (ReST).
 
 `````{exercise} Sphinx-2: Add more content to your example documentation
 
-1. Add a entry below `some-feature.md` labeled `another-feature.md` (or a better name) to the `index.rst` file.
-2. Create a file `another-feature.md` in the same directory as the `index.rst` file.
+1. Add a entry below `some-feature.md` labeled `another-feature.md` (or a better name) to the `index.md` file.
+2. Create a file `another-feature.md` in the same directory as the `index.md` file.
 3. Add some content to `another-feature.md`, rebuild with `sphinx-build . _build`, and refresh the browser to look at the results.
 4. Use the [MyST Typography](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html) page as help.
 
@@ -341,7 +341,7 @@ autodoc2_packages = [
 ```
 If you already have extensions from another exercise, just add `"autodoc2"` to the existing list.
 
-4. Add `apidocs/index` to the toctree in `index.rst`.
+4. Add `apidocs/index` to the toctree in `index.md`.
 ````md
 ```{toctree}
 :maxdepth: 2
