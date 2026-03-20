@@ -127,7 +127,7 @@ What do you need to change in the workflow file?
 1. **API documentation**
    1. Change line 16 of `.github/workflows/documentation.yml` from `pip install sphinx sphinx_rtd_theme myst_parser` to `pip install sphinx sphinx_rtd_theme myst_parser sphinx-autodoc2`.
    2. Follow the instructions in [Sphinx-3](#api-exercise) changing paths so that:
-      1. `multiply.py` is `src/multiply` and is specified as `../src/multiply.py` in the `autodoc2_packages` preference in `conf.py`
+      1. `multiply.py` is `src/multiply.py` and is specified as `../src/multiply.py` in the `autodoc2_packages` preference in `conf.py`
       2. `conf.py` is `doc/conf.py`
       3. `index.md` is `doc/index.md`.
    3. Commit and push your changes, verify the action has run successfully, and view the built site in your browser.
