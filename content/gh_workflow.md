@@ -105,7 +105,8 @@ jobs:
 ````
 
 ## Exercise - Sphinx documentation on GitHub Pages
-````{exercise} GH-Pages-2: Deploy Sphinx documentation to GitHub Pages
+````{exercise} GH-Pages-2: Putting it all together 
+
 1. Follow the above instructions to create a new repository with a Sphinx documentation project;
 2. Try adding one or more of the following to your Sphinx project:  
    1. API documentation (see [previous exercise](#api-exercise) on API references) which requires the `sphinx-autodoc2` package.
@@ -121,9 +122,8 @@ jobs:
       Make sure the correct file paths are used. This will require adjusting paths from the example from the previous episode to the new layout. Note many paths, including e.g. the `autodoc2_packages` preference are now relative to the `doc/` directory.
    ```
 What do you need to change in the workflow file?
-````
 
-`````{solution} Solution
+```{solution} Solution
 1. **API documentation**
    1. Change line 16 of `.github/workflows/documentation.yml` from `pip install sphinx sphinx_rtd_theme myst_parser` to `pip install sphinx sphinx_rtd_theme myst_parser sphinx-autodoc2`.
    2. Follow the instructions in [Sphinx-3](#api-exercise) changing paths so that:
@@ -142,7 +142,8 @@ What do you need to change in the workflow file?
    1. Change line 16 of `.github/workflows/documentation.yml` and add the theme package if necessary.
    2. In `docs/config.py` change `html_theme = 'sphinx_rtd_theme'` to the name of your chosen theme.
    3. Commit and push your changes, verify the action has run successfully, and view the built site in your browser.
-`````
+```
+````
 
 ## Alternatives to GitHub Pages
 
