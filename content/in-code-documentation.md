@@ -11,7 +11,7 @@
 In this episode we will learn how to write good documentation inside your code.
 
 
-## Exercise - Writing good comments
+## Demonstration - Writing good comments
 
 ````{exercise} In-code-1: Comments
   Let's take a look at two example comments (comments in Python start with `#`):

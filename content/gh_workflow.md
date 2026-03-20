@@ -99,7 +99,7 @@ jobs:
 **Step 5**: Verify the result
 - Your site should now be live on `https://USER.github.io/documentation-example/` (replace USER).
 
-**Step 6**: Verify refreshing the documentation
+**Step 6 (optional)**: Verify refreshing the documentation
 - Commit some changes to your documentation
 - Verify that the documentation website refreshes after your changes (can take few seconds or a minute)
 ````
