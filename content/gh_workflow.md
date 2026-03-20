@@ -46,7 +46,9 @@ on GitHub and create a copy to your namespace.
 
 **Step 3**: Add the GitHub Action to your new Git repository.
 - Add a new file at `.github/workflows/documentation.yml` (either through terminal or web interface), containing:
-```yaml
+```{code-block} yaml
+:linenos:
+:emphasize-lines: 16,19
 name: documentation
 
 on: [push, pull_request, workflow_dispatch]
@@ -75,8 +77,11 @@ jobs:
           publish_dir: _build/
           force_orphan: true
 ```
-- You don't need to understand all of the above, but you
-  might spot familiar commands in the `run:` sections.
+- You don't need to understand all of the above
+  -- you should mainly pay attention the highlighted lines
+  which are shell commands (we know this because they are part of a `run: |` section).
+  The first uses `pip` to install the dependencies and the second runs `sphinx-build`
+  to actually build the documentation (as we saw in the previous episode).
 - After the file has been committed (and pushed),
   check the action at `https://github.com/USER/documentation-example/actions`
   (replace `USER` with your GitHub username).
