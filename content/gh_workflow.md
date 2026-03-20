@@ -103,13 +103,14 @@ jobs:
 - Commit some changes to your documentation
 - Verify that the documentation website refreshes after your changes (can take few seconds or a minute)
 ````
+
 ## Exercise - Sphinx documentation on GitHub Pages
 ````{exercise} GH-Pages-2: Deploy Sphinx documentation to GitHub Pages
 1. Follow the above instructions to create a new repository with a Sphinx documentation project;
 2. Try adding one or more of the following to your Sphinx project:  
-   a. API documentation (see [previous exercise](#api-exercise) on API references)  
-   b. a Jupyter notebook (see [previous exercise](#jupyter-exercise) on Jupyter notebooks)  
-   c. change the theme (see the end of [the quickstart](#quickstart))  
+   1. API documentation (see [previous exercise](#api-exercise) on API references) which requires the `sphinx-autodoc2` package.
+   2. a Jupyter notebook (see [previous exercise](#jupyter-exercise) on Jupyter notebooks) which requires the `myst-nb` package.
+   3. change the theme (see the end of [the quickstart](#quickstart)). You can browse themes and find their package names on the [Sphinx themes gallery](https://sphinx-themes.org/#themes).
 
    ```{important}
       The computer on which the GitHub actions run is *not* your local machine,
@@ -117,10 +118,31 @@ jobs:
       Make sure you update the dependencies (installed with `pip` in the demonstration) appropriately.      
    ```
    ```{important}
-      Make sure the correct file paths are used where appropriate.
+      Make sure the correct file paths are used. This will require adjusting paths from the example from the previous episode to the new layout. Note many paths, including e.g. the `autodoc2_packages` preference are now relative to the `doc/` directory.
    ```
 What do you need to change in the workflow file?
 ````
+
+`````{solution} Solution
+1. **API documentation**
+   1. Change line 16 of `.github/workflows/documentation.yml` from `pip install sphinx sphinx_rtd_theme myst_parser` to `pip install sphinx sphinx_rtd_theme myst_parser sphinx-autodoc2`.
+   2. Follow the instructions in [Sphinx-3](#api-exercise) changing paths so that:
+      1. `multiply.py` is `src/multiply` and is specified as `../src/multiply.py` in the `autodoc2_packages` preference in `conf.py`
+      2. `conf.py` is `doc/conf.py`
+      3. `index.md` is `doc/index.md`.
+   3. Commit and push your changes, verify the action has run successfully, and view the built site in your browser.
+2. **a Jupyter notebook**
+   1. Change line 16 of `.github/workflows/documentation.yml` from `pip install sphinx sphinx_rtd_theme myst_parser` to `pip install sphinx sphinx_rtd_theme myst_parser myst-nb`.
+   2. Follow the instructions in [Sphinx-4](#jupyter-exercise) changing paths so that:
+      1. `flower.md` is `docs/flower.md`
+      2. `conf.py` is `doc/conf.py`
+      3. `index.md` is `doc/index.md`.
+   3. Commit and push your changes, verify the action has run successfully, and view the built site in your browser.
+3. **change the theme**
+   1. Change line 16 of `.github/workflows/documentation.yml` and add the theme package if necessary.
+   2. In `docs/config.py` change `html_theme = 'sphinx_rtd_theme'` to the name of your chosen theme.
+   3. Commit and push your changes, verify the action has run successfully, and view the built site in your browser.
+`````
 
 ## Alternatives to GitHub Pages
 
