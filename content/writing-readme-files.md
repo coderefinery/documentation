@@ -10,7 +10,7 @@ smaller or mid-size projects, this is enough documentation.  It's not that hard
 to make a basic one, and it's easy to expand as needed.
 
 
-## Exercise: Have fun testing some README features
+## Demonstration: Have fun testing some README features
 
 ````{exercise} Exercise README-1: Have fun testing some README features you may not have heard about
 
@@ -59,7 +59,7 @@ to make a basic one, and it's easy to expand as needed.
 ````
 
 
-## Exercise: Improve the README for your own project
+## Optional Exercise: Improve the README for your own project
 
 ```{exercise} Exercise README-2: Draft or improve a README for one of your recent projects
 Try to draft a brief README or review a README which you have written for one
@@ -79,7 +79,7 @@ of your projects.
 
 ---
 
-## Exercise: Discuss the README of a project that you use
+## Optional Exercise: Discuss the README of a project that you use
 
 ```{exercise} Exercise README-3: Review and discuss a README of a project that you have used
 In this exercise we will review and discuss a README of a project which you
