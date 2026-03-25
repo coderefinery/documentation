@@ -5,7 +5,7 @@ deploying code documentation.
 
 This demonstration will be mostly **independent of programming languages**
 (you will be able to follow and do all the exercises
-using the [CodeRefinery conda environment](https://coderefinery.github.io/installation/conda-environment/)).
+using the [CodeRefinery conda environment](https://coderefinery.github.io/installation/conda/)).
 
 
 We will discuss best practices, and briefly discuss the available tools.
