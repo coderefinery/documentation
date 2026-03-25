@@ -61,7 +61,7 @@ Our goal in this episode is to build HTML pages locally on our computers.
 If the above commands produce an error
 (**command not found** or **module not found** or **ModuleNotFoundError**),
 please follow our
-[installation instructions](https://coderefinery.github.io/installation/conda-environment/).
+[installation instructions](https://coderefinery.github.io/installation/conda/).
 But please don't give up if you don't have these - the episodes after this one will work even without these
 tools.
 ````
