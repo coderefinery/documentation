@@ -11,7 +11,84 @@
 
 ---
 
-## In-code documentation
+## Documentation Tools: comparison
+
+```{list-table} Comparison of the tools for documentation we have discussed so far
+:widths: 20 10 10 10 10 10 10 15
+:header-rows: 1
+:stub-columns: 1
+
+*  - Type
+   - Convenient  
+   - Easy
+   - Maintainabile
+   - Searchable
+   - Readable 
+   - LLM-friendly 
+   - Notes
+*  - in-code doc
+   - ✅✅ 
+   - 🟨
+   - ✅🟨
+   - 🟨
+   - ❌
+   - ✅🟨
+   - ❌for users
+*  - README
+   - ✅
+   - ✅
+   - ✅🟨
+   - 🟨
+   - ✅
+   - ✅
+   - typically enough
+*  - HTML Generators
+   - 🟨
+   - ❌
+   - ✅🟨
+   - ✅
+   - ❌
+   - ✅✅
+   - powerful 
+*  - Wikis
+   - 🟨
+   - ✅
+   - ❌❌ 
+   - ✅
+   - ✅
+   - ❌
+   - ✅for non-programmers
+*  - Latex
+   - 🟨(?)
+   - ❌
+   - ❌🟨
+   - 🟨
+   - ✅ (?)
+   - ❌
+   - ✅Physics/Math, 
+     ❌copy/paste
+*  - Jupyter 
+   - 🟨
+   - 🟨/❌
+   - ✅✅ 
+   - 🟨 (?)
+   - ✅ 
+   - 🟨 
+   - ✅ validation tooling
+```
+
+What do we mean?
+- **Convenience**: for programmers who live in code.
+- **Easiness**: how easy is is to contribute and set up?
+- **Maintainability** is good for those tools that can be version-controlled along with the code.
+   It is even better if it is easy to check automatically that the information is correct 
+   (*does the output of a snippet of code match what is shown in the docs?*)
+- **Searchability:** How easy is it to find the information we need?
+- **Readability**: Can the documentation be rendered in a way that makes it easy to read?
+- **LLM-friendliness**: how easy is to feed this documentation to an LLM?
+
+
+### In-code documentation
 
 - Comments, function docstrings, ...
 - Advantages
@@ -24,8 +101,7 @@
 For a closer look at this see the {ref}`in-code-documentation` episode.
 
 ---
-
-## README files
+### README files
 
 - Advantages
   - Versioned (goes with the code development)
@@ -39,44 +115,31 @@ For a closer look at this see the {ref}`writing-readme-files` episode.
 
 ---
 
-## Plain Text formats: reStructuredText and Markdown
+### Wikis
 
-```markdown
-# This is a section in Markdown   This is a section in RST
-                                  ========================
-
-## This is a subsection           This is a subsection
-                                  --------------------
-
-Nothing special needed for        Nothing special needed for
-a normal paragraph.               a normal paragraph.
-
-                                  ::
-
-    This is a code block          This is a code block
+- Popular solutions (but many others exist):
+  - [MediaWiki](https://www.mediawiki.org)
+  - [Dokuwiki](https://www.dokuwiki.org)
+- Advantage
+  - Barrier to write and edit is low
+- Disadvantages
+  - Typically disconnected from source code repository (**reproducibility**)
+  - Difficult to serve multiple versions
+  - Difficult to check out a specific old version
+  - Typically needs to be hosted and maintained
 
 
-**Bold** and *emphasized*.        **Bold** and *emphasized*.
 
-A list:                           A list:
-- this is an item                 - this is an item
-- another item                    - another item
 
-There is more: images,            There is more: images,
-tables, links, ...                tables, links, ...
-```
+---
 
-- Two of the most popular lightweight markup languages.
-- reStructuredText (RST) has more features than Markdown but the choice is a matter of taste.
-- There are (unfortunately) [many flavors of Markdown](https://github.com/jgm/CommonMark/wiki/Markdown-Flavors).
-- Motivation to stick to a standard text-based format: **They make it easier to move the documentation to other tools
-  which also expect a standard format, as the project/organization grows**.
-- We use [MyST](https://myst-parser.readthedocs.io/en/latest/)
-  flavored Markdown in the {ref}`sphinx` episode and the
-  {ref}`gh-pages` example.
-- Nice resource to learn Markdown: [Learn Markdown in 60 seconds](https://commonmark.org/help/)
-- [Pandoc](https://pandoc.org/) can convert between MD and RST (and many other formats).
+### LaTeX/PDF
 
+- Advantage
+  - Popular and familiar in the physics and mathematics community
+- Disadvantages
+  - PDF format is not ideal for copy-pasting of examples
+  - Possible, but not trivial to automate rebuilding documentation after every Git push
 
 
 ---
@@ -192,12 +255,8 @@ These tools offer some or all of these features:
   ```
 ````
 
-```{discussion}
+---
 
-Do you know an awesome tool or feature that should be in this list? 
-Let us know! (Open a PR)
-
-```
 
 ## Hosting Documentation on the Web 
 
@@ -210,37 +269,54 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 and can be [connected](https://docs.readthedocs.com/platform/latest/reference/git-integration.htm) 
 to common software forges.
 
----
-
-## Wikis
-
-- Popular solutions (but many others exist):
-  - [MediaWiki](https://www.mediawiki.org)
-  - [Dokuwiki](https://www.dokuwiki.org)
-- Advantage
-  - Barrier to write and edit is low
-- Disadvantages
-  - Typically disconnected from source code repository (**reproducibility**)
-  - Difficult to serve multiple versions
-  - Difficult to check out a specific old version
-  - Typically needs to be hosted and maintained
 
 
+```{discussion}
 
+Do you know an awesome tool or feature that should be in this list? 
+Let us know! (Open a PR)
+
+```
 
 ---
 
-## LaTeX/PDF
+### Plain Text formats: reStructuredText and Markdown
 
-- Advantage
-  - Popular and familiar in the physics and mathematics community
-- Disadvantages
-  - PDF format is not ideal for copy-pasting of examples
-  - Possible, but not trivial to automate rebuilding documentation after every Git push
+```markdown
+# This is a section in Markdown   This is a section in RST
+                                  ========================
+
+## This is a subsection           This is a subsection
+                                  --------------------
+
+Nothing special needed for        Nothing special needed for
+a normal paragraph.               a normal paragraph.
+
+                                  ::
+
+    This is a code block          This is a code block
 
 
+**Bold** and *emphasized*.        **Bold** and *emphasized*.
 
----
+A list:                           A list:
+- this is an item                 - this is an item
+- another item                    - another item
+
+There is more: images,            There is more: images,
+tables, links, ...                tables, links, ...
+```
+
+- Two of the most popular lightweight markup languages.
+- reStructuredText (RST) has more features than Markdown but the choice is a matter of taste.
+- There are (unfortunately) [many flavors of Markdown](https://github.com/jgm/CommonMark/wiki/Markdown-Flavors).
+- Motivation to stick to a standard text-based format: **They make it easier to move the documentation to other tools
+  which also expect a standard format, as the project/organization grows**.
+- We use [MyST](https://myst-parser.readthedocs.io/en/latest/)
+  flavored Markdown in the {ref}`sphinx` episode and the
+  {ref}`gh-pages` example.
+- Nice resource to learn Markdown: [Learn Markdown in 60 seconds](https://commonmark.org/help/)
+- [Pandoc](https://pandoc.org/) can convert between MD and RST (and many other formats).
 
 
 ```{keypoints}
