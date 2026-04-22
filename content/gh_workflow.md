@@ -134,13 +134,13 @@ What do you need to change in the workflow file?
 2. **a Jupyter notebook**
    1. Change line 16 of `.github/workflows/documentation.yml` from `pip install sphinx sphinx_rtd_theme myst_parser` to `pip install sphinx sphinx_rtd_theme myst_parser myst-nb`.
    2. Follow the instructions in [Sphinx-4](#jupyter-exercise) changing paths so that:
-      1. `flower.md` is `docs/flower.md`
+      1. `flower.md` is `doc/flower.md`
       2. `conf.py` is `doc/conf.py`
       3. `index.md` is `doc/index.md`.
    3. Commit and push your changes, verify the action has run successfully, and view the built site in your browser.
 3. **change the theme**
    1. Change line 16 of `.github/workflows/documentation.yml` and add the theme package if necessary.
-   2. In `docs/config.py` change `html_theme = 'sphinx_rtd_theme'` to the name of your chosen theme.
+   2. In `doc/conf.py` change `html_theme = 'sphinx_rtd_theme'` to the name of your chosen theme.
    3. Commit and push your changes, verify the action has run successfully, and view the built site in your browser.
 ```
 ````
