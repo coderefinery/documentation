@@ -46,8 +46,8 @@ Here below, NAMESPACE can either be a username or an organizational account.
 
 ```{callout} Real-life examples
 - CodeRefinery website (built using [Zola](https://www.getzola.org/))
-  - [Source](https://raw.githubusercontent.com/coderefinery/coderefinery.org/main/content/lessons/core.md)
-  - Result: <https://coderefinery.org/lessons/core/>
+  - [Source](https://github.com/coderefinery/coderefinery.org/blob/main/content/lessons/_index.md)
+  - Result: <https://coderefinery.org/lessons/>
 - This lesson (built using [Sphinx](https://www.sphinx-doc.org/)
     and [MyST](https://myst-parser.readthedocs.io/)
     and [sphinx-lesson](https://coderefinery.github.io/sphinx-lesson/))
