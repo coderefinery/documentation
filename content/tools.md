@@ -11,6 +11,7 @@
 
 ---
 
+
 ## Documentation Tools: comparison
 
 ```{list-table} Comparison of the tools for documentation we have discussed so far
@@ -41,7 +42,7 @@
    - 🟨
    - ✅
    - ✅
-   - typically enough
+   - typically enough  
 *  - HTML Generators
    - 🟨
    - ❌
@@ -80,7 +81,8 @@
 What do we mean?
 - **Convenience**: for programmers who live in code.
 - **Easiness**: how easy is is to contribute and set up?
-- **Maintainability** is good for those tools that can be version-controlled along with the code.
+- **Maintainability** is good for those tools that can be version-controlled 
+   along with the code.
    It is even better if it is easy to check automatically that the information is correct 
    (*does the output of a snippet of code match what is shown in the docs?*)
 - **Searchability:** How easy is it to find the information we need?
@@ -88,61 +90,8 @@ What do we mean?
 - **LLM-friendliness**: how easy is to feed this documentation to an LLM?
 
 
-### In-code documentation
-
-- Comments, function docstrings, ...
-- Advantages
-  - Good for programmers
-  - Version controlled alongside code
-  - Can be used to auto-generate documentation for functions/classes
-- Disadvantage
-  - Probably not enough for users of the code
-
-For a closer look at this see the {ref}`in-code-documentation` episode.
-
----
-### README files
-
-- Advantages
-  - Versioned (goes with the code development)
-  - It is often good enough to have a `README.md` or `README.rst` along with your code/script
-- If you use README files, use either
-  [RST](https://docutils.sourceforge.net/rst.html) or
-  [Markdown](https://commonmark.org/help/)
-- A great guide to README files: [MakeaREADME](https://www.makeareadme.com/)
-
-For a closer look at this see the {ref}`writing-readme-files` episode.
-
 ---
 
-### Wikis
-
-- Popular solutions (but many others exist):
-  - [MediaWiki](https://www.mediawiki.org)
-  - [Dokuwiki](https://www.dokuwiki.org)
-- Advantage
-  - Barrier to write and edit is low
-- Disadvantages
-  - Typically disconnected from source code repository (**reproducibility**)
-  - Difficult to serve multiple versions
-  - Difficult to check out a specific old version
-  - Typically needs to be hosted and maintained
-
-
-
-
----
-
-### LaTeX/PDF
-
-- Advantage
-  - Popular and familiar in the physics and mathematics community
-- Disadvantages
-  - PDF format is not ideal for copy-pasting of examples
-  - Possible, but not trivial to automate rebuilding documentation after every Git push
-
-
----
 
 ## HTML static site generators
 
@@ -175,10 +124,21 @@ These tools offer some or all of these features:
          - Full-text server-side on [Read the docs](https://about.readthedocs.com)
        - **Validation**: via [doctest](https://docs.python.org/3/library/doctest.html)
 
-     - [MkDocs](https://www.mkdocs.org/): A Markdown-first static site generator.
+     - [MkDocs](https://www.mkdocs.org/): A Markdown-first static site generator
+       (with a vast system of plugins developed independently).
        - **API Reference generation**: via 
          [mkdocstrings](https://mkdocstrings.github.io/)
        - **Search:** search plugin for client-side (Javascript that runs in the browser - lunr.js)
+       Project now (as of 2026) not maintained [^mkdocsdrama]
+
+       [^mkdocsdrama]: After somewhat dramatic events (2026), 
+             MkDocs 1.x is now superseded by [Zensical](https://zensical.org/),
+             which tries to keep compatibility wiht MkDocs 1.x.
+             (MkDocs 2.0 is also being developed 
+             but projects and plugins based on 1.x 
+             will break).
+       
+       
        
      - [Doxygen](https://www.doxygen.nl/):
        - **API Reference generation**: has also support for Python
@@ -320,5 +280,9 @@ tables, links, ...                tables, links, ...
 
 
 ```{keypoints}
+- READMEs are typically a good starting point
 - Some popular solutions make reproducibility and maintenance of multiple code versions difficult.
+- The landscape of tools is very diversified and every community has their own favourite.
+- The basic functionality of all Static site generators is very similar, 
+  but specific aspects (API ref generation, search, validation) differ.
 ```
