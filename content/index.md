@@ -8,12 +8,12 @@ This demonstration will be mostly **independent of programming languages**
 using the [CodeRefinery conda environment](https://coderefinery.github.io/installation/conda/)).
 
 
-We will discuss best practices, and briefly discuss the available tools.
 
-Then we will discuss the form of documentation which is the most immediate to write:
+We will start by discussing the form of documentation 
+which is the most immediate to write:
 **in-code** comments, and docstrings.
 
-We will step up our game and discuss **what makes a good README**. For many
+To step up our game we will discuss **what makes a good README**. For many
 projects, a curated README is enough.
 
 We will then learn how to build documentation with the
@@ -22,6 +22,14 @@ deploy it to [GitHub Pages](https://pages.github.com).
 The approach that we will learn will be transferable to
 [GitLab Pages](https://about.gitlab.com/features/pages/) and
 [Bitbucket Pages](https://pages.bitbucket.io).
+
+After we have seen Sphinx as an example, 
+we will see a brief taxonomy of the other popular tools and solutions,
+and finally, once we know what tooling can do and how to use it, 
+we will take a step back and look at best practices:
+what makes documentation important and useful and how to best maintain it.
+
+
 
 ```{prereq}
 1. Basic understanding of Git.
