@@ -1,0 +1,79 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "LearningResource",
+    "@id": "https://coderefinery.github.io/documentation/",
+    "description": "The lesson 'How to document your research software' gives an overview of the different ways how a code project can be documented: from small projects to larger projects. Markdown and Sphinx are central tools in this lesson.",
+    "keywords": "Documentation, Sphinx",
+    "name": "How to document your research software",
+    #"about": "",
+    #"audience": "",
+    "author": [
+        {
+            "@type": "Organization",
+            "name": "CodeRefinery"
+        },
+        {
+            "@type": "Person",
+            "name": "Radovan Bast"
+        },
+        {
+            "@type": "Person",
+            "name": "Richard Darst"
+        },
+        {
+            "@type": "Person",
+            "name": "Bj\u00f8rn Lindi"
+        },
+        {
+            "@type": "Person",
+            "name": "Stefan Negru"
+        },
+        {
+            "@type": "Person",
+            "name": "Luisa Orozco"
+        },
+        {
+            "@type": "Person",
+            "name": "Jarno Rantaharju"
+        },
+        {
+            "@type": "Person",
+            "name": "Annajiat Alim Rasel"
+        },
+        {
+            "@type": "Person",
+            "name": "Sabry Razick"
+        },
+        {
+            "@type": "Person",
+            "name": "Sven van der Burg"
+        },
+        {
+            "@type": "Person",
+            "name": "Marijn van Vliet"
+        },
+        {
+            "@type": "Person",
+            "name": "Kjartan Thor Wikfeldt"
+        },
+        {
+            "@type": "Person",
+            "name": "Samantha Wittke"
+        },
+        {
+            "@type": "Person",
+            "name": "Michele Mesiti"
+        }
+    ],
+    # "competencyRequired": "",
+    "educationalLevel": "Beginner",
+    "identifier": "https://doi.org/10.5281/zenodo.8280234",
+    "inLanguage": "en-UK",
+    #"learningResourceType": "",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "teaches": "Understand the importance of writing code documentation together with the source code, Know what makes a good documentation, Learn what tools can be used for writing documentation, Be able to motivate a balanced decision: sometimes READMEs are absolutely enough",
+    "url": "https://coderefinery.github.io/documentation/",
+    # "accessibilitySummary": "",
+    "isPartOf": "CodeRefinery workshop",
+    "version": "2023-08-24"
+}
