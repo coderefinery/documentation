@@ -47,12 +47,11 @@ With the understanding that:
 
 ## How to cite this lesson
 
-If you use this lesson material, please cite it using the metadata below:
+If you use this lesson material, please cite it using this DOI:
 
-> CodeRefinery community (2023). "How to document your research software"
-> (Version 2023-08-24) [Data set]. Zenodo. <https://doi.org/10.5281/zenodo.8280234>
+<https://doi.org/10.5281/zenodo.8280234>
 
-The authoritative, machine-readable citation record is kept in
+The machine-readable citation record is kept in
 [`CITATION.cff`](https://raw.githubusercontent.com/coderefinery/documentation/refs/heads/main/CITATION.cff)
 at the root of this lesson's repository, which lists the full set of
 contributing authors and stays up to date as the lesson evolves.
