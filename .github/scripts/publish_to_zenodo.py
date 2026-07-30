@@ -1,6 +1,5 @@
 # Based on examples on https://developers.zenodo.org/
 
-
 import json
 import os
 import requests
