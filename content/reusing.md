@@ -3,6 +3,25 @@
 This lesson material is free to reuse, adapt, and cite. This page collects
 everything you need to do so.
 
+## How to cite this lesson
+
+If you use this lesson material, please cite it using this DOI:
+
+<https://doi.org/10.5281/zenodo.8280234>
+
+The machine-readable citation record is kept in
+[`CITATION.cff`](https://raw.githubusercontent.com/coderefinery/documentation/refs/heads/main/CITATION.cff)
+at the root of this lesson's repository, which lists the full set of
+contributing authors and stays up to date as the lesson evolves.
+
+## Structured metadata
+
+This lesson also publishes its metadata as machine-readable
+[Bioschemas](https://bioschemas.org/) / [schema.org](https://schema.org/)
+structured data, embedded as JSON-LD on every page of this site. You can
+inspect the source directly in
+[`bioschemas.yml`](https://raw.githubusercontent.com/coderefinery/documentation/refs/heads/main/bioschemas.yml).
+
 ## License
 
 ### Website template
@@ -45,21 +64,3 @@ With the understanding that:
   rights such as publicity, privacy, or moral rights may limit how
   you use the material.
 
-## How to cite this lesson
-
-If you use this lesson material, please cite it using this DOI:
-
-<https://doi.org/10.5281/zenodo.8280234>
-
-The machine-readable citation record is kept in
-[`CITATION.cff`](https://raw.githubusercontent.com/coderefinery/documentation/refs/heads/main/CITATION.cff)
-at the root of this lesson's repository, which lists the full set of
-contributing authors and stays up to date as the lesson evolves.
-
-## Structured metadata
-
-This lesson also publishes its metadata as machine-readable
-[Bioschemas](https://bioschemas.org/) / [schema.org](https://schema.org/)
-structured data, embedded as JSON-LD on every page of this site. You can
-inspect the source directly in
-[`bioschemas.yml`](https://raw.githubusercontent.com/coderefinery/documentation/refs/heads/main/bioschemas.yml).
