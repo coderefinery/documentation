@@ -5,10 +5,14 @@ import os
 import requests
 import yaml
 
-ACCESS_TOKEN = os.environ["ZENODO_TOKEN"]
-CONCEPT_ID = os.environ["ZENODO_CONCEPT_ID"]
+ACCESS_TOKEN = os.environ["ZENODO_SANDBOX_TOKEN"]
+CONCEPT_ID = os.environ["ZENODO_SANDBOX_CONCEPT_ID"]
 
-BASE_URL = "https://zenodo.org/api"
+print(CONCEPT_ID)
+print(ACCESS_TOKEN)
+
+BASE_URL = "https://sandbox.zenodo.org/api"
+
 
 json_headers = {
     "Authorization": f"Bearer {ACCESS_TOKEN}",
@@ -28,14 +32,17 @@ def cff_to_creators(authors):
     creators = []
 
     for author in authors:
-        creators.append(
-            {
-                "name": (
-                    f"{author['family-names']}, "
-                    f"{author['given-names']}"
-                )
-            }
-        )
+        if "family-names" in author:
+            creators.append(
+                {
+                    "name": (
+                        f"{author['family-names']}, "
+                        f"{author['given-names']}"
+                    )
+                }
+            )
+        else:
+            creators.append({"name": author["name"]})
 
     return creators
 
@@ -51,15 +58,55 @@ metadata = {
     "description": cff.get("abstract", ""),
     "creators": cff_to_creators(cff["authors"]),
     "keywords": cff.get("keywords", []),
-    "version": cff.get("version"),
+    "version": str(cff.get("version")) if cff.get("version") is not None else None,
     "license": cff.get("license")
 }
+
+
+# Discard any unpublished draft left over from a previous failed run.
+# Zenodo only allows one unpublished new-version draft per concept at
+# a time, so a stray one would make the newversion call below fail.
+
+r = requests.get(
+    f"{BASE_URL}/deposit/depositions",
+    params={"q": f"conceptrecid:{CONCEPT_ID}", "all_versions": "true"},
+    headers=json_headers,
+)
+
+r.raise_for_status()
+
+for dep in r.json():
+    if not dep.get("submitted"):
+        print(f"Discarding leftover draft {dep['id']}")
+        requests.delete(dep["links"]["self"], headers=json_headers).raise_for_status()
+
+
+# Find the current latest version of this concept.
+# newversion only works when called on the latest version's own
+# deposit ID, and that ID changes with every new release.
+
+r = requests.get(
+    f"{BASE_URL}/records",
+    params={"q": f"conceptrecid:{CONCEPT_ID}", "all_versions": "true"},
+    headers=json_headers,
+)
+
+r.raise_for_status()
+
+hits = r.json()["hits"]["hits"]
+
+latest_id = hits[0]["id"]
+for hit in hits[1:]:
+    if hit["id"] > latest_id:
+        latest_id = hit["id"]
+
+print(f"Latest existing version: {latest_id}")
 
 
 # Create new version of existing concept DOI
 
 r = requests.post(
-    f"{BASE_URL}/deposit/depositions/{CONCEPT_ID}/actions/newversion",
+    f"{BASE_URL}/deposit/depositions/{latest_id}/actions/newversion",
     headers=json_headers)
 
 r.raise_for_status()
