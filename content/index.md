@@ -90,7 +90,6 @@ gh-pages.md
 Shell crash course <https://youtu.be/xbTTDLA3txI>
 exercises.md
 guide.md
-license.md
 ```
 
 ```{toctree}
@@ -99,5 +98,5 @@ license.md
 
 All lessons <https://coderefinery.org/lessons/core/>
 CodeRefinery <https://coderefinery.org/>
-Reusing <https://coderefinery.org/lessons/reusing/>
+reusing.md
 ```

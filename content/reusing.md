@@ -1,15 +1,35 @@
-# Credit and license
+# Reusing
 
-This material is provided by CodeRefinery under the licenses stated below.
+This lesson material is free to reuse, adapt, and cite. This page collects
+everything you need to do so.
 
+## How to cite this lesson
 
-## Website template
+If you use this lesson material, please cite it using this DOI:
+
+<https://doi.org/10.5281/zenodo.8280234>
+
+The machine-readable citation record is kept in
+[`CITATION.cff`](https://raw.githubusercontent.com/coderefinery/documentation/refs/heads/main/CITATION.cff)
+at the root of this lesson's repository, which lists the full set of
+contributing authors and stays up to date as the lesson evolves.
+
+## Structured metadata
+
+This lesson also publishes its metadata as machine-readable
+[Bioschemas](https://bioschemas.org/) / [schema.org](https://schema.org/)
+structured data, embedded as JSON-LD on every page of this site. You can
+inspect the source directly in
+[`bioschemas.yml`](https://raw.githubusercontent.com/coderefinery/documentation/refs/heads/main/bioschemas.yml).
+
+## License
+
+### Website template
 
 The website template is maintained by [CodeRefinery](https://coderefinery.org/)
 and rendered with [sphinx-lesson: structured lessons with Sphinx](https://coderefinery.github.io/sphinx-lesson/).
 
-
-## Instructional material
+### Instructional material
 
 All CodeRefinery instructional material is made available under the
 [Creative Commons Attribution license (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/).
@@ -43,3 +63,4 @@ With the understanding that:
   permissions necessary for your intended use. For example, other
   rights such as publicity, privacy, or moral rights may limit how
   you use the material.
+
