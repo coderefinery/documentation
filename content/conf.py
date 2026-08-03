@@ -39,6 +39,7 @@ extensions = [
     # remove once sphinx_rtd_theme updated for contrast and accessibility:
     "sphinx_rtd_theme_ext_color_contrast",
     "sphinx_coderefinery_branding",
+    "sphinx_bioschemas",
 ]
 
 # Settings for myst_nb:
@@ -75,6 +76,8 @@ exclude_patterns = [
     "*venv*",
 ]
 
+# Add bioschemas
+bioschemas = ["bioschemas.yml"]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
