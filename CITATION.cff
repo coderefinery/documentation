@@ -33,9 +33,9 @@ authors:
 title: "How to document your research software"
 type: "dataset"
 abstract: "The lesson 'How to document your research software' gives an overview of the different ways how a code project can be documented: from small projects to larger projects. Markdown and Sphinx are central tools in this lesson."
-version: 2026-03-26
+version: 2026-08-03
 doi: "10.5281/zenodo.8280234"
-date-released: 2023-08-24
+date-released: 2026-08-03
 url: "https://coderefinery.github.io/documentation/"
 license: CC-BY-4.0
 repository-code: "https://github.com/coderefinery/documentation"
