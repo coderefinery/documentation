@@ -5,13 +5,13 @@ import os
 import requests
 import yaml
 
-ACCESS_TOKEN = os.environ["ZENODO_SANDBOX_TOKEN"]
-CONCEPT_ID = os.environ["ZENODO_SANDBOX_CONCEPT_ID"]
+ACCESS_TOKEN = os.environ["ZENODO_TOKEN"]
+CONCEPT_ID = os.environ["ZENODO_CONCEPT_ID"]
 
 print(CONCEPT_ID)
 print(ACCESS_TOKEN)
 
-BASE_URL = "https://sandbox.zenodo.org/api"
+BASE_URL = "https://zenodo.org/api"
 
 
 json_headers = {

@@ -7,7 +7,7 @@ on:
 jobs:
   zenodo:
     runs-on: ubuntu-latest
-    environment: Zenodo_sandbox
+    environment: Zenodo
 
     permissions:
       contents: read
