@@ -30,7 +30,7 @@ authors:
   given-names: "Michele"
 - family-names: "Robertson"
   given-names: "Frankie"
-title: "How to document your research software"
+title: "How to document your research software - CodeRefinery lesson"
 type: "dataset"
 abstract: "The lesson 'How to document your research software' gives an overview of the different ways how a code project can be documented: from small projects to larger projects. Markdown and Sphinx are central tools in this lesson."
 version: 2026-08-03

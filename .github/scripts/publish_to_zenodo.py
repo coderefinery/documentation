@@ -59,7 +59,17 @@ metadata = {
     "creators": cff_to_creators(cff["authors"]),
     "keywords": cff.get("keywords", []),
     "version": str(cff.get("version")) if cff.get("version") is not None else None,
-    "license": cff.get("license")
+    "license": cff.get("license"),
+    "related_identifiers": (
+        [
+            {
+                "identifier": cff["repository-code"],
+                "relation": "isSupplementTo",
+            }
+        ]
+        if cff.get("repository-code")
+        else []
+    ),
 }
 
 
@@ -131,11 +141,24 @@ bucket_url = deposition["links"]["bucket"]
 print(f"Draft deposition: {deposition_id}")
 
 
+# newversion copies over the previous version's files. Remove them so
+# this version ends up with only its own zip and PDF.
+
+for f in deposition.get("files", []):
+    requests.delete(
+        f"{BASE_URL}/deposit/depositions/{deposition_id}/files/{f['id']}",
+        headers=json_headers,
+    ).raise_for_status()
+
+    print(f"Removed inherited file {f['filename']}")
+
+
 # Upload release archive
 
 
 tag = os.environ["GITHUB_REF_NAME"]
 repo_name = os.environ['GITHUB_REPOSITORY']
+owner, repo = repo_name.split("/", 1)
 
 
 archive_url = (
@@ -144,7 +167,7 @@ archive_url = (
     f"/archive/refs/tags/{tag}.zip"
 )
 
-archive_name = f"{tag}.zip"
+archive_name = f"{owner}-{repo}-{tag}.zip"
 
 download = requests.get(archive_url)
 download.raise_for_status()
@@ -168,7 +191,6 @@ print(f"Uploaded {archive_name}")
 # (built by sphinx.yml as OUTPUT_BASENAME.pdf, OUTPUT_BASENAME being
 # "{owner}-{repo}")
 
-owner, repo = repo_name.split("/", 1)
 pdf_source_name = f"{owner}-{repo}.pdf"
 pdf_name = f"{owner}-{repo}-{tag}.pdf"
 
@@ -193,6 +215,30 @@ with open(pdf_name, "rb") as fp:
 r.raise_for_status()
 
 print(f"Uploaded {pdf_name}")
+
+
+# Show the PDF first (Zenodo previews the first file in the list).
+
+r = requests.get(
+    f"{BASE_URL}/deposit/depositions/{deposition_id}/files",
+    headers=json_headers,
+)
+
+r.raise_for_status()
+
+files = r.json()
+
+sort_order = sorted(files, key=lambda f: f["filename"] != pdf_name)
+
+r = requests.put(
+    f"{BASE_URL}/deposit/depositions/{deposition_id}/files/sort",
+    data=json.dumps([{"id": f["id"]} for f in sort_order]),
+    headers=json_headers,
+)
+
+r.raise_for_status()
+
+print(f"File order: {[f['filename'] for f in sort_order]}")
 
 
 # Update metadata
