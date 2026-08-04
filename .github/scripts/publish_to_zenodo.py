@@ -52,24 +52,33 @@ def cff_to_creators(authors):
 
 cff = load_citation()
 
+description = cff.get("abstract", "")
+
+if cff.get("repository-code"):
+    description += (
+        f'<br><p>Source code: '
+        f'<a href="{cff["repository-code"]}">{cff["repository-code"]}</a></p>'
+    )
+
+if cff.get("url"):
+    description += (
+        f'<br><p>Lesson website: '
+        f'<a href="{cff["url"]}">{cff["url"]}</a></p>'
+    )
+
+description += (
+    '<br><p>CodeRefinery website: '
+    '<a href="https://coderefinery.org">https://coderefinery.org</a></p>'
+)
+
 metadata = {
     "title": cff["title"],
     "upload_type": "dataset",
-    "description": cff.get("abstract", ""),
+    "description": description,
     "creators": cff_to_creators(cff["authors"]),
     "keywords": cff.get("keywords", []),
     "version": str(cff.get("version")) if cff.get("version") is not None else None,
     "license": cff.get("license"),
-    "related_identifiers": (
-        [
-            {
-                "identifier": cff["repository-code"],
-                "relation": "isSupplementTo",
-            }
-        ]
-        if cff.get("repository-code")
-        else []
-    ),
 }
 
 
