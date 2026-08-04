@@ -33,16 +33,19 @@ def cff_to_creators(authors):
 
     for author in authors:
         if "family-names" in author:
-            creators.append(
-                {
-                    "name": (
-                        f"{author['family-names']}, "
-                        f"{author['given-names']}"
-                    )
-                }
-            )
+            creator = {
+                "name": (
+                    f"{author['family-names']}, "
+                    f"{author['given-names']}"
+                )
+            }
         else:
-            creators.append({"name": author["name"]})
+            creator = {"name": author["name"]}
+
+        if author.get("orcid"):
+            creator["orcid"] = author["orcid"].removeprefix("https://orcid.org/")
+
+        creators.append(creator)
 
     return creators
 
@@ -73,7 +76,7 @@ description += (
 
 metadata = {
     "title": cff["title"],
-    "upload_type": "dataset",
+    "upload_type": "lesson",
     "description": description,
     "creators": cff_to_creators(cff["authors"]),
     "keywords": cff.get("keywords", []),
