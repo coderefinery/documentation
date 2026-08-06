@@ -58,17 +58,28 @@ them aware of what the training material contains.
 
 ## Detailed schedule
 
-- 09:00 - 09:10 Motivation and tools
+- **00:00 - 00:10 Motivation and wishlist**
   - create a wishlist in collaborative notes
-- 09:10 - 09:20 Writing good README files
-  - brief discussion
-- 09:20 - 09:40 **Exercises**: README-1, README-2, README-3 (choose one or multiple)
-- 09:40 - 10:00 Sphinx and Markdown: Sphinx-1 as type along
-
-- 10:00 - 10:10 Break
-
-- 10:10 - 10:40 **Exercises**, Sphinx-2, Sphinx-3, GH-Pages-1
-- 10:40 - 11:00 Discussion, GH Pages, Summary
+- **00:10 - 00:18 Popular tools and solutions**
+  - Note: it starts with in-code documentation, do not waste much time on this since there's a discussion following right after
+- **00:18 - 00:25 In code documentation**
+- **00:25 - 00:50 Writing good README files**
+  - 00:25 - 00:30 brief discussion
+  - 00:30 - 00:35 **Walkthrough:** README-1, opening an empty project on GitHub, with a README, and copy-pasting code from the teaching material and using the preview
+  - 00:35 - 00:45 **Exercises**:  README-2, README-3 (choose one or multiple). 
+    We propose [https://github.com/opendatalab/MinerU](https://github.com/opendatalab/MinerU)
+    to have something to discuss 
+  - 00:45 - 00:50 Discussion of exercises and the notes
+- 00:50 - 01:00 Break
+- **01:00 - 01:40 Sphinx and Markdown**
+  - 01:00 - 01:15 **Type along**: Sphinx-1
+  - 01:15 - 01:35 **Exercises**: Sphinx-2/3/4 
+  - 01:35 - 01:40 Discussion 
+- **01:40 - 02:00 Sphinx deploy on GitHub**
+  - **Type along**: GH-Pages 1 
+- 02:00 - 02:10 Break
+- **02:10 - 02:20: Walkthrough Personal/Project Home Page on GitHub**
+- **02:20 - 02:30: Discussion and summary** 
 
 
 ## Place this lesson towards the end of the workshop
