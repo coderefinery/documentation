@@ -9,8 +9,7 @@ If you use this lesson material, please cite it using this DOI:
 
 <https://doi.org/10.5281/zenodo.8280234>
 
-The machine-readable citation record is kept in
-[`CITATION.cff`](https://raw.githubusercontent.com/coderefinery/documentation/refs/heads/main/CITATION.cff)
+The machine-readable citation record is kept in `CITATION.cff`
 at the root of this lesson's repository, which lists the full set of
 contributing authors and stays up to date as the lesson evolves.
 
@@ -18,9 +17,14 @@ contributing authors and stays up to date as the lesson evolves.
 
 This lesson also publishes its metadata as machine-readable
 [Bioschemas](https://bioschemas.org/) / [schema.org](https://schema.org/)
-structured data, embedded as JSON-LD on every page of this site. You can
-inspect the source directly in
-[`bioschemas.yml`](https://raw.githubusercontent.com/coderefinery/documentation/refs/heads/main/bioschemas.yml).
+structured data, embedded as JSON-LD on every page of this site. 
+
+All of this lesson's metadata is generated from a single source,
+`metadata.yml`,
+rendered here directly at build time:
+
+```{lesson-metadata}
+```
 
 ## License
 
