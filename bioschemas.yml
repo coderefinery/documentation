@@ -1,10 +1,10 @@
 {
     "@context": "https://schema.org/",
     "@type": "LearningResource",
-    "@id": "https://coderefinery.github.io/documentation/",
+    "@id": "https://coderefinery.github.io/documentation",
     "description": "The lesson 'How to document your research software' gives an overview of the different ways how a code project can be documented: from small projects to larger projects. Markdown and Sphinx are central tools in this lesson.",
-    "keywords": "Documentation, Sphinx",
-    "name": "How to document your research software",
+    "keywords": ", ",
+    "name": "How to document your research software - CodeRefinery lesson",
     "author": [
         {
             "@type": "Organization",
@@ -61,14 +61,23 @@
         {
             "@type": "Person",
             "name": "Michele Mesiti"
+        },
+        {
+            "@type": "Person",
+            "name": "Frankie Robertson"
         }
     ],
+    "about": "The lesson 'How to document your research software' gives an overview of the different ways how a code project can be documented: from small projects to larger projects. Markdown and Sphinx are central tools in this lesson.",
+    "audience": "",
+    "competencyRequired": "",
     "educationalLevel": "Beginner",
     "identifier": "https://doi.org/10.5281/zenodo.8280234",
     "inLanguage": "en-UK",
+    "learningResourceType": "lesson",
     "license": "https://creativecommons.org/licenses/by/4.0/",
-    "teaches": "Understand the importance of writing code documentation together with the source code, Know what makes a good documentation, Learn what tools can be used for writing documentation, Be able to motivate a balanced decision: sometimes READMEs are absolutely enough",
-    "url": "https://coderefinery.github.io/documentation/",
+    "teaches": "",
+    "url": "https://coderefinery.github.io/documentation",
+    "accessibilitySummary": "",
     "isPartOf": "https://coderefinery.org",
-    "version": "2023-08-03"
+    "version": "2026-08-07"
 }
