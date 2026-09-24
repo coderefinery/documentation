@@ -64,7 +64,7 @@ jobs:
       - uses: actions/setup-python@v5
       - name: Install dependencies
         run: |
-          pip install sphinx sphinx_rtd_theme myst_parser
+          pip install -r requirements.txt
       - name: Sphinx build
         run: |
           sphinx-build doc _build
@@ -125,14 +125,14 @@ What do you need to change in the workflow file?
 
 ```{solution} Solution
 1. **API documentation**
-   1. Change line 16 of `.github/workflows/documentation.yml` from `pip install sphinx sphinx_rtd_theme myst_parser` to `pip install sphinx sphinx_rtd_theme myst_parser sphinx-autodoc2`.
+   1. Edit the `requirements.txt` file in the repository, adding the  `sphinx-autodoc2` package.
    2. Follow the instructions in [Sphinx-3](#api-exercise) changing paths so that:
       1. `multiply.py` is `src/multiply.py` and is specified as `../src/multiply.py` in the `autodoc2_packages` preference in `conf.py`
       2. `conf.py` is `doc/conf.py`
       3. `index.md` is `doc/index.md`.
    3. Commit and push your changes, verify the action has run successfully, and view the built site in your browser.
 2. **a Jupyter notebook**
-   1. Change line 16 of `.github/workflows/documentation.yml` from `pip install sphinx sphinx_rtd_theme myst_parser` to `pip install sphinx sphinx_rtd_theme myst_parser myst-nb`.
+   1. Edit the `requirements.txt` file in the repository, adding the `myst-nb` package.
    2. Follow the instructions in [Sphinx-4](#jupyter-exercise) changing paths so that:
       1. `flower.md` is `doc/flower.md`
       2. `conf.py` is `doc/conf.py`
