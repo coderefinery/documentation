@@ -4,4 +4,3 @@ sphinx-lesson
 sphinx_rtd_theme_ext_color_contrast
 https://github.com/coderefinery/sphinx-coderefinery-branding/archive/master.zip
 sphinx-bioschemas
-sphinx-bioschemas
