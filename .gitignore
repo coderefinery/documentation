@@ -3,3 +3,4 @@ _build/
 venv/
 .*.sw?
 *DS_Store
+*__pycache__

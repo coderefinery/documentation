@@ -13,6 +13,8 @@ print(ACCESS_TOKEN)
 
 BASE_URL = "https://zenodo.org/api"
 
+TITLE_SUFFIX = " - CodeRefinery lesson"
+
 
 json_headers = {
     "Authorization": f"Bearer {ACCESS_TOKEN}",
@@ -23,12 +25,12 @@ upload_headers = {
     "Authorization": f"Bearer {ACCESS_TOKEN}"
 }
 
-def load_citation():
-    with open("CITATION.cff", encoding="utf-8") as f:
+def load_metadata():
+    with open("metadata.yml", encoding="utf-8") as f:
         return yaml.safe_load(f)
 
 
-def cff_to_creators(authors):
+def authors_to_creators(authors):
     creators = []
 
     for author in authors:
@@ -51,22 +53,22 @@ def cff_to_creators(authors):
 
 
 
-# Load metadata from CITATION.cff
+# Load metadata from metadata.yml
 
-cff = load_citation()
+meta = load_metadata()
 
-description = cff.get("abstract", "")
+description = meta.get("abstract", "")
 
-if cff.get("repository-code"):
+if meta.get("repository-code"):
     description += (
         f'<br><p>Source code: '
-        f'<a href="{cff["repository-code"]}">{cff["repository-code"]}</a></p>'
+        f'<a href="{meta["repository-code"]}">{meta["repository-code"]}</a></p>'
     )
 
-if cff.get("url"):
+if meta.get("url"):
     description += (
         f'<br><p>Lesson website: '
-        f'<a href="{cff["url"]}">{cff["url"]}</a></p>'
+        f'<a href="{meta["url"]}">{meta["url"]}</a></p>'
     )
 
 description += (
@@ -75,14 +77,20 @@ description += (
 )
 
 metadata = {
-    "title": cff["title"],
+    "title": meta["title"] + TITLE_SUFFIX,
     "upload_type": "lesson",
     "description": description,
-    "creators": cff_to_creators(cff["authors"]),
-    "keywords": cff.get("keywords", []),
-    "version": str(cff.get("version")) if cff.get("version") is not None else None,
-    "license": cff.get("license"),
+    "creators": authors_to_creators(meta["authors"]),
+    "keywords": meta.get("keywords", []),
+    "version": meta.get("version"),
+    "license": meta.get("license"),
 }
+
+if meta.get("maintainers"):
+    contributors = authors_to_creators(meta["maintainers"])
+    for contributor in contributors:
+        contributor["type"] = "ContactPerson"
+    metadata["contributors"] = contributors
 
 
 # Discard any unpublished draft left over from a previous failed run.
@@ -164,44 +172,13 @@ for f in deposition.get("files", []):
 
     print(f"Removed inherited file {f['filename']}")
 
-
-# Upload release archive
-
+# Upload lesson PDF from the gh-pages branch
+# (built by sphinx.yml as OUTPUT_BASENAME.pdf, OUTPUT_BASENAME being
+# "{owner}-{repo}")
 
 tag = os.environ["GITHUB_REF_NAME"]
 repo_name = os.environ['GITHUB_REPOSITORY']
 owner, repo = repo_name.split("/", 1)
-
-
-archive_url = (
-    f"https://github.com/"
-    f"{repo_name}"
-    f"/archive/refs/tags/{tag}.zip"
-)
-
-archive_name = f"{owner}-{repo}-{tag}.zip"
-
-download = requests.get(archive_url)
-download.raise_for_status()
-
-with open(archive_name, "wb") as fp:
-    fp.write(download.content)
-
-with open(archive_name, "rb") as fp:
-    r = requests.put(
-        f"{bucket_url}/{archive_name}",
-        data=fp,
-        headers=upload_headers
-    )
-
-r.raise_for_status()
-
-print(f"Uploaded {archive_name}")
-
-
-# Upload lesson PDF from the gh-pages branch
-# (built by sphinx.yml as OUTPUT_BASENAME.pdf, OUTPUT_BASENAME being
-# "{owner}-{repo}")
 
 pdf_source_name = f"{owner}-{repo}.pdf"
 pdf_name = f"{owner}-{repo}-{tag}.pdf"
@@ -228,29 +205,33 @@ r.raise_for_status()
 
 print(f"Uploaded {pdf_name}")
 
+# Upload release archive
 
-# Show the PDF first (Zenodo previews the first file in the list).
 
-r = requests.get(
-    f"{BASE_URL}/deposit/depositions/{deposition_id}/files",
-    headers=json_headers,
+archive_url = (
+    f"https://github.com/"
+    f"{repo_name}"
+    f"/archive/refs/tags/{tag}.zip"
 )
+
+archive_name = f"{owner}-{repo}-{tag}.zip"
+
+download = requests.get(archive_url)
+download.raise_for_status()
+
+with open(archive_name, "wb") as fp:
+    fp.write(download.content)
+
+with open(archive_name, "rb") as fp:
+    r = requests.put(
+        f"{bucket_url}/{archive_name}",
+        data=fp,
+        headers=upload_headers
+    )
 
 r.raise_for_status()
 
-files = r.json()
-
-sort_order = sorted(files, key=lambda f: f["filename"] != pdf_name)
-
-r = requests.put(
-    f"{BASE_URL}/deposit/depositions/{deposition_id}/files/sort",
-    data=json.dumps([{"id": f["id"]} for f in sort_order]),
-    headers=json_headers,
-)
-
-r.raise_for_status()
-
-print(f"File order: {[f['filename'] for f in sort_order]}")
+print(f"Uploaded {archive_name}")
 
 
 # Update metadata
