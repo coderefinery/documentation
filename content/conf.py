@@ -40,12 +40,12 @@ extensions = [
     "sphinx_rtd_theme_ext_color_contrast",
     "sphinx_coderefinery_branding",
     "sphinx_bioschemas",
-    "lesson_metadata",
-    "sphinx_bioschemas"
+    "lesson_metadata"
 ]
 
 
 bioschemas=["../bioschemas.yml"]
+
 # Settings for myst_nb:
 # https://myst-nb.readthedocs.io/en/latest/computation/execute.html#notebook-execution-modes
 #nb_execution_mode = "off"
@@ -79,9 +79,6 @@ exclude_patterns = [
     "jupyter_execute",
     "*venv*",
 ]
-
-# Add bioschemas
-bioschemas = ["bioschemas.yml"]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
