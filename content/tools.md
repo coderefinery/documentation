@@ -11,75 +11,101 @@
 
 ---
 
-## In-code documentation
+## Documentation Tools: comparison
 
-- Comments, function docstrings, ...
-- Advantages
-  - Good for programmers
-  - Version controlled alongside code
-  - Can be used to auto-generate documentation for functions/classes
-- Disadvantage
-  - Probably not enough for users of the code
+We try to compare documentation tools 
+in various dimensions: 
+- **Convenience**: how easy it is to contribute and set up, 
+  for different kinds of people?
+- **Maintainability and Reproducibility**: is it easy to retrieve the information for different versions of the code?
+   Good for tools that can be version-controlled 
+   along with the code.  
+   Even better if correctness of information can be checked automatically
+   (*does the output of a snippet of code match the docs?*)
+- **Searchability:** is it easy to find the information we need?
+- **Readability**: is it easy to read when rendered? Can one copy-paste from it easily?
+- **LLM-friendliness**: is it convenient to feed to an LLM or an AI-agent?
 
-For a closer look at this see the {ref}`in-code-documentation` episode.
+```{list-table} Comparison of tools for documentation
+:widths: 20 20 10 10 10 10 15
+:header-rows: 1
+:stub-columns: 1
 
----
-
-## README files
-
-- Advantages
-  - Versioned (goes with the code development)
-  - It is often good enough to have a `README.md` or `README.rst` along with your code/script
-- If you use README files, use either
-  [RST](https://docutils.sourceforge.net/rst.html) or
-  [Markdown](https://commonmark.org/help/)
-- A great guide to README files: [MakeaREADME](https://www.makeareadme.com/)
-
-For a closer look at this see the {ref}`writing-readme-files` episode.
-
----
-
-## Plain Text formats: reStructuredText and Markdown
-
-```markdown
-# This is a section in Markdown   This is a section in RST
-                                  ========================
-
-## This is a subsection           This is a subsection
-                                  --------------------
-
-Nothing special needed for        Nothing special needed for
-a normal paragraph.               a normal paragraph.
-
-                                  ::
-
-    This is a code block          This is a code block
-
-
-**Bold** and *emphasized*.        **Bold** and *emphasized*.
-
-A list:                           A list:
-- this is an item                 - this is an item
-- another item                    - another item
-
-There is more: images,            There is more: images,
-tables, links, ...                tables, links, ...
+*  - Type
+   - Convenient
+   - Maintainable/  
+     Reproducible
+   - Searchable
+   - Readable 
+   - LLM  
+     friendly 
+   - Notes
+*  - In-code  
+     Documentation
+   - ✅✅ (P),  
+     ❌ (U)
+   - ✅🟨
+   - 🟨
+   - ❌
+   - ✅🟨
+   - 
+*  - README
+   - ✅
+   - ✅🟨
+   - 🟨
+   - ✅
+   - ✅
+   - typically enough  
+*  - HTML  
+     Generators
+   - 🟨 
+   - ✅🟨
+   - ✅
+   - ✅✅
+   - ❌
+   - powerful,  
+     **only viable option**  
+     **for readable API docs**
+*  - Wikis
+   - 🟨 (P)  
+     ✅ (NP)
+   - ❌❌ 
+   - ✅
+   - ✅
+   - ❌
+   -
+*  - Latex
+   - 🟨
+   - ❌🟨
+   - 🟨
+   - ✅ (?)
+   - ❌
+   - ✅Physics/Math,  
+     ❌copy/paste
+*  - Jupyter 
+   - 🟨
+     🟨/❌
+   - ✅✅ 
+   - 🟨 (?)
+   - ✅ 
+   - 🟨 
+   - ✅ validation tooling
+*  - [llms.txt](https://llmstxt.org/)
+   - 🟨
+   - 🟨
+   - N/A
+   - 🟨/❌
+   - ✅✅
+   - 
 ```
+Abbreviations in the table:
 
-- Two of the most popular lightweight markup languages.
-- reStructuredText (RST) has more features than Markdown but the choice is a matter of taste.
-- There are (unfortunately) [many flavors of Markdown](https://github.com/jgm/CommonMark/wiki/Markdown-Flavors).
-- Motivation to stick to a standard text-based format: **They make it easier to move the documentation to other tools
-  which also expect a standard format, as the project/organization grows**.
-- We use [MyST](https://myst-parser.readthedocs.io/en/latest/)
-  flavored Markdown in the {ref}`sphinx` episode and the
-  {ref}`gh-pages` example.
-- Nice resource to learn Markdown: [Learn Markdown in 60 seconds](https://commonmark.org/help/)
-- [Pandoc](https://pandoc.org/) can convert between MD and RST (and many other formats).
-
-
+- **P**: For Programmers, who live in the code;
+- **U**: For Users;
+- **NP**: For Non-Programmers.
 
 ---
+
 
 ## HTML static site generators
 
@@ -90,7 +116,7 @@ or hosted on the web.
 
 Here are some HTML static site generators, relevant in our communities.
 These tools offer some or all of these features:
-- **API Reference generation**: source code is read, scan for docstrings and render them
+- **API Reference generation**: they read the source code scanning for docstrings, and render them to HTML
 - **Search**: they offer a "whole site" search feature (non trivial, when viewing only one page).
               (if you can download )
 - **Validation**: check that the code snipped in the documentation 
@@ -112,10 +138,21 @@ These tools offer some or all of these features:
          - Full-text server-side on [Read the docs](https://about.readthedocs.com)
        - **Validation**: via [doctest](https://docs.python.org/3/library/doctest.html)
 
-     - [MkDocs](https://www.mkdocs.org/): A Markdown-first static site generator.
+     - [MkDocs](https://www.mkdocs.org/): A Markdown-first static site generator
+       (with a vast system of plugins developed independently).
        - **API Reference generation**: via 
          [mkdocstrings](https://mkdocstrings.github.io/)
        - **Search:** search plugin for client-side (Javascript that runs in the browser - lunr.js)
+       Project now (as of 2026) not maintained [^mkdocsdrama]
+
+       [^mkdocsdrama]: After somewhat dramatic events (2026), 
+             MkDocs 1.x is now superseded by [Zensical](https://zensical.org/),
+             which tries to keep compatibility with MkDocs 1.x.
+             (MkDocs 2.0 is also being developed 
+             but projects and plugins based on 1.x 
+             will break).
+       
+       
        
      - [Doxygen](https://www.doxygen.nl/):
        - **API Reference generation**: has also support for Python
@@ -192,12 +229,8 @@ These tools offer some or all of these features:
   ```
 ````
 
-```{discussion}
+---
 
-Do you know an awesome tool or feature that should be in this list? 
-Let us know! (Open a PR)
-
-```
 
 ## Hosting Documentation on the Web 
 
@@ -210,39 +243,60 @@ GitHub, GitLab, and Bitbucket make it possible to serve HTML pages:
 and can be [connected](https://docs.readthedocs.com/platform/latest/reference/git-integration.htm) 
 to common software forges.
 
----
-
-## Wikis
-
-- Popular solutions (but many others exist):
-  - [MediaWiki](https://www.mediawiki.org)
-  - [Dokuwiki](https://www.dokuwiki.org)
-- Advantage
-  - Barrier to write and edit is low
-- Disadvantages
-  - Typically disconnected from source code repository (**reproducibility**)
-  - Difficult to serve multiple versions
-  - Difficult to check out a specific old version
-  - Typically needs to be hosted and maintained
 
 
+```{discussion}
 
+Do you know an awesome tool or feature that should be in this list? 
+Let us know! (click on "Edit on GitHub" at the top of this page)
+
+```
 
 ---
 
-## LaTeX/PDF
+### Plain Text formats: reStructuredText and Markdown
 
-- Advantage
-  - Popular and familiar in the physics and mathematics community
-- Disadvantages
-  - PDF format is not ideal for copy-pasting of examples
-  - Possible, but not trivial to automate rebuilding documentation after every Git push
+```markdown
+# This is a section in Markdown   This is a section in RST
+                                  ========================
+
+## This is a subsection           This is a subsection
+                                  --------------------
+
+Nothing special needed for        Nothing special needed for
+a normal paragraph.               a normal paragraph.
+
+                                  ::
+
+    This is a code block          This is a code block
 
 
+**Bold** and *emphasized*.        **Bold** and *emphasized*.
 
----
+A list:                           A list:
+- this is an item                 - this is an item
+- another item                    - another item
+
+There is more: images,            There is more: images,
+tables, links, ...                tables, links, ...
+```
+
+- Two of the most popular lightweight markup languages.
+- reStructuredText (RST) has more features than Markdown but the choice is a matter of taste.
+- There are (unfortunately) [many flavors of Markdown](https://github.com/jgm/CommonMark/wiki/Markdown-Flavors).
+- Motivation to stick to a standard text-based format: **They make it easier to move the documentation to other tools
+  which also expect a standard format, as the project/organization grows**.
+- We use [MyST](https://myst-parser.readthedocs.io/en/latest/)
+  flavored Markdown in the {ref}`sphinx` episode and the
+  {ref}`gh-pages` example.
+- Nice resource to learn Markdown: [Learn Markdown in 60 seconds](https://commonmark.org/help/)
+- [Pandoc](https://pandoc.org/) can convert between MD and RST (and many other formats).
 
 
 ```{keypoints}
+- READMEs are typically a good starting point
 - Some popular solutions make reproducibility and maintenance of multiple code versions difficult.
+- The landscape of tools is very diversified and every community has their own favourite.
+- The basic functionality of all Static site generators is very similar, 
+  but specific aspects (API ref generation, search, validation) differ.
 ```
