@@ -2,7 +2,7 @@
     "@context": "https://schema.org/",
     "@type": "LearningResource",
     "@id": "https://coderefinery.github.io/documentation",
-    "description": "The lesson 'How to document your research software' gives an overview of the different ways how a code project can be documented: from small projects to larger projects. Markdown and Sphinx are central tools in this lesson.",
+    "description": "The lesson 'How to document your research software' gives an overview  of the different ways how a code project can be documented:  from small projects to larger projects.  Markdown and Sphinx are central tools in this lesson.\n",
     "keywords": "documentation, sphinx, static website",
     "name": "How to document your research software - CodeRefinery lesson",
     "author": [
@@ -67,7 +67,7 @@
             "name": "Frankie Robertson"
         }
     ],
-    "about": "The lesson 'How to document your research software' gives an overview of the different ways how a code project can be documented: from small projects to larger projects. Markdown and Sphinx are central tools in this lesson.",
+    "about": "The lesson 'How to document your research software' gives an overview  of the different ways how a code project can be documented:  from small projects to larger projects.  Markdown and Sphinx are central tools in this lesson.\n",
     "audience": "",
     "competencyRequired": "",
     "educationalLevel": "Beginner",
