@@ -15,7 +15,11 @@ title: "How to document your research software"
 
 # Text. Used as CITATION.cff's abstract, bioschemas' description/about,
 # and the start of the Zenodo description.
-abstract: "The lesson 'How to document your research software' gives an overview of the different ways how a code project can be documented: from small projects to larger projects. Markdown and Sphinx are central tools in this lesson."
+abstract: > 
+  The lesson 'How to document your research software' gives an overview 
+  of the different ways how a code project can be documented: 
+  from small projects to larger projects. 
+  Markdown and Sphinx are central tools in this lesson.
 
 # Text (ISO 8601 date, YYYY-MM-DD), quoted so it isn't parsed as a
 # YAML date. Used in CITATION.cff, bioschemas.yml, and the Zenodo
