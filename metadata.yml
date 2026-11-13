@@ -65,7 +65,12 @@ inLanguage: "en-UK"
 
 # Text. bioschemas.yml only. Learning outcomes / what this lesson
 # teaches.
-teaches: ""
+teaches: >
+  Tools and techniques 
+  for developing technical documentation
+  in a sustainable way, and to make it accessible
+  also on the web.
+  Multiple tools are presented and compared.
 
 # URL or CreativeWork per schema.org. bioschemas.yml only. The
 # collection/series this lesson belongs to.
@@ -74,11 +79,11 @@ isPartOf: "https://coderefinery.org"
 # Audience (structured object) per schema.org - NOT plain Text, even
 # though it's currently stored and emitted as a bare string. bioschemas.yml
 # only. 
-audience: ""
+audience: "researchers,early-career research software engineers"
 
 # Text, DefinedTerm, or URL per schema.org. bioschemas.yml only.
 # Prerequisites/prior knowledge needed. 
-competencyRequired: ""
+competencyRequired: "software development (any language), version control, git or gitlab"
 
 # Text per schema.org. bioschemas.yml only. Describes accessibility
 # features of the material. 
