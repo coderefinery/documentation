@@ -271,7 +271,7 @@ What do you need to change in the workflow file?
 ## Alternatives to GitHub and GitLab Pages
 
 - [Read the Docs](https://readthedocs.org) is the most common alternative to
-  hosting in GitHub Pages.
+  the two solutions presented above.
 
 - Sphinx builds HTML files (this is what static site generators do), and you
   can host them anywhere, for example your university's web space or own web server.
